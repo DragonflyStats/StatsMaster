@@ -1,0 +1,78 @@
+ \documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{framed}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 2011 13:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+%\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+%\lhead{MA4413 2013} \rhead{Mr. Kevin O'Brien}
+%\chead{Midterm Assessment 1 }
+%\input{tcilatex}
+
+\begin{document}
+%----------------------------------------------------------------------------------------------------------------------SLR%
+\chapter{Linear Regression}
+\section{Simple Linear Regression}
+
+We start with a scatter diagram between two variables as before. This time, we want
+to know what line will best fit the data.
+
+The theory we learn here assumes we are going to use a straight line, and not a curve of any kind, though in some disciplines (physics or finance, for example) a curve would be more appropriate.
+
+We have to find the line of best fit. Before we can do this, we must assume that one
+variable is dependent on the other. By convention we call the dependent variable y
+and the independent variable x. We have to work out the slope of the line, and the
+point at which it cuts the y axis.
+
+Again, by convention, we call these values and respectively for the population.
+
+The basic model is therefore given as follows.
+
+The model of a random variable Y, the dependent variable, which is related to random
+variable X, the independent (or predictor or explanatory) variable by the equation:
+\begin{equation}
+Y = \alpha + \beta X + \epsilon
+\end{equation}
+
+where $\alpha$ and $\beta$ are constants and $\epsilon ~ N ( 0,\sigma^2)$ , a random error term. The
+coefficients $\alpha$ and $\beta$  are theoretical values and can only be estimated from sample data.
+
+The estimates are generally written as $a$ and $b$.
+
+Given a sample of bivariate data, $(x_1,y_1),(x_2,y_2) ,.........., (x_n,y_n)$, $a$ and $b$ can be
+estimated. To fit a line to some data as in this case, an objective must be chosen to
+define which straight line best describes the data. The most common objective is to
+minimise the sum of the squared distance between the observed value of $y_i$
+and the corresponding predicted value $\hat{y}_i$.
+
+The estimated least squares regression line is written as:
+$y = a + b\times x$
+We can derive the formulae for $b$ and $a$.
+
+
+
+The line is called the sample regression line of y on x.
+
+The following example demonstrates the calculation of a and b and the use of the resultant
+equation to estimate y for a given x.
+
+\subsection{Ordinary least squares}
+Ordinary least squares (OLS) is a technique for estimating the unknown parameters in a linear regression model. This method minimizes the sum of squared distances between the observed responses in a set of data, and the fitted responses from the regression model.
+
+\end{document}
