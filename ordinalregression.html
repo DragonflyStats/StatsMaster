@@ -1,0 +1,38 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{framed}
+\usepackage{graphicx}
+%opening
+
+\begin{document}
+\tableofcontents
+\newpage
+\section{Ordinal Regression}
+Ordinal logistic regression (often just called 'ordinal regression') is used to predict an ordinal dependent variable given one or more independent variables. It can be considered as either a generalisation of multiple linear regression or as a generalisation of binomial logistic regression, but this guide will concentrate on the latter. As with other types of regression, ordinal regression can also use interactions between independent variables to predict the dependent variable.
+\subsection{example}
+For example, you could use ordinal regression to predict the belief that "tax is too high" (your ordinal dependent variable, measured on a 4-point Likert item from "Strongly Disagree" to "Strongly Agree"), based on two independent variables: "age" and "income". Alternately, you could use ordinal regression to determine whether a number of independent variables, such as "age", "gender", "level of physical activity" (amongst others), predict the ordinal dependent variable, "obesity", where obesity is measured using using three ordered categories: "normal", "overweight" and "obese".
+
+\subsection{Types of Ordinal Regression}
+Ordinal Regression isa  type of regression used to predict ordinal outcomes (or in other words rankings). There are two types
+
+\begin{description}
+\item[Ordered Logit] - applied to data that meets the proportional odds assumption
+\item[Ordered Probit]
+\end{description}
+
+
+Ordered Probit is usually estimated using Maximum Likelihood Estimation
+ 
+\newpage
+\section{Quantile Regression}
+Quantile regression, which was introduced
+by Koenker and Bassett (1978), extends the regression model to conditional quantiles of the response
+variable, such as the 90th percentile. Quantile regression is particularly useful when the rate of change in
+the conditional quantile, expressed by the regression coefﬁcients, depends on the quantile.
+
+\newpage
+\section{Poisson Regression}
+\end{document}
+

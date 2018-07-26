@@ -1,0 +1,6 @@
+> Fit1<-lm(y3 ~x3,data=anscombe)
+
+> outlierTest(Fit1)
+
+  rstudent unadjusted p-value Bonferonni p
+3 1203.539         2.5441e-22   2.7985e-21

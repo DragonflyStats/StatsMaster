@@ -1,0 +1,35 @@
+Tobit Regression
+
+The Tobit model is a statistical model proposed by James Tobin (1958)[1] to describe the relationship between a non-negative dependent variable y_i and an independent variable (or vector) x_i. The term Tobit was derived from Tobin's name by truncating and adding -it by analogy with the probit model.[2]
+
+The model supposes that there is a latent (i.e. unobservable) variable y_i^*. This variable linearly depends on x_i via a parameter (vector) \beta which determines the relationship between the independent variable (or vector) x_i and the latent variable y_i^* (just as in a linear model). In addition, there is a normally distributed error term u_i to capture random influences on this relationship. The observable variable y_i is defined to be equal to the latent variable whenever the latent variable is above zero and zero otherwise.
+
+y_i = \begin{cases} 
+    y_i^* & \textrm{if} \; y_i^* >0 \\ 
+    0     & \textrm{if} \; y_i^* \leq 0
+\end{cases}
+where y_i^* is a latent variable:
+
+ y_i^* = \beta x_i + u_i, u_i \sim N(0,\sigma^2) \, 
+
+
+%===================================================================%
+
+Tobit regression
+
+%%- http://www.karlin.mff.cuni.cz/~pesta/NMFM404/tobit.html
+%%- Really good
+%====================%
+
+The tobit model, also called a censored regression model, is designed to estimate 
+linear relationships between variables when there is either left- or right-censoring in 
+the dependent variable (also known as censoring from below and above, respectively). 
+
+Censoring from above takes place when cases with a value at or above some threshold, all 
+take on the value of that threshold, so that the true value might be equal to 
+the threshold, but it might also be higher. In the case of censoring from 
+below, values those that fall at or below some threshold are censored.
+
+%===================================================================%
+%- http://www.iasri.res.in/sscnars/socialsci/1-Tobit%20analysis.pdf
+%- http://www.aae.wisc.edu/aae637/handouts/roncek_tobit_article.pdf
