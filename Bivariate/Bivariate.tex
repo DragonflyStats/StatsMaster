@@ -23,6 +23,82 @@
 \lhead{MA4128} \rhead{Kevin O'Brien} \chead{Assumptions for Linear Models} %\input{tcilatex}
 
 \begin{document}
+
+\section{Bivariate data}
+\subsection{What is Bivariate data?}
+
+A dataset with two variables contains what is called bivariate data. For example, the heights and weights of people (e.g. for the purposes of determining the extent to which taller people weigh more). Common bivariate statistical analyses include
+\begin{itemize}
+\item Correlation Analysis
+\item Simple Linear Regression
+\end{itemize}
+
+\subsection{Scatter Plot} A scatter plot of two variables shows the values of one variable on the Y axis and the values of the other variable on the X axis. Scatter plots are well suited for revealing the relationship between two variables.Scatterplots can be implemented in \texttt{R} using the command \texttt{\textbf{plot()}}
+
+\subsubsection*{Exercise:} Let us construct scatter-plots for the \textbf{\textit{Immer}} and \textbf{\textit{Iris}} data sets.
+
+\begin{framed}
+\begin{verbatim}
+plot(immer$Y1,immer$Y2)
+
+# First and Third Columns of iris
+plot(iris[,1],iris[,3])
+\end{verbatim}
+\end{framed}
+More complex scatterplots, with better visual aesthetics, can be constructed. We will look at this more later on in the semester.
+
+\subsection{Correlation}
+\begin{itemize}
+\item Recall that correlation describes the strength of a relationship between two numeric variables, and that the \textbf{\textit{Pearson product-moment correlation coefficient}} is a measure of the strength of the linear relationship between two variables.
+
+\item It is referred to as Pearson's correlation or simply as the correlation coefficient. If the relationship between the variables is not linear, then the correlation coefficient does not adequately represent the strength of the relationship between the variables.
+
+\item The symbol for Pearson's correlation is "$\rho$" when it is measured in the population and \texttt{\textbf{r}} when it is measured in a sample.
+
+\item As we will be dealing almost exclusively with samples, we will use \texttt{\textbf{r}} to to represent Pearson's correlation unless otherwise noted.
+
+\item Pearson's r can range from -1 to 1. An r of -1 indicates a perfect negative linear relationship between variables, an \texttt{\textbf{r}} of 0 indicates no linear relationship between variables, and an \texttt{\textbf{r}} of 1 indicates a perfect positive relationship between variables.
+
+\item Importantly it is assumed that the relationship in question is supposed to be linear. Some variables will in fact have a non-linear relationship (more on that later)
+\end{itemize}
+\subsubsection*{Implementation}
+The relevant \texttt{R} command to compute the correlation coefficient estimate is simply \texttt{\textbf{cor()}}.
+
+
+\begin{framed}
+\begin{verbatim}
+cor(immer$Y1,immer$Y2)
+
+cor(iris[,1],iris[,3])
+\end{verbatim}
+\end{framed}
+\begin{itemize}
+\item The strength of the relation is represented in a numeric value known at the correlation coefficient. 
+\item This coefficient can take a value between -1 and 1. Additionally there are no units.
+\end{itemize}
+\[ -1 \leq r \leq 1\]
+
+\subsection*{Test for Significance}
+Getting a correlation coefficient is generally only half the story; you will want to know if the relationship is significant. There is a more complex command called \texttt{\textbf{cor.test()}}. This command additionally provides a hypothesis test for the correlation estimate. The null and alternative hypotheses are as follows.
+
+\begin{itemize}
+	\item[Ho] : The correlation coefficient for the population of values is zero. (i.e. No linear relationship.)
+	\item[Ha] : The coefficient is not zero. (Linear relationship exists.)
+\end{itemize}
+
+\begin{framed}
+\begin{verbatim}
+cor.test(immer$Y1,immer$Y2)
+
+cor.test(iris[,1],iris[,3])
+\end{verbatim}
+\end{framed}
+
+	
+
+
+A confidence interval for the coefficient is provided for in the \texttt{R} output. If the interval includes 0 then we fail to reject the null hypothesis.
+\newpage
 \section{Bivariate data}
 \subsection{What is Bivariate data?}
 
@@ -190,32 +266,6 @@ confint(Fit1)
 # Conc        1.82522 2.035495
 \end{verbatim}
 \end{framed}
-
-\subsection{The Coefficient of Determination}
-The coefficient of determination $R^2$ is the proportion of variability in a data set that is accounted for by the linear model.
-
-Equivalently $R^2$ provides a measure of how well future outcomes are likely to be predicted by the model.
-
-(For simple linear regression, it canbe computed by squaring the correlation coefficient.)
-
-\begin{framed}
-\begin{verbatim}
-summary(fit1)$r.squared
-\end{verbatim}
-\end{framed}
-\newpage
-\section{Assessing Model Assumptions}
-\subsection{Residuals}  The difference between the predicted value (based on the regression equation) and the actual, observed value. In simple linear regression models, the matter of whether or not residuals are normally distributed often arises.
-
-Additionally the expected value of the residuals should be zero.
-
-We have seen previously two methodologies for determining whether or not a data set is normally distributed;
-
-\begin{itemize} \item 	Shapiro-Wilk tests (or Anderson-Darling test)
-\item 	QQ plots
-\end{itemize}
-
-We will explore this more in a forthcoming example.
 \subsection{Influence Analysis}
 
 

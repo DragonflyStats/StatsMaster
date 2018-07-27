@@ -118,4 +118,40 @@ suitable.
 >summary(wreg)
 \end{verbatim}
 
+\newpage
+
+\section{Weighted Regression}
+
+\textbf{Homoscedasticity} - the standard deviations of
+y-observations from the straight line are the same independently
+of the underlying x-observations.
+
+\textbf{Heteroscedasticity} - the standard deviations of
+y-observations depend on the underlying x-observations.
+
+In the first case, standard regression analysis should be
+performed, while in the second the weighted regression is more
+suitable.
+
+\begin{verbatim}
+>Conc=c(0,2,4,6,8,10)
+>StDev=c(0.001,0.004,0.010,0.013,0.017,0.022)
+>Abs=c(0.009,0.158,0.301,0.472,0.577,0.739)
+>n=length(Conc)
+>weights=StDev(-2)/mean(StDev(-2))
+>wreg=lm(AbsConc,weights=weights)
+>reg=lm(AbsConc)
+>summary(wreg)
+\end{verbatim}
+
+
+It is often convienent to express the regression analysis using
+ANOVA table. The following equation is the basis for such
+representation
+
+It is often shortened to SST = SSLR + SSR; where SST is referred
+
+to as the total sum of squares, SSLR is the sum of squares due to
+linear regression (within regression), SSR is the sum of squares
+due to residuals (outside regression).
 \end{document}

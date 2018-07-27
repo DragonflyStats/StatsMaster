@@ -26,102 +26,7 @@
 %\input{tcilatex}
 
 \begin{document}
-\section{Bivariate data}
-\subsection{What is Bivariate data?}
 
-A dataset with two variables contains what is called bivariate data. For example, the heights and weights of people (e.g. for the purposes of determining the extent to which taller people weigh more). Common bivariate statistical analyses include
-\begin{itemize}
-\item Correlation Analysis
-\item Simple Linear Regression
-\end{itemize}
-
-\subsection{Scatter Plot} A scatter plot of two variables shows the values of one variable on the Y axis and the values of the other variable on the X axis. Scatter plots are well suited for revealing the relationship between two variables.Scatterplots can be implemented in \texttt{R} using the command \texttt{\textbf{plot()}}
-
-\subsubsection*{Exercise:} Let us construct scatter-plots for the \textbf{\textit{Immer}} and \textbf{\textit{Iris}} data sets.
-
-\begin{framed}
-\begin{verbatim}
-plot(immer$Y1,immer$Y2)
-
-# First and Third Columns of iris
-plot(iris[,1],iris[,3])
-\end{verbatim}
-\end{framed}
-More complex scatterplots, with better visual aesthetics, can be constructed. We will look at this more later on in the semester.
-
-\subsection{Correlation}
-\begin{itemize}
-\item Recall that correlation describes the strength of a relationship between two numeric variables, and that the \textbf{\textit{Pearson product-moment correlation coefficient}} is a measure of the strength of the linear relationship between two variables.
-
-\item It is referred to as Pearson's correlation or simply as the correlation coefficient. If the relationship between the variables is not linear, then the correlation coefficient does not adequately represent the strength of the relationship between the variables.
-
-\item The symbol for Pearson's correlation is "$\rho$" when it is measured in the population and \texttt{\textbf{r}} when it is measured in a sample.
-
-\item As we will be dealing almost exclusively with samples, we will use \texttt{\textbf{r}} to to represent Pearson's correlation unless otherwise noted.
-
-\item Pearson's r can range from -1 to 1. An r of -1 indicates a perfect negative linear relationship between variables, an \texttt{\textbf{r}} of 0 indicates no linear relationship between variables, and an \texttt{\textbf{r}} of 1 indicates a perfect positive relationship between variables.
-
-\item Importantly it is assumed that the relationship in question is supposed to be linear. Some variables will in fact have a non-linear relationship (more on that later)
-\end{itemize}
-\subsubsection*{Implementation}
-The relevant \texttt{R} command to compute the correlation coefficient estimate is simply \texttt{\textbf{cor()}}.
-
-
-\begin{framed}
-\begin{verbatim}
-cor(immer$Y1,immer$Y2)
-
-cor(iris[,1],iris[,3])
-\end{verbatim}
-\end{framed}
-\begin{itemize}
-\item The strength of the relation is represented in a numeric value known at the correlation coefficient. 
-\item This coefficient can take a value between -1 and 1. Additionally there are no units.
-\end{itemize}
-\[ -1 \leq r \leq 1\]
-
-\subsection*{Test for Significance}
-Getting a correlation coefficient is generally only half the story; you will want to know if the relationship is significant. There is a more complex command called \texttt{\textbf{cor.test()}}. This command additionally provides a hypothesis test for the correlation estimate. The null and alternative hypotheses are as follows.
-
-\begin{itemize}
-	\item[Ho] : The correlation coefficient for the population of values is zero. (i.e. No linear relationship.)
-	\item[Ha] : The coefficient is not zero. (Linear relationship exists.)
-\end{itemize}
-
-\begin{framed}
-\begin{verbatim}
-cor.test(immer$Y1,immer$Y2)
-
-cor.test(iris[,1],iris[,3])
-\end{verbatim}
-\end{framed}
-
-	
-
-
-A confidence interval for the coefficient is provided for in the \texttt{R} output. If the interval includes 0 then we fail to reject the null hypothesis.
-
-\subsection*{Spearman and Kendall Correlation Coefficients}
-The Spearman's rank-order and Kendall Tau correlation coefficients are the \textbf{nonparametric} version of the Pearson product-moment correlation. Both methods measure the strength of association between two \textbf{ranked} (ordinal) variables. The coefficients are interpreted the same way.
-\begin{framed}
-	\begin{verbatim}
-### Spearman Correlation Coefficient
-
-cor(iris$Sepal.Length,iris$Sepal.Width, 
-   method="spearman")
-   
-### Kendall Correlation Coefficient
-
-cor(iris$Sepal.Length,iris$Sepal.Width, 
-   method="kendall")
-
-## [1] -0.1668
-## [1] -0.077
-	\end{verbatim}
-\end{framed}
-Non parametric statistics are statistics that do not require any special assumptions (i.e. Assumption of normality).
-
-\newpage
 \section{Simple Linear Regression}
 Simple linear regression is used to describe the mathematical relationship between two variables ‘x’ and ‘y’ in terms of a simple mathematical formula, of the form  (sometimes as $y = mx+c$, but usually)\[ y= a+bx.\]
 
@@ -237,22 +142,6 @@ confint(Fit1)
 \end{verbatim}
 \end{framed}
 
-\newpage
-\section{Assessing Model Assumptions}
-\subsection{Residuals}  
-\begin{itemize}
-\item The difference between the predicted value (based on the regression equation) and the actual, observed value. 
-\item In simple linear regression models, the matter of whether or not residuals are normally distributed often arises.
-\item Additionally the expected value of the residuals should be zero.
-\item We have seen previously two methodologies for determining whether or not a data set is normally distributed;
-\end{itemize}
-
-\begin{itemize} \item 	Shapiro-Wilk tests (or Anderson-Darling test) (\texttt{shapiro.test})
-\item 	QQ plots ( \texttt{qqnorm()} and \texttt{qqline()}.
-\end{itemize}
-
-We will explore this more in a forthcoming example.
-\newpage
 \subsection{Influence Analysis}
 
 
@@ -344,69 +233,6 @@ plot(fit1, which=c(6))
 \item Another plot is the "Funnel" plot.
 \item All of the plot would indicate an observation that would require special attention.
 \end{itemize}
-\newpage
-\section{Multiple Linear Regression}
-In your future studies, you will come across multiple linear regression (MLR). This is a linear model uses multiple independent variables to explain a single dependent variable.
-
-The implementation is very similar to simple linear regression (SLR). All that is required is to specify the additional independent variables.
-
-\begin{framed}
-\begin{verbatim}
-Fit.slr =lm(y~x)  	# SLR: y explained by predictor x
-Fit.mlr=lm(y~x+z)  # MLR: y explained by predictors x and z
-\end{verbatim}
-\end{framed}
-
-For this case, a  linear relationship can be defined by the regression model  \[y =\beta_0 + \beta+1x + \beta_2z + \epsilon\].
-
-Again, we determine the regression coefficients, i.e. estimates for slopes and intercept. (N.B. There are variations on this notation).
-
-\begin{itemize}
-\item	$b_0$ : the intercept estimate.
-\item	$b_1$  : the slope estimate for X
-\item	$b_2$  : the slope estimate for z
-\end{itemize}
-
-In many project datasets it is possible to implement a MLR model. For the moment, we will just look at slope and intercept estimates, their p-values and the coefficient of determination.
-
-Let try this out using the \textbf{\textit{iris}} data set. (This is not be a valid statistical analysis in practice. However we are focussing on the mechanics, so we shall proceed nonetheless).
-\begin{framed}
-\begin{verbatim}
-lm(Sepal.Length ~ Sepal.Width + Petal.Width)
-\end{verbatim}
-\end{framed}
-
-
-
-\subsection{Model Selection}
-There are many important methodologies for determining which combination of predictor variables bests describes a response variable. You will meet this in future modules.
-We will use two simple ones for this module only.
-\begin{itemize}
-\item Adjusted R–squared value
-\item The Akaike Information Criterion (AIC)
-\end{itemize}
-
-
-\noindent The adjusted R-square value is found on the summary output for a fitted model. It is called \textbf{\emph{adjusted}} because it takes into account the number of predictor variables being used. The law of parsimony states the simplest model that adequately explains the outcomes is the best. The candidate model with the higher adjusted R squared is considered preferable.
-
-
-\noindent The AIC is a model selection metric often used in statistics.It is computed using the R command
-\texttt{\textbf{AIC()}}.The candidate model with the smallest AIC value is considered preferable.
-
-\begin{framed}
-\begin{verbatim}
-fitA = lm(Sepal.Length ~ Sepal.Width + Petal.Width)
-fitB = lm(Sepal.Length ~ Sepal.Width + Petal.Length)
-
-summary(fitA)$adj.r.squared
-summary(fitB)$adj.r.squared
-
-AIC(fitA)
-AIC(fitB)
-\end{verbatim}
-\end{framed}
-
-
 
 
 %----------------------------------------------------%
