@@ -98,12 +98,28 @@ In general, multicollinearity can cause wide confidence intervals and strange $p
 		\item The variance inflation factor (VIF) quantifies the severity of multicollinearity in a regression analysis.
 		
 		\item The VIF provides an index that measures how much the variance (the square of the estimate's standard deviation) of an estimated regression coefficient is increased because of collinearity.
-		
+	\item	A common rule of thumb is that if the VIF is greater than 5 then multicollinearity is high. Also a VIF level of 10 has been proposed as a cut off value.	
 \end{itemize}	
-%	\item	A common rule of thumb is that if the VIF is greater than 5 then multicollinearity is high. Also a VIF level of 10 has been proposed as a cut off value.
+%	
 		
-		
-	
+\subsection{Multicollinearity}
+When choosing a predictor variable you should select one that might be correlated with the criterion variable, but that is not strongly correlated with the other predictor variables. However, correlations amongst the predictor variables are not unusual. The term multicollinearity (or collinearity) is used to describe the situation
+when a high correlation is detected between two or more predictor variables.
+%
+Such high correlations cause problems when trying to draw inferences about the relative contribution of each predictor variable to the success of the model. SPSS provides you with a means of checking for this and we describe this below.
+
+\subsection{Variance Inflation Factor (VIF)}
+%
+The variance inflation factor (or “VIF”) provides us with a measure of how much the variance for a given regression coefficient is increased compared to if all predictors were uncorrelated. To understand what the variance inflation factor is, and what it measures, we need to examine the computation of the standard error of a regression coefficient.
+%
+\section{Tolerance}
+%
+Tolerance is simply the reciprocal of VIF, and is computed as
+\[ \mbox{Tolerance} = \frac{1}{VIF}\]
+Whereas large values of VIF were unwanted and undesirable, since tolerance is the reciprocal of VIF, larger than not values of tolerance are indicative of a lesser problem with collinearity. In other words, we want large tolerances.
+
+
+%-------------------------------------------------------------- %
 \subsection{The Variance Inflation Factor (VIF)}
 
 
