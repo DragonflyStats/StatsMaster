@@ -1,56 +1,38 @@
-\documentclass[]{report}
+Stepwise regression
+From Wikipedia, the free encyclopedia
+In statistics, stepwise regression includes regression models in which the choice of predictive variables is carried out by an automatic procedure. [1][2][3][4] Usually, this takes the form of a sequence of F-tests or t-tests, but other techniques are possible, such as adjusted R-square, Akaike information criterion, Bayesian information criterion, Mallows's Cp, PRESS, or false discovery rate.
 
-\voffset=-1.5cm
-\oddsidemargin=0.0cm
-\textwidth = 480pt
-
-\usepackage{framed}
-\usepackage{subfiles}
-\usepackage{enumerate}
-\usepackage{graphics}
-\usepackage{newlfont}
-\usepackage{eurosym}
-\usepackage{amsmath,amsthm,amsfonts}
-\usepackage{amsmath}
-\usepackage{color}
-\usepackage{amssymb}
-\usepackage{multicol}
-\usepackage[dvipsnames]{xcolor}
-\usepackage{graphicx}
-\begin{document}
-\subsection*{When Is Stepwise Regression Appropriate?}
-
-Stepwise regression is an appropriate analysis when you have many variables and you’re interested in identifying a useful subset of the predictors. In Minitab, the standard stepwise regression procedure both adds and removes predictors one at a time. Minitab stops when all variables not included in the model have p-values that are greater than a specified Alpha-to-Enter value and when all variables that are in the model have p-values that are less than or equal to a specified Alpha-to-Remove value.
-
-In addition to the standard stepwise method, Minitab offers two other types of stepwise procedures:
-
-Forward selection:  Minitab starts with no predictors in the model and adds the most significant variable for each step. Minitab stops when all variables not in the model have p-values that are greater than the specified Alpha-to-Enter value.
-Backward elimination:  Minitab starts with all predictors in the model and removes the least significant variable for each step. Minitab stops when all variables in the model have p-values that are less than or equal to the specified Alpha-to-Remove value.
-
-%========================================%
-
-On the Stepwise tab of the Multiple Regression dialog box, select the stepwise regression method.
-Stepwise removes and adds terms to the model for the purpose of identifying a useful subset of the terms. For more information, go to Basics of stepwise regression.
-
-Specify the method that is used to fit the model.
-\begin{description}
-\item[Stepwise:] This method starts with an empty model, or includes the terms you specified to include in the initial model or in every model. Then, Minitab adds or removes a term for each step. You can specify terms to include in the initial model or to force into every model. Minitab stops when all variables not in the model have p-values that are greater than the specified Alpha to enter value and when all variables in the model have p-values that are less than or equal to the specified Alpha to remove value.
-\item[Forward selection:] This method starts with an empty model, or includes the terms you specified to include in the initial model or in every model. Then, Minitab adds the most significant term for each step. Minitab stops when all variables not in the model have p-values that are greater than the specified Alpha to enter value.
-\item[Backward selection:] This method starts with all potential terms in the model and removes the least significant term for each step. Minitab stops when all variables in the model have p-values that are less than or equal to the specified Alpha to remove value.
-\end{description}
-%==========================================%
+The frequent practice of fitting the final selected model followed by reporting estimates and confidence intervals without adjusting them to take the model building process into account has led to calls to stop using stepwise model building altogether[5][6] or to at least make sure model uncertainty is correctly reflected.[7][8]
 
 
-\subsection*{Pitfalls of Stepwise Regression}
+In this example from engineering, necessity and sufficiency are usually determined by F-tests. For additional consideration, when planning an experiment, computer simulation, or scientific survey to collect data for this model, one must keep in mind the number of parameters, P, to estimate and adjust the sample size accordingly. For K variables, P = 1(Start) + K(Stage I) + (K2 − K)/2(Stage II) + 3K(Stage III) = 0.5K2 + 3.5K + 1. For K < 17, an efficient design of experiments exists for this type of model, a Box–Behnken design,[9] augmented with positive and negative axial points of length min(2, (int(1.5 + K/4))1/2), plus point(s) at the origin. There are more efficient designs, requiring fewer runs, even for K > 16.
+Contents  [hide] 
+1 Main approaches
+2 Selection criterion
+3 Model accuracy
+4 Criticism
+5 See also
+6 References
+Main approaches[edit]
+The main approaches are:
 
-While a lot can be learned with stepwise regression, there are some potential pitfalls to be aware of:
+Forward selection, which involves starting with no variables in the model, testing the addition of each variable using a chosen model comparison criterion, adding the variable (if any) that improves the model the most, and repeating this process until none improves the model.
+Backward elimination, which involves starting with all candidate variables, testing the deletion of each variable using a chosen model comparison criterion, deleting the variable (if any) that improves the model the most by being deleted, and repeating this process until no further improvement is possible.
+Bidirectional elimination, a combination of the above, testing at each step for variables to be included or excluded.
+A widely used algorithm was first proposed by Efroymson (1960).[10] This is an automatic procedure for statistical model selection in cases where there is a large number of potential explanatory variables, and no underlying theory on which to base the model selection. The procedure is used primarily in regression analysis, though the basic approach is applicable in many forms of model selection. This is a variation on forward selection. At each stage in the process, after a new variable is added, a test is made to check if some variables can be deleted without appreciably increasing the residual sum of squares (RSS). The procedure terminates when the measure is (locally) maximized, or when the available improvement falls below some critical value.
 
-If two independent variables are highly correlated, only one may end up in the model even though both may be important.
-Because the procedure fits many models, it could be selecting models that fit the data well due to chance alone
-Stepwise regression may not always end with the model with the highest R2 value possible for a given number of predictors.
-Automatic procedures cannot take into account special knowledge the analyst may have about the data. Therefore, the model selected may not be the most practical one.
-Graphing individual predictors against the response is often misleading because graphs do not account for other predictors in the model.
-\newpage
+Selection criterion[edit]
+One of the main issues with stepwise regression is that it searches a large space of possible models. Hence it is prone to overfitting the data. In other words, stepwise regression will often fit much better in sample than it does on new out-of-sample data. This problem can be mitigated if the criterion for adding (or deleting) a variable is stiff enough. The key line in the sand is at what can be thought of as the Bonferroni point: namely how significant the best spurious variable should be based on chance alone. On a t-statistic scale, this occurs at about \sqrt{2 \log p}, where p is the number of predictors. Unfortunately, this means that many variables which actually carry signal will not be included. This fence turns out to be the right trade-off between over-fitting and missing signal. If we look at the risk of different cutoffs, then using this bound will be within a 2logp factor of the best possible risk. Any other cutoff will end up having a larger such risk inflation.[11][12]
 
+Model accuracy[edit]
+A way to test for errors in models created by step-wise regression, is to not rely on the model's F-statistic, significance, or multiple R, but instead assess the model against a set of data that was not used to create the model.[13] This is often done by building a model based on a sample of the dataset available (e.g., 70%) and use the remaining 30% dataset to assess the accuracy of the model. Accuracy is then often measured as the actual standard error (SE), MAPE, or mean error between the predicted value and the actual value in the hold-out sample.[14] This method is particularly valuable when data are collected in different settings (e.g., different times, social vs. solitary situations) or when models are assumed to be generalizable.
 
-\end{document}
+Criticism[edit]
+Stepwise regression procedures are used in data mining, but are controversial. Several points of criticism have been made.
+
+The tests themselves are biased, since they are based on the same data.[15][16] Wilkinson and Dallal (1981)[17] computed percentage points of the multiple correlation coefficient by simulation and showed that a final regression obtained by forward selection, said by the F-procedure to be significant at 0.1%, was in fact only significant at 5%.
+When estimating the degrees of freedom, the number of the candidate independent variables from the best fit selected is smaller than the total number of final model variables, causing the fit to appear better than it is when adjusting the r2 value for the number of degrees of freedom. It is important to consider how many degrees of freedom have been used in the entire model, not just count the number of independent variables in the resulting fit.[18]
+Models that are created may be over-simplifications of the real models of the data.[19]
+Such criticisms, based upon limitations of the relationship between a model and procedure and data set used to fit it, are usually addressed by verifying the model on an independent data set, as in the PRESS procedure.
+
+Critics regard the procedure as a paradigmatic example of data dredging, intense computation often being an inadequate substitute for subject area expertise. Additionally, the results of stepwise regression are often used incorrectly without adjusting them for the occurrence of model selection. Especially the practice of fitting the final selected model as if no model selection had taken place and reporting of estimates and confidence intervals as if least-squares theory were valid for them, has been described as a scandal.[7] Widespread incorrect usage and the availability of alternatives such as Ensemble learning, leaving all variables in the model, or using expert judgement to identify relevant variables have led to calls to totally avoid stepwise model selection.[5]
