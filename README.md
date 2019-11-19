@@ -1,2 +1,4 @@
-# StatsMaster
-Statistics Master
+Linear Regression Models
+========================
+
+Linear Regression Models

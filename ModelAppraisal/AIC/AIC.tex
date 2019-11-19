@@ -1,0 +1,47 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Akaike's Information Criterion} %\input{tcilatex}
+
+\begin{document}
+\section*{Akaike's Information Criterion}
+
+\begin{itemize}
+\item The AIC is a model selection metric often used in statistics. 
+\item Akaike's information criterion is a measure of the goodness of fit of an estimated statistical model.
+
+\item The AIC was developed by Hirotsugu Akaike under the name of ``An Information Criterion" in 1971.
+
+\item The AIC is calculated using the "likelihood function" and the number of parameters. The likelihood value is generally given in code output, as a complement to the AIC.
+
+\item It is computed using the R command
+\texttt{\textbf{AIC()}}. The candidate model with the smallest AIC value is considered preferable.
+
+\item The AIC is a "model selection" tool i.e. a method of comparing two 
+or more candidate models.
+\item The AIC methodology attempts to find the model that best explains the data with a minimum of parameters.
+(i.e. in keeping with the Law of parsimony)
+
+\item Given a data set, several competing models may be ranked according to their AIC, with the one having the lowest AIC being the best. \textit{(A difference in AIC values of less than two is considered negligible)}
+\end{itemize}
+
+
+\end{document}
