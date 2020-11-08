@@ -1,0 +1,137 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{framed}
+
+\begin{document}
+
+
+
+\section*{Entropy Calculations}
+Suppose we have a five letter source alphabet, with m=5 symbols i.e. $\{A,B,C,D,E\}$.
+In each of the following 7 examples, we adjust the probabilities for each symbol. We compute the information for each symbol ($I(x_i)$), and hence the entropy ($H(X)$).
+\[ I(x_i) = -\mbox{log}_2(p(x_i)) \]
+\[ H(X) = \sum^{i=m}_{i=1} (I(x_i) \times p(x_i)) \]
+\subsection*{Example 1}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$x_i$	&	$P(x_i)$	&	$I(x_i)$	&	$P(x_i) \times I(x_i)$	\\ \hline	\hline
+A	&	0.990	&	0.0145	&	0.0144	\\ \hline	
+B	&	0.005	&	7.6439	&	0.0382	\\ \hline	
+C	&	0.002	&	8.9658	&	0.0179	\\ \hline	
+D	&	0.002	&	8.9658	&	0.0179	\\ \hline	
+E	&	0.001	&	9.9658	&	0.0100	\\ \hline	
+	&	1.000	&		&	0.0984	\\ \hline	
+\end{tabular} 
+\begin{itemize}
+\item 99\% of the time, the symbol $A$ is transmitted
+\item Low information content. $H(X) = 0.0984 $ b/sym
+\end{itemize}
+
+
+
+
+
+\subsection*{Example 2}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$x_i$	&	$P(x_i)$	&	$I(x_i)$	&	$P(x_i) \times I(x_i)$	\\ \hline	\hline
+A	&	0.900	&	0.1520	&	0.1368	\\ \hline	
+B	&	0.050	&	4.3219	&	0.2161	\\ \hline	
+C	&	0.020	&	5.6439	&	0.1129	\\ \hline	
+D	&	0.020	&	5.6439	&	0.1129	\\ \hline	
+E	&	0.010	&	6.6439	&	0.0664	\\ \hline	
+	&	1.000	&		&	0.6451	\\ \hline	
+\end{tabular} 
+\begin{itemize}
+\item 90\% of the time, the symbol $A$ is transmitted. Other symbols more common.
+\item Slightly higher information content. $H(X) = 0.6451 $ b/sym
+\end{itemize}
+\newpage
+\subsection*{Example 3}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$x_i$	&	$P(x_i)$	&	$I(x_i)$	&	$P(x_i) \times I(x_i)$	\\ \hline	\hline
+A	&	0.800	&	0.3219	&	0.2575	\\ \hline	
+B	&	0.100	&	3.3219	&	0.3322	\\ \hline	
+C	&	0.050	&	4.3219	&	0.2161	\\ \hline	
+D	&	0.030	&	5.0589	&	0.1518	\\ \hline	
+E	&	0.020	&	5.6439	&	0.1129	\\ \hline	
+	&	1.000	&		&	1.0705	\\ \hline
+\end{tabular} 
+\begin{itemize}
+\item 80\% of the time, the symbol $A$ is transmitted. Again, other symbols more common.
+\item Slightly higher information content. $H(X) = 1.0705 $ b/sym
+\end{itemize}
+\subsection*{Example 4}
+\begin{itemize}
+\item Continue process of equalizing symbol probabilities over next few examples. 
+\item Entropy values consistently increase. 
+\end{itemize}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$x_i$	&	$P(x_i)$	&	$I(x_i)$	&	$P(x_i) \times I(x_i)$	\\ \hline	\hline
+A	&	0.650	&	0.6215	&	0.4040	\\ \hline	
+B	&	0.110	&	3.1844	&	0.3503	\\ \hline	
+C	&	0.100	&	3.3219	&	0.3322	\\ \hline	
+D	&	0.080	&	3.6439	&	0.2915	\\ \hline	
+E	&	0.060	&	4.0589	&	0.2435	\\ \hline	
+	&	1.000	&		&	1.6215	\\ \hline
+\end{tabular} 
+\begin{itemize}
+\item information content. $H(X) = 1.6215 $ b/sym
+\end{itemize}
+\subsection*{Example 5}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$x_i$	&	$P(x_i)$	&	$I(x_i)$	&	$P(x_i) \times I(x_i)$	\\ \hline	\hline
+A	&	0.400	&	1.3219	&	0.5288	\\ \hline	
+B	&	0.250	&	2.0000	&	0.5000	\\ \hline	
+C	&	0.150	&	2.7370	&	0.4105	\\ \hline	
+D	&	0.120	&	3.0589	&	0.3671	\\ \hline	
+E	&	0.080	&	3.6439	&	0.2915	\\ \hline	
+	&	1.000	&		&	2.0979	\\ \hline
+\end{tabular} 
+\begin{itemize}
+\item information content. $H(X) = 2.0979 $ b/sym
+\end{itemize}
+\subsection*{Example 6}
+\begin{tabular}{|c|c|c|c|}
+\hline$x_i$	&	$P(x_i)$	&	$I(x_i)$	&	$P(x_i) \times I(x_i)$	\\ \hline	\hline
+A	&	0.300	&	1.7370	&	0.5211	\\ \hline	
+B	&	0.250	&	2.0000	&	0.5000	\\ \hline	
+C	&	0.200	&	2.3219	&	0.4644	\\ \hline	
+D	&	0.130	&	2.9434	&	0.3826	\\ \hline	
+E	&	0.120	&	3.0589	&	0.3671	\\ \hline	
+	&	1.000	&		&	2.2352	\\ \hline	
+\end{tabular} 
+\begin{itemize}
+\item information content. $H(X) = 2.2352 $ b/sym
+\end{itemize}
+\newpage
+\subsection*{Example 7}
+\begin{itemize}
+\item Equal probability of each symbol.
+\item Maximum level of entropy.
+\item Remark, where m is the number of symbols in the source alphabet.
+ \[\mbox{log}_2(m) = \mbox{log}_2(5) = 2.3219 \]
+\end{itemize}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$x_i$	&	$P(x_i)$	&	$I(x_i)$	&	$P(x_i) \times I(x_i)$	\\ \hline	\hline
+A	&	0.200	&	2.3219	&	0.4644	\\ \hline	
+B	&	0.200	&	2.3219	&	0.4644	\\ \hline	
+C	&	0.200	&	2.3219	&	0.4644	\\ \hline	
+D	&	0.200	&	2.3219	&	0.4644	\\ \hline	
+E	&	0.200	&	2.3219	&	0.4644	\\ \hline	
+	&	1.000	&		&	2.3219	\\ \hline
+\end{tabular} 
+\begin{itemize}
+\item When each symbol is equally probably, we can say
+\[H(x) = \mbox{log}_2(m) \]
+\end{itemize}
+\end{document}
+
+
+

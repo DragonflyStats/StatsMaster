@@ -1,0 +1,319 @@
+﻿\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx} % Font Family
+\usepackage{helvet} % Font Family
+\usepackage{color}
+\mode<presentation> {
+\usetheme{Default} % was Frankfurt
+\useinnertheme{rounded}
+\useoutertheme{infolines}
+\usefonttheme{serif}
+%\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+\title[MA4413]{Statistics for Computing \\ {\normalsize MA4413 Lecture 11A}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Autumn 2011}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+\renewcommand{\arraystretch}{1.5}
+%------------------------------------------------------------------------%
+
+\begin{document}
+\begin{frame}
+\Huge
+\[\mbox{Information Theory}\]
+\[\mbox{Entropy}\]
+
+\Large
+\[\mbox{www.Stats-Lab.com}\]
+\[\mbox{Twitter: @StatsLabDublin}\]
+\end{frame}
+%----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\begin{itemize}
+\item The input source to a noisy communication channel is a random variable X over the
+four symbols $\{a, b, c, d\}$. \item  The output from this channel is a random variable Y over these same
+four symbols.
+\end{itemize}
+
+\end{frame}
+%----------------------------------------------------------------Part 2 %
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+The joint distribution of these two random variables is as follows:\\ \bigskip
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|}
+\hline
+&x=a& x=b & x=c & x=d \\ \hline \hline
+y=a &1/8 &1/16 &1/16 &1/4 \\ \hline
+y=b &1/16 & 1/8& 1/16& 0 \\ \hline
+y=c & 1/32&1/32 & 1/16 & 0\\ \hline
+y=d & 1/32& 1/32& 1/16 & 0\\ \hline 
+\end{tabular}
+\end{center}
+\end{frame}
+%----------------------------------------------------------------Part 2 %
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\begin{enumerate}
+\item Write down the marginal distribution for $X$ and compute the marginal entropy $H(X)$.
+\item Write down the marginal distribution for $Y$ and compute the marginal entropy $H(Y )$.
+%\item What is the joint entropy $H(X, Y )$ of the two random variables?
+%\item What is the conditional entropy $H(Y|X)$?
+%\item What is the conditional entropy $H(X|Y)$?
+%\item What is the mutual information $I(X;Y)$ between the two random variables?
+\end{enumerate}
+\end{frame}
+%----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+The marginal distribution of these two random variables is as follows:\\ \bigskip
+\begin{center}
+\begin{tabular}{|c||c|c|c|c||c|}
+\hline
+&x=a& x=b & x=c & x=d & P(Y)\\ \hline\hline
+y=a &1/8 &1/16 &1/16 &1/4 & \\ \hline
+y=b &1/16 & 1/8& 1/16& 0 &\\ \hline
+y=c & 1/32&1/32 & 1/16 & 0& \\ \hline
+y=d & 1/32& 1/32& 1/16 & 0& \\ \hline \hline
+P(X) & &&  & &\\ \hline
+\end{tabular}
+\end{center}
+\end{frame}
+%----------------------------------------------------------------Part 2 %
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+The marginal distribution of these two random variables is as follows:\\ \bigskip
+\begin{center}
+\begin{tabular}{|c||c|c|c|c||c|}
+\hline
+&x=a& x=b & x=c & x=d &\alert{P(Y)}\\ \hline\hline
+y=a &1/8 &1/16 &1/16 &1/4 & \alert{0.50}\\ \hline
+y=b &1/16 & 1/8& 1/16& 0 & \alert{0.25}\\ \hline
+y=c & 1/32&1/32 & 1/16 & 0& \alert{0.125}\\ \hline
+y=d & 1/32& 1/32& 1/16 & 0& \alert{0.125}\\ \hline \hline
+\alert{P(X)} & \alert{0.25}& \alert{0.25}& \alert{0.25} & \alert{0.25}&\\ \hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\vspace{-0.7cm}
+\begin{itemize}
+\item H(X), the entropy of X, is computed as\\
+ \[H(X) = -\sum P(x_i) \mbox{log}_2P(x_i)\] 
+
+\item Computing the logarithms
+\LARGE
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline $x_i$ & a & b & c & d \\ 
+\hline $P(x_i)$ & 0.25 & 0.25 & 0.25 & 0.25 \\ 
+\hline log ($P(x_i)$) &  &  &  &  \\ 
+\hline 
+\end{tabular} 
+\end{itemize}
+\end{frame}
+%--------------------------------------------------------------------------- %
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\vspace{-1cm}
+ \[H(X) = -\sum P(x_i) \mbox{log}_2P(x_i)\]
+\begin{center}
+\LARGE
+\begin{tabular}{|c|c|c|c|c|}
+\hline $x_i$ & a & b & c & d \\ 
+\hline $P(x_i)$ & 0.25 & 0.25 & 0.25 & 0.25 \\ 
+\hline log ($P(x_i)$) & -2 & -2 & -2 & -2 \\ 
+\hline $P(x_i) \times$ log ($P(x_i)$)&  &  &  &  \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\end{frame}
+
+ \begin{frame}
+ \frametitle{Information Theory: Entropy}
+ \Large
+ \vspace{-0.7cm}
+ \begin{itemize}
+ \item H(Y), the entropy of Y, is computed as\\
+  \[H(Y) = -\sum P(y_j) \mbox{log}_2P(y_j)\]
+ 
+ \item Computing the logarithms
+ \LARGE
+ 
+ \begin{tabular}{|c|c|c|c|c|}
+ \hline $y_j$ & a & b & c & d \\ 
+ \hline $P(y_j)$ & 0.50 & 0.25 & 0.125 & 0.125 \\ 
+ \hline log ($P(y_j)$) &  &  &  &  \\ 
+ \hline 
+ \end{tabular} 
+ \end{itemize}
+ \end{frame}
+ 
+
+ %--------------------------------------------------------------------------- %
+ \begin{frame}
+ \frametitle{Information Theory: Entropy}
+ \LARGE
+ \vspace{-1cm}
+  \[H(Y) = -\sum P(y_j) \mbox{log}_2P(y_j)\]
+ \begin{center}
+ \LARGE
+ \begin{tabular}{|c|c|c|c|c|}
+ \hline $y_j$ & a & b & c & d \\ 
+  \hline $P(y_j)$ & 0.50 & 0.25 & 0.125 & 0.125 \\  
+ \hline log ($P(y_j)$) & -1 & -2 & -3 & -3 \\ 
+ \hline $P(y_j) \times$ log ($P(y_j)$)&  &  &  &  \\ 
+ \hline 
+ \end{tabular} 
+ \end{center}
+ 
+
+\end{frame}
+%------------------------------------------------ %
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\begin{itemize}
+\item H(X), the entropy of X, is 
+\[H(X) = 2 \mbox{b}.\] 
+\item H(Y), the entropy of Y, is 
+\[H(Y) = 1.75 \mbox{b}.\] 
+\end{itemize}
+\end{frame}
+%------------------------------------------------ %
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+
+\end{frame}
+\begin{frame}
+\frametitle{Entropies: Example (f)}
+\begin{itemize}
+
+\item To compute the joint entropy $H(X,Y)$,  we will use $H(X,Y) = -\sum P(x_i,y_y) \mbox{log}_2P(x_i,y_j)$
+\bigskip
+\item This means we should compute the entropy component for each cell of the table, and sum up all the resultant terms.
+\bigskip
+\item To save time, we will aggregate similar results, \begin{itemize} \item there are 4 cells where the probability is $1/32$,\item 6 cells with probability $1/16$, \item 2 cells with probability $1/8$ \item and 1 cell with probability $1/4$. \end{itemize}
+\item Solving
+\[ H(X,Y) = [4 \times -{1\over 32} \mbox{log}_2 {1\over 32} ] + [6 \times -{1\over 16} \mbox{log}_2 {1\over 16} ] + \ldots + [1 \times -{1\over 4} \mbox{log}_2 {1\over 4} ] \]
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Entropies: Example (g)}
+\begin{itemize}
+\item Simplifying\[ H(X,Y) = [4 \times -{1\over 32} \mbox{log}_2 {1\over 32} ] + [6 \times -{1\over 16} \mbox{log}_2 {1\over 16} ] + \ldots + [1 \times -{1\over 4} \mbox{log}_2 {1\over 4} ] \]
+\item Simplifying \[H(X,Y) = [-{4\over 32} \times -5 ] + [-{6\over 16} \times -4 ] + [-{2\over 8} \times -3 ] + [ -{1\over 4} \times -2]\]
+\item $H(X,Y) = 27/8$ b.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Entropies: Example (h)}
+From last lecture, two useful relationships among the types of entropies are
+\begin{itemize}
+\item $H(X,Y)=H(X|Y)+H(Y) $
+\item $H(X,Y)=H(Y|X)+H(X) $
+\end{itemize}
+\bigskip
+Re-arranging these formulae
+\begin{itemize}
+\item $H(X,Y)-H(Y) = H(X|Y) $
+\item $H(X,Y)-H(X) = H(Y|X) $
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Entropies: Example (i)}
+Re-arranging these formulae
+\begin{itemize}
+\item $H(X|Y) = H(X,Y)-H(Y) = 27/8 - 14/8 = 13/8$ b. \bigskip
+\item $H(Y|X) = H(X,Y)-H(X) = 27/8 - 16/8 = 11/8$ b.
+\end{itemize}
+\bigskip
+\begin{itemize}
+\item Remark $1.75 =14/8$ and $2 = 16/8$.\\\bigskip
+\item Also: we will derive $H(Y|X$ and $H(X|Y)$ from first principles in a tutorial.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Entropies: Example (j)}
+There are three alternative ways to obtain the answer:
+\begin{itemize}
+\item $I(X; Y ) = H(Y ) - H(Y |X)$ = $7/4 - 11/8 = 3/8$ b.
+\item $I(X; Y ) = H(X) - H(X|Y)$ = $2 - 13/8 = 3/8$ b.
+\item $I(X; Y ) = H(X) + H(Y ) - H(X,Y )$ = $2 + 7/4 - 27/8 = (16+14-27)/8 = 3/8$b.
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{ Kraft inequality}
+\begin{itemize}
+\item Let X be a DMS with alphabet ($x _i = \{1, 2, . . . ,m\}$). Assume that the length of the assigned binary
+code word corresponding to x, is n.
+\item A necessary and sufficient condition for the existence of an instantaneous binary code is
+
+ \[ K = \sum^{m}_{i=1}2^{-n_i} \leq 1 \]
+which is known as the \textbf{Kraft inequality}.
+\item Note that the Kraft inequality assures us of the existence of an instantaneously decodable code
+with code word lengths that satisfy the inequality. But it does not show us how to obtain these code
+words, nor does it say that any code that satisfies the inequality is automatically uniquely decodable
+\end{itemize}
+\end{frame}
+
+
+% - Lossless data compression.
+% - Huffman Coding
+% - Inverse Mapping
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

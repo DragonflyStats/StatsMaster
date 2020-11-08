@@ -1,0 +1,138 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{framed}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MA4603} \rhead{Week 3} \chead{Science Maths 3 (Statistics)} %\input{tcilatex}
+%opening
+%\title{MA4413 }
+%\author{Tutorial Sheet for }
+
+\begin{document}
+
+\newpage
+2.	A die is rolled until a number divisible by 3 is obtained. Calculate the probability that
+i)	the die is rolled exactly once.
+ii)	the die is rolled exactly five times.
+iii)	the number of rolls is even.
+
+
+3.	A die is thrown 720 times.
+a)	What is the distribution of the number of sixes obtained?
+
+b) Using an appropriate approximation, estimate the probability that
+i) exactly 120 sixes are obtained.
+ii) between 115 and 127 (inclusively) sixes are obtained.
+
+
+
+	
+	
+	
+\begin{enumerate}	
+	
+	%--------------------------------------------------%	
+	\item In the British national lottery 6 numbers are chosen without replacement from 49. Calculate the probability of 
+	i)	winning the jackpot (choosing all 6 numbers correctly)
+	ii)	winning the smallest prize (choosing 3 of the 6 numbers correctly)
+	iii)	choosing at least one of the numbers correctly.
+	%--------------------------------------------------%	
+	
+	\item	I obtain a hand of 13 cards. Calculate the probability of
+	\begin{enumerate}[(i)]
+		\item obtaining 2 aces.
+		\item obtaining 2 aces and 2 kings.
+		\item obtaining 2 aces or 2 kings.	
+	\end{enumerate}
+	
+	
+	\item A computer chooses a number at random n times from the set {1, 2, 3, 4, 5} (with replacement). Let S denote the sum of the numbers chosen. Show that
+	E(S) = 3n and Var(S) = 2n.
+	
+	%\item	Let Y=aX+b. Prove that i) E(Y)=aE(X)+b, ii) Var(Y)=a2Var(X).
+	
+	
+	
+	\item	The probabilities with which Liverpool win, draw or lose a premier league match are 0.5, 0.3 and 0.2, respectively. Calculate the probability that in 8 matches
+	\begin{enumerate}[(i)]
+		\item 	Liverpool lose 2 matches.
+		\item	Liverpool win 5 matches and draw 2.
+	\end{enumerate}
+	
+	
+	\item	A die is thrown until either a six is obtained or five rolls are done (a truncated geometric distribution). Let X be the number of rolls.
+	\begin{enumerate}[(i)]
+		\item 	Define the cumulative distribution function of X.
+		\item	Find the median of X.
+	\end{enumerate}	
+	
+
+	
+	
+	
+
+\end{enumerate}
+
+	%=====================================%
+	\subsection*{Question 1 Part A}
+	
+	\noindent \textbf{Useful:} Binomial Probability Tree 
+	\begin{itemize}
+		\item All possible Outcomes:
+		$\{ (HHH), (HHT), (HTH), (HTT) , (THH), (THT), (TTH),(TTT)\} $
+		
+		
+		
+		\item ``More Heads than Tails" means 2 or 3 Heads. Sample space from above written in terms of numbers f Heads: $\{ (3), (2), (2), (1), (2),(1),(1),(0)\} $
+		
+		\[ \Pr(\mbox{More Heads than Tails} = \Pr(\mbox{2 Heads}) + \Pr(\mbox{3 Heads}) = 3/8 + 1/8 \]
+		
+		\item $ \Pr(\mbox{2 Heads}) = 3/8 $
+		
+	\end{itemize}
+	
+	
+	
+
+	%=====================================%
+	\subsection*{Question 1 Part C}
+	Compute the probability $p$ of each event:
+	\begin{itemize}
+		\item[(i)] An even number appears in the toss of a fair die,
+		\\
+		Sample Space: $\{1,2,3,4,5,6\}$
+		\\
+		Relevant Sample Points : $\{2,4,6\}$
+		\\ P(Even) = 0.5
+		\\ \smallskip
+		\item[(ii)] One or more tails appear in the toss of three fair coins,
+		\\ (Based on Previous)
+		\\ 7 of the 8 Sample Points in the Sample Space have a Tail
+		\\ smallskip
+		\item[(iii)] A blue marble appears in a random drawing of one marble from a box containing four white, three blue, and five red marbles.
+		\\ P(Blue) = 3/12 = 0.25
+	\end{itemize}
+	
+	
+	
+	
+
+\end{document}

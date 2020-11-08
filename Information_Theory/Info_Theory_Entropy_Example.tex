@@ -1,0 +1,102 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx} % Font Family
+\usepackage{helvet} % Font Family
+\usepackage{color}
+\mode<presentation> {
+	\usetheme{Default} % was Frankfurt
+	\useinnertheme{rounded}
+	\useoutertheme{infolines}
+	\usefonttheme{serif}
+	%\usecolortheme{wolverine}
+	% \usecolortheme{rose}
+	\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+\title[MA4413]{Statistics for Computing \\ {\normalsize MA4413 Lecture 11A}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Autumn 2012}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+\renewcommand{\arraystretch}{1.5}
+%------------------------------------------------------------------------%
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{document}
+%----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Entropies: Example}
+\begin{itemize}
+\item The input source to a noisy communication channel is a random variable X over the
+four symbols $\{a, b, c, d\}$. \item  The output from this channel is a random variable Y over these same
+four symbols.
+\end{itemize}
+
+\end{frame}
+%----------------------------------------------------------------Part 2 %
+\begin{frame}
+\frametitle{Entropies: Example}
+The joint distribution of these two random variables is as follows:\\ \bigskip
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+&x=a& x=b & x=c & x=d \\ \hline
+y=a &1/8 &1/16 &1/16 &1/4 \\ \hline
+y=b &1/16 & 1/8& 1/16& 0 \\ \hline
+y=c & 1/32&1/32 & 1/16 & 0\\ \hline
+y=d & 1/32& 1/32& 1/16 & 0\\ \hline
+\end{tabular}
+\end{center}
+\end{frame}
+%----------------------------------------------------------------Part 2 %
+\begin{frame}
+\frametitle{Entropies: Example}
+\begin{itemize}
+\item Write down the marginal distribution for $X$ and compute the marginal entropy $H(X)$.
+\item Write down the marginal distribution for $Y$ and compute the marginal entropy $H(Y )$.
+\item (next class) What is the joint entropy $H(X, Y ) $ of the two random variables?
+\item (next class) What is the conditional entropy $H(Y|X)$?
+\item (next class) What is the conditional entropy $H(X|Y)$?
+\item (next class) What is the mutual information $I(X;Y)$ between the two random variables?
+\end{itemize}
+\end{frame}
+%----------------------------------------------------------------------------------%
+%----------------------------------------------------------------Part 2 %
+\begin{frame}
+\frametitle{Entropies: Example}
+The marginal distribution of these two random variables is as follows:\\ \bigskip
+\begin{center}
+\begin{tabular}{|c|c|c|c|c||c|}
+\hline
+&x=a& x=b & x=c & x=d &\alert{P(Y)}\\ \hline
+y=a &1/8 &1/16 &1/16 &1/4 & \alert{0.50}\\ \hline
+y=b &1/16 & 1/8& 1/16& 0 & \alert{0.25}\\ \hline
+y=c & 1/32&1/32 & 1/16 & 0& \alert{0.125}\\ \hline
+y=d & 1/32& 1/32& 1/16 & 0& \alert{0.125}\\ \hline \hline
+\alert{P(X)} & \alert{0.25}& \alert{0.25}& \alert{0.25} & \alert{0.25}&\\ \hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Entropies: Example}
+\begin{itemize}
+
+\item H(X) , the entropy of X, is computed as\\
+ \[H(X) = -\sum P(x_i) \mbox{log}_2P(x_i)\] \item $H(X) =  (-0.25 \times -2) + (-0.25 \times -2) +(-0.25 \times -2) +(-0.25 \times -2)$\item $ H(X) = 2 \mbox{b}$ \bigskip
+
+\item H(X) , the entropy of Y, is computed as\\
+ \[H(Y) = -\sum P(y_j) \mbox{log}_2P(y_j)\] \item $H(Y) =  (-0.5 \times -1) +(-0.25 \times -2)  + (-0.125 \times -3)  +(-0.125 \times -3)$\item $ H(Y) = 1.75 \mbox{b}$
+
+
+\end{itemize}
+\end{frame}
+
+
+\end{document}

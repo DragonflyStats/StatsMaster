@@ -1,0 +1,78 @@
+
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+
+\mode<presentation> {
+	\usetheme{Default} % was Frankfurt
+	\useinnertheme{rounded}
+	\useoutertheme{infolines}
+	\usefonttheme{serif}
+	%\usecolortheme{wolverine}
+	% \usecolortheme{rose}
+	\usefonttheme{structurebold}
+}
+
+\setbeamercovered{dynamic}
+
+\title[MA4413]{Statistics for Computing \\ {\normalsize Lecture 10B}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Autumn 2012}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+
+\begin{document}
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Information Rate}
+If the time rate at which source X emits symbols is $r$ (symbols/second), the information rate R of the
+source is given by
+
+\[R = rH(X) \mbox{      (b/second)} \]
+
+\end{frame}
+
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information Rate : Example}
+\begin{itemize}
+
+\item A high-resolution TV picture consists of about $2 \times 10^6$ picture elements (symbols) and 16
+different brightness levels. \item Pictures are repeated at a rate of 32 per second. \item All picture elements
+are assumed to be independent, and all levels have equal likelihood of occurrence. \item Calculate the
+average rate of information conveyed by this TV picture source.
+
+\end{itemize}
+\end{frame}
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information Rate : Example}
+\begin{itemize}
+\item $H(X) = - \sum \limits^{16}_{i=1} {1\over16} \mbox{log}_2{1\over16}$ \bigskip
+
+\item i.e. $H(X) = [ -{1\over16} \mbox{log}_2{1\over16} ] + [- {1\over16} \mbox{log}_2{1\over16} ] \ldots [ -{1\over16} \mbox{log}_2{1\over16}) ] $ \bigskip
+\item Sixteen identical terms. Compute one and multiply by 16.
+
+\[ H(X) = 16 \times [ -{1\over16} \mbox{log}_2{1\over16} ]  = -\mbox{log}_2{1\over16} = -(-4) = 4\] \bigskip
+\item $H(X)= 4$ b
+\item $r =  2(10^6)(32) = 64(10^6)$ elements/sec \bigskip
+
+\item $R = rH(X) = 64(10^6)(4) = 256(l0^6) \mbox{ b/sec } = 256 \mbox{ Mb/sec }$ \bigskip
+\end{itemize}
+\end{frame}
+%\end{document}
+
+\end{document}

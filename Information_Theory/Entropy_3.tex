@@ -1,0 +1,231 @@
+﻿\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx} % Font Family
+\usepackage{helvet} % Font Family
+\usepackage{color}
+\mode<presentation> {
+	\usetheme{Default} % was Frankfurt
+	\useinnertheme{rounded}
+	\useoutertheme{infolines}
+	\usefonttheme{serif}
+	%\usecolortheme{wolverine}
+	% \usecolortheme{rose}
+	\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+\title[MA4413]{Statistics for Computing \\ {\normalsize MA4413 Lecture 11A}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Autumn 2011}
+%\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+\renewcommand{\arraystretch}{1.5}
+%------------------------------------------------------------------------%
+
+\begin{document}
+\begin{frame}
+\Huge
+\[\mbox{Information Theory}\]
+\[\mbox{Entropy}\]
+
+\Large
+\[\mbox{www.Stats-Lab.com}\]
+\[\mbox{Twitter: @StatsLabDublin}\]
+\end{frame}
+%----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\vspace{-0.5cm}
+\begin{itemize}
+\item The input source to a noisy communication channel is a random variable X over the
+four symbols $\{a, b, c, d\}$. \item  The output from this channel is a random variable Y over these same
+four symbols.
+\item The marginal entropies for $X$ and $Y$ are \\$H(X)=2$bs, \\$H(Y)=1.75$bs.
+\item The joint entropy of $X$ and $Y$ is\\  $H(X,Y)$ = $3.375$bs.
+\end{itemize}
+\end{frame}
+%----------------------------------------------------------------Part 2 %
+
+%----------------------------------------------------------------Part 2 %
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\begin{enumerate}
+\item What is the conditional entropy $H(Y|X)$?
+\item What is the conditional entropy $H(X|Y)$?
+\item What is the mutual information $I(X;Y)$ between the two random variables?
+\end{enumerate}
+\end{frame}
+%----------------------------------------------------------------------------
+
+
+
+%------------------------------------------------ %
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\begin{itemize}
+\item H(X), the entropy of X, is 
+\[H(X) = 2 \mbox{b}.\] 
+\item H(Y), the entropy of Y, is 
+\[H(Y) = 1.75 \mbox{b}.\] 
+\end{itemize}
+\end{frame}
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\vspace{-0.5cm}
+Relationship between conditional, joint and marginal entropy.
+\begin{itemize}
+\item $H(X,Y)=H(X|Y)+H(Y) $
+\item $H(X,Y)=H(Y|X)+H(X) $    (Equivalently)
+\end{itemize}
+\bigskip
+Re-arranging these equations
+\begin{itemize}
+\item $H(X,Y)-H(Y) = H(X|Y) $
+\item $H(X,Y)-H(X) = H(Y|X) $
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\vspace{-1.8cm}
+\begin{itemize}
+\item $H(X|Y) = H(X,Y)-H(Y)$
+\bigskip\vspace{1.5cm}
+\item $H(Y|X) = H(X,Y)-H(X)$ 
+\end{itemize}
+\bigskip
+%------------------------------------------------------------ %
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\vspace{-1.2cm}
+\begin{itemize}
+\item $H(X|Y) = H(X,Y)-H(Y)$ \\ \bigskip $= 3.375 - 1.75 = 1.625$ b
+\bigskip\vspace{0.8cm}
+\item $H(Y|X) = H(X,Y)-H(X)$ \\ \bigskip $= 3.375 - 2.0 = 1.375$ b
+\end{itemize}
+\bigskip
+
+
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\vspace{-1.5cm}
+The formula for computing mutual information $I(X;Y)$ is 
+\[I(X; Y ) = H(X) + H(Y ) - H(X,Y )\]
+
+\begin{itemize}
+\item $H(X)$ = 2b
+\item $H(Y)$ = 1.75b
+\item $H(X,Y) $ = 3.375b
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Information Theory: Entropy}
+\Large
+\vspace{-1.5cm}
+The formula for computing mutual information $I(X;Y)$ is 
+\[I(X; Y ) = H(X) + H(Y ) - H(X,Y )\]
+
+\begin{itemize}
+\item $H(X)$ = 2b
+\item $H(Y)$ = 1.75b
+\item $H(X,Y) $ = 3.375b
+\end{itemize}
+\LARGE
+\[I(X; Y ) = 3 + 1.75 - 3.375 = 0.375\mbox{b}\]
+\end{frame}
+
+
+
+
+% - Lossless data compression.
+% - Huffman Coding
+% - Inverse Mapping
+
+
+
+
+
+
+%-----------------------------------------------------------------------------------------------%
+\begin{frame} % ULCIS
+\frametitle{Self Information}Self-information
+This is defined by the following mathematical formula:$I(A) = −logb P(A)$
+
+The self-information of an event measures the amount of one's surprise
+evoked by the event. The negative logarithm $−logb P(A)$ can also be written as \[
+log_b  {1 \over P(A)} \]
+Note that log(1) = 0, and that $| − log(P(A))|$ increases as P(A) decreases
+from 1 to 0. This supports our intuition from daily experience. For example,
+a low-probability event tends to cause more ``surprise".
+\end{frame}
+
+
+%-------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Example}
+For a simple example, we will take a short phrase and derive our probabilities from a frequency count of letters within that phrase. The resulting encoding should be good for compressing this phrase, but of course will be inappropriate for other phrases with a different letter distribution.
+
+"All you base are belong to us"
+}
+
+
+%----------------------------------------------------------------------------------%
+\frame{
+\frametitle{Entropy}
+\begin{itemize}
+\item Entropy is the uncertainty of a single random variable. \item We can define \textbf{\emph{conditional entropy }}$H(X|Y)$, which is the entropy of a random variable
+conditional on the knowledge of another random variable. \item The reduction in uncertainty due to another random variable is called the \textbf{\emph{mutual information}}.
+\end{itemize}
+}
+%----------------------------------------------------------------------------------%
+
+
+
+
+\frame{
+\frametitle{What is Information?}
+\begin{itemize} \item Once we agree to define the information of an event ain terms of P(a), the properties (2) and (3) will be satisfied if the information in ais defined as
+\[ I(a) = -log P(a)\]
+
+\item Remark : The base of the logarithm depends on the unit of information to be used.
+\end{itemize}
+}
+
+
+
+%-------------------------------------------------------------------------------------------%
+\frame{
+Ambiguity occurs if there is any path to some symbol whose label is a prefix of the label of a path to some other symbol. In the Huffman tree, every symbol is a \textbf{\emph{leaf}}. Thus it is impossible for the label of a path to a leaf to be a prefix of any other path label, and so the mapping defined by Huffman coding has an inverse and decoding is possible.
+}
+%-------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Example}
+For a simple example, we will take a short phrase and derive our probabilities from a frequency count of letters within that phrase. The resulting encoding should be good for compressing this phrase, but of course will be inappropriate for other phrases with a different letter distribution.
+
+"All you base are belong to us"
+}
+
+\end{document}

@@ -1,0 +1,164 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+
+\mode<presentation> {
+ \usetheme{Default} % was Frankfurt
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+
+\setbeamercovered{dynamic}
+
+\title[MA4413t]{Statistics for Computing \\ {\normalsize Lecture 10B}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Summer 2011}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+
+\begin{document}
+
+
+%-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+
+
+% page 247 
+
+\begin{frame}
+\frametitle{Information Rate}
+If the time rate at which source X emits symbols is r (symbols/s), the lnformation rate R of the
+source is given by
+
+%\[R ; r11(X) b/s (10.10)\]
+
+\end{frame}
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{ MUTUAL INFORMATION}
+\textbf{A. Conditional and Joint Entropies:}\\
+Using the input probabilities P(x,), output probabilities $P(y_i)$, transition probabilities P(yJ|>r,),
+and joint probabilities P(x,, yy), we can define the following various entropy functions for a channel
+with m inputs and n outputs:
+ 
+\begin{itemize}
+\item H(X) = - X P(xi) log %; P(x;) (10.21)
+\item H(Y) = -2P(yj)]%<>gz Pty;) UU-22)
+\item H<X I Y) = - X X %P<>¤r,yy)1<¤gz Ptmlyj) <10.23)
+\item H = -2 ZP%(>¢..y,) 1022 P(y,|X.) (10-24)
+\item H(X, Y) - -2 Z F%<><..y,)1¤zz P(><r.y;) <10·25)
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Conditional and Joint Entropy}
+These entropies can be interpreted as follows: H(X) is the average uncertainty of the channel input,
+and H(Y) is the average uncertainty of the channel output. The conditional entropy H(X]Y) is a
+measure of the average uncertainty remaining about the channel input after the channel output has
+been observed. And H(X] Y) is sometimes called the equivncation of X with respect to Y. \begin{itemize} \item The
+conditional entropy H(Y|X) is the average uncertainty of the channel output given that X was
+transmitted.\item  The joint entropy H(X, Y) is the average uncertainty of the communication channel as a
+whole.\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------------------%
+\begin{frame}
+Two useful relationships among the above various entropies are
+\begin{itemize} \item
+$H(X, Y)=H(X|Y)+H(Y) (10,26)$
+$H(X,Y)=H(Y|X)+H(X) (10.27)$
+\end{itemize}
+B. Mutual Information:
+The mutual information 1(X; Y) of a channel is deiined by
+I(X; Y) = H(X)— H(X|Y) b/symbol (10.28)
+\end{frame}
+
+%-----------------------------------------------------------------------------------------------%
+\begin{frame} % ULCIS 
+\frametitle{Self Information}Self-information
+This is defined by the following mathematical formula:$I(A) = −logb P(A)$
+
+The self-information of an event measures the amount of one’s surprise
+evoked by the event. The negative logarithm $−logb P(A)$ can also be written as \[
+log_b  {1 \over P(A)} \]
+Note that log(1) = 0, and that $| − log(P(A))|$ increases as P(A) decreases
+from 1 to 0. This supports our intuition from daily experience. For example,
+a low-probability event tends to cause more ``surprise".
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------%
+
+
+
+\begin{frame}
+\frametitle{Code efficiency and Code redundancy}
+% Pg 253/254
+The parameter $L$ represents the average number of bits per source symbol used in the source coding process.
+The code efficiency is defined as \[\nu = {L_{min} \over L} \]where $L_{min}$ is the minimum possiblve value of $L$. When $\nu$ approaches unity, the codes is said to be efficient. 
+The code redundancy $\gamma$ is defined as $\gamma = 1- \nu$.
+\end{frame}
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+%page 254
+\frametitle{Source Coding Theorem}
+The source coding theorem states that for zi DMS X with entropy $H(X)$, the average code word length $L$ per symbol is bounded as
+L 2 H(X) (10.52)
+
+and further, L can bc made as close to H(X) as dcsircd for some suitably chosen code.
+Thus, with$ L_{min} \geq H(X)$.
+
+The code efficiency can be rewritten as
+\[\nu = {H(X) \over L} \]
+\end{frame}
+
+
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{ Kraft inequality}
+\begin{itemize}
+\item Let X be a DMS with alphabet ($x _i = \{1, 2, . . . ,m\}$). Assume that the length of the assigned binary
+code word corresponding to x, is n,.
+\item A necessary and sufficient condition for the existence of an instantaneous binary code is
+ 
+ \[ K = \sum^{m}_{i=1}2^{-n_i} \leq 1 \]
+which is known as the \textbf{Kraft inequality}.
+\item Note that the Kraft inequality assures us of the existence of an instantaneously decodable code
+with code word lengths that satisfy the inequality. But it does not show us how to obtain these code
+words, nor does it say that any code that satisfies the inequality is automatically uniquely decodable
+\end{itemize}
+\end{frame}
+
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+10.5. A high-resolution black—and-white TV picture consists of about $2 \times 10^6$  picture elements and 16
+different brightness levels. Pictures are repeated at a rate of 32 per second. All picture elements
+are assumed to be independent, and all levels have equal likelihood of occurrence. Calculate the
+average rate of information conveyed by this TV picture source.\\ \bigskip
+
+%Hm — -§ img L — 4 11/111e111e111
+%P, 16 Z is
+%1 : 2(l0§)(32) : 64(l0°) elements/s
+%Hence, by Eq. (10.10)
+%R = rH(X) : 64(l0°)(4) = 256(l0°) b/s Z 256 Mb/s
+
+\end{frame}
+
+\end{document}

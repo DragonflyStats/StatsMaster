@@ -1,0 +1,122 @@
+﻿
+
+%-----------------------------------------------------------------Part 3 Data Compression %
+
+\frame{
+\frametitle{Data compression(1)}
+Data compression is the science (and art) of representing information in a compact form. Having been the domain of a relatively small group of engineers and scientists, it is now ubiquitous. \\ \bigskip It has been one of the critical enabling technologies for the on-going digital multimedia revolution for decades. Without compression techniques, none of the ever-growing Internet, digital TV, mobile communication or increasing video communication would have been practical developments. \\ \bigskip
+}
+%-----------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Data compression(1)}
+
+Data compression is an active research area in computer science. By "compressing data", we actually mean deriving techniques or, more specifically, designing efficient algorithms to:
+
+\begin{itemize}
+\item represent data in a less redundant fashion
+\item remove the redundancy in data
+\item implement coding, including both encoding and decoding.
+\end{itemize}
+
+}
+
+
+%-----------------------------------------------------------------Part 3 Data Compression %
+
+\frame{
+\frametitle{Data compression(1)}
+Data compression is the science (and art) of representing information in a compact form. 
+Having been the domain of a relatively small group of engineers and scientists, it is now ubiquitous.
+ \\ 
+\bigskip It has been one of the critical enabling technologies for the on-going digital multimedia 
+revolution for decades. Without compression techniques, none of the ever-growing Internet, digital 
+TV, mobile communication or increasing video communication would have been practical developments. \\ \bigskip
+}
+%-----------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Data compression(1)}
+
+Data compression is an active research area in computer science. By "compressing data", we actually mean deriving techniques or, more specifically, designing efficient algorithms to:
+
+\begin{itemize}
+\item represent data in a less redundant fashion
+\item remove the redundancy in data
+\item implement coding, including both encoding and decoding.
+\end{itemize}
+
+}
+
+
+\frame{
+\frametitle{Data compression(2)}
+The key approaches of data compression can be summarized as modelling + coding.
+Modelling is a process of constructing a knowledge system for
+performing compression. Coding includes the design of the code and product of the compact data form.
+
+}
+
+% - Entropy
+% - Information
+% - Mutual Information
+
+
+
+
+%-----------------------------------------------------------------------------------------------%
+\begin{frame} % ULCIS
+\frametitle{Self Information}Self-information
+This is defined by the following mathematical formula:$I(A) = −logb P(A)$
+
+The self-information of an event measures the amount of one's surprise
+evoked by the event. The negative logarithm $−logb P(A)$ can also be written as \[
+log_b  {1 \over P(A)} \]
+Note that log(1) = 0, and that $| − log(P(A))|$ increases as P(A) decreases
+from 1 to 0. This supports our intuition from daily experience. For example,
+a low-probability event tends to cause more ``surprise".
+\end{frame}
+
+
+%-------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Example}
+For a simple example, we will take a short phrase and derive our probabilities from a frequency count of letters within that phrase. The resulting encoding should be good for compressing this phrase, but of course will be inappropriate for other phrases with a different letter distribution.
+
+"All you base are belong to us"
+}
+
+
+%----------------------------------------------------------------------------------%
+\frame{
+\frametitle{Entropy}
+\begin{itemize}
+\item Entropy is the uncertainty of a single random variable. \item We can define \textbf{\emph{conditional entropy }}$H(X|Y)$, which is the entropy of a random variable
+conditional on the knowledge of another random variable. \item The reduction in uncertainty due to another random variable is called the \textbf{\emph{mutual information}}.
+\end{itemize}
+}
+%----------------------------------------------------------------------------------%
+
+
+
+
+\frame{
+\frametitle{What is Information?}
+\begin{itemize} \item Once we agree to define the information of an event ain terms of P(a), the properties (2) and (3) will be satisfied if the information in ais defined as
+\[ I(a) = -log P(a)\]
+
+\item Remark : The base of the logarithm depends on the unit of information to be used.
+\end{itemize}
+}
+
+
+
+%-------------------------------------------------------------------------------------------%
+\frame{
+Ambiguity occurs if there is any path to some symbol whose label is a prefix of the label of a path to some other symbol. In the Huffman tree, every symbol is a \textbf{\emph{leaf}}. Thus it is impossible for the label of a path to a leaf to be a prefix of any other path label, and so the mapping defined by Huffman coding has an inverse and decoding is possible.
+}
+%-------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Example}
+For a simple example, we will take a short phrase and derive our probabilities from a frequency count of letters within that phrase. The resulting encoding should be good for compressing this phrase, but of course will be inappropriate for other phrases with a different letter distribution.
+
+"All you base are belong to us"
+}

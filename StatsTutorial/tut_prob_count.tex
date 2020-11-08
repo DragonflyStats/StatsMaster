@@ -1,0 +1,239 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{multicol}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{Maths Resource} \rhead{Tutorial Sheet B} \chead{Counting Problems} %\input{tcilatex}
+\begin{document}
+	
+	\begin{enumerate}
+		
+\item 
+	In your favourite RPG game, let's assume that in selecting your character there are 5 character classes and 2 genders. Let's also assume there are 3 levels of difficulty for this game.\\[-0.2cm]
+	\begin{enumerate}[(a)]
+		\item How many possible ways can you play this game? 
+		\item What if you always choose the ``warrior'' class? 
+		\item What if you always choose a female character? 
+		\item What if you always play on the highest difficulty setting? 
+		\item  Let's assume the game has a two-player mode. How many possible ways can you play this game? (hint: you cannot play the game on different difficulty levels). \item  What if your friend chooses a different character class to you?
+		
+	\end{enumerate}
+	
+	
+	
+\item 
+	Assume that you are going to an exam and you can only bring 3 items. You have the following items: $\{\text{mobile phone, } \text{pen, } \text{ruler, } \text{calculator, } \text{laptop, } \text{apple} \}$.\\
+	
+	\begin{enumerate}[(a)]
+		\item In order to make your decision, you first \emph{arrange} these 6 items on your desk. How many possible arrangements are there? \item How many possible groups of three items can you bring with you? \item What if you decide that the pen is essential? \item What if the pen is essential and you also decide that you won't bring an apple or a laptop?
+	\end{enumerate}
+
+\item 	The following contingency table gives the results of operations in a hospital according to the complexity of the operation
+\begin{center}
+\begin{tabular}{|c|c|c|} \hline
+	& Simple	& Complex\\ \hline
+	Successful& 	1990&	950 \\ \hline
+	Unsuccessful& 	10&	50 \\ \hline
+	
+\end{tabular} 
+\end{center}
+
+
+Let A be the event that an operation is simple and B the event that an operation is successful. 
+
+Calculate $P(A)$, $P(B)$, $P(A|B)$, $P(A|B^C)$, $P(B|A)$, $P(B|A^C)$.	
+
+\item 
+A software company examined blocks of code written by its employees. Each block of code was tested for bugs and, in addition, the skill level of the employee was also recorded. See table:
+\begin{center}
+	\begin{tabular}{|cc|ccc|c|}
+		\hline
+		&&&&&\\[-0.4cm]
+		&& \multicolumn{3}{|c|}{Skill Level} &  \\
+		&& High & Average & Low & Total \\
+		\hline
+		&&&&&\\[-0.4cm]
+		Bug in   & No    &  140 &   600  & 100 & 840 \\
+		Code & Yes   &    5 &    70  &  40 & 115 \\
+		\hline
+		&&&&&\\[-0.4cm]
+		&Total &  145 &   670  & 140 & 955 \\
+		\hline
+	\end{tabular}
+\end{center}
+In answering the following questions use appropriate probability notation.\\[0.2cm]
+Let $B =$ ``bug'' and, hence, $B^c =$ ``no bug''.\\[0.1cm]
+Also let $S_H = $ ``skill: high'', $S_A = $ ``skill: average'' and $S_L =$ ``skill: low''.\\[-0.2cm]
+
+{\bf(a)} Calculate the probability that the programmer has: (i) high skill, (ii) average skill and (iii) low skill. \quad {\bf(b)} Calculate the probability of a bug. \quad {\bf(c)} Calculate the probability of a bug \emph{given that} the code was written by a programmer with: (i) high skill, (ii) average skill and (iii) low skill. \quad {\bf(d)} Comment on the above conditional (i.e., updated) probabilities compared with $\Pr(B)$ calculated in part (b). Is the presence of bugs independent of the skill level? \quad {\bf(e)} Show that $\Pr(S_A\,|\,B) > \Pr(S_L\,|\,B)$. Explain the reason for this.
+
+\item 
+	A team of 5 people is required to perform a particular task. We are selecting from a group of 7 women and 3 men.\\[0.2cm]
+	How many selections are there:\\[-0.2cm]
+	\begin{enumerate}[(a)]
+		\item 	
+	 Altogether? \item  If one of the men is an expert and must be on the team? \item If two of the individuals do not get along and cannot be on the team together? \item If the group must contain 3 women and 2 men? \item If the group must contain more women than men? \item If the group must contain more men than women?
+\end{enumerate}
+		\item In the British national lottery 6 numbers are chosen without replacement from 49. Calculate the probability of 
+		\begin{enumerate}[(a)]
+			\item		winning the jackpot (choosing all 6 numbers correctly)
+		\item	winning the smallest prize (choosing 3 of the 6 numbers correctly)
+		\item	choosing at least one of the numbers correctly.
+	\end{enumerate}
+		\item An urn contains 10 balls: 4 red and 6 blue. A second urn contains 16 red balls and an 
+	unknown number of blue balls. A single ball is drawn from each urn. The probability 
+	that both balls are the same color is 0.44 . 
+	Calculate the number of blue balls in the second urn. 
+	
+	\begin{itemize}
+		\item[(A)] 4 
+		\item[(B)] 20 
+		\item[(C)] 24 
+		\item[(D)] 44 
+		\item[(E)] 64
+	\end{itemize}
+
+
+\item A jar contains 4 blue marbles, 5 red marbles and 11 white marbles. If three marbles are drawn from the jar at random, what is the probability that the first marble is red, the second marble is blue, and the third is white?
+\begin{itemize}
+	\item The probability that the first marble is red is 5/20, or 1/4. 
+	\item The probability of the second marble being blue is 4/19, since we have one fewer marble, but not one fewer blue marble. 
+	\item And the probability that the third marble is white is 11/18, because we've already chosen two marbles. This is another measure of a dependent event.
+\end{itemize}
+\item 
+Given S is the set of all 5 digit binary strings, E is the set of a 5 digit
+binary strings beginning with a 1 and F is the set of all 5 digit binary strings ending
+with two zeroes.
+\begin{itemize}
+	\item[(a)] Find the cardinality of S, E and F.
+	\item[(b)] Draw a Venn diagram to show the relationship between the sets S, E and F.
+	Show the relevant number of elements in each region of your diagram.
+\end{itemize}
+
+\item 
+
+
+The following contingency table shows the age and sex of derby winners
+
+
+
+\begin{center}
+
+\begin{tabular}{ccc}
+	Age	&	Stallion	&	Total	 \\ \hline
+	
+	
+	age =3	&	10	&	30	 \\ \hline
+	
+	
+	age =4 	&	30	&	50	 \\ \hline
+	
+	
+	age =5	&	20	&	30	 \\ \hline
+	
+	
+	Total	&	60	&	110	 \\ \hline
+	
+\end{tabular}
+
+\end{center}
+
+
+
+
+
+A winner is chosen at random. Calculate the probability that
+
+\begin{enumerate}
+	\item the horse is a filly
+	\item the horse won as a 5-year old.
+	\item the horse was a stallion, given it won as a 3-year old
+	\item the horse was a 4-year old, given it was a filly.
+\end{enumerate}
+
+\item 	6. A survey of students was carried out before an exam. 20\% of students stated that they were very confident, 50\% stated that they were confident and 30\% were unconfident. 80\% of those who said they were very confident, 50\% of those who said they were confident and 20\% of those who said they were unconfident got at least a B1 grade. Calculate 
+\begin{enumerate}[(a)]
+	\item 	the probability that a randomly picked student  got at least a B1 grade.
+\item	given that the student got at least a B1 grade, what is the probability that he/she was very confident.
+\item	given that the student got less than a B1 grade, what is the probability that he/she was unconfident.
+
+\end{enumerate}
+
+\item 
+Combinations and Permutations Compute the following:
+
+\begin{multicols}{2}
+\begin{enumerate}[(a)] 
+	\item	5C2
+	\item	5P2
+	\item	4C0
+	\item	4C4
+	\item	6C1
+	\item	6P3
+	\item	6C2
+	\item	6C3
+\end{enumerate}
+
+\end{multicols}
+
+\item A committee of 4 must be chosen from 3 females and 4 males.
+
+\begin{enumerate}[(i)]
+	\item In how many ways can the committee be chosen.
+	\item In how many cans 2 males and 2 females be chosen.
+	\item Compute the probability of a committee of 2 males and 2 females are chosen.
+	\item Compute the probability of at least two females.
+\end{enumerate}
+
+
+\item 
+An ordered sequence of four digits is formed by choosing digits without
+repetition from the set $\{1, 2, 3, 4, 5, 6, 7\}$ .
+
+\begin{itemize}
+	\item[(i)] the total number of such sequences; (780)
+	\item[(ii)] the number of sequences which begin with an odd number; (480) N(A)
+	\item[(iii)] the number of sequences which end with an odd number; (480) (NB)
+	\item[(iv)] the number of sequences which begin and end with an odd number;(240)
+	\item[(v)] the number of sequneces which begin with an odd number or end with an
+	odd number or both; (720)
+	\item[(vi)] the number of sequences which begin with an odd number or end with an
+	odd number but not both. (480)
+\end{itemize}
+
+\item In how many ways can a group of four people be selected from three men and four women?
+In how many of these groups are there more women than men?
+%----------------------------------------------------------%
+%PAGE 66
+\item In how many ways can a group of five be selected from ten people
+How many groups can be selected if two particular people from the ten can not be selected in the same group?\\
+
+
+\item \textbf{Counting Sets using Venn Diagrams}
+%http://www.mathsireland.com/LCHGeneralNotes/PermCombProb/5_5_Prob_MultAnd/Q_5_5_Prob_MultAnd.html
+The Venn Diagram shows the number of elements in each subset of set $S$.
+If $P(A) = 3/10$ and $P(B) = 1/2$, find the values of $x$ and $y$
+
+%Page 27
+\item How many different four digit numners greater than 5000 can be formed from the digits \textbf{2,4,5,8,9} if each digit can only be used once in any given number. How many of these numbers are odd?
+
+\end{enumerate}
+\end{document}

@@ -1,0 +1,325 @@
+﻿\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+
+\mode<presentation> {
+ \usetheme{Default} % was Frankfurt
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+
+\setbeamercovered{dynamic}
+
+\title[MathsCast]{MathsCast Presentations \\ {\normalsize Data Compression}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Summer 2011}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+
+%------------------------------------------------------------------------%
+\begin{document}
+%----------------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Data Compression}
+
+}
+
+
+
+
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+\frame{Past Paper Example}
+\begin{itemize}
+\item The frequency of a `0' signal to a binary channel is 0.6. If the `0' is the input, then `0' is the output with probability 0.8.
+
+\item If `1' is the input, then output is `1' with probability 0.9.
+
+\item Calculate the probability that the input is 1, given that the output is 1.
+\end{itemize}
+
+\end{frame}
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+\frame{Past Paper Example}
+\begin{itemize}
+\item Let $IU$ be the event that the input is `1' (i.e. $I$ for Input, $U$ rather than $O$ for `1'.)
+\item Let $OU$ be the event that the output is `1' (i.e. $O$ for output.)
+\item Let $IZ$ be the event that the input is `0' (i.e. $Z$ for Zero.)
+\item Let $OZ$ be the event that the output is `0'
+\end{itemize}
+
+\begin{itemize}
+\item $P(IZ) = 0.6$  Necessarily $P(IU) = 0.4$
+\item $P(OZ|IZ) = 0.8$  Necessarily $P(OU|IZ) = 0.2$
+\item $P(OU|IU) = 0.9$  Necessarily $P(OZ|IU) = 0.1$
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example: Part 1}
+Calculate the probability that the output is `1'.
+\begin{itemize}
+\item $P(OU) = P(OU \ cap IU) + P(OU \ cap IZ)$
+
+\item $P(OU) = [P(OU|IU) \times P(IU) ] + [P(OU|IZ) \times P(IZ) ]$
+
+\item $P(OU) = [0.9 \times 0.4 ] + [0.2 \times 0.6 ]$
+
+\item $P(OU) = [0.36] + [0.12] = \boldsymbol{0.48}$
+\end{itemize}
+Necessarily $P(OZ) = 0.52$.
+\end{frame}
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example: Part 2}
+Calculate the probability that the output is `0' ( from first principles ).
+\begin{itemize}
+\item $P(OZ) = P(OZ \ cap IU) + P(OZ \ cap IZ)$
+
+\item $P(OZ) = [P(OZ|IU) \times P(IU) ] + [P(OZ|IZ) \times P(IZ) ]$
+
+\item $P(OZ) = [0.1 \times 0.4 ] + [0.8 \times 0.6 ]$
+
+\item $P(OZ) = [0.04] + [0.48] = \boldsymbol{0.52}$
+\end{itemize}
+
+\end{frame}
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example: Part 3}
+Compute $P(IU|OU)$ 
+
+\begin{itemize}
+\item Use Bayes's Theorem to solve this.
+
+\[P(IU|OU) = { P(OU|IU) \times P(IU)\over P(OU) } \]
+
+\item $P(OU|IU)\times P(IU)$ = $0.9 \times 0.4 = 0.36$
+\item From before $P(OU) = 0.48$
+\item Therefore $P(IU|OU) = 0.36 / 0.48 = \boldsymbol{0.75}$
+\item Necessarily $P(IZ|OU)  = 0.25$
+\end{itemize}
+
+\end{frame}
+
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example: Part 4}
+Compute $P(IZ|OZ)$ 
+\begin{itemize}
+\item Use Bayes's Theorem to solve this.
+
+\[P(IZ|OZ) = {P(OZ|IZ)\times P(IZ)\over P(OZ)} \]
+
+\item $P(OZ|IZ)\times P(IZ)$ = $0.8 \times 0.6 = 0.48$
+
+\item From before $P(OZ) = 0.52$
+
+\item Therefore $P(IZ|OZ) = 0.48 / 0.52 = \boldsymbol{0.923}$
+
+\item Necessarily $P(IU|OZ)  = 0.077$
+\end{itemize}
+\end{frame}
+%--------------------------------------------------------------------------------%
+\begin{frame}
+\begin{itemize}
+\item The specifications for the length of a component is a minimum of 9.90 mm  and a maximum of 10.44mm.
+
+\item A batch of parts is produced that is normally distributed with a a mean of 10.20mm and a standard deviation of 0.20mm.
+
+\item Each part costs $\$10$ to produce. Those that are too short or too long have to be scrapped, or shortened, at a further cost of $\$8$.
+
+\item Compute the percentage of the parts which are (i) Undersize (ii) Oversize.
+
+\item Compute the expecte cost of producing 10000 parts.
+
+\item Suppose we are able to adjust the processing method such that the mean is halfway between the upper and lower specification.
+\end{itemize}
+\end{frame}
+
+
+%--------------------------------------------------------------------------------%
+\begin{frame}
+\begin{itemize}
+\item The number of undersize parts is therefore 670.
+\item The number of oversize parts is therefore 1150.
+\item The number of parts that don't meet specification is therefore 1820.
+\item The additional cost is $1820 \times 8 = 14,560$
+\end{itemize}
+\end{frame}
+
+
+%--------------------------------------------------------------------------------%
+\begin{frame}
+If the mean is changed to 10.17mm, then the symmetry of the normal distribution will mean that the same number of items are too short as too long.
+
+To compute this proportion
+
+\[ z = {10.44 - 10.17 \over 0.2} = 1.35 \]
+
+\begin{itemize}
+\item From the tables $P(Z \geq 1.35) = 0.0885$
+
+\item 885 items will be too short, 885 items will be too long.
+\end{itemize}
+\end{frame}
+
+
+
+%-------------------------------------------------------------%
+
+
+\begin{frame}
+Information entropy is often used as a preliminary test for randomness. 
+
+
+Generally speaking, random data will have a high level of information entropy, and a low level of information entropy is a 
+good indicator that the data isn't random. 
+(A low level of entropy isn't definitive proof that the data isn't random, but it means you should be suspcious and submit the generator to further tests.)
+
+
+However, the converse relation doesn't hold, meaning a high degree of 
+information entropy is no guarantee of randomness. 
+For example, a compressed file (e.g., a ZIP file) has a high level of information entropy, but is 
+in fact highly structured, and it will fail many other tests for randomness. 
+Hence, you have to be a little careful using information entropy as a metric for randomness. 
+To get meaningful results, you really need to combine it with other tests.
+\end{frame}
+
+
+%-------------------------------------------------------------%
+
+
+
+
+\begin{frame}
+In information theory, entropy is a measure of the uncertainty associated with a random variable. 
+The term by itself in this context usually refers to the Shannon entropy, which quantifies, in the 
+sense of an expected value, the information contained in a message, usually in units such as bits. 
+Equivalently, the Shannon entropy is a measure of the average information content one is missing 
+when one does not know the value of the random variable. 
+The concept was introduced by Claude E. Shannon in his 1948 paper "A Mathematical Theory of Communication".
+
+
+A Source X delivers a message among a set of M possible messages $x_i$ , $i = 1, \ldots ,M$
+with fixed probabilities $p_i = p(x_i)$,  $i = 1, \ldots ,M$ (pre-defined probabilities).
+Messages can be seen as ”events”.
+\end{frame}
+
+
+%-------------------------------------------------------------%
+
+
+\begin{frame}
+
+
+Example 1:\\ Binary source with probabilities p and 1 − p\\
+H(X) = −p log p − (1 − p) log(1 − p)
+
+
+Example 2:\\ M equiprobable messages: \\
+H(x) = logM
+
+
+\end{frame}
+
+
+%-------------------------------------------------------------%
+
+
+\begin{frame}
+\frametitle{Conditional Entropy}
+Is always lower than a priori uncertainty on X
+$H(X|Y ) < H(X)$
+\end{frame}
+
+
+
+
+%-------------------------------------------------------------%
+\begin{frame}
+\frametitle{Mutual Information}
+Mutual information defined as
+I (X;Y ) = H(X) − H(X|Y )
+\begin{itemize}
+
+
+\item Represents by how much uncertainty decreases on average by knowledge of Y
+\item Represents information gained on X by observing Y
+\end{itemize}
+\end{frame}
+
+
+
+
+%-----------------------------------------------------------%
+\begin{frame}
+
+
+The $t$ distribution is the appropriate basis for
+determining the standardized test statistic when the sampling
+distribution of the mean is normally distributed but $s$ is not
+known. The sampling distribution can be assumed to be normal
+either because the population is normal or because the sample is
+large enough to invoke the central limit theorem. \\ The $t$
+distribution is required when the sample is small ($n < 30$). For
+larger samples, normal approximation can be used. For the critical
+value approach, the procedure is identical to that described in
+Section 10.3 for the normal distribution, except for the use of $t$
+instead of z as the test statistic.
+\end{frame}
+%-----------------------------------------------------------%
+\begin{frame}
+The intelligence quotient (IQ) of 36 randomly chosen students was measured.
+Their average IQ was 109.9 with a variance of 324.
+The average IQ of the population as a whole is 100.
+\begin{enumerate}
+\item Calculate the p-value for the test of the hypothesis that on average
+students are as intelligent as the population as a whole against the alternative that on average students are more intelligent.
+\item Can we conclude at a significance level of $1\%$ that students are on average more intelligent than the population as a whole?
+\item Calculate a $95\%$ confidence interval for the mean IQ of all students.
+\end{enumerate}
+\[Z_{Test} = \frac{X- \mu}{\frac{\sigma}{\sqrt{n}}} = \frac{109.9 - 100}{\frac{18}{\sqrt{36}}} = \frac{9.9}{3} = 3.3\]
+\[p.value = P(Z \geq Z_{Test}) = P(Z \geq 3.3) = 0.00048\]
+\end{frame}
+%--------------------------------------------------------------%
+\begin{frame}
+\begin{itemize}
+\item $\bar{X} \pm t_{1-\alpha/2,\nu}S.E.(\bar{X})$
+\item $\nu = 1.96$
+\item $t_{1-\alpha/2,\nu} = 1.96$
+\item $109.9 \pm (1.96 \times 3) = [104.02, 115.79]$
+\end{itemize}
+\end{frame}
+%--------------------------------------------------------------%
+\begin{frame}
+For a particular Java assembler interface, the operand stack size has the
+following probabilities:
+\begin{tabular}{|c||c|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Stack Size  & 0 & 1 & 2 & 3 & 4 \\ \hline
+ Probability & .15 & .05 & .10 &.20 &.50\\
+  \hline
+\end{tabular}
+\begin{itemize}
+\item Calculate the expected stack size.
+\item Calculate the variance of the stack size.
+\end{itemize}
+\end{frame}\end{document}
+

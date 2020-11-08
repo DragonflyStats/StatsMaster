@@ -1,0 +1,110 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx} % Font Family
+\usepackage{helvet} % Font Family
+\usepackage{color}
+\mode<presentation> {
+	\usetheme{Default} % was Frankfurt
+	\useinnertheme{rounded}
+	\useoutertheme{infolines}
+	\usefonttheme{serif}
+	%\usecolortheme{wolverine}
+	% \usecolortheme{rose}
+	\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+\title[MA4413]{Statistics for Computing \\ {\normalsize MA4413 Lecture 11B}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Autumn 2013}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+\renewcommand{\arraystretch}{1.5}
+%------------------------------------------------------------------------%
+
+\begin{document}
+%---------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Hamming's Distiance}
+\Large
+The Hamming distance between two strings of equal length is the number of positions at which the corresponding symbols are different.\\ Put another way, it measures the minimum number of substitutions required to change one string into the other, or the number of errors that transformed one string into the other.
+\end{frame} 
+%---------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Hamming's Distiance}
+The Hamming distance is named after Richard Hamming, who introduced it in his fundamental paper on Hamming codes Error detecting and error correcting codes in 1950. It is used in telecommunication to count the number of flipped bits in a fixed-length binary word as an estimate of error, and therefore is sometimes called the signal distance. Hamming weight analysis of bits is used in several disciplines including information theory, coding theory, and cryptography.
+\end{frame}
+
+
+%---------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information}
+\begin{tabular}{|l||c|c|c|c|} \hline
+$x_i$ & A & B & C & D \\ \hline \hline
+$p(x_i)$ &0.5&0.25&0.125 &0.125 \\ \hline
+$1/ p(x_i)$ &2&4&8 &8 \\ \hline
+$\mbox{log}(1/ p(x_i)$  &0.30103	 &0.60206 	  &0.90309&	0.90309 \\ \hline
+$p(x_i) [\mbox{log}(1/ p(x_i)]$ & 0.15051 &	0.15051&	0.11288 &	0.11288 \\ \hline
+\end{tabular}
+\\  \bigskip
+\large
+$H(X) = \sum p(x_i) \left[\mbox{log}({1 \over p(x_i)}\right] $  \bigskip 
+
+$H(X) = 0.15051 +	0.15051+	0.11288 +	0.11288 $ \bigskip
+
+$H(X) =  0.52680 $
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Examples}
+The fair coin 
+
+H = -1/2 log2(1/2) - 1/2 log2(1/2) \\
+= 1/2 + 1/2 \\
+= 1 bit 
+
+That biased coin, P(head)=0.75, P(tail)=0.25 
+
+$H = - 3/4 log2(3/4) - 1/4 log2(1/4) $
+$= 3/4\times0.42 + 2/4 = 0.31 + 1/2$ 
+$= 0.81 $bits, approx. 
+A biased four-sided dice, p(a)=1/2, p(c)=1/4, p(g)=p(t)=1/8 
+\[
+H = - 1/2 log2(1/2) - 1/4 log2(1/4) - 1/8 log2(1/8) - 1/8 log2(1/8) \]
+= 1 3/4 bits 
+\end{frame}
+%---------------------------------------------------------------------------------%
+\begin{frame}
+bits = - $log_2 p$  where p is the probability with which a particular value occurs
+\begin{itemize}
+\item  bits(A) = - log 2 1/2 = 1
+\item  bits(B) = - log 2 1/4 = 2
+\item  bits (C) = bits(D) = - log 2 1/8 = 3
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Entropy}
+\begin{itemize}
+\item High Entropy means that we are sampling from a uniform (boring) distribution.  Would have a flat histogram, therefore we have an equal chance of obtaining any possible value.
+\item 
+Low Entropy means that the distribution varies, it has peaks and valleys.  The histogram of frequency distribution would have many lows and maybe one or two highs.  Hence it is more predictable.
+\item
+Entropy is a measure of how pure or impure a variable is.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Information Gain} 
+Information Gain is the number of bits saved, on average, if we transmit Y and both receiver and sender know X
+
+
+\end{frame}
+
+\end{document}

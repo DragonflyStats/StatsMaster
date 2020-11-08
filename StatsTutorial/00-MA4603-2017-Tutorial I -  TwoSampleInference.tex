@@ -1,0 +1,1021 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+\begin{enumerate}
+	\item 
+	Google want to estimate the average amount (in dollars) that an individual spends after clicking on a particular Google Ad. In order to achieve this, 1000 people are randomly selected and the amount they spend is recorded. It is found that the average spend is \$42.38 and the standard deviation is \$16.80.\\[-0.2cm]
+	
+	
+	{\bf(a)} What is the data type? \quad {\bf(b)} Write down the values of: $p$, $\hat p$, $\mu$, $\bar x$, $\sigma$ and $s$. \quad {\bf(c)} Calculate a 99\% confidence interval for the average spend. \quad {\bf(d)} What value of $n$ is needed to estimate the true average spend within $\pm \,\, \$\,0.50$ with 99\% confidence? (i.e., $z_{\,0.005}\,\frac{s}{\sqrt{n}} = 0.5$)
+	
+	
+	
+	
+	
+	\item 
+	A manufacturer of aircraft parts wishes to estimate the operating life of a particular component. Thus, a sample of 45 components are used until failure. It is found that the average life is 671.23 hours and the variance is 400 hours-squared.
+	\begin{itemize}
+		\item[{\bf(a)}] What type of data was collected? \quad \item[{\bf(b)}] What is the parameter and its value? \quad \item[{\bf(c)}] What is the statistic and its value? \quad \item[{\bf(d)}] Calculate / interpret the 99.9\% confidence interval.
+	\end{itemize}
+	
+	
+	
+	
+	\item 
+	A random sample of 18 software engineers was selected and it was found that their average income was \euro{40,000} with a standard deviation of \euro{3,125}. \\[-0.2cm]
+	
+	Calculate the following:\\[0.2cm]
+	{\bf(a)} An 80\% confidence interval for $\mu$. \quad {\bf(b)} A 95\% confidence interval for $\mu$. \quad {\bf(c)} A 99\% confidence interval for $\mu$.
+	
+	\item 
+	Guinness brewery wish to compare the quality of stout made using two different varieties of barley. Samples of the drink were prepared and subsequently tested. Taking various factors into consideration, each one was then given an overall quality score (where a higher score indicates better quality). The results are as follows:\\[-0.3cm]
+	\begin{center}
+		\begin{tabular}{|c|cccccc|}
+			\cline{1-7}
+			&&&&&&\\[-0.2cm]
+			Variety1 & 10 & 8 & 7 & 8 & 6 & \\[0.2cm]
+			\cline{1-7}
+			&&&&&&\\[-0.2cm]
+			Variety2 & 5  & 6 & 8 & 6 & 7 & 7 \\[0.2cm]
+			\cline{1-7}
+		\end{tabular}
+	\end{center}
+	
+	The aim is to compare the mean scores in the two groups.\\[0.3cm]
+	{\bf(a)} If we wish to make the equal variance assumption in our calculation - what test must we carry out? \quad {\bf(b)} By carrying out this test, show that the equal variance assumption is reasonable here. \quad {\bf(c)} Calculate a 95\% confidence interval for the difference between the two means (using the equal variance approach). State your conclusion. \quad {\bf(d)} What is the advantage of the \emph{unequal} variance approach? Calculate a 95\% confidence interval using this approach.
+	
+	\item 
+	Seven athletes were asked to run 100m without warming up prior to running. On another day they warmed up first and then ran. On both occasions they were timed and the results (in seconds) are as follows:\\[-0.3cm]
+	\begin{center}
+		\begin{tabular}{|c|ccccccc|}
+			\hline
+			&&&&&&&\\[-0.3cm]
+			Individual & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\[0.1cm]
+			\hline
+			&&&&&&&\\[-0.3cm]
+			No Warm Up    & 13.6 & 12.8 & 12.3 & 11.7 & 12.0 & 13.3 & 10.5 \\[0.1cm]
+			\hline
+			&&&&&&&\\[-0.3cm]
+			Warm Up       & 13.9 & 12.4 & 12.2 & 11.6 & 11.9 & 12.7 & 10.4 \\[0.1cm]
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	{\bf(a)} Calculate a 95\% confidence interval for the \emph{average difference} in times and hence comment on the usefulness of warming up (hint: the data is paired).
+	
+	
+	
+	\item 
+	Consider the following two types of heat sink used for the purposes of CPU cooling:\\[-0.4cm]
+	\begin{center}
+		\begin{tabular}{|c|c|c|}
+			\hline
+			&&\\[-0.3cm]
+			& Type 1 & Type 2 \\
+			\hline
+			&&\\[-0.3cm]
+			number tested      & 50 & 50 \\
+			mean CPU temperature   & 40.1  & 34.8 \\
+			standard deviation &  2.5 & 1.1 \\[0.1cm]
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	{\bf(a)} Identify the parameter of interest. \quad {\bf(b)} Calculate a 95\% confidence interval for the parameter and comment. \quad {\bf(c)} How large a sample is required to reduce the \emph{margin of error} in the previous confidence interval to $\pm 0.4$? (note: assume that $n_1 = n_2$)
+	
+	
+	\item
+	A group of 8 computer science students were randomly selected and asked how many hours they spent gaming last week. The average time was found to be 6.4 hours and the standard deviation was 2.2 hours.
+	\begin{itemize}
+		\item[{\bf(a)}] Calculate a 95\% confidence interval for $\mu$. \item[{\bf(b)}] Calculate a 99\% confidence interval for $\mu$.
+	\end{itemize}
+	
+	\item 
+	Guinness set their bottle-filling machine to put 33cl into each bottle. A sample of 5 bottles were selected at random and measured. The volumes in cl were as follows:\\[-0.2cm]
+	\begin{center}
+		\begin{tabular}{|ccccc|}
+			\hline
+			&&&&\\[-0.3cm]
+			34.1  & 33.5 & 32.8 & 33.1 & 32.5\\[0.1cm]
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	
+	{\bf(a)} Calculate the sample mean and standard deviation. \quad {\bf(b)} Calculate a 95\% confidence interval.  \quad {\bf(c)} Based on the confidence interval, does it appear that the machine is working correctly?
+	
+	
+	\item A claim has been made that the mean body temperature of healthy adults is equal to 98.6 degrees. 
+	A sample of 106 people has produced a mean body temperature of 98.2 degrees and a standard deviation of 0.62. Test the claim using a 0.05 significance.
+	
+	\item A manufacturer of computer monitors  has for many years used a process giving a mean life of 4700 hours and a standard deviation of 1460 hours. 
+	A new process is tried to see if it will increase the life significantly. A sample of 100 monitors gave a mean life of 5000 hours.  
+	Does the new process make a difference at the 5% level of significance?
+	
+	\item In a study of store checkout scanners, 1234 items were checked and 20 of them were overcharges.
+	Use a 0.05 significance level to test the claim that with scanners, 1\% of sales are overcharges.
+	
+
+	
+	\item 
+	
+	
+	\begin{itemize}
+		\item A researcher takes a random sample of 500 urban residents and finds that
+		122 have fibre-optic broadband access. 
+		\item Calculate a 90\% Confidence Interval for
+		the true percentage of residents who have fibre-optic broadband access.
+	\end{itemize}
+	
+	
+	\item \textbf{Confidence Interval for a Mean (Small Sample)} \\
+	\begin{itemize}
+		\item The mean operating life for a random sample of $n = 10$ light bulbs is $\bar{x} = 4,000$ hours, with the sample
+		standard deviation $s = 200$ hours. 
+		
+		\item The operating life of bulbs in general is assumed to be approximately normally distributed.
+		\item We estimate the mean operating life for the population of bulbs from which this sample was taken, using a 95 percent confidence interval as follows:
+		
+		\[4,000\pm(2.262)(63.3)  = (3857,4143)\]
+		
+		\item The point estimate is 4,000 hours. The sample standard deviation is 200 hours, and the sample size is 10. Hence
+		\[S.E(\bar{x} ) = { 200 \over \sqrt{10}} = 63.3\]
+		
+		\item From last slide, the t quantile with $df=9$ is 2.262.
+	\end{itemize}
+	
+	\item \textbf{Confidence Intervals : Worked Example}\\
+	
+	\begin{itemize} 
+		\item In a statistical report on the daily sales of a certain pharmaceutical product the following confidence interval was reported [6.3, 8.1] in hundreds of units per day.
+		
+		\item In the report it was stated that the used confidence level was 99\% and the sample size was n = 25. 
+		\item The industry standard for that type of analysis recommends the 95\% confidence level.
+	\end{itemize}
+	Question: Calculate a 95\% confidence interval
+	%========================================================%
+	\textbf{Solution:}
+	
+	The sample mean is 7.2
+	
+	\[X=\frac{8.1 + 6.3}{2}=7.2\]
+	
+	The sample size is n= 25. This is a small sample (i.e. less than 30)
+	%========================================================%
+	We are able to deduce the quantile of the $t-$distribution used to construct the 99\% confidence interval
+	
+	Confidence intervals are always 2 tailed , therefore k=2
+	\begin{itemize}
+		\item The significance level used is 1\%
+		\item The degrees of freedom  is 24 (n-1)
+		\item The significance level for the new interval is 5\%
+	\end{itemize}
+	%========================================================%
+	Using Murdoch Barnes Table 7
+	\begin{itemize}
+		\item The quantile used to make the 99\% interval was 2.797.
+		\item The quantile used to make the 95\% interval is 2.064.
+	\end{itemize}
+	We are now able to work out the standard error.
+	%========================================================%
+	
+	
+	\item \textbf{Single Sample Confidence interval for the Mean: Worked Example}\\
+	
+	The intelligence quotient (IQ) of 36 randomly chosen students was measured.
+	Their average IQ was 109.9 with a variance of 324.
+	The average IQ of the population as a whole is 100.
+	
+	\begin{enumerate}
+		\item Calculate the p-value for the test of the hypothesis that on average
+		students are as intelligent as the population as a whole against the alternative that on average students are more intelligent.
+		
+		
+		\item Can we conclude at a significance level of 1\% that students are on average more intelligent than the population as a whole?
+		
+		\item Calculate a 95\% confidence interval for the mean IQ of all students.
+		
+	\end{enumerate}
+	
+	\begin{equation}
+	Z_{Test} = \frac{X- \mu}{\frac{\sigma}{\sqrt{n}}} = \frac{109.9 - 100}{\frac{18}{\sqrt{36}}} = \frac{9.9}{3} = 3.3
+	\end{equation}
+	
+	
+	\begin{equation}
+	p.value = P(Z \geq Z_{Test}) = P(Z \geq 3.3) = 0.00048
+	\end{equation}
+	
+	
+	
+	\begin{equation}
+	\bar{X} \pm t_{1-\alpha/2,\nu}S.E.(\bar{X})
+	\end{equation}
+	$\nu = 1.96$
+	\begin{equation}
+	t_{1-\alpha/2,\nu} = 1.96
+	\end{equation}
+	\begin{equation}
+	109.9 \pm (1.96 \times 3) = [104.02, 115.79]
+	\end{equation}
+	
+	
+	
+\end{enumerate}
+
+\subsection{Confidence Intervals for Proportions}
+
+\begin{itemize}
+	\item In a survey conducted by a mail order company a random sample of 200 customers yielded 172 who indicated that they 
+	were highly satisfied with the delivery time of their orders. 
+	
+	\item Calculate an approximate 95\% confidence interval for the proportion of the company's customers who are 
+	highly satisfied with delivery times.
+\end{itemize}
+
+
+\[p= \frac{172}{200}= 86\%\]
+
+
+\[ \frac{p(100-p)}{n} =\frac{86 \times 14}{200}\]
+
+
+%---------------------------------------------------------%
+
+\noindent \textbf{CI for Difference in Two Means}
+A research company is comparing computers from two different companies, X-Cel and Yellow, on the basis of energy consumption per hour. Given the following data, compute a $95\%$ confidence interval for the difference in energy consumption.
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Type & sample size & mean & variance \\ \hline
+		X-cel & 17 & 5.353 & 2.743 \\ \hline
+		Yellow & 17 & 3.882 & 2.985 \\ \hline
+	\end{tabular}
+\end{center}
+Remark: It is reasonable to believe that the variances of both groups is the same. Be mindful of this.
+
+
+%---------------------------------------------------------%
+
+\begin{itemize}
+	\item Point estimate : $\bar{x} - \bar{y}$ = 1.469
+	\item Standard Error: 0.5805
+	\[ S.E.(\bar{x}-\bar{y}) = \sqrt{\frac{2.743}{17} + \frac{2.985}{17}} = \sqrt{0.33698} \]
+	\item Quantile : 1.96 (Large sample, with confidence level of $95\%$.)
+\end{itemize}
+
+\[ 1.469  \pm (1.96 \times 0.5805) = (0.3321,2.607) \]
+
+
+This analysis provides evidence that the mean consumption level per hour for X-cel is higher than the mean consumption level per hour for Yellow, and that the difference between means in the population is likely to be between 0.332 and 2.607 units.
+
+
+%---------------------------------------------------------%
+
+
+\noindent \textbf{Computing the Confidence Interval}
+Standard Error for difference of two means (small aggregate sample)
+
+\[ S.E.(\bar{x}-\bar{y}) = \sqrt{  s^2_p \left({1\over n_x}+{1\over n_y} \right)} \]
+
+Pooled Variance $s^2_p$ is computed as:
+
+\[ s^2_p = \frac{(n_x-1)s^2_x + (n_y-1)s^2_y}{(n_x-1) + (n_y-1)} \]
+
+%---------------------------------------------------------%
+
+\noindent \textbf{CI for Difference in Two Means}
+From the previous example (comparing X-cel and Yellow) lets compute a 95\% confidence interval when the sample sizes are $n_x=10$ and $n_y=12$ respectively. (Lets assume the other values remain as they are.)
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		Type & sample size & mean & variance \\ \hline
+		X-cel & 10 & 5.353 & 2.743 \\ \hline
+		Yellow & 12 & 3.882 & 2.985 \\ \hline
+	\end{tabular}
+\end{center}
+The point estimate $\bar{x} - \bar{y}$ remains as 1.469. Also we require that both samples have equal variance. As both $X$ and $Y$ have variances at a similar level, we will assume equal variance.
+
+
+%---------------------------------------------------------%
+
+
+\noindent \textbf{Computing the Confidence Interval}
+\begin{itemize} \item Pooled variance $s^2_p$ is computed as:
+	
+	\[ s^2_p = \frac{(10-1)2.743 + (12-1)2.985}{(10-1) + (12-1)}  = \frac{57.52}{20} = 2.87\]
+	
+	\item Standard error for difference of two means is therefore
+	
+	\[ S.E.(\bar{x}-\bar{y}) = \sqrt{  2.87 \left({1\over 10}+{1\over 12} \right)} = 0.726 \]
+	
+	\item The aggregate sample size is small i.e. 22. The degrees of freedom is $n_x+n_y-2 = 20$.
+	From Murdoch Barnes tables 7, the quantile for a $95\%$ confidence interval is 2.086.
+	
+	\item The confidence interval is therefore
+	\[ 1.469  \pm (2.086 \times 0.726) = 1.4699 \pm 1.514 =  (-0.044, 2.984 )  \]
+\end{itemize}
+
+
+
+\subsection{Confidence Interval Problem}
+
+Suppose we want to estimate the average weight of an adult american male. We draw a random sample of 100 men from the population  and weigh them.\\ \vspace{0.3cm} We find that the average man in our sample weighs 180 pounds, and the standard deviation of the sample is 30 pounds.\\ What is the 95\% confidence interval?
+
+
+
+\noindent  \textbf{Problem}
+
+\begin{itemize}
+	\item
+	\textbf{Identify a sample statistic} - Since we are trying to estimate the mean weight in the population, we choose the mean weight in our sample (180) as the sample statistic.
+	
+	
+	\item \textbf{Select a confidence level}  -In this case, the confidence level is defined for us in the problem. We are working with a 95\% confidence level.
+	
+	
+	\item \textbf{Find the margin of error} - Previously, we described how to compute the margin of error.
+\end{itemize}
+
+
+
+
+
+Using these values, we can calculate the standard error with this expression.
+
+\vspace{0.1cm}
+\[
+\mbox{Std. Error}(\bar{X})  = \sqrt{{30^2\over 100}} = \sqrt{9}
+= 3\]
+
+\vspace{0.1cm}
+
+The Standard Error is 3lbs.
+
+
+
+\noindent  \textbf{Outline of the Survey}
+The objective of the survey is to obtain an assessment of the views or opinions of students studying in the Faculty of Business and Accounting studies at a specific university.
+
+\vspace{0.4cm}
+
+The Survey is broken into three parts - A,B and C. \\ \vspace{0.2cm}
+
+A - Questions in this section are of ``Likert'' type. The data obtained here is ordinal (Categorical) although we treat it as if it were interval (Numerical) for the analysis.\\
+\vspace{0.2cm}
+B - One question asking people to indicate what School they are from - nominal (Categorical) data.\\
+\vspace{0.2cm}
+C - Another Likert question.
+
+
+
+
+\newpage	
+\section*{Question Set 1: Stating Hypotheses}
+
+
+\begin{enumerate}	
+	\item \textbf{Worked Example}
+	%%Question 3.1 (g)\\    
+	A firm that produces lightbulbs claim that their products last on average 1000 hours. An independent study took a random sample of 150 lightbulbs, and found the average burning time to be 990 (with a standard deviation of 60)
+	
+	\textit{(Hint: This is a test of whether the nominal mean is too high)}
+	
+	\begin{itemize}
+		\item[(i)] Clearly state your null and alternative hypotheses.
+		\item[(ii)] Is this a One Tail or Two Tail test?
+	\end{itemize}
+	\item \textbf{Worked Example}
+	%	Question 3.1 (c) \\
+	Based on birth records for millions of babies, the percentage of newborn babies in Sweden that are female is 51\%. A group of researchers in Sweden are interested in finding out if women who suffer from severe morning
+	sickness are more likely to have a girl. 
+	
+	The researchers looked at records for 1000 women admitted to hospital for
+	severe morning sickness and determined that 560 of these women gave birth
+	to a female baby.  \textit{[Source: Lancet 354: 2053, 1999]}.
+	(Hint: This is a test of whether the nominal proportion is too low)
+	\begin{itemize}
+		\item[(i)] Clearly state your null and alternative hypotheses.
+		\item[(ii)] Is this a One Tail or Two Tail test?
+	\end{itemize}
+	\item \textbf{Worked Example}
+	%	Question 3.1 (e)\\
+	An environmental group states that “fewer than 60\% of industrial plants comply with air pollution standards”. An independent researcher takes a sample of 60 plants and finds that 33 are complying with air pollution standards. 
+	(Hint: This is a test of whether the nominal proportion is accurate)
+	\begin{itemize}
+		\item[(i)] Clearly state your null and alternative hypotheses.
+		\item[(ii)] Is this a One Tail or Two Tail test?
+	\end{itemize}
+	
+	\item \textbf{Worked Example}
+	%	Question 3.1 (f) \\ 
+	A claim has been made that the mean body temperature of healthy adults is equal to 98.6? Fahrenheit. A sample of 106 people has produced a mean body temperature of 98.2? Fahrenheit and a standard deviation of 0.62. 
+	
+	(Hint: This is a test of whether the nominal mean is too high)
+	\begin{itemize}
+		\item[(i)] Clearly state your null and alternative hypotheses.
+		\item[(ii)] Is this a One Tail or Two Tail test?
+	\end{itemize}
+	
+	\item \textbf{Worked Example}
+	%	Question 3.1 (b)\\
+	A Health and Safety survey of 200 industrial accidents revealed that 53 
+	were due to untidy working conditions.  
+	
+	A factory manager claims that the above sample is just a “one off”, and that less than 20\% of accidents are a result of untidy working conditions. 
+	
+	(Hint: This is a test of whether the nominal proportion is too low)
+	\begin{itemize}
+		\item[(i)] Clearly state your null and alternative hypotheses.
+		\item[(ii)] Is this a One Tail or Two Tail test?
+	\end{itemize}
+	
+	%%	\section{Single Sample Statistical Inference}
+	
+	
+	\item \textbf{Worked Example   - Hypothesis Testing}	
+	
+	\begin{itemize}
+		\item A sample of 50 households in one community
+		shows that 10 of them are watching a TV special on the national
+		economy. 
+		\item In a second community, 15 of a random sample of 50
+		households are watching the TV special. 
+		\item We test the hypothesis
+		that the overall proportion of viewers in the two communities does
+		not differ, using the 1 percent level of significance, as follows:
+	\end{itemize}
+	
+	\item \textbf{Worked Example   - Confidence Intervals}	
+	
+	A simple random sample is conducted of 1486 college students who are near completion of a bachelors degree in statistics. 802 students are female. Let $\pi$ be the proportion of female students who are near completion of their bachelor degree in `
+	statistics.
+	\begin{itemize}
+		\item[a.] (1 mark) Provide a point estimate of $\pi$.
+		\item[b.] (5 marks) Calculate a 99\% confidence interval for $\pi$.
+		\item[c.] (9 marks) Use a 0.01 significance level to test the claim that the majority of
+		college students who are near completion of a bachelors degree in statistics are
+		female. [Clearly state the null and alternative hypotheses and your conclusion].\end{itemize}
+	
+	
+	\item \textbf{Worked Example  - Single Sample t-Test (Small Sample)  } \\ % 10 Marks
+	\begin{itemize}
+		\item 	A web-based software company claims that the average amount of time it takes for
+		online queries to be dealt with is less than 2 hours. 
+		\item Out of a sample of 15 queries, the
+		sample mean $\bar{x}$ = 3.5 hours and the standard deviation is 30 minutes.
+	\end{itemize}
+	
+	\begin{itemize}
+		\item[a.](2 marks) Construct the null and alternative hypothesis statements.
+		\item[b.](2 marks) Test this claim using a significance level of 0.05.
+		\item[c.](2 marks) Describe the two types of errors associated with hypothesis testing and how
+		they relate to this question?
+	\end{itemize}
+	
+	\item \textbf{Worked Example} \\ ABC Software has 125 programmers divided into two groups with 75 in
+	Group A and 50 in Group B. In order to compare the efficiencies of the
+	two groups, the programmers are observed for one day. \begin{itemize} \item The 75
+		programmers of Group A averaged 76.21 lines of code with a standard
+		deviation of 10.37. \item The 50 programmers of Group B averaged 72.72
+		lines of code with a standard deviation of 10.07. \end{itemize}
+	\begin{itemize}
+		\item[a.](10 marks) Using a significance
+		level of 5\%, test the hypothesis that there is no difference between the
+		two groups versus the alternative that there is a difference. Clearly state
+		your null and alternative hypotheses and your conclusion.
+	\end{itemize}
+	
+	\item \textbf{Hypothesis Testing}
+	A manufacturer of a common cold cure claims that the product provides
+	relief for 70\% of people who use it. ln a test of 400 people, it was found
+	that 300 people said the treatment provided relief.
+	
+	\begin{itemize}
+		\item[a.](4 marks) Calculate a 95\% confidence interval for the true proportion of
+		people who would get relief from the product.
+		
+		\item[b.](4 marks) Suppose the manufacturer wishes to be 95\% confident that the
+		prediction is correct to within 2\% of the true proportion. What
+		sample size is needed?
+		
+		\item[c.](7 marks) Using a significance level of 5\%, test the hypothesis that more than
+		70\% of people who use the product find relief Clearly state your
+		null and alternative hypotheses and your conclusion.
+	\end{itemize}
+	
+	
+	\item  % 10 Marks
+	A study was carried out to compare two treatments for the flu. A total of 500
+	newly diagnosed flu patients were randomly assigned to one of the two treatments.
+	\begin{itemize}
+		\item Of the 280 assigned to the first treatment, 168 still had the flu after 2 days after
+		diagnosis. \item Of the 220 assigned to the second treatment, 176 still had the flu after 2
+		days after diagnosis. \end{itemize} Let $p_l$ denote the probability that a flu patient assigned to the
+	first treatment will still have the flu after 2 days after diagnosis; let $p_2$ denote the
+	corresponding probability for the second treatment.
+	
+	\item 	\textbf{Single Sample Proportion Test } % 10 Marks
+	A company organizes two evening courses, one on stock market trading and one on
+	spread-betting. From a sample of 100 clients, 64 of them choose the stock market course.
+	
+	\begin{itemize}
+		\item[a.](5 marks) Calculate a 95\% confidence interval for the percentage of clients who
+		prefer the stock market course. (5 marks)
+		\item[b.](5 marks) lt is known that in past years the percentage of clients who preferred the
+		stock market trading classes was 75\%. Should the company conclude that
+		the interest in the stock market trading courses has decreased significantly in
+		comparison to past years? Clearly state $H_0$ and $H_1$.
+	\end{itemize}
+	
+	\begin{itemize}
+		\item[a.] (2 marks) Provide an estimate of the difference between the population
+		proportions (i.e. $\pi_l -\pi_2$).
+		\item[b.] (6 marks) Calculate a 95\% confidence interval for the difference between the
+		population proportions.
+		\item[c.] (10 marks) Use a 0.05 significance level to determine if there is a difference
+		between the two proportions. [Clearly state the null and alternative hypotheses
+		and your conclusion].
+	\end{itemize}
+	
+	
+	\item \textbf{Single Sample t-test for Means (Small Sample) } % 10 Marks
+	The mean and standard deviation of the salaries of 16 Irish full-time workers are 5000 and
+	3000, respectively.
+	\begin{itemize}
+		\item[(i)] Test the hypothesis that the mean salary of all Irish full-time workers is 4000 at a significance level of 5\%.
+		\item[(ii)] What assumption is made in this testing procedure? Is this assumption reasonable?
+	\end{itemize}
+	
+\end{enumerate}	
+\section*{Question Set 3 : One Sample Hypothesis Tests}
+\begin{enumerate}
+	\item \textbf{Single Sample Worked Examples}
+	\noindent \textbf{Worked Example Null and Alternative Hypotheses}
+	
+	%%- \frametitle{Hypothesis Testing}
+	%%	Question 3.1 (a)\\
+	There are 200 students on course A and another 200 students on course B.  On the final exam, the 200 students on course A scored a mean mark of 68 with a standard deviation of 20, while those on course B obtained a mean mark of 73 with a standard deviation of 18.  
+	(Hint: This is a test of whether that the means of the two groups are the same)
+	
+	\begin{itemize}
+		\item[(i)] Clearly state your null and alternative hypotheses.
+		\item[(ii)] Is this a One Tail or Two Tail test?
+	\end{itemize}
+	
+	\item \textbf{Independent Sample Test for Means Question 55. } % 10 Marks
+	The height of 100 Americans and 50 Spaniards was observed. The mean and
+	standard deviation of the height of the Americans was 172cm and 13cm,
+	respectively. The mean and standard deviation of the height of the Spaniards
+	was 167cm and 12cm, respectively.
+	
+	\begin{itemize}
+		\item[(i)](7 marks) Calculate a 99\% confidence interval for the difference between the mean height
+		of all Americans and the mean height of all Spaniards.
+		
+		
+		\item[(ii)](3 marks) Without doing any further calculations, test the hypothesis that the mean
+		height of all Americans is equal to the mean height of all Spaniards. Give a brief
+		justification of your conclusion. What is the significance level of this test'?
+	\end{itemize}
+	
+	\item \textbf{Worked Example : Two Sample Test} Deltatech software has 350 programmers divided into two groups with 200 in Group A and 150 in Group B. In order to compare the efficiencies of the two groups, the programmers are observed for  1 day.
+	
+	\begin{itemize}
+		\item  The 200 programmers in Group A averaged 45.2 lines of code with a standard deviation of 8.4.
+		
+		\item The 150 programmers in Group B averaged 42.7 lines of code with a standard deviation of 5.2.
+		
+	\end{itemize}
+	
+	
+	Let $x_a$ denote the average number of lines of code per day produced by programmers in Group A and
+	let $x_b$ be the corresponding quantity for Group B.
+	
+	Provide an estimate of a — b and calculate an approximate 95\% confidence interval for a — b .
+	
+	\item \textbf{DeltaTech Part 2 - Worked Examples} 
+	Using the data in Q1 (Deltatech), test the claim that Group A are more efficient than Group B by
+	\begin{itemize}
+		\item 	Interpreting the 95\% confidence interval.
+		\item Computing the appropriate test statistic.
+		\item Computing the appropriate p-value.
+	\end{itemize}
+	
+	\item \textbf{Independent Sample Means (Small Samples) hypothesis Test }
+	A research company is comparing cars on the basis of fuel consumption.
+	Given the following data:
+	%==============================================================%
+	\begin{center}
+		\begin{tabular}{|c|c|c|} \hline
+			&	Type A	&	Type B	\\	\hline
+			Sample Size	&	11	&	10	\\	\hline
+			Sample Meab	&	Mean 8.3miles/L	&	9.6miles/L	\\	\hline
+			Standard Deviation 	&	1.99m.iles/L	&	2.37miles/ L	\\	\hline
+		\end{tabular} 
+		
+	\end{center}
+	
+	\begin{itemize}
+		\item Test at a 0.05 level of significance that the fuel consumption is the same for both types of car.
+		
+		\item Suppose that the sample sizes in Q3 were 110 and 100 respectively. Again test at a 0.05 level of significance that the fuel consumption is the same for both types of car.
+	\end{itemize}
+	
+\end{enumerate}		
+%-----------------------------------------------------------%
+
+
+\section{Confidence Interval examples}
+
+
+%--------------------
+\subsection{Example}
+In an election campaign, a campaign manager requests that a sample of votes be polled to determine public support for a candidate. In a sample of 150 votes 72 expressed plans to support the candidate.
+
+
+
+\begin{itemize}
+	\item What is the point estimate of the proportion of the voters who will support the candidate in the election?
+	\item Contruct and interpret a 95\% confidence interval for the proportion of votes in the population that support the candidate.
+	
+	\item Given the confidennce interval, is the campaign manager justified in feeling confident that the candidate has at least 50\% support
+	
+	\[S.E. (\hat{P}) = \sqrt{{\hat{p}(1-\hat{p} \over n}}\]
+\end{itemize}
+
+
+%--------------------
+\subsection{Example}
+A random sample of 15 observations is taken from a normally distributed population
+of values. The sample mean is 94.2 and the sample variance is 24.86.
+Calculate a 99\% confidence interval for the population mean.
+
+
+\noindent \textbf{Solution}
+$t_(14,0.005) = 2.977$
+99\% CI is $94.2 \pm 2.977 \sqrt{24.86/15}$ \\i.e. $94.2 \pm 3.83$ \\i.e. $(90.37,98.03)$
+
+
+\subsection{Example 1: paired T test}
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		X & 5.20 & 5.15 & 5.17 & 5.16 & 5.19 & 5.15\\ \hline 
+		Y & 5.20 & 5.15 & 5.17 & 5.16 & 5.19 & 5.15\\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subsection{Example 2}
+
+Seven measurements of the pH of a buffer solution gave the
+following results:
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		5.12 & 5.20 & 5.15 & 5.17 & 5.16 & 5.19 & 5.15\\
+		\hline
+	\end{tabular}
+\end{center}
+
+
+Task 1: Calculate the 95\% confidence limits for the true pH
+utilizing $R$.
+
+
+Solution. We are using Student t distribution with six degrees of
+freedom and the following code gives us the confidence interval
+for this problem.
+%%		\begin{verbatim}
+%%		>x <- c(5.12, 5.20, 5.15, 5.17, 5.16, 5.19, 5.15)
+%%		>n =length(x)
+%%		>alpha =0.05
+%%		>stderr =sd(x)/sqrt(n)
+%%		>LB=mean(x)+qt(alpha/2,6)* stderr
+%%		>UB=mean(x)+qt(1-alpha/2,6)* stderr
+%%		>LB
+%%		#[1] 5.137975
+%%		>UB
+%%		#[1]5.187739
+%%		\end{verbatim}
+
+\subsection{Example 3} Ten replicate analyses of the concentration
+of mercury in a sample of commercial gas condensate gave the
+following results (in ng/ml) :
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		23.3 & 22.5 & 21.9 & 21.5 & 19.9 & 21.3 & 21.7 & 23.8 & 22.6 &
+		24.7\\
+		\hline
+	\end{tabular}
+\end{center}
+
+Compute 99\% confidence limits for the mean.
+%http://www.stats.gla.ac.uk/steps/glossary/hypothesis_testing.html
+
+
+\newpage
+\section*{Question Set 2 : Confidence Intervals}
+\begin{enumerate}
+	
+	\item \textbf{Worked Example}
+	Calculate a 99\% confidence interval for the difference between the proportion of all Irish having access to the
+	Internet and the proportion of all Spaniards having access to the internet.  (4 marks)
+	
+	
+	
+	\noindent \textbf{Standard Error for confidence interval}	
+	
+	\[\frac{p1(1 -p1)}{n1}+ \frac{p2(1 -p2)}{n2}\]	
+	\[=\frac{0.750.25}{1000}+ \frac{0.700.30}{2000}     =  0.017103\]
+	
+	\noindent \textbf{Quantile for a 99\% confidence interval}
+	\begin{itemize}
+		\item 	significance level  =1\%
+		\item	number of tails = 2
+		\item	degrees of freedom = 
+		\item	quantile = 2.576 
+	\end{itemize}
+	
+	
+	
+	99\% Confidence Interval for difference of two proportions
+	
+	%================================================================= %
+	
+	
+	Useful pieces of information
+	
+	
+	Sample size  n=100
+	
+	
+	\item \textbf{Worked Examples} \\
+	
+	The strength of concrete depends, to some extent, on the method used for drying. Two different methods showed the following results for independently tested specimens.  ( You may assume that there are equal variances).
+	
+	
+	\begin{itemize}
+		\item[(i)] Does Method 1 appear to produce concrete with a greater mean strength? State your conclusions clearly.
+		\item[(ii)] Construct a 95\% confidence interval for the difference between the two means. Interpret this interval.
+		
+	\end{itemize}
+	
+	\item \textbf{Independent Sample Means hypothesis Test }
+	%	Question 3.1 (d) \\
+	
+	\begin{itemize}
+		\item 	A survey was carried out to investigate absenteeism in the building industry.
+		\item Data on the number of sick days per year and type of job (unskilled or skilled)
+		were collected for a random sample of employees.
+		\item The mean number of sick days for 50 unskilled workers was 3.8 days with a standard deviation of 2.6 days. 
+		\item The mean number of sick days for 60 skilled workers was 3 days with a standard deviation of 2.2 days. 
+		\item (Hint: This is a test of whether that the means of the two groups are the same)
+		
+		\item Clearly state your null and alternative hypotheses.
+		Is this a One Tail or Two Tail test?
+	\end{itemize}
+	
+\end{enumerate}		
+
+
+
+
+
+
+
+%------------------------------------------------------------- %
+
+\subsection{Small Sample Test For Means - Worked Example}
+%	D Hypothesis Testing - Example
+The catering manager in a hotel suspects that the weight of loaves of bread delivered
+daily by a bakery is consistently below the nominal weight of 800g. To test this,
+10 loaves chosen at random from a day’s deliveries are weighed. The mean and
+standard deviation of the ten weights are 792g and 25g, respectively.
+
+\begin{enumerate}
+	\item  Carry out a formal significance test.
+	\item List the steps involved in this test 
+	\item Calculate a 95\% confidence interval for the average weight of loaves produced
+	\item Comment on the correspondence between the interval, as calculated, and the
+	result of the test.
+\end{enumerate}	
+
+
+
+%		\noindent \textbf{Solution 2}
+%		
+%		\begin{itemize}
+%			\item Confidence interval width is 3, so half-width is 1.5
+%			
+%			\item Seek n such that $1.96 \times \frac{9}{\sqrt{n}} = 1.5$
+%			
+%			\item Divide both sides by $1.96 \times 9$ \\
+%			\[\frac{1}{\sqrt{n}} = \frac{1.5}{1.96 \times 9} =\]
+%			
+%			
+%			\item invert and square boths sides.
+%		\end{itemize}
+
+
+
+
+\subsection{ Single Sample Proportion Test - Worked Examples}
+%% Question 2 part b
+
+A study of 1000 randomly chosen adults indicated that 450 had been to the cinema at least once in the previous year.
+
+A cinema wants to test the hypothesis that 50\% of all Irish adults have been to the cinema in the last year.
+
+Calculate the p-value for such a test and draw the appropriate conclusion.
+
+Discussion: Based on this sample, we estimate the proportion to be 0.45  (i.e. 45\%)
+
+\[ \mbox{Point Estimate} \hat{p} = 0.45\]
+
+\noindent \textbf{Step A : Formally state the null and alternative hypotheses}
+
+\begin{itemize}
+	\item p : true proportion of Irish adults who have been to the cinema in the last year.
+	
+	\item	Null Hypothesis               Ho:p = 0.50        True proportion is 50%
+	
+	\item Alternative Hypothesis      Ha:p 0.50        True proportion is not 50%.
+	
+	
+	\item	N.B. This is a two-tailed procedure.
+\end{itemize}
+
+
+
+
+\noindent \textbf{Step B : Compute the test statistic.}
+
+Remember the general structure of a test statistic
+
+TS =Observed Value-Null ValueStd. Error 
+
+
+
+From the formulae
+
+We have to compute the standard error for a proportion. 
+
+( From formulae at back of exam paper)
+
+S.E.(p) =p(1-p)n=0.450.551000= 0.0157
+
+
+
+
+\noindent \textbf{Step 3: Calculate p-value}
+
+P-value is found from Murdoch Barnes Tables 3 ( Normal distribution)
+
+Absolute value  |-3.18| =3.18
+
+
+
+
+\[ \mbox{P-Value} = P(Z \geq 3.18) = 0.00074\]
+
+
+\noindent \textbf{Step 4: Interpret the p-value to make a decision.}
+
+The significance level is 5\%.  The procedure is a two tailed test.
+
+
+[ Black Board ]
+
+\newpage
+Q5. The standard deviation of test scores obtained for a certain exam is 18 points. 
+A random sample of 81 students has a sample mean of 70 points.
+
+(a) State the point estimate for the mean score for all the students.
+(b) Find the 95\% confidence interval for the average score for all students.
+(c) Find the 99\% confidence interval for the average score for all students.
+
+Q6. The amount spent (€’s) by customers in a shop are normally distributed. 
+A random sample of 16 customers have these values:
+\[19 21 35 29 12 35 7 18 21 14 29 20 12 24 32 23\]
+(Sample  mean of €21.94 and a sample standard deviation of €8.40) 
+Estimate a 95% confidence interval for the population mean.
+
+Q7. The operating life of rechargeable cordless screwdrivers produced by a firm is assumed to 
+the approximately normally distributed. A sample of 15 screwdrivers is tested and the mean 
+life is found to be 8900 hours, with a sample standard deviation of 500 hours. 
+Provide a 95% confidence interval for the population mean.
+
+
+Question 1 
+An IT competency test, used for staff recruitment, is devised so as to give a normal distribution of scores with a mean of 100. A random sample of 49 experienced IT users who are given the test achieve a mean score of 121 with a standard deviation of 14. 
+Compute a 95% confidence interval for the group.
+
+\newpage
+
+Question 5
+A manufacturer of computer monitors  has, for many years, used a process giving a mean  working life of 4700 hours  for components.
+A new process is tried to see if it will increase the life significantly. A sample of 100 monitors gave a mean life of 5000 hours, with a standard deviation of 1400 hours.
+i.	Compute a 95% confidence interval for the mean life of components built using the new process.
+
+
+
+\newpage
+
+MA4413 2013 Tutorial for Week 8 : Confidence intervals and Hypothesis testing
+Question 1. 
+An IT competency test, used for staff recruitment, is devised so as to give a normal distribution of scores with a mean of 100. A random sample of 49 experienced IT users who are given the test achieve a mean score of 121 with a standard deviation of 14. 
+i.	Perform a hypothesis test to assess whether all such experienced IT Users is unusual (i.e. have a different mean from the general population).
+ii.	Compute a 95% confidence interval for the group.
+
+Question 2.
+A claim has been made that the mean body temperature of healthy adults is equal to 98.6 degrees. Test this hypothesis using a 0.05 level significance, given the following information.
+A sample of 121 people has produced a mean body temperature of 98.2 degrees and a standard deviation of 6.6 degrees.  
+Question 3.
+The quality control manager at the Telektronic Company considers the production of telephone answering machines to be ’out of control’ when the overall rate of defects exceeds 6%. 
+Testing of a random sample of 150 machines revealed that 12 are defective. The production manager claims that production is not out of control and no corrective action is necessary.
+i.	Compute a 95% confidence interval for the rate of defective components
+ii.	Use a 0.05 significance level to test the production manager’s claim.
+(N.B. The Standard Error used in hypothesis testing is different to the one used for confidence intervals)
+Question 4.
+A manufacturer of computer monitors  has, for many years, used a process giving a mean  working life of 4700 hours  for components.
+A new process is tried to see if it will increase the life significantly. A sample of 100 monitors gave a mean life of 5000 hours, with a standard deviation of 1400 hours.
+i.	Compute a 95% confidence interval for the mean life of components built using the new process.
+ii.	Does this new process make a difference at the 5% level of significance? (Perform a two tailed test, then a one tailed test)
+
+
+
+
+Question 5.
+In a study of store checkout scanners, 240 items were checked and 6 of those items were found to be “overcharges”.
+Use a 0.05 significance level to test the claim that with these scanners, 1.5 % of sales transactions are overcharges.
+(N.B. The Standard Error used in hypothesis testing is different to the one used for confidence intervals)
+
+	\item \textbf{Worked Example 3} \\ Ten replicate analyses of the concentration
+	of mercury in a sample of commercial gas condensate gave the
+	following results (in ng/ml) :
+	
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		23.3 & 22.5 & 21.9 & 21.5 & 19.9 & 21.3 & 21.7 & 23.8 & 22.6 &
+		24.7\\
+		\hline
+	\end{tabular}
+	
+	\item \textbf{Wasking Machine Example}%example: 
+	Suppose a machine produces circular parts for an electrical component. A random sample of 10 circular parts is selected and the variance of the sample is found to be 0.7 centimetres. The machine is producing the correct standard of circular parts if the variance of the diameter is no larger than 0.4cm.
+	
+	Suppose that the sampled measurements are normally distributed. A hypothesis test may be carried out to determine whether or not the machine is producing the correct standard of part.
+	
+	\begin{description}
+		\item[$H_0$] $s^2=0.4$
+		\item[$H_1$] $s^2>0.4$
+	\end{description} 
+	
+	\begin{itemize}
+		\item At a 5\% significance level, the critical value for the test is ? 2 9 ˜ 16.92 . 
+		\item The test statistic is ? 2 = n - 1 s 2 s 2 
+		\item H 0 = 10 - 1 × 0.7 0.4 = 15.75 .
+	\end{itemize}
+	
+	
+	
+	
+	As the test statistic is less than the critical value, there is no evidence to reject the null hypothesis. The machine is therefore producing a sufficient standard of circular parts.
+	
+	\item \textbf{Question 42. - Sample Size Estimation } % 10 Marks
+	Let $\pi$ be the proportion of workers in Ireland who spend at least one hour
+	per day in front of a computer terminal. Suppose that a researcher is going to take a
+	sample of n workers and estimate $\pi$ using $\hat{p}$, the proportion of workers in the sample
+	who spend at least one hour per day in front of a computer terminal.
+	
+	\begin{itemize}
+		\item[a.] (1 mark) How large
+		should $n$ be if the researcher wants to be 90\% certain that his error is less than 0.01?
+	\end{itemize}
+\end{enumerate}		
+
+\end{document}
+

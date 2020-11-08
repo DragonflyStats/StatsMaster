@@ -1,0 +1,122 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx} % Font Family
+\usepackage{helvet} % Font Family
+\usepackage{color}
+\mode<presentation> {
+	\usetheme{Default} % was Frankfurt
+	\useinnertheme{rounded}
+	\useoutertheme{infolines}
+	\usefonttheme{serif}
+	%\usecolortheme{wolverine}
+	% \usecolortheme{rose}
+	\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+\title[MA4413]{Statistics for Computing \\ {\normalsize MA4413 Lecture 11A}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Autumn 2011}
+%\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+\renewcommand{\arraystretch}{1.5}
+%------------------------------------------------------------------------%
+
+\begin{document}
+	\begin{frame}
+	\frametitle{ Kraft inequality}
+	\begin{itemize}
+		\item Let X be a DMS with alphabet ($x _i = \{1, 2, . . . ,m\}$). Assume that the length of the assigned binary
+		code word corresponding to x, is n.
+		\item A necessary and sufficient condition for the existence of an instantaneous binary code is
+		
+		\[ K = \sum^{m}_{i=1}2^{-n_i} \leq 1 \]
+		which is known as the \textbf{Kraft inequality}.
+		\item Note that the Kraft inequality assures us of the existence of an instantaneously decodable code
+		with code word lengths that satisfy the inequality. But it does not show us how to obtain these code
+		words, nor does it say that any code that satisfies the inequality is automatically uniquely decodable
+	\end{itemize}
+\end{frame}
+
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Kraft inequality}
+\begin{itemize}
+	\item \textbf{\emph{Kraft's inequality}} gives a necessary and sufficient condition for the existence of a uniquely decodable code for a given set of codeword lengths (more so variable length codes)
+	
+	\item More specifically, Kraft's inequality limits the lengths of codewords in a prefix code, and can be thought of in terms of a constrained budget to be spent on codewords, with shorter codewords being more expensive.
+	
+	
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Kraft inequality}
+\begin{itemize}
+\item Let X be a DMS with alphabet ($x _i = \{1, 2, \ldots ,m\}$). \item Assume that the length of the assigned binary
+code word corresponding to $x_i$ is $n_i$.
+\item Kraft inequality is given as
+
+\[ K = \sum^{m}_{i=1}2^{-n_i} \leq 1 \]
+
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Kraft inequality}
+\begin{itemize}
+\item If Kraft's inequality holds with strict inequality (i.e. $K < 1$), the code has some redundancy.
+\item If Kraft's inequality holds with strict equality (i.e. $K = 1$), the code in question is a complete code.
+\item The closer K is to 1, the more efficient the code is.
+\item If Kraft's inequality does not hold, the code is not uniquely decodable.
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Kraft inequality}
+\begin{itemize}
+\item Note that the Kraft inequality assures us of the existence of an instantaneously decodable code
+with code word lengths that satisfy the inequality. \item However it does not show us how to obtain these code
+words, nor does it say that any code that satisfies the inequality is automatically uniquely decodable
+\end{itemize}
+\end{frame}
+
+
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Kraft inequality}
+Compute the value for K in each case, and determine whether Kraft's Inequality is observed.
+\begin{itemize}
+\item \textbf{code 1 and 2} K = 1 so Kraft's inequality is obeyed.  \[ K = \sum^{m}_{i=1}2^{-n_i} = (2^{-2} \times 4) = 1 \]
+\item \textbf{code 3} K = 1.5 so Kraft's inequality is not obeyed.   \[ K = \sum^{m}_{i=1}2^{-n_i} = (2^{-1} + 2^{-1} + 2^{-2} + 2^{-2}) = 1.5 \]
+\item \textbf{code 4 } K = 1 so Kraft's inequality is obeyed.   \[ K = \sum^{m}_{i=1}2^{-n_i} = (2^{-1} + 2^{-2} + 2^{-3} + 2^{-3}) = 1 \]
+
+\item \textbf{code 5 and 6 } K =  0.9375 so Kraft's inequality is obeyed.   \[ K = \sum^{m}_{i=1}2^{-n_i} = (2^{-1} + 2^{-2} + 2^{-3} + 2^{-4}) =  0.9375 \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Kraft inequality: Fixed length codes.}
+\begin{itemize}
+\item Consider a 6 symbol alphabet: $\{x_1, x_2, x_3, x_4, x_5,x_6\}$
+\item If a fixed length code is to be used, how many digits are required for each symbol.
+\item Each codeword must be distinct.
+\item Answer: We must have 3 digits in every codeword.
+\item Compute K for this alphabet, and use Kraft's Inequality to appraise this code.
+\item $K = 6 \times 2^{-3} = 0.750$. This code is uniquely decodable, but not very efficient.
+\end{itemize}
+\end{frame}
+
+
+% - Lossless data compression.
+% - Huffman Coding
+% - Inverse Mapping
+
+\end{document}

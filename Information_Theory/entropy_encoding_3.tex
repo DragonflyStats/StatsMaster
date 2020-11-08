@@ -1,0 +1,181 @@
+﻿\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx} % Font Family
+\usepackage{helvet} % Font Family
+\usepackage{color}
+\mode<presentation> {
+	\usetheme{Default} % was Frankfurt
+	\useinnertheme{rounded}
+	\useoutertheme{infolines}
+	\usefonttheme{serif}
+	%\usecolortheme{wolverine}
+	% \usecolortheme{rose}
+	\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+\title[MA4413]{Statistics for Computing \\ {\normalsize MA4413 Lecture 11A}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Autumn 2011}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+\renewcommand{\arraystretch}{1.5}
+%------------------------------------------------------------------------%
+\begin{document}
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Entropy Encoding}
+The design of a variable-length code such that its average code word length approaches the
+entropy of the DMS is often referred to as \textbf{\emph{entropy coding}}.\\ \bigskip In this lecture, we will present two examples of
+entropy coding.
+\begin{itemize}
+\item Shannon-Fano Coding
+\item Huffman Coding
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+% Page 255
+\frametitle{A. Shannon-Fano Coding:}
+An efficient code can be obtained by the following simple procedure, known as
+Shannon- Fano algorithm:
+\begin{itemize}
+\item[1.] List the source symbols in order of decreasing probability.
+\item[2.] Partition the set into two sets that are as close to equiprobable as possible, and assign 0 to the
+upper set and 1 to the lower set.
+\item[3.] Continue this process, each time partitioning the sets with as nearly equal probabilities as possible until no further partitioning is possible.
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+% Page 255
+\frametitle{A. Shannon-Fano Coding:}
+\begin{itemize}
+\item Consider a 6 symbol alphabet: $\{x_1, x_2, x_3, x_4, x_5,x_6\}$ with corresponding probabilities $\{0.30, 0.25, 0.20, 0.12, 0.08,0.05\}$
+\item Use the Shannon Fano coding algorithm to compute a variable length code.
+\item (On Overhead)
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+% Page 255
+\frametitle{A. Shannon-Fano Coding:}
+\begin{itemize}
+\item Compute the entropy
+\[H(X) = ( -0.30 \times \mbox{log}_2(0.3) ) +  \ldots +( -0.05 \times \mbox{log}_2(0.05)) = 2.36 \mbox{b/symbol} \]
+
+\item Compute the average codeword length
+\[E(L) = ( 0.30 \times 2 ) +( 0.25 \times 2)  + \ldots + ( 0.05 \times 4) = 2.38 \mbox{b/symbol} \]
+
+\item Compute the efficiency of the code.
+
+\[ \eta  = H(X) / E(L)  = 2.36 / 2.38  = 0.99 \]
+
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+% Page 256 Bottom
+\begin{frame}\frametitle{B. Huffman Encoding:}
+ The Huffman encoding procedure is as follows:
+
+\begin{itemize}\item[1.] List the source symbols in order of decreasing probability.
+\item[2.] Combine the probabilities of the two symbols having the lowest probabilities, and reorder
+the resultant probabilities; this step is called reduction 1. The same procedure is repeated until
+there are two ordered probabilities remaining.
+\item[3.] Start encoding with the last reduction, which consists of exactly two ordered probabilities. Assign
+0 as the first digit in the code words for all the source symbols associated with the first probability;
+assign 1 to the second probability.
+\item[4.] Now go back and assign 0 and 1 to the second digit for the two probabilities that were combined
+in the previous reduction step, retaining all assignments made in Step 3.
+\item[5.] Keep regressing this way until the first column is reached.
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+% Page 256 Bottom
+\begin{frame}\frametitle{B. Huffman Encoding:}
+\begin{itemize}
+\item (Implementation on overhead)
+\item The underlying entropy is 2.36 b.
+\item The codeword lengths are the same as for Shannon Fano Coding. So the average code length $E(L)$ and the efficiency $\eta$ as the same also.
+\item
+In general, Huffman encoding results in an optimum code. Thus, it is the code that has the highest
+efficiency.
+\end{itemize}
+\end{frame}
+%----------------------------------------------------------------------------------%
+
+\frame{
+Huffman coding is an entropy encoding algorithm used for lossless data compression.
+
+
+}
+%----------------------------------------------------------------------------------%
+
+\frame{
+\frametitle{Huffman encoding algorithm}
+
+A frequency based coding scheme (algorithm) that follows Huffman�s idea is called Huffman coding. Huffman coding is a simple algorithm that generates a set of variable-size codewords of the minimum average length. The algorithm for Huffman encoding involves the following steps:
+}
+%----------------------------------------------------------------------------------%
+
+\frame{
+\begin{itemize}
+\item[1.] Frequency Table: Constructing a frequency table sorted in descending order.
+
+\item[2.] Building a binary tree:
+    Carrying out iterations until completion of a complete binary tree:
+    \begin{itemize}
+    \item[(a)] Merge the last two items (which have the minimum frequencies) of    the frequency table to form a new combined item with a sum
+    frequency of the two.
+    \item[(b)] Insert the combined item and update the frequency table.
+    \end{itemize}
+
+\item[3.] Deriving Huffman tree:
+Starting at the root, trace down to every leaf; mark �0� for a left branch and �1� for a right branch.
+
+\item[4.] Generating Huffman code:
+Collecting the 0s and 1s for each path from the root to a leaf and assigning a 0-1 codeword for each symbol.
+
+\end{itemize}
+}
+%----------------------------------------------------------------------------------%
+
+\frame{
+\frametitle{Huffman Coding}
+Huffman coding is a method of lossless data compression, and a form of entropy encoding. The basic idea is to map an alphabet to a representation for that alphabet, composed of strings of variable size, so that symbols that have a higher probability of occurring have a smaller representation than those that occur less often.
+
+}
+%----------------------------------------------------------------------------------%
+
+\frame{
+\frametitle{Huffman Coding}
+The key to Huffman coding is Huffman's algorithm, which constructs an extended binary tree of minimum weighted path length from a list of weights. For this problem, our list of weights consists of the probabilities of symbol occurrence. From this tree (which we will call a Huffman tree for convenience), the mapping to our variable-sized representations can be defined.
+}
+%-------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Huffman Coding}
+The mapping is obtained by the path from the root of the Huffman tree to the leaf associated with a symbol's weight. The method can be arbitrary, but typically a value of 0 is associated with an edge to any left child and a value of 1 with an edge to any right child (or vice-versa). By concatenating the labels associated with the edges that make up the path from the root to a leaf, we get a binary string. Thus the mapping is defined.
+}
+%-------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Inverse Mapping}
+\begin{itemize}
+\item In order to recover the symbols that make up a string from its representation after encoding, an inverse mapping must be possible. It is important that this mapping is unambiguous. \item We can show that all possible strings formed by concatenating any number of path labels in a Huffman tree are indeed unambiguous, due to the fact that it is a complete binary tree. \item That is, given a string composed of Huffman codes, there is exactly one possible way to decompose it into the individual codes.
+\end{itemize}
+}
+%-------------------------------------------------------------------------------------------%
+\frame{
+
+\frametitle{Ambiguity}
+
+Ambiguity occurs if there is any path to some symbol whose label is a prefix of the label of a path to some other symbol. In the Huffman tree, every symbol is a \textbf{\emph{leaf}}. Thus it is impossible for the label of a path to a leaf to be a prefix of any other path label, and so the mapping defined by Huffman coding has an inverse and decoding is possible.
+}
+
+\end{document}

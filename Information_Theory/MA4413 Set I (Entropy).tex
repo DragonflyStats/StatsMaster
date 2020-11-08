@@ -1,0 +1,1035 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+
+\mode<presentation> {
+ \usetheme{Default} % was Frankfurt
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+
+\setbeamercovered{dynamic}
+
+\title[MathsCast]{MathsCast Presentations \\ {\normalsize The Continuous Uniform Distribution}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Summer 2011}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+
+%------------------------------------------------------------------------%
+\begin{document}
+%------------------------------------------------------------------------%
+%-----------------------------------------------------------------%
+%- Source  MAterial for enxt section
+%  http://shannon.cm.nctu.edu.tw/it/itvol12004.pdf
+%-------------------------------------------------------------------------------%
+\begin{frame}
+\begin{itemize}
+	\item How to measure Information
+	\item Self Information
+	\item Instantaneouse Cod
+	\item Joint Entropy
+	\item Chain Rule for Entropy
+	\item Prefix Code
+	\item Shannon Fado Coding
+	\item Mutual Information
+\end{itemize}
+\end{frame}
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{How to measure information?}
+A good measure on information content
+should base on the degree of its uncertainty.
+From probabilistic viewpoint, if an event is less likely to happen, it should
+carry more information when it occurs, because it is more uncertain that the
+event would happen.\\ \bigskip In addition, it is reasonable to have additivity for information measure, i.e., the degree-of-uncertainty of a joint event should equal the sum
+of the degree-of-uncertainty of each individual event. Moreover, a small change
+in event probability should only yield a small variation in event uncertainty.
+\end{frame}
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{How to measure information?}
+For example, two events respectively with probabilities 0:20001 and 0:19999 should
+reasonably possess comparable information content. 
+
+As it turns out, the only
+measure satisfying these demands is the self-information de¯ned as the logarithm
+of the reciprocal of the event probability . 
+
+It is then legitimateto adopt the entropy|the expected value of the self-information|as a measure
+of information.
+
+
+
+
+\end{frame}
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{How to measure information?}
+
+In the case of data transmission over noisy channel, the concern is di®erent
+from that for data storage (or error-free transmission). 
+
+
+The sender wishes to
+transmit to the receiver a sequence of pre-defined information symbols under an
+acceptable symbol error rate. Code redundancies are therefore added to combat
+the noise.
+
+For example, one may employ the three-times repetition code (i.e.,
+transmit 111 for information symbol 1 and send 000 for information symbol
+0), and apply the majority law at the receiver end so that one-bit error can
+be recovered.
+
+
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+
+\frametitle{Definition} A code is called a prefix code or an instantaneous code if
+no codeword is a prefix of any other codeword.
+An instantaneous code can be decoded without reference to future codewords
+since the end of a codeword is immediately recognizable. 
+
+Hence,
+for an instantaneous code, the symbol $x_i$ can be decoded as soon as we
+come to the end of the codeword corresponding to it. We need not wait
+to see the codewords that come later. 
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Information Theory}
+The initial questions treated by information theory lay in the
+areas of data compression and transmission. The answers are
+quantities such as entropy and mutual information, which are
+functions of the probability distributions that underlie the
+process of communication. A few definitions will aid the initial
+discussion. \\. The entropy
+of a random variable X with a probability mass function p(x) is
+defined by $H(X) = -\sum x p(x) log2 p(x)$. 
+\end{frame}
+%-------------------------------------------------------------------------------%
+\begin{frame}
+We use logarithms to base 2. The entropy will then be measured in
+bits. The entropy is a measure of the average uncertainty in the
+random variable. It is the number of bits on average required to
+describe the random variable.
+\end{frame}
+\begin{frame}
+\begin{itemize}
+\item How to measure Information
+\item Self Information
+\item Instantaneouse Cod
+\item Joint Entropy
+\item Chain Rule for Entropy
+\item Prefix Code
+\item Shannon Fado Coding
+\item Mutual Information
+\end{itemize}
+\end{frame}
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Definition} A code is called a prefix code or an instantaneous code if
+no codeword is a prefix of any other codeword.
+An instantaneous code can be decoded without reference to future codewords
+since the end of a codeword is immediately recognizable. 
+
+Hence,
+for an instantaneous code, the symbol $x_i$ can be decoded as soon as we
+come to the end of the codeword corresponding to it. We need not wait
+to see the codewords that come later. 
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Self-information}
+
+Let E be an event with probability Pr(E), and let I(E) represent the amount
+of information you gain when you learn that E has occurred (or equivalently,
+the amount of uncertainty you lose after learning that E has happened). Then
+a natural question to ask is ``what properties should I(E) have?" 
+
+The answer
+to the question may vary person by person. Here are some common properties
+that I(E), which is called the self-information, is reasonably expected to have.
+
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Instantaneous Code}
+An instantaneous code is a selfpunctuating
+code; we can look down the sequence of code symbols and
+add the commas to separate the codewords without looking at later symbols.
+For example, the binary string 01011111010 produced by the code
+is parsed as 0,10,111,110,10.
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+In computing the entropy, we adopt the convention that
+\[0  log 0 = 0\]
+which can be justified by continuity since $x log x - 0$ as$ x - 0$.
+
+\end{frame}
+
+
+%-----------------------------------------------------------------%
+\begin{frame}
+
+\frametitle{Joint Entropy}
+By its definition, joint entropy is commutative; i.e., $H(X,Y ) = H(Y,X)$.
+\\
+The conditional entropy can be thought of in terms of a channel whose input
+is the random variable X and whose output is the random variable Y . \\
+
+$H(X|Y )$ is
+then called the equivocation and corresponds to the uncertainty in the channel
+input from the receiver's point-of-view.
+\end{frame}
+\begin{frame}
+
+\frametitle{Joint Entropy}
+%----Cover Book page 15
+\begin{itemize}
+	\item The Joint Entrropy $H(X,Y)$ of a pair of discrete random variables (X,Y) with a joint probability $p(x,y)$ is defined as
+	\[ H(X,Y) = -\sum_x \sum_y p(x,y) \mbox{ log}p(x,y)\]
+	\item This can also be expressed as 
+	\[ H(X,Y) = - E[\mbox{ log}p(x,y)]\]
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Chain rule for entropy}
+\[H(X, Y ) = H(X) + H(Y |X)\]
+\end{frame}
+
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{mutual information}
+For two random variables X and Y , the mutual information between X and
+Y is the reduction in the uncertainty of Y due to the knowledge of X (or vice
+versa)
+\end{frame}
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{uniquely decodable}
+In practice, the encoder often needs to encode a sequence of source symbols,
+which results in a concatenated sequence of codewords. If any concatenation of
+codewords can also be unambiguously reconstructed without punctuation, then
+the code is said to be uniquely decodable. Note that a non-singular code is not
+necessarily uniquely decodable. For example, consider a code for source symbols
+$\{A,B,C,D,E, F \}$ given by\\
+code of A = 0;\\
+code of B = 1;\\
+code of C = 00;\\
+code of D = 01;\\
+code of E = 10;\\
+code of F = 11:\\
+The above code is clearly non-singular; it is however not uniquely decodable
+because the codeword sequence, 01, can be reconstructed as AB or D.
+\end{frame}
+
+
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Classification of variable-length codes}
+
+\begin{itemize}
+	\item Prefix Codes
+	\item Uniquely decodable codes
+	\item Non-singular codes
+\end{itemize}
+
+A \textbf{\emph{prefix code}} is also named an instantaneous code because the codeword sequence can be decoded instantaneously without the reference to future codewords
+in the same sequence. Note that a uniquely decodable code is not necessarily
+prefix-free and may not be decoded instantaneously.
+
+For any prefix code, the average codeword length is no less than entropy.
+\end{frame}
+
+%-----------------------------------------------------------------%
+
+%-----------------------------------------------------------------%
+\begin{frame}
+Consider a random variable X taking values in the set
+X = {1, 2, 3, 4, 5} with probabilities 0.25, 0.25, 0.2, 0.15, 0.15, respectively.
+We expect the optimal binary code for X to have the longest
+codewords assigned to the symbols 4 and 5. These two lengths must be
+equal, since otherwise we can delete a bit from the longer codeword and
+still have a prefix code, but with a shorter expected length.
+
+
+\end{frame}
+
+
+
+%-----------------------------------------------------------------%
+\begin{frame} In general,
+we can construct a code in which the two longest codewords differ only
+in the last bit. For this code, we can combine the symbols 4 and 5 into
+a single source symbol, with a probability assignment 0.30. \\ Proceeding
+this way, combining the two least likely symbols into one symbol until
+we are finally left with only one symbol, and then assigning codewords
+to the symbols, we obtain the following table:
+
+
+\end{frame}
+%-----------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Huffman’s idea}
+Instead of using a fixed-length code for each symbol, Huffman’s idea is to
+represent a frequently occurring character in a source with a shorter code and
+to represent a less frequently occurring one with a longer code. 
+
+So for a text
+source of symbols with different frequencies, the total number of bits in this
+way of representation is, hopefully, significantly reduced. That is to say, the
+number of bits required for each symbol on average is reduced.
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+Frequency of occurrence:\\
+E A O T J Q X\\
+5 5 5 3 3 2 1\\
+Suppose we find a code that follows Huffman’s approach. For example, the
+most frequently occurring symbol E and A are assigned the shortest 2-bit
+codeword, and the lest frequently occurring symbol X is given a longer 4-bit
+codeword, and so on, as below:\\
+E A O T J Q X\\
+10 11 000 010 011 0010 0011\\
+Then the total number of bits required to encode string `EEETTJX’ is only
+$2 + 2 + 2 + 3 + 3 + 3 + 4 = 19$ (bits). This is significantly fewer than
+$8 \times 7 = 56$ bits when using the normal 8-bit ASCII code.
+\end{frame}
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\large
+1. Constructing a frequency table sorted in descending order.\\
+2. Building a binary tree\\
+Carrying out iterations until completion of a complete binary tree:\\
+(a) Merge the last two items (which have the minimum frequencies) of
+the frequency table to form a new combined item with a sum
+frequency of the two.\\
+(b) Insert the combined item and update the frequency table.\\ \bigskip
+3. Deriving Huffman tree
+Starting at the root, trace down to every leaf; mark ‘0’ for a left branch
+and ‘1’ for a right branch.\\
+4. Generating Huffman code:\\
+Collecting the 0s and 1s for each path from the root to a leaf and
+assigning a 0-1 codeword for each symbol.
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Huffman’s idea}
+Instead of using a fixed-length code for each symbol, Huffman’s idea is to
+represent a frequently occurring character in a source with a shorter code and
+to represent a less frequently occurring one with a longer code. 
+
+So for a text
+source of symbols with different frequencies, the total number of bits in this
+way of representation is, hopefully, significantly reduced. That is to say, the
+number of bits required for each symbol on average is reduced.
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+Frequency of occurrence:\\
+E A O T J Q X\\
+5 5 5 3 3 2 1\\
+Suppose we find a code that follows Huffman’s approach. For example, the
+most frequently occurring symbol E and A are assigned the shortest 2-bit
+codeword, and the lest frequently occurring symbol X is given a longer 4-bit
+codeword, and so on, as below:\\
+E A O T J Q X\\
+10 11 000 010 011 0010 0011\\
+Then the total number of bits required to encode string `EEETTJX’ is only
+$2 + 2 + 2 + 3 + 3 + 3 + 4 = 19$ (bits). This is significantly fewer than
+$8 \times 7 = 56$ bits when using the normal 8-bit ASCII code.
+\end{frame}
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\large
+1. Constructing a frequency table sorted in descending order.\\
+2. Building a binary tree\\
+Carrying out iterations until completion of a complete binary tree:\\
+(a) Merge the last two items (which have the minimum frequencies) of
+the frequency table to form a new combined item with a sum
+frequency of the two.\\
+(b) Insert the combined item and update the frequency table.\\ \bigskip
+3. Deriving Huffman tree
+Starting at the root, trace down to every leaf; mark ‘0’ for a left branch
+and ‘1’ for a right branch.\\
+4. Generating Huffman code:\\
+Collecting the 0s and 1s for each path from the root to a leaf and
+assigning a 0-1 codeword for each symbol.
+\end{frame}
+%-----------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Decoding algorithm}
+The decoding process is based on the same Huffman tree. This involves the
+following types of operations:
+\begin{itemize}
+\item We read the coded message bit by bit. Starting from the root, we follow
+the bit value to traverse one edge down the the tree.
+\item If the current bit is 0 we move to the left child, otherwise, to the right
+child.
+\item We repeat this process until we reach a leaf. If we reach a leaf, we will
+decode one character and re-start the traversal from the root.
+\item Repeat this read-move procedure until the end of the message.
+\end{itemize}
+Example : Given a Huffman-coded message,\\
+111000100101111000001001000111011100000110110101,\\
+what is the decoded message?
+\end{frame}
+
+\end{document}
+
+\begin{frame}
+\frametitle{Shannon-Fano coding}
+This is another approach very similar to Huffman coding. In fact, it is the
+first well-known coding method. It was proposed by C. Shannon (Bell Labs)
+and R. M. Fano (MIT) in 1940.\\
+The Shannon-Fano coding algorithm also uses the probability of each
+symbol’s occurrence to construct a code in which each codeword can be of
+different length. \\Codes for symbols with low probabilities are assigned more
+bits, and the codewords of various lengths can be uniquely decoded.
+\end{frame}
+\frametitle{Shannon-Fano coding}
+This is another approach very similar to Huffman coding. In fact, it is the
+first well-known coding method. It was proposed by C. Shannon (Bell Labs)
+and R. M. Fano (MIT) in 1940.\\
+The Shannon-Fano coding algorithm also uses the probability of each
+symbol’s occurrence to construct a code in which each codeword can be of
+different length. \\Codes for symbols with low probabilities are assigned more
+bits, and the codewords of various lengths can be uniquely decoded.
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Shannon-Fano algorithm}
+Given a list of symbols, the algorithm involves the following steps:\\
+1. Develop a frequency (or probability) table\\
+2. Sort the table according to frequency (the most frequent one at the top)\\
+3. Divide the table into 2 halves with similar frequency counts\\
+4. Assign the upper half of the list a 0 and the lower half a 1\\
+5. Recursively apply the step of division (2.) and assignment (3.) to the
+two halves, subdividing groups and adding bits to the codewords until
+each symbol has become a corresponding leaf on the tree.
+\end{frame}
+
+
+
+\begin{frame}
+\begin{itemize}
+	\item Joint Entropy
+	\item Conditional entropy
+	\item The chain rule
+	\item Decoding
+\end{itemize}
+\end{frame}
+
+\frame{
+\begin{itemize}
+	\item The entropy of a data set depends on the individual probabilities $p(x_i)$, and is largest when all n probabilities are equal
+	\item This fact is used to reduce redundancy R in the data set.
+	\item Redundancy is defined as the difference between an alphabets largest possible entropy and its actual entropy.
+	\[ R = - \mbox{log}_2(n) + \sum p(x_i)\mbox{log}_2 p(x_i)\]
+	\end{itemize}
+	
+	
+	
+	
+}
+%------------------------------------------------------------------------%
+
+
+%------------------------------------------------------------------------%
+\begin{frame}
+
+\frametitle{The Chain Rule}
+%----Cover Book page 17
+\begin{itemize}
+\item Note that $H(Y|X) \neq H(X|Y)$.
+\item However $H(X) - H(X|Y) = H(Y) - H(Y|X)$. This is a result that we will use later.
+\item Check this using data from last example
+\item $H(X) - H(X|Y)  = 7/4 - 11/8 = 3/8$   ( remark 7/4 = 14/8)
+\item $H(Y) - H(Y|X)  = 2 - 13/8 = 3/8$   (remark 2 = 16/8)
+\end{itemize}
+\end{frame}
+
+
+
+
+
+\begin{frame}
+\frametitle{Importance of data compression}
+Data compression techniques is motivated mainly by the need to improve
+efficiency of information processing. This includes improving the following
+main aspects in the digital domain:
+\begin{itemize} \item storage efficiency
+	\item  efficient usage of transmission bandwidth
+	\item reduction of transmission time. \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Importance of data compression}
+Although the cost of storage and transmission bandwidth for digital data
+have dropped dramatically, the demand for increasing their capacity in many
+applications has been growing rapidly ever since.\\ There are cases in which
+extra storage or extra bandwidth is difficult to achieve, if not impossible.\\
+Data compression as a means may make much more efficient use of existing
+resources with less cost. \\ Active research on data compression can lead to
+innovative new products and help provide better services.
+\end{frame}
+\section{Information Theory}
+%-----------------------------------------------------------------------------------------------%
+%---http://www.cs.cmu.edu/~dst/Tutorials/Info-Theory/
+%-----------------------------------------------------------------------------------------------%
+\begin{frame}
+Information theory provides us with a formula for determining the number of bits required in an optimal code even when we don't know the code. Let's first consider uniform probability distributions where the number of possible outcomes is not a power of two. \\Suppose we had a conventional die with six faces.\\ The number of bits required to transmit one throw of a fair six-sided die is:$ log 6 = 2.58$. Once again,we can't really transmit a single throw in less than 3 bits, but a sequence of such throws can be transmitted using 2.58 bits on average. 
+\end{frame}
+%-----------------------------------------------------------------------------------------------%
+\begin{frame}
+\large
+The optimal code in this case is complicated, but here's an approach that's fairly simple and yet does better than 3 bits/throw. Instead of treating throws individually, consider them three at a time. The number of possible three-throw sequences is $6^3= 216$. \\Using 8 bits we can encode a number between 0 and 255, so a three-throw sequence can be encoded in 8 bits with a little to spare; this is better than the 9 bits we'd need if we encoded each of the three throws seperately.
+\end{frame}
+%-----------------------------------------------------------------------------------------------%
+\begin{frame}
+\large
+In probability terms, each possible value of the six-sided die occurs with equal probability $P=1/6$. Information theory tells us that the minmum number of bits required to encode a throw is $-log P = 2.58$.\\ If you look back at the eight-sided die example,you'll see that in the optimal code that was described, every message had a length exactly equal to -log P bits.
+\end{frame}
+%-----------------------------------------------------------------------------------------------%
+\begin{frame}
+\large Now let's look at how to apply the formula to biased (non-uniform) probability distributions.\\ Let the variable x range over the values to be encoded,and let P(x) denote the probability of that value occurring.\\ The expected number of bits required to encode one value is the weighted average of the number of bits required to encode each possible value,where the weight is the probability of that value: 
+\end{frame}
+
+\end{document}
+%------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Conditonal Entropy}
+\begin{itemize}
+\item We define the condtional entropy of a random variable given another as the expected value of the entropies of the condtional distributions, averaged over the conditioning random variable.
+\[ H(Y|X) = \sum p(x)H(Y|X=x) \]
+\item $H(X|Y) = -\sum ( p(x_i,y_k)\mbox{ log }p(x_i|y_k)$
+\end{itemize}
+\end{frame}
+
+
+
+%------------------------------------------------------------------------%
+
+\begin{frame}
+
+\frametitle{The Chain Rule}
+%----Cover Book page 17
+Let (X,Y) have the following joint distribution.
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|}\hline
+& X=1 &X=2 &X=3 &X=4 \\ \hline \hline
+Y=1& 1/8  & 1/16 & 1/32 & 1/32 \\ \hline
+Y=2& 1/16 & 1/8  & 1/32 & 1/32 \\ \hline
+Y=3& 1/16 & 1/16 & 1/16 & 1/16 \\ \hline
+Y=4& 1/4  & 0       & 0       & 0 \\ \hline
+\end{tabular}
+\end{center}
+
+\end{frame}
+%------------------------------------------------------------------------%
+
+\begin{frame}
+%----Middleton's Stat Comm Theory page 297 
+\frametitle{Example}
+\begin{itemize}
+\item Consider an noisy channel,  whereby two signals $x_1$ and $x_2$ can arise at the channel input, with a corresponding signal set $y_1$ and $y_2$ appearing at the output.
+\item $P(x_1) = 0.6$ and $P(x_2) = 0.4$
+\item $P(y_1)= 0.8$ and $P(y_2) = 0.2$
+\item $P(y_1|x_1) = 5/6$ and  $P(y_2|x_1) = 1/6$
+\item $P(y_1|x_2) = 3/4$ and  $P(y_2|x_2) = 1/4$
+\end{itemize}
+\end{frame}
+
+%==========================================================%
+\begin{frame}
+\begin{itemize}
+\item $H(X_1) =  - \mbox{ log} (0.6) = 0.714 $ bits  ( or $0.513 nats)$
+\item $H(x_2) = -\mbox{log)(0.4) = 1.32 $ bits ( or $0.913 nats )$
+\item $H(X)  = - \sum p(x_i) \mbox{ log }p(x_i) = -(0.6 \mbox{log } (0.6) + 0.4 \log{0.4}) = 0.67301 nats (0.971 bits)$
+\item $H(Y)  = - \sum p(x_i) \mbox{ log }p(x_i) = -(0.8 \mbox{log } (0.8) + 0.2 \log{0.2}) = 0.501 nats (0.721 bits)$
+\item $H(X|Y) = -[0.5 log(5/8) + 0.1 log(1/2) + 0.3 log(3/8) + 0.1 log(0.5)] = 0.669 nats (0.964 bits)$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Relative Entropy}
+\begin{itemize}
+\item Relative entropy is the measure of the `distance' between distributions.
+\item Importantly, it expresses the inefficiency of assuming that the distribution is $q$ when the distribution is really $p$.
+\item Relative Entropy is also known as the \textbf{\emph{ Kullback Leibler distance}}
+\item
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+% Salomon Data Compression Page 46
+\frametitle{Variable Size Codes}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}\hline
+Symbol &Prob &Code 1&Code 2 \\ \hline \hline
+A  & 0.49 & 1 & 1 \\ \hline
+B  & 0.25 & 01  & 01 \\ \hline
+C  & 0.25 & 010 & 000  \\ \hline
+D  & 0.01 & 001       &  001       \\ \hline
+\end{tabular}
+\end{center}
+
+20 symbol string: ACBA CCDB AABB AACA ABCA
+
+encoded by code 1 : 10100110100100010111010111010110101101
+\end{frame}
+%--------------------------------------------------------------------------------%
+\begin{frame}
+\begin{itemize}
+\item Efficiency
+\item Information Source
+\item Shannon's Communication Theory
+\item Data Compression Ratio
+\item Shannon Hartley Theorem
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Efficiency}
+A source alphabet with non-uniform distribution will have less entropy than if those symbols had uniform distribution (i.e. the "optimized alphabet"). 
+Efficiency has utility in quantifying the effective use of a communications channel.
+\end{frame}
+%---------------------------------------------------------------------------------%
+\begin{frame}
+\begin{enumerate}
+\item We will want our information measure $I(p)$ to have several
+properties (note that along with the axiom is motivation for
+choosing the axiom). \item Information is a non-negative quantity:
+$I(p) \geq 0$. \item If an event has probability 1, we get no
+information from the occurrence of the event: $I(1) = 0$. \item If
+two independent events occur (whose joint probability is the
+product of their individual probabilities), then the information
+we get from observing the events is the sum of the two
+informations: $I(p1 + p2) = I(p1)+I(p2).$ (This is the critical
+property)
+\item We will want our information measure to be a continuous
+(and, in fact, monotonic) function of the probability (slight
+changes in probability should result in slight changes in
+information).
+\end{enumerate}
+\begin{equation}
+I(p) = -logb(p) = logb(1/p) \mbox{ for some base b }.
+\end{equation}
+\end{frame}
+%-------------------------------------------------------------------------------%
+\begin{frame}
+H satisfies the following equation: $ H\left(\frac{1}{n},
+\ldots,\frac{1}{n}\right) = H\left(\frac{b_1}{n}, \ldots,
+\frac{b_k}{n}\right) + \sum_{i=1}^k \frac{b_i}{n}
+H\left(\frac{1}{b_i}, \ldots, \frac{1}{b_i}\right). $
+\end{frame}
+%-------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Shannon's communication theory }
+In his classic 1948 papers, Claude Shannon laid the foundations
+for contemporary information, coding, and communication theory. He
+developed a general model for communication systems, and a set of
+theoretical tools for analyzing such systems.\\
+His basic model consists of three parts: a sender (or source), a
+channel, and a receiver (or sink). His general model also includes
+encoding and decoding elements, and noise within the channel.
+\end{frame}
+
+%-------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information Theory}
+The fundamental quantities of information theory entropy, relative
+entropy, and mutual information are defined as functionals of
+probability distributions. In turn, they characterize the behavior
+of long sequences of random variables and allow us to estimate the
+probabilities of rare events (large deviation theory) and to find
+the best error exponent in hypothesis tests.
+\end{frame}
+
+%-------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example}Consider a random variable that has a
+uniform distribution over 32 outcomes. To identify an outcome, we
+need a label that takes on 32 different values. Thus, 5-bit
+strings suffice as labels. The entropy of this random variable is
+$H(X) = - \sum p(i) log p(i) = log 32 = 5 bits$, (1.2) which
+agrees with the number of bits needed to describe X. In this case,
+all the outcomes have representations of the same length.
+\end{frame}
+%-----------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Information Entrophy}
+Entropy is the uncertainty of a single random variable. We can
+define conditional entropy $H(X|Y)$, which is the entropy of a
+random variable conditional on the knowledge of another random
+variable. The reduction in uncertainty due to another random
+variable is called the mutual information.
+}
+%\end{document}
+%-----------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Information Entropy}
+Information entropy is a measure of the uncertainty associated
+with a random variable. The term by itself in this context usually
+refers to the \textbf{Shannon entropy}, which quantifies, in the sense of
+an expected value, the information contained in a message, usually
+in units such as bits.
+The Shannon entropy is denoted by $H(X)$ and is defined as
+\begin{equation}
+H(X) = - \sum_{i=1}^np(x_i)\log_b p(x_i).
+\end{equation}
+}
+%-----------------------------------------------------------------------------------------------%
+\frame{
+\frametitle{Example}
+A source language has 5 symbols A, B, C, D and E. The associated
+probabilities of these symbols are 0.35, 0.25, 0.20, 0.10 and
+0.10, respectively.
+\begin{itemize}
+\item Calculate the entropy of the source language. \item Define a
+Huffman binary code for the source language. \item Calculate the
+efficiency of this code.
+\end{itemize}
+}
+%--------------------------------------------------------%
+
+
+\section{Huffman Coding and data compression}
+%----------------------------------------------------------------------------------------------------%
+\frame{\frametitle{ Efficiency and Redundancy}
+\begin{itemize}
+\item Entrophy
+\[ I(p) = -\mbox{log}_2(p)  =  \mbox{log}_2({1\over p})\]
+\item Efficiency
+\[ \mbox{ Efficiency } = {H \over E(L)}\]
+\item Redundancy
+\item
+\[ I(X,Y) =H(X) -(H(X|Y) \]
+\end{itemize}
+}
+
+%----------------------------------------------------------------------------------------------------%
+\frame{\frametitle{ The Prefix condtion}
+
+Code States
+\begin{itemize}
+\item singular or non-singular
+\item uniquely decodable
+\item instantaneous
+\end{itemize}
+
+}
+%----------------------------------------------------------------------------------------------------%
+\frame{\frametitle{ Alphabets}
+A souirce language has 5 Symbols A,B,C,D and E. The associated probabilities of these symbolas are given in the table below: 
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline Symbol & Probability \\ \hline
+A & 0.60 \\
+B & 0.30 \\ 
+C & 0.05\\
+D & 0.03\\ 
+E & 0.02\\ \hline
+\end{tabular}
+\end{center}
+Calculate the entropy of the source language, and define a huffman code of the source language.
+
+}
+%\end{document}
+%----------------------------------------------------------------------------------------------------%
+\frame{
+The frequency of 0 as an input to a binary channel is 0.60.
+If 0 is the input, the 0 is the output
+If 1 is the input then the 1 is the output with probability 0.9.
+\begin{itemize}
+\item Calculate the information per bit contained in the input
+\item Calculate the probability that the output is 0.
+\item Calculate the probability that the output is 1.
+\item Ca
+\end{itemize}
+}
+%----------------------------------------------------------------------------------------------------%
+
+\begin{frame}
+
+
+\frametitle{Entropy}
+
+
+\begin{itemize} \item In information theory, entropy is a measure of the loss of information in a transmitted signal or message.
+
+
+\item Entropy estimation is a two stage process; first a histogram is estimated and thereafter the entropy is calculated. 
+
+
+\item 
+The base of the logarithm determines the unit of measurement. The default base e (nats) is used, alternative choices are 2 (bit) and 10 (Hartley).
+
+
+\item In information theory, self-information is a measure of the information content associated with the outcome of a random variable. 
+\item It is expressed in a unit of information, for example bits, nats, or hartleys, depending on the base of the logarithm used in its calculation. 
+
+
+\end{itemize}
+\end{frame}
+
+
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information }
+
+
+The term self-information is also sometimes used as a synonym of entropy, i.e. the expected value of self-information in the first sense, because 
+$I(X;X) = H(X)$, where $I(X;X)$ is \textbf{\emph{the mutual information}} of $X$ with itself.
+
+
+The information entropy of a random event is the expected value of its self-information.
+
+
+
+
+On tossing a coin, the chance of a head is 0.5. 
+When it is known that indeed 'head' occurred, this amounts to
+\[I(`H') = \mbox{log}_2 (1/0.5) = \mbox{log}_2(2)  = 1 \mbox{ bits of information}. \]
+
+
+
+
+When throwing a fair die, the probability of 'two' is 1/6 (i.e. 0.1666). When it is known that 'two' has been thrown, the amount of self-information is
+
+
+
+
+\[I(`\mbox{ two }') = \mbox{log}_2 (1/0.16666) = \mbox{log}_2(6)  = 2.585 \mbox{ bits of information}. \]
+
+
+\end{frame}
+
+
+
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information Theory}
+
+
+This page provides some simple applications where information theory provides a useful analysis.
+
+
+The formula for uncertainty (sometimes referred to as entropy) is
+
+
+\[ H(X)  = \sum P_i \mbox{log}_2({1 \over P_i}) \]
+
+
+By convention, if any probability is zero, we set the product term to zero as well. Those of you who are familiar with calculus 
+could use limits to establish that zero is a reasonable value for this product.
+\end{frame}
+
+
+\end{document}
+
+
+
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+Consider this distribution of ratings:
+\begin{center}
+\begin{tabular}{c|ccccc|}
+Symbol & A & B & C & D & E \\ \hline
+Probability & 0.50 & 0.125 & 0.125 & 0.125 & 0.125 \\ \hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+
+
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+The uncertainty calculation would be
+
+
+\[ H(X)  = \sum P_i \mbox{log}_2({1 \over P_i}) \]
+
+
+
+
+
+
+\[ H(X)  = (0.5 \times \mbox{log}_2({1 \over 0.5}) ) + (0.125 \times \mbox{log}_2({1 \over 0.125}) )  + \ldots\]
+
+
+\[ H(X)  = [0.5 \times \mbox{log}_2(2) ] + [0.125 \times \mbox{log}_2(8) ]  + \ldots\]
+
+
+$H(X) = (0.5) + (0.375) + (0.375) + (0.375) + (0.375) = 2 $
+\end{frame}
+
+
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+Suppose we wanted to send a coded binary message that would indicate what category the rater chose. A simple approach would use three binary digits
+
+
+
+
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+A=000,\\
+B=001,\\
+C=010,\\
+D=011,\\
+E=100.\\
+
+
+\hline
+\end{tabular}
+\end{center}
+
+
+\end{frame}
+
+
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information Theory}
+But you could use the probabilities involved to save a bit of time. Set the most common category to a shorter binary string, and longer strings to the less common categories
+
+
+
+
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+A=1,\\
+B=000,\\
+C=001,\\
+D=010,\\
+E=011.\\
+\hline
+\end{tabular}
+\end{center}
+
+
+Then half of the time we would only use one bit to send the message, the other half of the time, we'd need three bits. On average, you would use two bits, which is exactly the number produced by our uncertainty calculation.
+\end{frame}
+
+
+
+
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information Theory}
+
+
+This example is a bit tricky because you might ask, why couldn't I use two bits for B, C, D, and E. This would lead to a coding of
+
+
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+A=1,\\
+B=00,\\
+C=01,\\
+D=10,\\
+E=11.\\
+\hline
+\end{tabular}
+\end{center}
+
+
+The problem with this is that unless you could separate the bits, then you couldn't distinguish between AA (11) and E (11). You'd need a stop bit or some other type of separator, which would add to the average length of a message.
+\end{frame}
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Huffman Encoding}
+
+
+One of the compression methods used by various Zip programs, Huffman encoding, takes advantage of this feature. 
+Instead of allocating 7/8 bits to each character, it will remap the characters with the most frequently occurring characters 
+having short bit lengths and the least frequently occurring characters having long bit lengths.
+
+
+\end{frame}
+
+
+%-----------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{The data compression ratio}
+
+
+The data compression ratio, also known as compression power, quantifies the reduction in data-representation size produced by a data 
+compression algorithm. The data compression ratio is analogous to the physical compression ratio used to measure physical compression of substances, 
+and is defined in the same way, as the ratio between the compressed size and the uncompressed size: 
+
+
+\[ \mbox{ compression ratio } = { \mbox{ Compressed size }  \over \mbox{ Uncompressed size}  }  \]
+
+
+\end{frame}
+
+
+%-------------------------------------------------------------------------------------------------------%
+
+\begin{frame}
+An  \textbf{\emph{information source}} is a sequence of random variables ranging over a finite alphabet, having a stationary distribution.\\ \bigskip
+The Shannon–Hartley theorem tells the maximum rate at which information can be transmitted over a communications channel of a specified bandwidth in the presence of noise. 
+\end{frame}
+
+\begin{frame}
+\frametitle{Importance of data compression}
+Data compression techniques is motivated mainly by the need to improve
+efficiency of information processing. This includes improving the following
+main aspects in the digital domain:
+\begin{itemize} \item storage efficiency
+\item  efficient usage of transmission bandwidth
+\item reduction of transmission time. \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Importance of data compression}
+Although the cost of storage and transmission bandwidth for digital data
+have dropped dramatically, the demand for increasing their capacity in many
+applications has been growing rapidly ever since.\\ There are cases in which
+extra storage or extra bandwidth is difficult to achieve, if not impossible.\\
+Data compression as a means may make much more efficient use of existing
+resources with less cost. \\ Active research on data compression can lead to
+innovative new products and help provide better services.
+\end{frame}
+
+\end{document}

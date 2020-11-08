@@ -1,0 +1,48 @@
+\documentclass{beamer}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+%======================================================================= %
+\begin{frame}
+	\large
+	\frametitle{Huffman Coding}
+ A discrete memoryless source $X$ has five symbols \[\{x_1,x_2,x_3,x_4,x_5\}\] with probabilities $P(x_1) = 0.42$ , $P(x_2) = 0.22$, $P(x_3) = 0.17$, $P(x_4) = 0.10$ and $P(x_5) = 0.09$.
+
+\begin{itemize}
+	\item [(a)] Construct a Huffman code for X.
+	\item [(b)] Calculate the efficiency of the code.
+	\item [(c)] Calculate the redundancy of the code.
+\end{itemize}
+
+
+\end{frame}
+
+%=============================================== %
+
+
+\begin{frame}
+	
+\begin{itemize}
+\item $x_1$ (0.42) \bigskip \bigskip
+\item $x_2$ (0.22) \bigskip \bigskip
+\item $x_3$ (0.17) \bigskip \bigskip
+\item $x_4$ (0.10) \bigskip \bigskip
+\item $x_5$ (0.09)
+\end{itemize}
+\end{frame}
+
+%============================================== %
+\begin{frame}
+	\LARGE
+\frametitle{Important Formulae}
+\[H = - \sum_{j=1}^{m} log_{2}(p_{i})\] \bigskip
+
+\[E(L) = \sum_{j=1}^{m} (l_{i} \times p_{i})\] \bigskip
+
+\[\mbox{Efficiency} = \frac{H }{ E(L) }\]
+\end{frame}
+
+\end{document}

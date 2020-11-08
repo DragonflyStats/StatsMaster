@@ -1,0 +1,340 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+
+\usepackage{vmargin}
+
+\usepackage{amsmath}
+
+\usepackage{framed}
+
+\usepackage{graphics}
+
+\usepackage{epsfig}
+
+\usepackage{subfigure}
+
+\usepackage{enumerate}
+
+\usepackage{fancyhdr}
+
+
+
+\setcounter{MaxMatrixCols}{10}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+
+%TCIDATA{Version=5.00.0.2570}
+
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+
+%TCIDATA{Language=American English}
+
+
+
+\pagestyle{fancy}
+
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+
+\lhead{MathsResource} \chead{Probability Distributions} \rhead{Normal Distribution} %\input{tcilatex}
+
+\begin{document}
+
+\section*{Normal Distribution : Tutorial Sheet 2}
+
+\begin{enumerate}
+
+
+
+\item 
+
+Assume that a character in a game is programmed to have an attack power according to $X \sim \text{Normal}(\mu=40,\sigma=3)$.\\[-0.2cm]
+
+
+
+\begin{enumerate}[(a)]
+
+\item What is the probability that the attack is greater than 45? \item What is the probability that the attack is between 32 and 42? \item Let $X_1$ and $X_2$ be the first and second attacks. What is the probability that the \emph{sum} of these two attacks is greater than 85 units? \quad \item Calculate 99\% limits for the sum of two attacks.  \item What is the probability that the \emph{difference} in attacks is more than 5 units? Note that attack 2 can be 5 units more than attack 1 or attack 1 can be 5 units more than attack 2, i.e., $\Pr(|D|>5)=\Pr(D<-5) + \Pr(D>5)$.
+
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\item A character in a game deals a standard attack 75\% of the time and a critical attack the rest of the time (call these events $S$ and $S^c$). Given that it is a standard attack, the attack power is $X\,|\,S \sim \text{Normal}(\mu=40,\sigma=3)$. When the character deals a critical attack, a random fluctuation is added to this according to a $\text{Normal}(\mu=5,\sigma=1)$ distribution.\\[-0.2cm]
+
+
+
+\begin{enumerate}[(a)]
+
+\item What is the distribution of $X\,|\,S^c$? \item Calculate $\Pr(X<43\,|\,S)$ and $\Pr(X<43\,|\,S^c)$. \item Calculate $\Pr(X<43)$. \,\, (hint: law of total probability) \item If the character deals less than 43 damage points, what is the probability that the attack was a critical attack?
+
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\item 
+
+The income of a technician (in thousands) is $X_1 \sim \text{Normal}(\mu=30,\sigma=2)$. The income of an engineer is $X_2 \sim \text{Normal}(\mu=40,\sigma=3.5)$. 
+
+\begin{enumerate}[(a)]
+
+\item Calculate the probability that an engineer earns more than a technician. \item Calculate 90\% limits for the difference in their income. \item For a group of 25 technicians, calculate the probability that the average wage is less than 30500, i.e., $\Pr(\,\overline{\!X}_1 < 30.5)$. \item In a group of 10 engineers, what is the probability that \emph{at least two} of them earn more than 45000? (hint: binomial with $p = \Pr(X_2 > 45)$) \item For a sample of 30 technicians and 35 engineers, calculate the 80\% limits for the difference in their average wages.
+
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\item 
+
+Let $X \sim \text{Normal}(\mu=10,\sigma=2)$. Calculate the following:
+
+\begin{enumerate}[(a)]
+
+\item $\Pr(X>10)$. \item $\Pr(X<3)$. \item $\Pr(X>8.4)$. \item $\Pr(6<X<14)$. \item The value of $x$ such that $\Pr(X>x)$ = 0.3. \item The value of $x$ such that $\Pr(X>x)$ = 0.8.
+
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\item 
+
+Assume that speeds of cars on a motorway have a normal distribution with mean 115km/hr and standard deviation 4km/hr.\\[-0.2cm]
+
+\begin{enumerate}[(a)]
+
+\item Draw a rough sketch of the distribution. \item $\Pr(X>120)=$ ? \item $\Pr(X<100)=$ ? \item $\Pr(100<X<110)=$ ? \item 1\% of drivers travel above what speed?
+
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item Assume that Z scores are normally distributed with a mean of Zero and a
+
+standard deviation of 1
+
+
+
+\begin{enumerate}[(a)]
+
+\item $P (0< Z < a)  =  0.1685$  Find   a 
+
+\item           $ P(- b \leq Z < b) =  0.95$             Find   b
+
+\item             P($Z \leq c$)  =       0.3015  Find   c
+
+\end{enumerate}
+
+
+\item  Assume that the diameter of a critical component is normally distributed with a mean of 500mm and a standard deviation of 12.5mm. You are required  to estimate the approximate probability of the following measurements occurring on an individual component.
+\begin{itemize}
+	\item[(i)](2 Mark) Greater than 517mm.
+	\item[(ii)](3 Marks) Less than 495mm.
+	\item [(iii)](2 Marks) Between 495mm and 513mm.
+	\item[(iv)] (3 Marks) The production manager reports that more than 99\% of the output is between 475mm and 525mm. Do you agree with this statement? Justify your answer with the appropriate calculations.
+\end{itemize}
+\item Assume that z scores are normally distributed with a mean of zero and
+
+standard deviation of 1.
+
+
+
+\begin{enumerate}[(a)]
+
+\item If   $P(0 < Z < a)$ = 0.4778 find a
+
+
+
+\item If  $P (-b   Z   b)$ = 0.7814 find b
+
+
+
+\item If  $P (Z < c) = 0.0062$ find c.
+
+\end{enumerate}
+
+
+
+\item Assume that the number of weekly study hours for students at a certain university is approximately normally distributed with a mean of 22 and a standard deviation of 6.
+
+
+
+\begin{enumerate}[(a)]
+
+\item Find the probability that a randomly chosen student studies less than 12 hours.
+
+\item Estimate the percentage of students that study more than 37 hours.
+
+\end{enumerate}
+
+
+
+
+
+\item 
+
+For \emph{any} normal variable $X \sim \text{Normal}(\mu,\sigma)$:
+
+\begin{enumerate}[(a)]
+
+\item Show that $\Pr(\mu-3\,\sigma<X<\mu+3\,\sigma) = 0.997$. \item Find a value for $k$ such that $\Pr(\mu-k\,\sigma<X<\mu+k\,\sigma) = 0.95$. \item Find $k$ such that $\Pr(\mu-k\,\sigma<X<\mu+k\,\sigma) = 0.99$. \item Show that $\Pr(X>\mu+1.64\,\sigma) = 0.05.$
+
+\end{enumerate}
+
+
+
+\item The height of Dutchmen is normally distributed with mean 180cm and variance 144cm2. Calculate
+
+\begin{enumerate}[(a)]
+
+\item the probability that a Dutchman is between 171cm and 195cm tall.
+
+\item the height that 15\% of Dutchmen exceed.
+
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\item The lengths of Padraig Harrington's drives are normally distributed with mean of 250m and standard deviation of 15m. The lengths of Rory McIlroy's drives are normally distributed with a mean of 245m and a standard deviation of 20m. Calculate the probability that Rory drives further than Padraig.
+
+
+
+\item IQ  is defined to have a normal distribution with mean 100 and standard deviation 15. 
+
+
+
+\begin{enumerate}[(a)]
+
+\item Calculate the probability that a person’s IQ is greater than 130
+
+\item Calculate the probability that a person’s IQ is less than 110
+
+\item Calculate the probability that a person’s IQ is between 82 and 120
+
+\item Calculate the IQ that is exceeded by 15\% of the population.
+
+\end{enumerate}
+
+
+
+
+
+\item Assume that readings on thermometers are normally distributed with a mean of zero, a standard deviation of one degree.  In each of the following
+
+readings draw a sketch and find the probability of the following
+
+readings occurring.
+
+
+
+\begin{enumerate}[(a)]
+
+\item Between 0 and 1.50 degrees.
+
+
+
+\item Less than 2.17 degrees.
+
+
+
+\item Between -1.96 and + 1.96 degrees.
+
+
+
+\item Between -2.00 and -1.50 degrees.
+
+
+
+\end{enumerate}
+
+
+%======================================================== 
+
+\item
+%%\subsection{Worked Examples: Spring 2008}
+The diameter of a screw produced in a factory has a normal distribution with mean 8mm and standard deviation 0.05mm. A screw is defective if its diameter is less than 7.92mm or more than 8.08mm.
+\begin{itemize}
+	\item[(i)]	Calculate the probability that a screw is defective.
+	
+	\item[(ii)] Suppose it is possible to control the variance of the diameter without changing the mean diameter. What is the maximum variance possible such that only 1\% of screws are defective?
+\end{itemize}		
+
+
+\item
+%%	\noindent \textbf{MA4413 Autumn 2008 paper}
+
+A model of an on-line computer system gives a mean times to retrieve a record from a direct access storage system device of 200 milliseconds, with a standard deviation of 58 milliseconds. If it can assumed that the retrieval times are normally distributed:
+
+\begin{itemize}
+	\item[(i)] What proportion of retrieval times will be greater than 75 milliseconds?
+	\item[(ii)] What proportion of retrieval times will be between 150 and 250 milliseconds?
+	\item[(iii)] What is the retrieval time below which 10\% of retrieval times will be?
+\end{itemize}
+
+\item 
+%% Spring 2007 ( Question 3) b) 
+The percentage of carbon in a batch of steel produced using a particular method is normally distributed with mean 3 and variance 0.16. 
+
+\begin{itemize}
+	\item[iv)]	Calculate the probability that the percentage of carbon in a batch is less than 3.3
+	\item[v)]	The batch is high grade if the percentage of carbon is between 2.5 and 3.5. Calculate the probability that the batch is high grade. 
+	\item[vi)]	Suppose that it is possible to control the variance. What is the maximum variance possible such that at least 95\% of the batches are high grade?
+	(10 marks)
+\end{itemize}
+
+	
+%======================================================== %
+\item 
+%% Spring 2005 Q3.    (a)	
+An important manufacturing process produces cylindrical component parts for the automotive industry. The diameter of these parts is normally distributed with a mean of 5 millimeters and a standard deviation of 0.1 millimeters.
+
+\begin{itemize}
+	\item[(vi)]	What is the probability that a part will have a diameter greater than 5.24mm?
+	\item[(vii)] What is the probability a part will have diameter measuring between 4.78mm and 4.85mm?
+	\item[(iii)] The diameter of 99\% of the parts is below what value?
+\end{itemize}
+
+%======================================================== %
+\item	
+% %	MA4004     Engineering Statistics    SPRING 2008
+
+
+The amount of beer in a bottle has a normal distribution with mean 500ml and variance 25ml2.
+\begin{itemize}
+	\item[(i)]	Calculate the probability that the amount of beer in the bottle is between 498ml and 504ml.
+	\item[(ii)]	What volume is exceeded by $20\%$ of the bottles?
+	(6 marks)
+\end{itemize}
+
+
+
+\end{enumerate}
+
+\end{document}

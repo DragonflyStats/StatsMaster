@@ -1,0 +1,304 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{enumerate}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+
+
+
+%============================================%
+% PMS Spring 2008 Question 4 - Probability
+\section*{Question 1}
+Consider Two events A, B such that
+
+\begin{itemize}
+\item P(A) = 0.3
+\item P(A $\cap B$) = 0.1
+\end{itemize}
+
+Find the minimum possible value of $P(A|B)$
+
+\[ P(A|B) = \frac{P(A \cup B) }{P(B)}\]
+
+\begin{itemize}
+\item $P(A \cup B) Maximum = 1$
+\item $P(A \cup B) Minimum = 0.3$
+\end{itemize}
+
+\subsection*{Minimum}
+
+\[ P(A \cup B) = P(A) + P(B) - P(A \cap B)\]
+\[ 0.3 = 0.3 + P(B) - 0.1 \]
+\[ P(B) = 0.1\] 
+
+\subsection*{Maximum}
+
+\[ P(A \cup B) = P(A) + P(B) - P(A \cap B)\]
+\[ 1 = 0.3 + P(B) - 0.1 \]
+\[P(B) = 0.8\]
+
+\[ P(A|B)_{MIN} = \frac{P(A \cup B) }{P(B)} = \frac{0.1}{0.8} = 0.125 \]
+\[ P(A|B)_{MAX} = \frac{P(A \cup B) }{P(B)} = \frac{0.1}{0.1} = 1 \]
+
+%=================================================================================%
+
+\subsection*{Question 3: Defective Electronics}
+Suppose an electronics assembly subcontractor receives resistors from only two suppliers: A and B
+
+\begin{itemize}
+\item Suppose we are told that Supplier A supplies 80\% of the resistors
+
+\end{itemize}
+
+\begin{framed}
+\begin{itemize}
+\item Supplier A supplies 80\% of the resistors
+\item \textit{Probability that a randomly chosen resistor comes from A is 80 \%} : \textit{P(A) = 0.80 }
+\item Supplier B supplies 20\% of the resistors
+\item \textit{Probability that a randomly chosen resistor comes from B is therefore 20\%} : \textit{P(B) = 0.20}
+\end{itemize}
+\end{framed}
+
+
+
+\begin{itemize}
+\item We are giving information about the rate of faulty components from each supplier. \\(Faulty : resistor fails some 
+\item 1\% of the resistors supplied by A are faulty
+
+\item 3\% of the resistors supplied by B are faulty 
+\vspace{1cm}
+\end{itemize}
+
+\begin{itemize}
+\item We are giving information about the rate of faulty components from each supplier. \\(Faulty : resistor fails some quality test)
+\item  \textit{P(F) probability that randomly selecting compoent is faulty}
+\item 1\% of the resistors supplied by A are faulty.
+\item\textit{ We write this as $P(F|A) =0.01$}
+\item 3\% of the resistors supplied by B are faulty 
+\item \textit{We write this as $P(F|B) =0.03$}
+\end{itemize}
+\newpage
+
+
+
+\section{Question 1}
+Events  (Important the event names are explained)
+
+\begin{itemize}
+\item F: Student plays footballP(F) = 50%
+\item S: Student does SwimmingP(S) = 20%
+\item F and S:            Student takes part in both swimming and football  
+\end{itemize}
+
+P(S and F) = 15%
+
+Find P (F or S)
+Use addition rule
+
+\begin{eqnarray}P (F or S)  &=  P(F) + P(S) – P( Fand S)\\
+&=  50% + 20 % - 15%\\
+&=   55%\\
+\end{eqnarray}
+
+(We subtract 15\% to stop the “boths” getting counted twice)
+
+Probability of playing neither
+This is the complement event of playing one or both sports.
+\[P(Neither) = 1 –  P( F or S)  = 45\%\]
+
+\subsection{Question 2} 
+2 components A and B.
+P(A) = event that A is workingP(A) = 0.98
+P(B) = event that B is workingP(B) = 0.95
+P(A and B) = event that both A and B are working = P(A) x P(B) = 0.98 x 0.95 = 0.931
+
+\subsection{Question 3}
+Lots of useless information.
+Complement event of at least one working is that they are both broken.
+
+Answer  100 – 4\% = 96%
+
+\subsection{Question 4}
+
+
+
+Events 
+\begin{description}
+\item[A] components from supplier A  P (A) = 0.8 
+\item[B] components from supplier B  P (B) = 0.2 
+\item[F] resistor fails test
+\end{description}
+
+\begin{verbatim}
+1\% Probability of a Failure given that component is from Supplier A.      P(F|A) = 0.01
+3\% Probability of a Failure given that component is from Supplier B.      P(F|B) = 0.03
+\end{verbatim}
+Probability of flaw : P(F)
+Failed resistors either come from A or B
+\[P( F) =  P ( F \mbox{ and } A)  +  P( F \mbox{ and } B)\]
+Use conditional Probability  rule
+\[P(F) = P(F|A)\times P(A)  + P(F|B)\times P(B)\]
+
+\[P(F)  =  ( 0.01 x 0.8 ) + ( 0.03 x 0.2) = (0.008) + (0.06) = 0.014\]
+Answer 1.4%
+
+Part ii
+Given that a component failed, what was the probability of coming from A
+P(A|F) 
+
+P(A|F) = P(A and F)  / P(F)We found P(A and F) earlier ; 0.008
+
+\[P(A|F) = 0.008/0.014 =  0.57\][answer : 57\%]
+
+%========================================================================%
+\subsection{Basic Probability Questions}
+
+Suppose a pair of fair dice is thrown. 
+\begin{itemize}
+\item[(a)] What is the probability of getting a sum of 9 from two throws of a dice
+\end{itemize}
+Find the probability that the sum is 10 or greater if
+\begin{itemize}
+\item[(b)] a 5 appears on the first die, 
+\item[(c)] a 5 appears on at least one of the dice.
+\end{itemize}
+
+%========================================================================%
+\subsection{Basic Probability Questions}
+Tickets numbered 1 to 20 are mixed up and then a ticket is drawn at random. What is the probability that the ticket drawn has a number which is a multiple of 3 or 5
+
+
+
+%========================================================================%
+\subsection{Exercise : Probability of Two Dice Rolls}
+A pair of dice is thrown. Let X denote the minimum of the two numbers which occur.
+Find the distributions and expected value of X.
+
+\newpage
+%========================================================================%
+\subsection{Question 6}
+
+\begin{verbatim}
+A = coming from supplier AP(A) = 50\%
+B = coming from supplier BP(B) = 30\%
+C = coming from supplier CP( C)= 20\%
+
+D = being defective
+
+Given P(D|A) = 0.01P(D|B) = 0.03P(D|C) = 0.04
+
+
+P(D) = P( D and A) + P( D and B) + P(D and C)
+= P(D|A).P(A) +  P(D|B).P(B) + P(D|C).P(C)
+= (0.01 X 0.5)  + (0.03 X 0.30) + (0.04 X 0.20)
+= 0.005 + 0.009 +  0.008
+= 0.022 [I.E. 2.2%]
+
+
+P(B|D) = P(B and D) / P(D)  
+= 0.009/0.022 =  0.409[41%]
+\end{verbatim}
+% Question 5 in lectures
+% Answer P(D) =0.0395 (3.95%)
+% P(C|D) = 0.0506(5.06%)
+
+
+
+\newpage
+\textbf{Question 1:}
+\begin{itemize}
+\item What is the probability that a randomly selected resistor fails the final test?
+
+\item In mathematical terms, compute P(F) 
+\end{itemize}
+
+
+\textbf{Law of Total Probability:}
+\begin{itemize}
+\item Faulty Resistors are either from Supplier A or Supplier B.
+\vspace{0.3cm} 
+\item \textit{Resistors MUST come from one of the two suppliers.}
+\item \textit{A and B are mutually exclusive.}
+\end{itemize}
+\vspace{0.3cm} 
+\[ P(F) = P(F \mbox{ and } A) + P(F \mbox{ and } B) \]
+
+
+
+
+
+
+\section*{Question 11 - Summary Statistics}
+
+The following data give the marks of 10 students in a test (out of 20 marks). Calculate
+\begin{itemize}   
+\item[(a.)] the median    
+\item[(b.)] the mean     
+\item[(c.)] the range    
+\item[(d.)] the standard deviation 
+\item[(e.)] The Inter-Quartile Range
+\end{itemize}
+
+\[12, 17, 7, 11, 18, 6, 14, 15, 11, 9.\]
+
+
+
+
+\textbf{Probability Table} \\ \bigskip
+\begin{tabular}{|c|c|c||c|}
+\hline  &  \phantom{sp} Europe \phantom{sp} & \phantom{sp} Outside \phantom{sp} & \phantom{sp} Total\phantom{sp}  \\ 
+\hline On Time  & 48.82\% & 30.00\% & 78.82\% \\ 
+\hline Late & 14.12\% & 7.06\% &  21.18\% \\ \hline
+\hline Total  & 62.94\% & 30.06\% & 100.00\% \\ 
+\hline 
+\end{tabular} 
+
+
+
+Using the probability table answer the following questions. \\
+\bigskip
+For a randomly chosen flight departing from this airport, what is the probability that it: 
+\begin{itemize}
+\item[(a)] Departs on time? 
+\item[(b)] Departs with a delay and is a flight outside Europe? 
+
+\item[(c)] Departs on time or is a flight outside Europe? 
+\item[(d)] Departs on time, given that you know it is a flight within Europe? 
+
+\item[(e)] Is a flight within Europe, given that you know that it departs on time?
+\end{itemize}
+
+
+
+
+
+\section*{Question 14 - Urn Question}
+
+
+
+\section*{Discrete Random Variables}
+\begin{enumerate}
+
+
+
+
+
+
+
+\end{document}

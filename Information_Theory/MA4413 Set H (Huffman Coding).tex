@@ -1,0 +1,410 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx}  % Font Family
+\usepackage{helvet}   % Font Family
+\usepackage{color}
+
+\mode<presentation> {
+ \usetheme{Default} % was Frankfurt
+ \useinnertheme{rounded}
+ \useoutertheme{infolines}
+ \usefonttheme{serif}
+ %\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+
+\setbeamercovered{dynamic}
+
+\title[MathsCast]{MathsCast Presentations \\ {\normalsize Huffman Coding}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Summer 2011}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+
+\renewcommand{\arraystretch}{1.5}
+
+
+%------------------------------------------------------------------------%
+\begin{document}
+
+\begin{frame}
+\frametitle{Contents}
+\large
+\begin{itemize}
+\item Redundancy Reduction
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Information}
+\begin{itemize}
+\item Messages with a small difference in probability provide information also differing slightly. 
+\item The information of two messges can be added if they are independent of each other.
+\item Using the logarithm base 2 information provides the best possible code length in bit for this message. 
+\item If the probability of a message is 0.5 the information is 1. A proper code would provide a code length of 1 bit. 
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------%
+
+
+\begin{frame}
+
+\frametitle{Redundancy Reduction}
+
+Compression procedures intended for redundancy reduction try to adapt the internal data structure without affecting information or contents respectively. Original data will be transformed into a more efficient form to enable better usage of resources. Procedures belonging to this category are totally reversible. After decoding data will be obtained back without any difference to the original ones.
+
+The focal point of this technology is file compression for data transfer or archiving purposes, e.g. for downloads. In this field the most important format is ZIP.
+
+Synonymously entropy coding is in use for redundancy reduction. Strictly speaking the term entropy focusses on a smaller range of procedures. Normally it will be used for Huffman, Shannon Fano or arithmetic coding.
+
+\end{frame}
+\begin{frame}
+
+
+A communication channel is a system in which the output depends
+probabilistically on its input. It is characterized by a probability transition
+matrix $p(y|x)$ that determines the conditional distribution of the output
+given the input. For a communication channel with input X and output
+Y, we can define the capacity C by
+
+
+
+
+\[C = max_{p(x)} I (X; Y).\]
+
+
+
+
+\end{frame}
+
+
+
+%----------------------------------------------------------------------------%
+\begin{frame}
+%--http://ee.stanford.edu/~gray/it.pdf
+The development of the idea of entropy of random variables and processes by
+Claude Shannon provided the beginnings of information theory and of the modern
+age of ergodic theory. 
+
+
+We shall see that entropy and related information
+measures provide useful descriptions of the long term behavior of random processes
+and that this behavior is a key factor in developing the coding theorems
+of information theory. 
+
+
+We now introduce the various notions of entropy for random
+variables, vectors, processes, and dynamical systems and we develop many
+of the fundamental properties of entropy.
+\end{frame}
+
+%----------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Information of a Message}
+
+
+In information theory, information is a value only depending on the probability for the occurrence of a particular message.
+
+
+
+Definition: Information of a Message m
+
+
+\[   I(m) = - \mbox{log}_2 P(m)\]
+
+
+
+Corresponding to the definition above information shows the following characteristics:
+\begin{itemize}
+\item Increasing probability for the occurrence of a message results in decrease of information. 
+\item Information always provides a positive value because probability is varying in a range of 0 to 1. 
+\item The information of messages having a probability closely to 0 is very large, and for P(m) -> 0 it is infinite. 
+\end{itemize}
+\end{frame}
+
+
+
+%-----------------------------------------------------------------%
+\begin{frame}
+We first introduce the concept of entropy, which is a measure of the
+uncertainty of a random variable. Let X be a discrete random variable
+with alphabet $\chi$ and probability mass function $p(x) = Pr(X = x)$, $x  \chi$.
+
+
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Definition} A code is called uniquely decodable if its extension is nonsingular.
+In other words, any encoded string in a uniquely decodable code has
+only one possible source string producing it. 
+\\
+\bigskip
+However, one may have to look at the entire string to determine even the first symbol in the
+corresponding source string.
+
+
+\end{frame}
+
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Self-information}
+
+Let E be an event with probability Pr(E), and let I(E) represent the amount
+of information you gain when you learn that E has occurred (or equivalently,
+the amount of uncertainty you lose after learning that E has happened). \\Then
+a natural question to ask is ``What properties should I(E) have?" 
+\\
+The answer
+to the question may vary person by person. Here are some common properties
+that I(E), which is called the self-information, is reasonably expected to have.
+
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Definition} A code is called a prefix code or an instantaneous code if
+no codeword is a prefix of any other codeword.
+An instantaneous code can be decoded without reference to future codewords
+since the end of a codeword is immediately recognizable. 
+
+Hence,
+for an instantaneous code, the symbol $x_i$ can be decoded as soon as we
+come to the end of the codeword corresponding to it. We need not wait
+to see the codewords that come later. 
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Instantaneous Code}
+An instantaneous code is a selfpunctuating
+code; we can look down the sequence of code symbols and
+add the commas to separate the codewords without looking at later symbols.
+For example, the binary string 01011111010 produced by the code
+is parsed as 0,10,111,110,10.
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+In computing the entropy, we adopt the convention that
+\[0  log 0 = 0\]
+which can be justified by continuity since $x log x - 0$ as$ x - 0$.
+
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Joint Entropy}
+By its definition, joint entropy is commutative; i.e., $H(X,Y ) = H(Y,X)$.
+\\
+The conditional entropy can be thought of in terms of a channel whose input
+is the random variable X and whose output is the random variable Y . \\
+
+$H(X|Y )$ is
+then called the equivocation and corresponds to the uncertainty in the channel
+input from the receiver's point-of-view.
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Chain rule for entropy}
+\[H(X, Y ) = H(X) + H(Y |X)\]
+\end{frame}
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{mutual information}
+For two random variables X and Y , the mutual information between X and
+Y is the reduction in the uncertainty of Y due to the knowledge of X (or vice
+versa)
+\end{frame}
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{uniquely decodable}
+In practice, the encoder often needs to encode a sequence of source symbols,
+which results in a concatenated sequence of codewords. If any concatenation of
+codewords can also be unambiguously reconstructed without punctuation, then
+the code is said to be uniquely decodable. Note that a non-singular code is not
+necessarily uniquely decodable. For example, consider a code for source symbols
+$\{A,B,C,D,E, F \}$ given by\\
+code of A = 0;\\
+code of B = 1;\\
+code of C = 00;\\
+code of D = 01;\\
+code of E = 10;\\
+code of F = 11:\\
+The above code is clearly non-singular; it is however not uniquely decodable
+because the codeword sequence, 01, can be reconstructed as AB or D.
+\end{frame}
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Classification of variable-length codes}
+
+\begin{itemize}
+\item Prefix Codes
+\item Uniquely decodable codes
+\item Non-singular codes
+\end{itemize}
+
+A \textbf{\emph{prefix code}} is also named an instantaneous code because the codeword sequence can be decoded instantaneously without the reference to future codewords
+in the same sequence. Note that a uniquely decodable code is not necessarily
+prefix-free and may not be decoded instantaneously.
+
+For any prefix code, the average codeword length is no less than entropy.
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+Consider a random variable X taking values in the set
+X = {1, 2, 3, 4, 5} with probabilities 0.25, 0.25, 0.2, 0.15, 0.15, respectively.
+We expect the optimal binary code for X to have the longest
+codewords assigned to the symbols 4 and 5. These two lengths must be
+equal, since otherwise we can delete a bit from the longer codeword and
+still have a prefix code, but with a shorter expected length.
+
+
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame} In general,
+we can construct a code in which the two longest codewords differ only
+in the last bit. For this code, we can combine the symbols 4 and 5 into
+a single source symbol, with a probability assignment 0.30. Proceeding
+this way, combining the two least likely symbols into one symbol until
+we are finally left with only one symbol, and then assigning codewords
+to the symbols, we obtain the following table:
+
+
+\end{frame}
+%-----------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Huffman’s idea}
+Instead of using a fixed-length code for each symbol, Huffman’s idea is to
+represent a frequently occurring character in a source with a shorter code and
+to represent a less frequently occurring one with a longer code. 
+
+So for a text
+source of symbols with different frequencies, the total number of bits in this
+way of representation is, hopefully, significantly reduced. That is to say, the
+number of bits required for each symbol on average is reduced.
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+Frequency of occurrence:\\
+E A O T J Q X\\
+5 5 5 3 3 2 1\\
+Suppose we find a code that follows Huffman’s approach. For example, the
+most frequently occurring symbol E and A are assigned the shortest 2-bit
+codeword, and the lest frequently occurring symbol X is given a longer 4-bit
+codeword, and so on, as below:\\
+E A O T J Q X\\
+10 11 000 010 011 0010 0011\\
+Then the total number of bits required to encode string `EEETTJX’ is only
+$2 + 2 + 2 + 3 + 3 + 3 + 4 = 19$ (bits). This is significantly fewer than
+$8 \times 7 = 56$ bits when using the normal 8-bit ASCII code.
+\end{frame}
+
+%-----------------------------------------------------------------%
+\begin{frame}
+\large
+1. Constructing a frequency table sorted in descending order.\\
+2. Building a binary tree\\
+Carrying out iterations until completion of a complete binary tree:\\
+(a) Merge the last two items (which have the minimum frequencies) of
+the frequency table to form a new combined item with a sum
+frequency of the two.\\
+(b) Insert the combined item and update the frequency table.\\ \bigskip
+3. Deriving Huffman tree
+Starting at the root, trace down to every leaf; mark ‘0’ for a left branch
+and ‘1’ for a right branch.\\
+4. Generating Huffman code:\\
+Collecting the 0s and 1s for each path from the root to a leaf and
+assigning a 0-1 codeword for each symbol.
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Decoding algorithm}
+The decoding process is based on the same Huffman tree. This involves the
+following types of operations:
+\begin{itemize}
+\item We read the coded message bit by bit. Starting from the root, we follow
+the bit value to traverse one edge down the the tree.
+\item If the current bit is 0 we move to the left child, otherwise, to the right
+child.
+\item We repeat this process until we reach a leaf. If we reach a leaf, we will
+decode one character and re-start the traversal from the root.
+\item Repeat this read-move procedure until the end of the message.
+\end{itemize}
+Example : Given a Huffman-coded message,\\
+111000100101111000001001000111011100000110110101,\\
+what is the decoded message?
+\end{frame}
+\begin{frame}
+\frametitle{Shannon-Fano coding}
+This is another approach very similar to Huffman coding. In fact, it is the
+first well-known coding method. It was proposed by C. Shannon (Bell Labs)
+and R. M. Fano (MIT) in 1940.\\
+The Shannon-Fano coding algorithm also uses the probability of each
+symbol’s occurrence to construct a code in which each codeword can be of
+different length. \\Codes for symbols with low probabilities are assigned more
+bits, and the codewords of various lengths can be uniquely decoded.
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Shannon-Fano algorithm}
+Given a list of symbols, the algorithm involves the following steps:\\
+1. Develop a frequency (or probability) table\\
+2. Sort the table according to frequency (the most frequent one at the top)\\
+3. Divide the table into 2 halves with similar frequency counts\\
+4. Assign the upper half of the list a 0 and the lower half a 1\\
+5. Recursively apply the step of division (2.) and assignment (3.) to the
+two halves, subdividing groups and adding bits to the codewords until
+each symbol has become a corresponding leaf on the tree.
+\end{frame}
+\begin{frame}
+\frametitle{Importance of data compression}
+Data compression techniques is motivated mainly by the need to improve
+efficiency of information processing. This includes improving the following
+main aspects in the digital domain:
+\begin{itemize} \item storage efficiency
+\item  efficient usage of transmission bandwidth
+\item reduction of transmission time. \end{itemize}
+\end{frame}
+%-----------------------------------------------------------------%
+\begin{frame}
+\frametitle{Importance of data compression}
+Although the cost of storage and transmission bandwidth for digital data
+have dropped dramatically, the demand for increasing their capacity in many
+applications has been growing rapidly ever since.\\ There are cases in which
+extra storage or extra bandwidth is difficult to achieve, if not impossible.\\
+Data compression as a means may make much more efficient use of existing
+resources with less cost. \\ Active research on data compression can lead to
+innovative new products and help provide better services.
+\end{frame}
+\section{Information Theory}
+%-----------------------------------------------------------------------------------------------%
+%---http://www.cs.cmu.edu/~dst/Tutorials/Info-Theory/
+%-----------------------------------------------------------------------------------------------%
+\begin{frame}
+Information theory provides us with a formula for determining the number of bits required in an optimal code even when we don't know the code. Let's first consider uniform probability distributions where the number of possible outcomes is not a power of two. Suppose we had a conventional die with six faces. The number of bits required to transmit one throw of a fair six-sided die is:$ log 6 = 2.58$. Once again,we can't really transmit a single throw in less than 3 bits, but a sequence of such throws can be transmitted using 2.58 bits on average. 
+\end{frame}
+%-----------------------------------------------------------------------------------------------%
+\begin{frame}
+\large
+The optimal code in this case is complicated, but here's an approach that's fairly simple and yet does better than 3 bits/throw. Instead of treating throws individually, consider them three at a time. The number of possible three-throw sequences is $6^3= 216$. Using 8 bits we can encode a number between 0 and 255, so a three-throw sequence can be encoded in 8 bits with a little to spare; this is better than the 9 bits we'd need if we encoded each of the three throws seperately.
+\end{frame}
+%-----------------------------------------------------------------------------------------------%
+\begin{frame}
+\large
+In probability terms, each possible value of the six-sided die occurs with equal probability $P=1/6$. Information theory tells us that the minmum number of bits required to encode a throw is $-log P = 2.58$. If you look back at the eight-sided die example,you'll see that in the optimal code that was described, every message had a length exactly equal to -log P bits.
+\end{frame}
+%-----------------------------------------------------------------------------------------------%
+\begin{frame}
+\large Now let's look at how to apply the formula to biased (non-uniform) probability distributions. Let the variable x range over the values to be encoded,and let P(x) denote the probability of that value occurring. The expected number of bits required to encode one value is the weighted average of the number of bits required to encode each possible value,where the weight is the probability of that value: 
+\end{frame}
+
+\end{document}

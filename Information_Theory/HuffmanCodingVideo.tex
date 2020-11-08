@@ -1,0 +1,41 @@
+\documentclass{beamer}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+%======================================================================= %
+\begin{frame}
+	\Large
+\frametitle{Huffman Coding}
+\begin{itemize}
+\item[1.] Constructing a frequency table sorted in descending order. \bigskip
+\item[2.] Building a binary tree\\ 
+Carrying out iterations until completion of a complete binary tree:{\Large
+
+	\item[   (a)]   Merge the last two items (which have the minimum frequencies) of
+the frequency table to form a new combined item with a sum
+frequency of the two.
+\item[(b)]    Insert the combined item and update the frequency table.
+
+}
+\end{itemize}
+\end{frame}
+%======================================================================= %
+\begin{frame}
+	\Large
+\frametitle{Huffman Coding}
+\begin{itemize}
+\item[3.] Deriving Huffman tree\\
+Starting at the root, trace down to every leaf; mark `0' for a left branch
+and `1' for a right branch.
+\item[4.] Generating Huffman code:\\
+Collecting the 0s and 1s for each path from the root to a leaf and
+assigning a 0-1 codeword for each symbol.
+\end{itemize}
+\end{frame}
+%======================================================================= %
+%======================================================================= %
+\begin{frame}
+\end{frame}
+\end{document}

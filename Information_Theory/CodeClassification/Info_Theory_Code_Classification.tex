@@ -1,0 +1,105 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx} % Font Family
+\usepackage{helvet} % Font Family
+\usepackage{color}
+\mode<presentation> {
+	\usetheme{Default} % was Frankfurt
+	\useinnertheme{rounded}
+	\useoutertheme{infolines}
+	\usefonttheme{serif}
+	%\usecolortheme{wolverine}
+	% \usecolortheme{rose}
+	\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+\title[MA4413]{Statistics for Computing \\ {\normalsize MA4413 Lecture 11A}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Autumn 2011}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+\renewcommand{\arraystretch}{1.5}
+%------------------------------------------------------------------------%
+\begin{document}
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Classification of Codes}
+In this section we look at to classify codes according to the following categories.
+\begin{enumerate}
+\item Fixed Length Codes
+\item Variable Length Codes
+\item Distinct Codes
+\item Prefix-Free Codes
+\item Uniquely decodable codes
+\item Instantaneous Codes
+\item Optimal Codes
+\end{enumerate}
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Classification of Codes}
+Classification of codes is best illustrated by an example. Consider the table below where a source of
+size 4 has been encoded in binary codes with symbol 0 and 1.\\ \bigskip
+% Table 10-I Binary Codes
+\begin{center}
+\begin{tabular}{|c| c| c| c| c| c| c|}
+\hline
+X& Code l& Code 2& Code 3 &Code 4& Code 5& Code 6\\\hline
+$x_1$& 00& 00 &0 &0 &0 &1\\
+$x_2$& 01& 01 &1 &10 &01 &01\\
+$x_3$ &00 &10& 00& 110& 011 &001\\
+$x_4$ &11& 11& 11& 111 &0111 &0001\\\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\begin{itemize}
+\item[1.] Fixed-Length Codes: A fixed-length code is one whose code word length is fixed. Code 1 and code 2are
+fixed-length codes with length 2.
+\item[2.] Variable-Length Codes: A variable-length code is one whose code word length is not fixed. All codes except codes 1 and 2 are variable-length codes.
+\item[3.] Distinct Codes:
+A code is distinct if each code word is distinguishable from other code words. All codes except code 1 are distinct codes. Notice the codes for $x_l$ and $x_3$.
+\item[4.] Prefix-Free Codes:
+A code in which no code word can be formed by adding code symbols to another code word is
+called a prefix-free code. Thus, in a prefix-free code no code word is a prefix of another. Codes 2, 4,
+and 6 are prefix-free codes.
+\end{itemize}
+\end{frame}
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+5. Uniquely Decodable Codes
+\begin{itemize}
+\item A distinct code is uniquely decodable if the original source sequence can be reconstructed perfectly
+from the encoded binary sequence. \item Note that code 3 is not a uniquely decodable code. \item
+For example, the binary sequence 1001 may correspond to the source sequences $x_2x_3x_2$ or $x_2x_1x_1x_2$.
+\item
+A sufficient condition to ensure that a code is uniquely decodable is that no code word is a prefix of
+another. \item Thus, the prefix-free codes 2, 4, and 6 are uniquely decodable codes. Note that the prefix -free
+condition is not a necessary condition for unique decodability. \item For example, code 5 does
+not satisfy the prefix-free condition, and yet it is uniquely decodable since the bit 0 indicates the
+beginning of each code word of the code.
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+6. Instantaneous Codes
+\begin{itemize} \item A uniquely decodable code is called an instantaneous code if the end of any code word is
+recognizable without examining subsequent code symbols. \item The instantaneous codes have the property
+previously mentioned that no code word is a prefix of another code word.  \end{itemize}
+7. Optimal Codes
+\begin{itemize}
+\item A code is said to be optimal if it is instantaneous and has minimum average length $L$ for a given
+source with a given probability assignment for the source symbols.
+\end{itemize}
+\end{frame}
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------%
+\end{document}

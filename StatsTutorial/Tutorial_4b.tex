@@ -1,0 +1,317 @@
+
+\documentclass[]{article}
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 490pt
+
+
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{amssymb}
+\usepackage{framed}
+
+%\usepackage[paperwidth=21cm, paperheight=29.8cm]{geometry}
+%\usepackage[angle=0,scale=1,color=black,hshift=-0.4cm,vshift=15cm]{background}
+%\usepackage{multirow}
+\usepackage{enumerate}
+
+%\SetBgScale{1}
+%\SetBgAngle{0}
+%\SetBgColor{black}
+%\SetBgContents{\rule{1pt}{30cm}}
+%\SetBgHshift{-8.4cm}
+%
+%\backgroundsetup{contents={
+%\begin{tabular}{c|c}
+%\hspace{2cm} & \\[0.7cm]
+%& {\bf Statistics for Computing ------ Lecture 1 ------ Solutions} \\[0.3cm]
+%%\hline
+%\hspace{2cm} & \hspace{18.5cm} \\ [28cm]
+%\end{tabular}}}
+
+
+
+
+
+\begin{document}
+%====================================================================%
+\subsection{Question 3 : Binomial Distribution}
+
+10\% of intended passengers dont show up. Each flight holds 50 people.
+
+Binomial distribution with parameters n=50 and p = 0.1
+
+From Murdoch Barnes Table 1 (third page of tables at back of book )
+
+
+a) What is the probability that six people or more fail to show up.
+
+P(X6) =0.3839
+
+
+b) Less than three people fail to show up (i.e. X=0,1 or 2)
+
+P(X < 3) = 1- P(X3) =    1 - 0.8883  = 0.1117 [ANS]
+
+
+c) More than 2 but less than 8   (i.e. X = 3,4,5,6,7)
+
+This is equal to P(X3) - P(X8) = 0.8883 -0.1221 =  0.7662
+
+
+\section{Binomial Distribution}
+
+\begin{itemize}
+
+\item MCQ questions  - 25\% chance of getting a single question right at random.
+
+\item number of questions is 10
+
+\item 
+Binomial parameter values n=10, p = 0.25
+
+\item
+X number of correct answers
+\item 
+
+P(X7) = 0.0035        [00.35\%]
+
+\end{itemize}
+
+\begin{enumerate}
+\item Question1 : Discrete Random Variables
+Consider a binomial experiment where the number of independent trials is 10, and the probability of success is 0.25. Let X denote the number of successes in the 10 trials.
+1)	Write out the sample space of X.
+2)	For the each of the following events, write out the sample points:
+a.	the number of successes is less than or equal to 3,
+b.	the number of successes is greater than 4, 
+c.	the number of successes is greater than 8, 
+d.	the number of successes is between 4 and 7 inclusive.
+\item Question 2: Discrete Random Variables
+By considering the relevant sample points from the sample space in question 1, show that 
+1)	P(4 ≤X ≤8) = P(X ≥4) – P(X ≥9 )
+2)	P(X=4) = P(X ≥4) – P(X ≥5 )
+3)	P(X≤7) = 1- P(X ≥8)
+\item Question 4 : Binomial Distribution
+Let X denote the number of bits received in error in a digital communication channel, and assume that X is a binomial random variable with p=0.10. If 100 bits are transmitted, use the binomial tables to determine the following
+1)	P(X=10)
+2)	P(X ≥10)
+3)	P(X ≤20)
+\item Question 5 : Binomial Distribution
+In a test of a printed circuits board using a random test pattern,  an array of 10 bits is equally likely to be “zero” or “one”. Assume that the bits are independent. 
+What is the probability that all bits are “ones”?  (Answer : 0.0010)
+
+\item Question 6 : Binomial Distribution
+An examination contains 20 multiple choice questions with four choices per questions. A pass is obtained by answering  10 questions correctly. Calculate the probability that a student who chooses the answer to each question at random will pass the examination.  ( Answer : 0.0139 )
+
+\item Question 7 : Binomial Distribution
+An electronics product contains 20 integrated circuits. The probability that any integrated circuit is defective is 0.20. The ICs operate independently of each other.  The product operates only if there are no defective ICs. What is the probability that the product operates?
+It is not economically viable to repair the product if there are more than 3 ICs are defective.  What is the probability that it will not be repaired if broken.
+
+\item
+Using recent data provided by the low-cost arriving on time is estimated to be 0.9. 
+
+On four different occasions I am taking a flight with Brianair. 
+\begin{itemize}
+	\item[(i)] What is the probability that I arrive on time on all four flights? 
+	\item[(ii)] What is the probability that I arrive on time on exactly two occasions? 
+\end{itemize}
+
+
+\end{enumerate}
+
+
+\section{Binomial Distribution : Example}
+
+
+
+%=============================================================%
+\begin{itemize}
+\item A manufacturer of hospital equipment knows from experience that 5\% of the production will have some type of minor default, and will require adjustment.
+
+\begin{itemize}
+\item Number of independent trials $n$
+
+\item Probability of a "success" $p$
+
+\end{itemize}
+\end{itemize}
+
+
+
+
+
+
+%=================================================%
+
+\textbf{The Binomial Distribution}
+
+Solution
+\begin{itemize}
+\item Firstly, identify the probability distribution to be used?
+
+Answer: the binomial distribution
+\item 
+We are given the number of trials ( " choose 10 employees")
+\item 
+We are given a definition of a "success", which is finding an employee that did NOT reads the WSJ
+
+\item 
+We are given the probability of such a success : 30\%  or 0.30
+
+\item 
+So our binomial parameters are n= 10 and p = 0.30
+
+\item
+Open Murdoch Barnes Table 1 and find the relevant section (Page 62)
+\end{itemize}
+
+
+
+%=================================================%
+
+\subsection{The Binomial Distribution}
+
+Let $X$  denote the number of employees in the sample of 10 who did not read the WSJ.
+part i
+
+
+
+Here our value of  r is 5
+
+Our answer is 0.1503
+
+\begin{enumerate}[(i)]
+
+\item What is the probability of there being between 4 and 8 successes?
+
+
+We can find out the probability of four or more successes,   and then exclude the probability of 
+9 or more success   to find the answer we are looking for.
+
+
+\item part iii
+
+\begin{itemize}
+\item Probability of no more than 7 successes?
+\item So, we are interested in the probability of between 0 and 7 successes.
+\item The complement of this is the probability of 8 or more successes.
+\end{itemize}
+
+\item
+
+part iv
+
+mean and variance
+
+\end{enumerate}
+
+
+\subsection*{Question 4}
+
+You flip a coin 10 times - let $X =$ ``the number of heads''. Using the binomial probability function, calculate the following:\\[-0.2cm]
+\begin{itemize}
+\item[(a)] $\Pr(X = 2)$.  \item[(b)] $\Pr(X = 0)$.  \item[(c)]  $\Pr(X > 2)$.  \item[(d)] $\Pr(X \le 3)$.  \item[(e)] $\Pr(5 \le X \le 7)$.   \item[(f)] $E(X)$ and $Sd(X)$.  \item[(g)] Using the binomial tables, calculate $\Pr(X \le10)$ in the case where the coin is flipped 20 times.  {\bf(h)} If the coin is flipped 50 times, what is $E(X)$?
+\end{itemize}
+\subsection*{Question 5}
+The \emph{average time} between customers arriving to a shop is 5 minutes. We will assume that the time, $T$, has an exponential distribution. Calculate the following:\\[-0.2cm]
+\begin{itemize}
+\item[(a)] The average arrival \emph{rate}, i.e., $\lambda$ customers per minute.  \item[(b)] The probability that we wait more than 15 minutes for the next customer.  \item[(c)] The probability that the next customer arrives within 1 minute.  \item[(d)] The average \emph{number of customers} in a 1 hour period. What is the standard deviation that goes with this average?  \item[(e)] The probability that \emph{15 or more} customers arrive in a 1 hour period.
+\end{itemize}
+\subsection{Question 1}
+I throw a coin 5 times. Calculate the probability that 
+\begin{enumerate}
+
+\item I throw no heads
+\item I throw one head
+\item I throw exactly 3 heads
+\item I throw at least 2 heads
+\end{enumerate}
+
+
+\subsection{Question 2}
+A die is thrown 5 times. Calculate the probability of 
+\begin{enumerate}
+\item Obtaining exactly one six.
+\item Obtaining at least one six.
+\item Obtaining at least one six, given that not more than two sixes are thrown.
+\end{enumerate}
+
+\subsection{Question 3}
+Suppose X is a binomial random variable with
+\[ X \sim \mbox{Bin}(n,p). \]
+
+\begin{itemize}
+\item Describe, in your own words, what is meant by the expected value of X.
+
+\item Compute the expected value, the variance and the standard deviation for the following scenarios
+
+\begin{enumerate}[(a)]
+\item $X \sim \mbox{Bin}(n=10,p=0.40)$
+\item $X \sim \mbox{Bin}(n=15,p=0.25)$
+\item $X \sim \mbox{Bin}(n=20,p=0.30)$
+\item $X \sim \mbox{Bin}(n=50,p=0.20)$
+\item $X \sim \mbox{Bin}(n=200,p=0.10)$
+\item $X \sim \mbox{Bin}(n=1000,p=0.01)$
+\end{enumerate}
+
+\end{itemize}
+
+
+%=====================================================================%
+\subsection{Binomial Distribution}
+According to a recent poll, approximately seventy percent of U.S. adults drink alcohol.
+Suppose 5 U.S. adults are randomly selected. Let represent the number of adults in the sample who drink 
+alcohol. Use the binomial probability formula, the binomial probability table, or your calculator to find the 
+following probabilities.
+\begin{itemize}
+\item a. That exactly 2 adults in the sample drink alcohol.
+= 0.1323
+\item b. That at least three adults in the sample drink alcohol.
+= P(3) + P(4) + P(5) = 0.3087 + 0.36015 + 0.16807 = 0.83692
+\item Alternatively, you can use binomcdf on the calculator:
+P(at least 3) = 1 – P(2 or fewer) = 1 – binomcdf(5, 0.70, 2) = 0.83692
+\item c. That everyone in the sample drinks alcohol.
+= 0.16807
+\end{itemize}
+
+
+
+
+
+\subsection*{Discrete Distributions Theory }
+\begin{itemize}
+\item[a.] (4 marks) State the four conditions to be satisfied for the Binomial probability
+distribution to apply.
+
+\item[b.] (2 marks)When can the Poisson distribution be used as an approximation to the
+Binomial distribution?
+\end{itemize}
+
+\subsection*{Question 5}
+
+Repeat Question 4 (a) - (e) but now using the binomial tables.
+
+
+
+
+\section{Binomial Example 4} 
+Using recent data provided by the low-cost arriving on time is estimated to be 0.9. 
+
+On four different occasions I am taking a flight with Brianair. 
+\begin{itemize}
+\item[(i)] What is the probability that I arrive on time on all four flights? 
+\item[(ii)] What is the probability that I arrive on time on exactly two occasions? 
+\end{itemize}
+
+\subsubsection{Last lecture}
+In the last lecture we looked at how to compute
+\begin{itemize}
+\item the expected value
+\item the variance 
+\end{itemize}
+of a discrete random variable. In our example, we considered the experiment of throwing a fair die.
+
+\end{document}

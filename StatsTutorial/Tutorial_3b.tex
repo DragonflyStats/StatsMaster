@@ -1,0 +1,143 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+\section{Tutorial F}
+
+\subsection*{Question 1}
+Jobs are sent to a supercomputer at a rate of 10 per hour and take the supercomputer on average 4 minutes to process. We will assume that the number of arrivals is $X_a \sim \text{Poisson}(\lambda_a)$ and the processing (i.e., service) time is $T_s \sim \text{Exponential}(\lambda_s)$. This leads to an $M/M/1$ system.\\[-0.2cm]
+
+\begin{enumerate}[(i)]
+\item Let $T$ be the total time in the system - what distribution has $T$? \item What is the average time spent in the system? Calculate $Sd(T)$ also. \item How many jobs are in the system on average? (hint: Little's law)  \item From the time the job is sent, what is the probability that it takes more than 15 minutes to complete? \item  From the time the job enters the processor (i.e., service component), what is the probability that it takes more than 15 minutes to complete? \item What is the average number of jobs completed in a 3 hour period of operation? (hint: Burke's theorem) \item What is the probability that more than 40 jobs are completed in a 3 hour period? (hint: Burke's theorem again)
+\end{enumerate}
+
+
+
+
+
+
+
+
+\subsection*{Question 2}
+You flip three coins. Let $X = $ ``the number of heads'' and $Y = $ ``the number of unique faces''.\\[-0.2cm]
+\begin{itemize}
+\item[(a)] What is the sample space for this experiment?  \item[(b)] Construct the \emph{joint distribution} for $X$ and $Y$.  \item[(c)] Based on this joint distribution, construct the \emph{marginal} distribution for $X$ and for $Y$.  \item[(d)] Are $X$ and $Y$ independent?  \item[(e)] Calculate $E(Y)$ and $Sd(Y)$.  \item[(f)] Calculate $\Pr(Y=2\,|\,X=2)$ and interpret its value (compare with $\Pr(Y=2)$).
+\end{itemize}
+
+
+
+%=================================================%
+
+\subsection*{Question 3}
+Customers arrive to a deli counter at a rate of 12 per hour. On average it takes 3 minutes to serve a customer at this counter. Customers then exit and head to another counter to pay. It takes 1 minute to deal with a customer at this counter. We will assume that arrivals have a Poisson$(\lambda_a)$ distribution and service times have Exponential$(\lambda_{s1})$ and Exponential$(\lambda_{s2})$ distributions respectively (hint: this is a sequence of two $M/M/1$ systems).\\[-0.2cm]
+
+\begin{itemize}
+\item[(a)] What is the average time spent in each sub-system?  \item[(b)] What is the average total time spent in the system?  \item[(c)] How many customers are there (on average) in the system?   \\\item[(d)] Calculate the utilisation factor for each sub-system.  \item[(e)] What is the average total queueing time? (i.e., total time excluding service time)  \item[(f)] Calculate the probability that at least 20 people exit the shop (i.e., the whole system) in one hour.
+\end{itemize}
+%=================================================%
+\subsection*{Question 3}
+Let $X =$ ``the attack power of player 1'' and let $Y =$ ``the attack power of player 2''.\\[-0.3cm]
+
+Let the probability distributions for $X$ and $Y$ be:
+\begin{center}
+\begin{tabular}{|c|ccc|c|c|ccc|}
+\cline{1-4}\cline{6-9}
+&&&&&&&&\\[-0.4cm]
+$x$ & 0 & 100 & 300 & \qquad\qquad & $y$ & 0 & 80 & 200\\
+\cline{1-4}\cline{6-9}
+&&&&&&&&\\[-0.4cm]
+$\Pr(X=x)$ & $0.2$ & $0.75$ & $0.05$ & & $\Pr(Y=y)$ & $0.1$ & $0.6$ & $0.3$ \\[0.1cm]
+\cline{1-4}\cline{6-9}
+%\multicolumn{9}{c}{}
+\end{tabular}
+\end{center}
+{\footnotesize(e.g., p1 misses 20\% of the time, deals 100 points of damage 75\% of the time and performs a critical blow 5\% of the time.)}\\[-0.2cm]
+
+\begin{itemize}
+\item[(a)] What is the average attack power of each player?  \item[(b)] If both players have 1000 hit-points, how many attacks does it take for player 1 to defeat player 2 and vice versa? Which player will win on average?  \item[(c)] Let's now assume that player 1 uses his/her \emph{first} turn to cast a spell (and therefore does not attack in this turn). The result of the spell is that player 2 can no longer perform a critical blow, i.e., $\Pr(Y=200) = 0$, \emph{from turn two onwards}. Since setting $p(200) = 0$ leads to $\sum p(y) \ne 1$, assume that the remaining probability ($= 0.3$) is distributed evenly between $p(0)$ and $p(80)$. What is the outcome of the battle now?
+\end{itemize}
+
+%=================================================%
+\subsection*{Question 4}
+Consider a RAID (redundant array of inexpensive disks) system constructed using the hard disks described in Question 3. Specifically, we will assme that the system is made up of \emph{two} of these hard disks which work/fail \emph{independently} of each other.\\[-0.2cm]
+\begin{itemize}
+\item[(a)] Let $H =$  ``hard disk works for more than a year''. Calculate $\Pr(H) = \Pr(T > 1)$.  \\\item[(b)] Calculate $\Pr(\text{RAID-0 fails within a year})$.  \item[(c)] Calculate $\Pr(\text{RAID-1 fails within a year})$.   \item[(d)] What would $E(T)$ need to be so that $\Pr(\text{RAID-1 fails within a year}) \approx 0.05$.  \item[(e)] Rather than increasing the \emph{quality} of hard disk, we can increase the \emph{number} of hard disks. How many of the original hard disks are needed to achieve $\Pr(\text{RAID-1 fails within a year}) \approx 0.05$.
+\end{itemize}
+
+
+
+\subsection*{Question 4}
+{\footnotesize({\bf Note}: this is not a queueing theory question. It is a generalisation of a question which appears on Tutorial2)}\\[0.1cm]
+There are two possible routes to a particular location. You take $R_1$ 80\% of the time and $R_2$ 20\% of the time. We assume that travel time has an exponential distribution and, furthermore, the average travel time is 0.25 hours if you take $R_1$ and 0.5 hours if you take $R_2$.\\[-0.2cm]
+
+\begin{itemize}
+\item[(a)] Calculate the probability that the journey takes more than 0.5 hours for each of the routes, i.e., $\Pr(T > 0.5\,|\,R_1)$ and $\Pr(T > 0.5\,|\,R_2)$ respectively.  \item[(b)] Calculate $\Pr(T > 0.5)$. (hint: law of total probability)  \item[(c)] Given that $T>0.5$ hours, what is the probability that you used $R_1$? (i.e., calculate $\Pr(R_1\,|\,T>0.5)$)  \item[(d)] Derive a general expression for $\Pr(R_1\,|\,T>t)$ and evaluate it at $t=0.25$, $t = 1$ and $t = 2$ respectively. Interpret the results.
+\end{itemize}
+
+
+%============================%
+
+
+
+\subsection*{Question 6}
+By applying \emph{Little's Law}, answer the following questions:\\[-0.2cm]
+\begin{itemize}
+\item[(a)] A section of road takes on average 5 minutes to negotiate. Cars arrive to this section at a rate of 2 per minute. On average, how many cars are on the road?   \item[(b)] Jobs are sent to a supercomputer at a rate of 4 per hour. On average we wait 30 minutes from the time of sending to the time of completion. How many jobs are in the system on average?  \item[(c)] On average 20 customers arrive to a cafe per hour. If there are 10 people in the cafe on average, how long do they spend there?
+\end{itemize}
+
+
+\subsection*{Question 7}
+We follow on from Question 6 but now consider the case where, to reduce the probability of error, each bit is sent \emph{three} times and then a ``majority vote'' approach is used to determine the value of each received bit. The following example explains the situation:\\[-0.5cm]
+\begin{center}
+\begin{tabular}{ccccc}
+\hline
+&&&&\\[-0.3cm]
+\multirow{2}{*}{Sent} & $0$ & $1$ & $1$ & $0$ \\
+& $\overbrace{000}$ & $\overbrace{111}$ & $\overbrace{111}$ & $\overbrace{000}$ \\[0.2cm]
+\hline
+&&&&\\[-0.3cm]
+\multirow{2}{*}{Received} & $\underbrace{001}$ & $\underbrace{111}$ & $\underbrace{010}$ & $\underbrace{000}$ \\
+& $0$ & $1$ & $0$ & $0$ \\[0.2cm]
+\hline
+%\multicolumn{5}{c}{}
+\end{tabular}
+\end{center}
+$\Rightarrow$ there is one error in decoding the first $000$, but since the majority result is taken, this bit is correctly identified as a $0$. There are two errors in decoding the second $111$, so this bit is misread as a $0$. It is clear that a character is misread if the decoder makes \emph{two or three errors} in these blocks of three replicates.\\[-0.2cm]
+\begin{itemize}
+\item[(a)] Show that sending each bit 3 times reduces the error probability from 10\% to 2.8\%. \\ \item[(b)] Using this reduced value, $p=0.028$, calculate the probability that there are no errors in a 20-bit string. Compare this result to Q6(a).  \item[(c)] Now assume that each bit is sent 5 times and, again, the majority vote approach is used. Calculate the probability that there are no errors in a 20-bit string in this case. % \item[(d)] Recalculate the two probabilities from part (c) using the Poisson approximation.
+\end{itemize}
+
+
+
+\subsection*{Question 7}
+Customers arrive to a shop at a rate of 40 per hour and typically stay 30 minutes. \\[-0.2cm]
+\begin{itemize}
+\item[(a)] How many customers are in the shop on average?  \item[(b)] Through advertising, the shop can increase the arrival rate to 60 per hour. How many customers are in the shop now (assuming they still spend 30 minutes)?  \item[(c)] The shop is small and is now too full. However, by streamlining the layout we can reduce the average time spent in the shop (without compromising profits). How much would the average time need to drop to in order that with 60 customers arriving per hour, there are still the same number of customers in the shop as in part (a).
+
+
+\end{itemize}
+
+
+
+
+
+
+
+\end{document} 

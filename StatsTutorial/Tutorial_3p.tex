@@ -1,0 +1,205 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{enumerate}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+%-----------------------------------------------------------------------%
+
+\begin{enumerate}[(1)]
+\item What is the probability of rolling two consecutive fives on a six-sided die?
+\begin{itemize}
+	\item You know that the probability of rolling one five is 1/6, and the probability of rolling another five with the same die is also 1/6.
+	\item These are independent events, because what you roll the first time does not affect what happens the second time; you can roll a 3, and then roll a 3 again.
+\end{itemize}
+
+%----------------------------------------------------------------------%
+
+\item  Two cards are drawn randomly from a deck of cards. What is the likelihood that both cards are clubs?
+\begin{itemize}
+	\item The likelihood that the first card is a club is 13/52, or 1/4. (There are 13 clubs in every deck of cards.) Now, the likelihood that the second card is a club is 12/51.
+	\item You are measuring the probability of dependent events. This is because what you do the first time affects the second; if you draw a 3 of clubs and don't put it back, there will be one less fewer club and one less card in the deck (51 instead of 52).
+\end{itemize}
+
+\item What is the probability of rolling two consecutive fives on a six-sided die?
+\begin{itemize}
+	\item You know that the probability of rolling one five is 1/6, and the probability of rolling another five with the same die is also 1/6.
+	\item These are independent events, because what you roll the first time does not affect what happens the second time; you can roll a 3, and then roll a 3 again.
+\end{itemize}
+
+%----------------------------------------------------------------------%
+
+\item Two cards are drawn randomly from a deck of cards. What is the likelihood that both cards are clubs?
+\begin{itemize}
+	\item The likelihood that the first card is a club is 13/52, or 1/4. (There are 13 clubs in every deck of cards.) Now, the likelihood that the second card is a club is 12/51.
+	\item You are measuring the probability of dependent events. This is because what you do the first time affects the second; if you draw a 3 of clubs and don't put it back, there will be one less fewer club and one less card in the deck (51 instead of 52).
+\end{itemize}
+
+%--------------------------------------------------%	
+\item In the British national lottery 6 numbers are chosen without replacement from 49. Calculate the probability of 
+\begin{enumerate}[(i)]
+\item winning the jackpot (choosing all 6 numbers correctly)
+\item winning the smallest prize (choosing 3 of the 6 numbers correctly)
+\item choosing at least one of the numbers correctly.
+\end{enumerate}	
+
+\item	I obtain a hand of 13 cards. Calculate the probability of
+\begin{enumerate}[(i)]
+\item obtaining 2 aces.
+\item obtaining 2 aces and 2 kings.
+\item obtaining 2 aces or 2 kings.
+\end{enumerate}	
+
+
+\item A jar contains 4 blue marbles, 5 red marbles and 11 white marbles. If three marbles are drawn from the jar at random, what is the probability that the first marble is red, the second marble is blue, and the third is white?
+\begin{enumerate}[(i)]
+	\item The probability that the first marble is red is 5/20, or 1/4. 
+	\item The probability of the second marble being blue is 4/19, since we have one fewer marble, but not one fewer blue marble. 
+	\item And the probability that the third marble is white is 11/18, because we've already chosen two marbles. This is another measure of a dependent event.
+\end{enumerate}
+
+\item 
+Of 200 employees of a company, a total of 120 smoke cigarettes:
+60\% of the smokers are male and 80\% of the non smokers are
+male. What is the probability that an employee chosen at random:
+\begin{itemize}
+	\item[1.]  is male or smokes cigarettes
+	\item[2.] is female or does not smoke cigarettes
+	\item[3.] either smokes or does not smoke
+\end{itemize}
+
+\item 
+Suppose we wish to find the probability of drawing either a Queen or a Heart
+in a single draw from a pack of 52 playing cards. We define the events $Q$ =
+`draw a queen' and $H$ = `draw a heart'.
+\begin{enumerate}[(i)]
+\item $P(Q)$ probability that a random selected card is a Queen
+\item  $P(H)$ probability that a randomly selected card is a Heart.
+\item  $P(Q\cap H)$ probability that a randomly selected card is the Queen of
+Hearts.
+\item  $P(Q\cup H)$ probability that a randomly selected card is a Queen or a Heart.
+\end{enumerate}
+%=================================================%
+
+\item 
+Competitors A and B fire at their respective targets. The probability that A hits a target is 1/3 and the probability that B hits a target is 1/5. Find the probability that:
+\begin{itemize}
+\item[(i)] (2 marks) A does not hit the target,
+\item[(ii)](2 marks)  both hit their respective targets,
+\item[(iii)](2 marks)  only one of them hits a target,
+\item[(iv)](2 marks) neither A nor B hit their targets.
+\end{itemize}
+
+
+\item 
+
+The following contingency table illustrates the number of 200 students in different
+departments according to gender.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+& Physics & Biology & Chemistry & Total \\\hline
+Males & 30 & 20 & 50 & 100 \\  \hline
+Females & 20 & 50 & 30 & 100 \\ \hline
+Total & 50 & 70 & 80 & 200 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item[a.] (1 mark) What is the probability that a randomly chosen person from the sample is a
+Chemistry student?
+\item[b.] (1 mark) What is the probability that a randomly chosen person from the sample is both female and studying Biology?
+\item[c.] (1 mark) Given that the student is female, what is the probability that she is an
+Biology student?
+\item[d.] (1 mark) Given that a student studies Biology, what is the probability that the student is female?
+\end{itemize}
+
+\item 
+On completion of a programming project, four programmers from a
+team submit a collection of subroutines to an acceptance group. The
+following table shows the percentage of subroutines each programmer
+submitted and the probability that a subroutine submitted by each
+programmer will pass the certification test based on historical data.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+Programmer & 1 & 2 & 3 & 4 \\
+Proportion of subroutines submitted & 0.10 & 0.20 & 0.40 & 0.30 \\
+Probability of acceptance & .55 & .60 & .95 & .75 \\
+\hline
+\end{tabular}
+\end{center}
+\begin{itemize}
+\item[a.] What is the proportion of subroutines that pass the acceptance test?
+\item[b.] After the acceptance tests are completed, one of the subroutines is
+selected at random and found to have passed the test. What is the
+probability that it was written by Programmer l?
+\end{itemize}
+
+
+
+\item What is the probability of rolling two consecutive fives on a six-sided die?
+\begin{enumerate}[(i)]
+	\item You know that the probability of rolling one five is 1/6, and the probability of rolling another five with the same die is also 1/6.
+	\item These are independent events, because what you roll the first time does not affect what happens the second time; you can roll a 3, and then roll a 3 again.
+\end{enumerate}
+
+%----------------------------------------------------------------------%
+
+\item Two cards are drawn randomly from a deck of cards. What is the likelihood that both cards are clubs?
+\begin{enumerate}[(i)]
+	\item The likelihood that the first card is a club is 13/52, or 1/4. (There are 13 clubs in every deck of cards.) Now, the likelihood that the second card is a club is 12/51.
+	\item You are measuring the probability of dependent events. This is because what you do the first time affects the second; if you draw a 3 of clubs and don't put it back, there will be one less fewer club and one less card in the deck (51 instead of 52).
+\end{enumerate}
+
+
+
+%
+%
+% x=seq(2,18,length=1600)
+% y=dnorm(x,10,2)
+% plot(x,y,type="l",  col="black")
+% x=seq(10,12.4,length=240)
+% y=dnorm(x,10,2)
+% polygon(c(10,x,12.4),c(0,y,0),col="wheat")
+% abline(h=0)
+% text(14,0.15,"P(10 < X < 12.4)")
+%
+%
+%
+%
+% x=seq(2,18,length=1600)
+% y=dnorm(x,10,2)
+% plot(x,y,type="l",  col="black")
+% L=2
+% U=9.7
+% x=seq(L,U,length=((U-L)*100) )
+% y=dnorm(x,10,2)
+% polygon(c(L,x,U),c(0,y,0),col="wheat")
+% abline(h=0)
+% text(14,0.15,"P(10 < X < 12.4)")
+%
+%
+%abline(v=10)
+
+\end{enumerate}
+
+\end{document}

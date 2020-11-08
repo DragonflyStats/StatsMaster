@@ -1,0 +1,72 @@
+\documentclass{beamer}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+%======================================================================= %
+\begin{frame}
+\Large
+\frametitle{Kraft-McMillan Inequality}
+	
+	
+%Theorem 4.1 
+Let C be a code with N codewords with lengths \[l_1 , l_2 , \ldots , l_N\]. 
+\bigskip
+If
+C is uniquely decodable, then
+\[\sum_{i=1}^{N} 2^{-l_i} \leq 1 \]
+
+This inequality is known as the Kraft-McMillan inequality.
+
+\end{frame}
+%======================================================================= %
+\begin{frame}
+	\Large
+	\frametitle{Kraft-McMillan Inequality}
+\vspace{-2.5cm}	
+% (SeeSayood(2000), section 2.4.3 for the proof).
+{
+	\LARGE
+\[\sum_{i=1}^{N} 2^{-l_i} \leq 1 \]
+}
+\begin{itemize} 
+\item N is the number of codewords in a code
+\item $l_i$ is the length of
+the $i-$th codeword.
+\end{itemize}
+\end{frame}
+
+%======================================================================= %
+\begin{frame}
+	\Large
+	\frametitle{Kraft-McMillan Inequality}
+	\vspace{-1cm}
+\textbf{Example}\\ Given an alphabet of 4 symbols (A, B, C, D), would it be
+possible to find a uniquely decodable code in which a codeword of length 2 is
+assigned to A, codewords of length 1 to B and C, and a codeword of length 3 to D?
+
+
+\end{frame}
+
+%======================================================================= %
+\begin{frame}
+	\Large
+	\frametitle{Kraft-McMillan Inequality}
+	
+\textbf{Solution}\\
+ Here we have $l_1 = 2$, $l_2 = l_3 = 1$, and $l_4 = 3$.
+ \bigskip
+\[\sum_{i=1}^{4} 2^{-l_i} = \frac{1}{2^2} + \frac{1}{2^1} + \frac{1}{2^1} + \frac{1}{2^3}  = 1.375\]
+
+%==============================%
+\bigskip
+\[ \sum_{i=1}^{4} 2^{-l_i} > 1 \mbox{     } \]
+
+\end{frame}
+
+
+%======================================================================= %
+\begin{frame}
+\end{frame}
+\end{document}

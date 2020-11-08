@@ -1,0 +1,388 @@
+	\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{framed}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{Maths Resource} \rhead{Tutorial Sheet} \chead{Probability} %\input{tcilatex}
+
+\begin{document}
+\begin{enumerate}
+	\item I pick 3 cards from a pack of 52. Calculate the probability that 
+	i)	I pick exactly one spade
+	ii)	I pick at least one spade
+	iii)	I pick exactly one spade, given that I pick at least one spade.
+	
+\item The probability that a new born child is a boy is 0.51. Calculate the probability that in a family with 3 children
+	i)	there are two girls and one boy
+	ii)	all the children are boys, given that the eldest and the youngest child are of the same sex.
+	
+\item	A coin is thrown 4 times. Calculate 
+	i)	The probability of throwing 4 heads
+	ii)	The probability of throwing 3 heads 
+	iii)	The probability of throwing 3 heads, given that the result of the first roll is tails.
+	
+
+	\item A machine is composed of 3 components, which function independently of each other with probabilities p1, p2 and p3, respectively. Calculate the probability that the machine works when
+	a)	the machine only works when all the components are working
+	b)	the machine works when at least one of the components works.
+	
+	\item  A die is thrown twice. A is the event that the sum is 7. B is the event that the first die roll results in a 1. C is the event that the second die roll results in a 6. 
+	i)	Are the events A, B and C independent?
+	ii)	Are the events A, B and C pairwise independent?
+\item A coin is tossed until it falls on the same side twice in a row.
+\begin{itemize}
+	\item[(i)] Define the set of elementary events of such an experiment.
+	\item[(ii)]  Calculate the probability that the coin is thrown exactly 5 times.
+	\item[(iii)]  Calculate the probability that the number of throws is even.
+\end{itemize}
+%--------------------------------------------------%	
+\item	In a newspaper on average 1 in 10 000 characters is incorrectly printed. Suppose the paper contains 50 000 characters. Calculate the exact probability that 
+ \begin{itemize}
+\item[(i)]	no printing errors are made
+\item[(ii)]	at least 3 errors are made
+ \end{itemize}	
+	Using the appropriate approximation, estimate these two probabilities. 
+%--------------------------------------------------%	
+
+\item 	Suppose X has the following cumulative distribution function. F(x)=0, for x≤0, 
+	F(x)=1, for x≥5 and F(x) = x3/125 for 0≤ x ≤ 5. Derive E(X) and Var(X).
+	
+	
+	
+\item  Suppose calls come into a call centre randomly at a rate of one per 30 seconds.
+	i) What is the distribution of the time to the second call?
+	ii) Using this distribution, calculate the probability that the second call arrives within a minute. 
+	iii) Using the appropriate discrete distribution, calculate the probability that at least 2 calls are received in a minute (note this probability has to be the same as above).
+	iv) What is the exact distribution of the time to the 200th call?
+	v) Using the central limit theorem, give the normal distribution which approximates the distribution from iv).
+	vi) Using your answer from v), estimate the probability that the time to the 200th call is less than 102 minutes.
+	
+\item A coin is tossed 100 times. Using the appropriate approximating distribution, estimate the probability that
+	a) exactly 46 heads are thrown
+	b) between 48 and 59 heads (inclusively) are thrown.
+\item	I obtain a hand of 13 cards. Calculate the probability of
+	i) obtaining 2 aces.
+	ii) obtaining 2 aces and 2 kings.
+	iii) obtaining 2 aces or 2 kings.
+	
+\item A computer chooses a number at random n times from the set {1, 2, 3, 4, 5} (with replacement). Let S denote the sum of the numbers chosen. Show that
+	E(S) = 3n and Var(S) = 2n.
+	
+\item	Let Y=aX+b. Prove that i) E(Y)=aE(X)+b, ii) Var(Y)=a2Var(X).
+	
+\item	a) Suppose X has a geometric distribution with parameter p. From the standard interpretation of the geometric distribution, conditioning on whether X=1 or not and using the memoryless property of the geometric distribution
+	i)	calculate E(X)
+	ii)	calculate Var(X). [Hint: first calculate E(X2)].
+	
+\item	The probabilities with which Liverpool win, draw or lose a premier league match are 0.5, 0.3 and 0.2, respectively. Calculate the probability that in 8 matches
+	i)	Liverpool lose 2 matches.
+	ii)	Liverpool win 5 matches and draw 2.
+\item % \frametitle{Review Question 5 :  Probability}
+If A and B are events such that $P(A|B^c) = 2P(A|B)$ and $P(B^c) = 2P(B)$.
+(The event $B^c$ is the complement of event B.) Compute the probability: $P(B^c|A)$ 
+\begin{framed}
+\begin{itemize}
+\item Complement events: $P(B^c) = 1 - P(B)$. Also we are told $P(B^c) = 1-P(B)= 2P(B)$
+\item Necessarily $1 = 3P(B)$. Therefore $P(B) = 1/3$ and  $P(B^c)=2/3$
+\item Total Probability: $P(A) = P(A \mbox{ and } B) + P(A \mbox{ and } B^c)$
+\end{itemize}
+\end{framed}
+
+\item I pick 3 cards from a pack of 52. Calculate the probability that 
+\begin{enumerate}[(i)]
+\item I pick exactly one spade
+\item I pick at least one spade
+\item I pick exactly one spade, given that I pick at least one spade.
+\end{enumerate}
+
+\item The probability that a new born child is a boy is 0.51. Calculate the probability that in a family with 3 children
+\begin{enumerate}[(i)]
+\item there are two girls and one boy
+\item all the children are boys, given that the eldest and the youngest child are of the same sex.
+\end{enumerate}
+
+\item 
+Consider a couple that has two children. Treating the gender of the children as an \textit{\textbf{ordered pair}} outcome of a random experiment, the sample space is 
+\[\boldsymbol{S} = \{ (b,b), (b,g), (g,b), (g,g)\}.\]
+Let us assume that each sample point is \textit{\textbf{equiprobable}}, with probability 0.25 for each sample point.
+Find the probability $p$ that both children are girls if it is known that: 
+
+\begin{itemize}
+\item[(a)] at least one of the children is a girl,
+\item[(b)] the older child is a girl. 
+\end{itemize}
+
+\item 
+If two events A and B have the following probabilities $P(A) = 0.3$, $P(B) = 0.6$, $P(A|B) = 0.2$
+
+\begin{itemize}
+\item[(i)] Are A and B independent? Justify your answer.
+\item[(ii)] Are A and B mutually exclusive? Justify your answer.
+\item[(iii)] Calculate $P(A \cup B)$.
+\end{itemize}
+
+
+
+
+
+\item Tickets numbered 1 to 20 are mixed up and then a ticket is drawn at random. What is the probability that the ticket drawn has a number which is a multiple of 3 or 5
+
+\item 
+Which are the following pairs of events are mutually exclusive?
+
+i.
+Two dice are thrown: A is the event the sum is 10, B is the event the sum is 11
+
+
+ai.
+A hand of two cards is dealt: A is the event that the hand includes at least one red card, B is the event that the hand includes at least one black card.
+
+
+bi.
+student is chosen from the class at random: A is the event that the student is female, B is the event that a student is left-handed.
+
+
+
+
+
+
+\begin{framed}
+
+
+Solution
+
+\begin{itemize}
+\item[(i)] is mutually exclusive. cant throw 10 and 11 in same throw of two dice.
+
+
+\item[(ii)] not mutually exlusive: can have one red card and one black card.
+
+
+\item[(iii)] not mutually exclusine: can have a lefthanded female
+\end{itemize}
+\end{framed}
+%================================================================================%
+
+\item Let $P = $ ``the individual drinks Pepsi'' and $C = $ ``the individual drink Coca Coca''.\\ Furthermore $\Pr(P) = 0.72$, $\Pr(C) = 0.24$ and $\Pr(P \cap C) = 0.12$.\\[-0.2cm]
+
+\begin{enumerate}[(i)]
+\item Calculate the probability that an individual drinks both brands? 
+\item Calculate the probability that an individual drinks neither brand? 
+\item Are $P$ and $C$ mutually exclusive? 
+%\item Are $W$ and $M$ independent?
+\end{enumerate}
+
+\begin{framed}
+
+
+\begin{itemize}
+\item Given $\Pr(P) = 0.72$, $\Pr(C) = 0.24$
+\item Person drinks both Pepsi and Coca Cola $\Pr(P \cap C) = 0.12$
+\item Person drinks either Pepsi or Coca Cola  or Both
+\[\Pr(P \cap C) = \Pr(P) +  \Pr(C)   - \Pr(P \cap C) \]
+\[\Pr(P \cap C) = 0.72 +  0.24  - 0.12 = 0.84\]
+\item Remark: subtract the "P and C" component to prevent double-coutning
+\item Remark: People who dont drink either 0.16.
+\item Question: Are $P$ and $C$ mutually exclusive?
+\\ No - you can drink both (according to the maths here)
+\end{itemize}
+\end{framed}
+
+\item \textbf{Joint Probability Tables}
+% PMS Autumn 2009 Question 8
+
+Find $E[X|Y=2]$
+
+\begin{tabular}{ccccc}
+& X=0  & X=1  & X=2  &              \\ \hline
+Y=1 & 0.15 & 0.2  & 0.25 & P(Y=1) = 0.6 \\ \hline
+Y=2 & 0.05 & 0.15 & 0.20 & P(Y=2) = 0.4 \\ \hline
+& P(X=0) = 0.2  & P(X=1) = 0.35  & P(X=2)=0.45  &              \\ \hline
+\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{framed}
+\textbf{Solution}
+\[   \frac{(0 \times 0.05) + (1 \times 0.15)+(2 \times 0.2) }{0.4}  = \frac{0.55}{0.4}  \] 
+
+$E[X|Y=2] = 1.375$
+\end{framed}
+
+
+\item \textbf{Sampling}
+A lot contains 13 items of which 4 are defective. Three items are drawn at random from the lot one after the other. Find the probability $p$ that all three are non-defective.
+
+
+
+\item \textbf{Probability of Two Dice Rolls}
+A pair of dice is thrown. Let X denote the minimum of the two numbers which occur.
+Find the distributions and expected value of X.
+
+\item The following contingency table illustrates the number of 200 students in different
+departments according to gender.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+& Physics & Biology & Chemistry & Total \\\hline
+Males & 30 & 20 & 50 & 100 \\  \hline
+Females & 20 & 50 & 30 & 100 \\ \hline
+Total & 50 & 70 & 80 & 200 \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{itemize}
+\item[a.] (1 mark) What is the probability that a randomly chosen person from the sample is a
+Chemistry student?
+\item[b.] (1 mark) What is the probability that a randomly chosen person from the sample is both female and studying Biology?
+\item[c.] (1 mark) Given that the student is female, what is the probability that she is an
+Biology student?
+\item[d.] (1 mark) Given that a student studies Biology, what is the probability that the student is female?
+\end{itemize}
+
+
+\item
+A driver passes through 3 traffic lights. The chance he/she will stop at the first is 1/2 , at the second 1/3 and at the third ¼ independently of what happens at any of the other lights. What is the probability that
+
+\begin{enumerate}
+\item    the driver makes the whole journey without being stopped at any of the lights
+
+\item   the driver is only stopped at the first and third lights
+
+\item  the driver is stopped at just one set of lights.
+\end{enumerate}
+
+\begin{framed}
+\begin{multicols}{3}
+\begin{itemize}
+\item $P[F] = 0.5 $  
+\item $P[F^c] = 0.5 $           
+\item $P[S] = 0.333 $       
+\item $P[S^c] = 0.666$
+\item $P[T] = 0.25  $      
+\item $P[T^c] = 0.75$
+\end{itemize}
+\end{multicols}
+
+
+\begin{itemize}
+\item Probability of not getting stopped at all three lights
+
+
+\[P[0] =P[Fc]P[Sc]P[Tc] = 0.5 \times 0.666 \times 0.75 = 0.25\]
+
+
+\item Probability of only getting stopped at first  lights
+
+
+\[P[F only] = P[F]P[Sc]P[Tc] = 0.5\times 0.666\times 0.75 = 0.25\]
+
+
+\item Probability of only getting stopped at second lights
+
+
+\[P[S only] =P[Fc]P[S]P[T^c] = 0.5\times 0.333\times 0.75 = 0.125\]
+\item Probability of only getting stopped at third  lights
+
+\[P[T only] =P[F^c]P[S^c]P[T] = 0.5\times 0.666\times 0.25 = 0.083\]
+
+
+\item Probability of getting stopped at one lights only 
+
+
+\[P[1 only] =P[F only]+P[S only]+ P[T only]\]
+
+
+\[P[1 only] = 0.125 + 0.25 + 0.083 = 0.458\]
+
+\end{itemize}
+\end{framed}
+
+\item 
+Assume that there are three different routes to get to a particular location: $R_1$, $R_2$ and $R_3$. You take $R_1$ 75\% of the time, $R_2$ 20\% of the time and $R_3$ the rest of the time. If you take $R_1$, there is a 90\% chance that you will be on time; if you take $R_2$, there is a 50\% chance that you will be on time and, if you take $R_3$, there is a 70\% chance that you will be on time. \\[0.1cm]
+Let $T$ represent on time.\\[-0.2cm]
+
+{\bf(a)} If $T$ represents ``on time'', what notation would we use for ``late''? \quad {\bf(b)} What is the value of $\Pr(R_1 \cap R_2)$? \quad {\bf(c)} Calculate the probability of being on time. \quad {\bf(d)} \emph{Given that} you \emph{are} on time, calculate the probabilities of having used each of the routes. \quad {\bf(e)} Given that you are late, what is the probability that you used $R_1$?
+
+\item One in 10 000 people suffer from a particular disease. Given a person has the disease, a test for the disease is always positive (indicates that the person has the disease). Given a person does not have the disease, a test for the disease is positive with probability 0.01.
+\begin{enumerate}[(i)]
+\item calculate the probability that when a randomly chosen person is tested, the result is positive. 
+\item calculate the probability that an individual has the disease, given that the test result was positive.
+\end{enumerate}
+
+\item \textbf{Example 1:} What is the probability of rolling two consecutive fives on a six-sided die?
+\begin{itemize}
+\item You know that the probability of rolling one five is 1/6, and the probability of rolling another five with the same die is also 1/6.
+\item These are independent events, because what you roll the first time does not affect what happens the second time; you can roll a 3, and then roll a 3 again.
+\end{itemize}
+
+\item \textbf{Example 2:} Two cards are drawn randomly from a deck of cards. What is the likelihood that both cards are clubs?
+\begin{itemize}
+\item The likelihood that the first card is a club is 13/52, or 1/4. (There are 13 clubs in every deck of cards.) Now, the likelihood that the second card is a club is 12/51.
+\item You are measuring the probability of dependent events. This is because what you do the first time affects the second; if you draw a 3 of clubs and don't put it back, there will be one less fewer club and one less card in the deck (51 instead of 52).
+\end{itemize}
+\item A jar contains 4 blue marbles, 5 red marbles and 11 white marbles. If three marbles are drawn from the jar at random, what is the probability that the first marble is red, the second marble is blue, and the third is white?
+\begin{itemize}
+\item The probability that the first marble is red is 5/20, or 1/4. 
+\item The probability of the second marble being blue is 4/19, since we have one fewer marble, but not one fewer blue marble. 
+\item And the probability that the third marble is white is 11/18, because we've already chosen two marbles. This is another measure of a dependent event.
+\end{itemize}
+
+\item  An elevator can lift 600kg. 4 men and 4 women are in the lift. The mean mass of males is 80kg with a standard deviation of 20kg, the mean mass of females is 65kg with a standard deviation of 15kg. Assuming the weights of these individuals are independent and approximately normally distributed, estimate the probability that the elevator will lift these passengers. 
+
+Note: 1) Use the results regarding the sum of independent, normally distributed random variables. 
+2)The sum of the masses of the males is the sum of 4 random variables.
+
+
+
+\item Suppose X has the following cumulative distribution function. F(x)=0, for x≤0, 
+F(x)=1, for x≥5 and F(x) = x3/125 for 0≤ x ≤ 5. Derive E(X) and Var(X).
+
+
+
+
+\item A coin is tossed 100 times. Using the appropriate approximating distribution, estimate the probability that
+\begin{enumerate}[(i)]
+\item exactly 46 heads are thrown
+\item  between 48 and 59 heads (inclusively) are thrown.
+\end{enumerate}
+
+\item Commuter trains have a probability 0.1 of delay
+between Dublin and Maynooth. Supposing that the delays are all independent,
+what is the probability that out of 10 journeys between Dublin and
+Mullinar more than 8 do not have a delay.
+\begin{itemize}
+\item Reconsider the question : What is the probability that there is less than 2 delays.
+\item $X$ is the variable for `delays', with Binomial parameters $n=10$, $p=0.1$
+\item $P(X < 2) = P(X \leq 1) = P(X=0)+P(X=1)$
+\item $P(X=0)$
+\[P(X=0)= {10 \choose 0} \times 0.1^0  \times 0.9^10 = 0.34868\]
+\item $P(X=1)$
+\[P(X=1)= {10 \choose 1} \times 0.1^1  \times 0.9^9 = 0.38742\]
+\item $P(X < 2) = = 0.38742 + 0.34868 = 0.73610.$
+\end{itemize}
+
+
+
+\end{enumerate}
+\end{document}

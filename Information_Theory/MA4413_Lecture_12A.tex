@@ -1,0 +1,140 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx} % Font Family
+\usepackage{helvet} % Font Family
+\usepackage{color}
+\mode<presentation> {
+\usetheme{Default} % was Frankfurt
+\useinnertheme{rounded}
+\useoutertheme{infolines}
+\usefonttheme{serif}
+%\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+\title[MA4413]{Statistics for Computing \\ {\normalsize MA4413 Lecture 12A}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Autumn 2011}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+\renewcommand{\arraystretch}{1.5}
+%------------------------------------------------------------------------%
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Codes}
+Recall from last weeks lectures, this table below where a source of
+size 4 has been encoded in binary codes with symbol 0 and 1.\\ \bigskip
+% Table 10-I Binary Codes
+\begin{center}
+\begin{tabular}{|c| c| c| c| c| c| c|}
+\hline
+X& Code l& Code 2& Code 3 &Code 4& Code 5& Code 6\\\hline
+$x_1$& 00& 00 &0 &0 &0 &1\\
+$x_2$& 01& 01 &1 &10 &01 &01\\
+$x_3$ &00 &10& 00& 110& 011 &001\\
+$x_4$ &11& 11& 11& 111 &0111 &0001\\\hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Code Classifications}
+\begin{itemize}
+\item \textbf{Code 1} This code is fixed length, but not distinct. Two symbols have the same binary representation. Due to this flaw it is no longer considered.
+\item \textbf{Code 2} This code is fixed length and distinct. 
+\item \textbf{Code 3} This code is not uniquely decodable. Again due to this flaw, we will no longer consider it.
+
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Prefix-free codes}
+\begin{itemize}
+\item A prefix-free code is one in which no codeword is a prefix in another. \item Note that every prefix-free code is decipherable, but the converse is not true. 
+    \item In code 4, none of the codewords appear as prefixes for other codewords.
+\item For code 5, each code word are prefixes for the subsequent codeword.
+\item Both code 4 and 5 are uniquely decodable.
+\item Code 6 is prefix free and uniquely decodable.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Word Length}
+\begin{itemize}
+\item These codes use code lengths between 1 and 4.
+\item For code 2; $n_1 = n_2 = n_3 = n_4 = 2$.
+\item For code 6; $n_1 = 1$, $n_2 = 2$, $n_3 = 3$,$n_4 = 4$.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Word Length}
+\begin{itemize}
+\item Suppose that the symbols $\{x_1, x_2, x_3, x_4\}$ appear with the following probabilities $\{0.4, 0.3, 0.2, 0.1\}$
+\item The average code word length E(L) per source symbol is given by
+
+\[ E(L) = \sum ^{m}_{i=1} P(x_i) n_i \]
+\item For each code compute $E(L)$.
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Word Length}
+\begin{itemize}
+\item \textbf{Code 1 and 2} Codes are fixed length $ E(L) = 2 $
+\item \textbf{Code 3} Recall: Code is flawed \[ E(L) = (0.4 \times 1)+(0.3 \times 1)+(0.2 \times 2)+(0.1 \times 2) = 1.3 \]
+\item \textbf{Code 4 } \[ E(L) = (0.4 \times 1)+(0.3 \times 2)+(0.2 \times 3)+(0.1 \times 3) = 1.9 \]
+\item \textbf{Code 5 and 6} \[ E(L) = (0.4 \times 1)+(0.3 \times 2)+(0.2 \times 3)+(0.1 \times 4) = 2 \]
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Word Length : Interpretation}
+\begin{itemize}
+\item Code 4 would require 190 binary digits to transmit 100 symbols. The transmission would be uniquely decodable.
+\item Code 3 would require 130 binary digits to transmit 100 symbols. The transmission would be not be uniquely decodable, and the intended message would be unclear.
+\item For the other codes, each would require 200 digits.
+\item Code 4 is seemingly the best choice.
+\end{itemize}
+\end{frame}
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Entropy and Efficiency}
+Given that the entropy of the input source is $H(X) = 1.85$b, compute the efficiency $\eta$ for each code.
+\begin{itemize}
+\item \textbf{Code 1 and 2} \\$ \eta = H(X) / E(L) = [1.85 / 2] \times 100\% = 92.5\% $
+\item \textbf{Code 3} \\Recall that this code is flawed $ \eta = H(X) / E(L) = [1.84 / 1.3] \times 100\% = 142\% $
+\item \textbf{Code 4}\\ $ \eta = H(X) / E(L) = [1.85 / 1.9] \times 100\% = 97.2\% $
+\item \textbf{Code 5 and 6}\\ $ \eta = H(X) / E(L) = [1.85 / 2] \times 100\% = 92.5\% $
+
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Instantaneous Codes}
+\begin{itemize} \item Recall from previous lecture \item A uniquely decodable code is called an instantaneous code if the end of any code word is
+recognizable without examining subsequent code symbols. \item The instantaneous codes have the property
+that no code word is a prefix of another code word.  \item Codes 2,4 and 6 are prefix-free codes, hence they are instantaneous codes.\end{itemize}
+\end{frame}
+
+
+
+
+
+%-------------------------------------------------------------------------------------------%
+\end{document} 

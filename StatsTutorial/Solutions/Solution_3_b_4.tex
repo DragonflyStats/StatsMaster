@@ -1,0 +1,58 @@
+An assembly plant has two suppliers, one based in England (E) and the other in Spain (S).  
+60\% of the components are supplied by the Spanish factory and the remaining 40\% by the English base factory.  
+The defect rate in the English plant is 5\% and in the Spanish plant is 6\%.
+
+\begin{itemize}
+\item[(i)]If a component is randomly selected from the production floor in Spain what is the probability that it will fail?
+\item[(ii)]If a motherboard fails what is the probability that the component which caused the failure was sourced in England?
+\end{itemize}
+
+
+
+%-----------------------------------------------------%
+\begin{framed}
+\noindent \textbf{Events}
+Did Motherboard Pass Quality Control Test?
+\begin{description}
+\item[F] fails the quality control test
+\item[P] passes the quality control test
+\end{description}
+Where was Motherboard manufactured?
+\begin{multicols}{2}
+\begin{description}
+\item[B] item built in England: $P(E) = 0.40$
+\item[C] item built in Spain:  $P(S) = 0.60$
+\end{description}
+\end{multicols}
+\end{framed}
+
+\begin{framed}
+\noindent \textbf{Conditional Probabilities}
+\begin{multicols}{2}
+\begin{description}
+\item[1] $P(F|E) = 0.05$
+\item[2] $P(F|S) = 0.06$
+
+\end{description}
+\end{multicols}
+\end{framed}
+
+
+\noindent \textbf{Question:} \\ What is the probability that a randomly selected Motherboard fails the quality control test?\\
+
+\noindent Compute P(F) 
+
+\[P(F) = P(F \mbox{ and } E) + P(F\mbox{ and }S)\]
+
+
+\noindent Re-arranging the conditional probability formula
+\[P(F) = P(F|E)\times P(E) +  P(F|S)\times P(S) \]
+\[P(F) = 0.05 \times 0.40 +  0.06 \times 0.60 \]
+\[P(F) = 0.020  +  0.036 = \boldsymbol{0.056}
+\]
+
+\noindent \textbf{Question: Compute $P(C|F)$ }
+\\ What is the probability that a randomly selected hard drive comes from cork, given that it fails the quality control test?
+
+\[P(E|F) = \frac{P(F\mbox{ and }C)}{P(F)} = \frac{0.020}{0.056} = \boldsymbol{0.3571} \]
+\bigskip

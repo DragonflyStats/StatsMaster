@@ -1,0 +1,77 @@
+\documentclass{beamer}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+%======================================================================= %
+\begin{frame}
+	\Large
+	\frametitle{Information}
+The information of an event that has a probability of $p$ (with $\leq p \leq 1$) is denoted as $I(p)$ and is computed as follows:
+\[
+I(p) = -\mathrm{log}_b(p) = \mathrm{log}_b(1/p)   .
+\]
+
+Let's use base of 2.
+\[
+I(p) = -\mathrm{log}_2(p) = \mathrm{log}_2(1/p)   .
+\]
+
+\end{frame}
+%======================================================================= %
+\begin{frame}
+	\Large
+	\frametitle{Information}
+\begin{itemize}
+\item We will want our information measure $I(p)$ to have several
+properties.
+%(note that along with the axiom is motivation for
+%choosing the axiom).
+ \item Information is a non-negative quantity:
+\[I(p) \geq 0\]. 
+\end{itemize}
+
+
+
+\end{frame}
+
+%======================================================================= %
+\begin{frame}
+	\Large
+	\frametitle{Information}
+	
+\begin{itemize}
+\item If an event has probability 1, we get no
+information from the occurrence of the event: \[I(1) = 0\]. 
+
+\item If
+two independent events occur (whose joint probability is the
+product of their individual probabilities), then the information
+we get from observing the events is the sum of the two
+informations: \[I(p1 + p2) = I(p1)+I(p2).\]
+% (This is the critical property)
+
+\end{itemize}
+
+\end{frame}
+
+%======================================================================= %
+\begin{frame}
+	\Large
+	\frametitle{Information}
+	
+\begin{itemize}
+\item We will want our information measure to be a continuous
+(and, in fact, monotonic) function of the probability (slight
+changes in probability should result in slight changes in
+information).
+\end{itemize}
+
+\end{frame}
+
+\end{document}
+
+
+

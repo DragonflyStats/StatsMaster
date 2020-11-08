@@ -1,0 +1,163 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{Maths Resource} \chead{Probability Theory} \rhead{Poisson Distribution} %\input{tcilatex}
+\begin{document}
+\begin{enumerate}
+%====================================================================================%
+\item The Poisson random variable X with parameter $\lambda > 0$ has probability mass function
+
+\[{\displaystyle p_X(x) =e^{-\lambda }{\frac {\lambda ^{x}}{x!}}}\] where
+$ x = \{0, 1, 2, \ldots\}$ and $\lambda>0$ .
+
+\begin{enumerate}[(a)]
+\item Show that, for integer $x \geq 0$,
+
+\[{\displaystyle p_X(x) =e^{-\lambda }{\frac {\lambda ^{x}}{x!}}}\]
+
+and outline how this could be used to calculate the probability mass function for a given value of $\lambda$.
+
+
+
+\item Show that $E(X) = Var(X) = \lambda$.
+
+
+
+\item Suppose that Y has a Poisson distribution with mean $\mu$ independently of X, and that $W = X +Y$. Use the relation
+
+\[ P(W=w) =  \sum^{n}_{x=0} P(X=x) P(Y=w-x) \]
+
+to show that W has a Poisson distribution, and write down its mean.
+\end{enumerate}
+
+\item An office has two computer systems, one of Type A and one of Type B. The numbers of breakdowns per day on these systems, X and Y say, have independent Poisson distributions with respective means 2 and 0.5.
+\begin{enumerate}[(i)]
+\item Find the conditional probability that if there is exactly one breakdown on a given day then it is the Type A system that fails.
+\item Find the probability that on a given day there are more than 2 breakdowns.
+\item The office is one of 50 run by a large company. The offices are each equipped with one Type A system and one Type B system, which function independently in the way described above. Write down the distribution of T, the total number of breakdowns occurring in the 50 offices on any given day. Use a suitable approximation to estimate $T<0.95$, the number of breakdowns per day which will be exceeded on at most 5\% of days.
+
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RSS- HC2- 2009 Question 
+\item The discrete random variable X has the Poisson distribution with parameter $\lambda$, so that
+its probability mass function is given by
+
+\[ {\displaystyle  p_X(x) = e^{-\lambda }{\frac {\lambda ^{x}}{x!}}}  \]
+
+\begin{enumerate}[(a)]
+\item Given that $E(X)$ = $\lambda$, show that $E(X^2)$ = $\lambda$($\lambda$ + 1) and deduce Var(X).
+
+\item The random variables Y and Z have Poisson distributions with respective
+parameters $\mu$ and $\lambda$, and X, Y and Z are independent. Use the relation
+
+\[ P(W=w) =  \sum^{n}_{x=0} P(X=x) P(Y=w-x) \]
+to show that the random variable $W = X + Y$ has a Poisson distribution, and
+write down its mean and variance. 
+\item What is the distribution of the random
+variable $V = Y + Z$ ?
+
+\item  The random variables T and U are defined by $T = W - Z$, $U = V - Z$. Find
+$E(T)$, $Var(T)$, $E(U)$ and $Var(U)$. 
+\item Explain why $P(U < 0) = 0$ but $P(T < 0) > 0$.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % RSS HC2 2007 Question 4
+
+
+\item The number of flaws, $X$, in a standard length of yarn is assumed to be Poisson distributed with probability mass function
+\[ {\displaystyle  p_X(x) = e^{-\lambda }{\frac {\lambda ^{x}}{x!}}}  \]
+where $\lambda$ is a positive parameter. A textile manufacturer buys yarn from suppliers P, Q and R in the long-run proportions 1:2:3. It is known from experience that the numbers of flaws in lengths of yarn from these suppliers are independently Poisson distributed with respective parameter values $\lambda_P=3$,
+$\lambda_Q=2$ and $\lambda_R=1$.
+
+\begin{enumerate}[(a)]
+\item An unlabelled length of yarn is found to have 2 flaws. Is it more likely to have come from supplier $Q$ or supplier $R$?
+
+\item A second unlabelled length of yarn, known to be from the same supplier as the first, is also found to have 2 flaws. Are the two lengths of yarn more likely to have come from supplier $Q$ or supplier $R$? Comment briefly on this result in comparison with that of part (a).
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% RSS- HC2 - 2012
+\item A statistics lecturer holds a weekly 'surgery' of 2 hours during which students of his
+course can visit him to ask for help with their work. It is assumed that individual
+students arrive randomly and independently during the surgery period (but not before)
+at a rate of 5 per hour, so that the number of students Nt arriving in any interval of
+t hours during the surgery period can be taken as having the Poisson distribution
+
+\[ P(N_t=n) = exp(-5t) \frac{(5t)^n}{n!}, \]
+where $n=\{0,1,2,3 \ldots \}$.
+
+\begin{enumerate}[(a)]
+\item The lecturer makes a cup of coffee immediately before his surgery period
+begins and will take 10 minutes to drink it. Find the probability that he
+finishes his coffee before any student arrives.
+\item  A student has just arrived and asked for help, and his query takes 15 minutes.
+Find the probability that at least 2 more students arrive while this student is
+being dealt with.
+\item The course runs for a term of 10 weeks, each surgery lasts for 2 hours and
+surgery visits in different weeks are independent. Use a suitable approximation
+to calculate the probability that the total number of surgery visits is more than
+110. Explain why the exact probability might be anticipated to be more than
+the calculated value.
+\item Suggest reasons why a Poisson model may not be a good assumption in
+practice.
+\end{enumerate}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+
+% RSS HC2 2010 Question 2
+
+\item Flaws in lengths of rope made by Company A occur in a Poisson process at rate $\lambda_A$ per metre length, so that the number of flaws X in a length of l metres of rope has the Poisson probability mass function
+
+
+\[ {\displaystyle  p_X(x) = e^{-(\lambda_A l) }{\frac {(\lambda_A l) ^{x}}{x!}}}  \]
+where $x = \{0, 1, 2, \ldots \}$ and  $\lambda_A > 0$.
+
+\begin{enumerate}[(a)]
+\item Find the probability that there are 
+\begin{enumerate}[(i)]
+    \item no flaws,
+    \item more than 2 flaws,
+\end{enumerate}  in a 1000-metre length of rope made by company A, given that $\lambda_A$ = 0.002.
+
+\item Company B makes similar rope, indistinguishable in appearance from that made by Company A, in which flaws occur in a Poisson process at rate $\lambda_B$ = 0.003 per metre. A boat is rigged with 100 metres of rope from Company A and 100 metres of rope from Company B. Assuming that the lengths of rope supplied by A and B are independent, find the probability that
+\begin{enumerate}[(i)]
+    \item there are no flaws,
+    \item there is exactly one flaw, in the rigging of this boat.
+\end{enumerate}
+
+\item A manufacturer of rigging for sailing boats buys 75\% of his rope from Company A and 25\% from Company B. The supplier's label has become detached from a drum of rope of length 2 km which is found to have 7 flaws. Find the probability that this drum was supplied by Company A.
+
+\item Suppose, instead, that the rope in this drum had been found to have 8 flaws. Find the probability that this drum was supplied by Company A. Compare this probability with your answer to part (c) and comment.
+
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+\end{document}

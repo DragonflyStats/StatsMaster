@@ -1,0 +1,98 @@
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx} % Font Family
+\usepackage{helvet} % Font Family
+\usepackage{color}
+\mode<presentation> {
+	\usetheme{Default} % was Frankfurt
+	\useinnertheme{rounded}
+	\useoutertheme{infolines}
+	\usefonttheme{serif}
+	%\usecolortheme{wolverine}
+	% \usecolortheme{rose}
+	\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+\title[MA4413]{Statistics for Computing \\ {\normalsize MA4413 Lecture 11A}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Autumn 2011}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+\renewcommand{\arraystretch}{1.5}
+%------------------------------------------------------------------------%
+\begin{document}
+
+\begin{frame}
+\frametitle{Source Coding}
+\begin{itemize}
+\item A conversion of the output of a DMS into a sequence of binary symbols (binary code word) is
+called \textbf{\emph{Source Coding}}.
+\item  The device that performs this conversion is called the source encoder.
+\item
+An objective of source coding is to minimize the average bit rate required for representation of the
+source by reducing the redundancy of the information source.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Source Coding : Code Length and Code Efficiency}
+\begin{itemize}
+
+\item
+Let X be a DMS with finite entropy $H(X)$ and an alphabet $\{x_1 , \ldots,  x_m\}$, each with corresponding
+probabilities of occurrence $P(x_i)$. \item Let the binary code word assigned to symbol $x_i$ by
+the encoder have length $n_i$ b. \item The length of a code word is the number of binary digits
+in the code word. The average code word length L, per source symbol is given by
+
+\[ E(L) = \sum ^{m}_{i=1} P(x_i) n_i \]
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Source Coding : Code efficiency and Code redundancy}
+% Pg 253/254
+\begin{itemize}
+\item The parameter $L$ (estimated by $E(L)$) represents the average number of bits per source symbol used in the source coding process.\item
+The code efficiency is defined as \[\eta = {L_{min} \over L} \]where $L_{min}$ is the minimum possible value of $L$. When $\eta$ approaches unity, the codes is said to be efficient.
+\item The code redundancy $\gamma$ is defined as $\gamma = 1- \eta$.
+\end{itemize}
+\end{frame}
+
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+%page 254
+\frametitle{Source Coding Theorem}
+\begin{itemize}
+\item The source coding theorem states that for a DMS X with entropy $H(X)$, the average code word length $L$ per symbol is bounded as $L \geq H(X)$
+
+\item Furthermore L can be made as close to H(X) as required for some suitably chosen code.
+\item Thus, with $ L_{min} \geq H(X)$, the code efficiency can be rewritten as
+\[\eta = {H(X) \over L} \]
+\item We will use this definition for efficiency. (Remark $L$ is estimable by $E(L)$.)
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------------------------------------------------------------------------%
+\begin{frame}
+%page 254
+\frametitle{Source Coding Theorem}
+The source coding theorem states that for zi DMS X with entropy $H(X)$, the average code word length $L$ per symbol is bounded as
+L 2 H(X) (10.52)
+
+and further, L can bc made as close to H(X) as dcsircd for some suitably chosen code.
+Thus, with$ L_{min} \geq H(X)$.
+
+The code efficiency can be rewritten as
+\[\nu = {H(X) \over L} \]
+\end{frame}
+\end{document}
+
+
+\end{document}

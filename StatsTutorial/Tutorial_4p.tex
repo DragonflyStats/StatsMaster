@@ -1,0 +1,168 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+
+\setcounter{MaxMatrixCols}{10}
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.00.0.2570}
+%TCIDATA{<META NAME="SaveForMode"CONTENT="1">}
+%TCIDATA{LastRevised=Wednesday, February 23, 201113:24:34}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{Language=American English}
+
+\pagestyle{fancy}
+\setmarginsrb{20mm}{0mm}{20mm}{25mm}{12mm}{11mm}{0mm}{11mm}
+\lhead{MS4222} \rhead{Kevin O'Brien} \chead{Binomial Distribution} %\input{tcilatex}
+\begin{document}
+
+
+
+\section{Question D01  - Poisson Example}
+A motor dealership which specializes in agricultural machinery sells on vehicle every 2 days, on average
+
+In this question the unit period is one day. The company expects to sell, on average, 0.5 vehicles every day.
+The Poisson mean $m$ is therefore 0.5.
+
+$P(X \geq 1)$
+
+Go to your Poisson tables, and search for the $m=0.5$ column.
+We are interested in the probability of \textbf{exactly} one vehicle sold on a particular day.
+From the tables we can easily work out P($X \geq 1$), but this is probability of one or more vehicles being sold.
+This is not the same thing.
+\[P(X \geq 1) = P(X =1) + P( X=2) + P(X=3) + \ldots
+P(X \geq 1) = P(X=1) + P(X \geq 2)\]
+From tables
+$P(X \geq 1)$
+$P(X \geq 2)$
+
+Six day working week?
+our unit period is now six days.
+How many vehicles do we expect to sell in 6 days?
+answer = 3
+$m=3$
+
+P($X\geq 4$)
+
+\begin{eqnarray}
+e^{-6/5} = 0.3011942
+e^{-4/5} = 0.449329
+e^{-5/5} = 0.3678794
+\end{eqnarray}
+
+\begin{enumerate}[(a)]
+\item What is the probability that the number of manuals sold will exceed 600?
+\item What is the probability that the number of manuals sold will be less than 300?
+\item What is the probability that the number of manuals sold will be between 450 and 550?
+\item What is the minimum number of manuals that the company must print such
+that that 90\% of the demand is satisfied?
+\end{enumerate}
+
+
+
+
+%======================================================================================= %
+
+%================================================================%
+
+\subsection{Question 4 : Poisson Distribution}
+
+Poisson mean for 1 hours: 16 per hour.
+
+m = 16
+
+Poisson mean for 30 minutes: 8 per 30 minutes.
+
+m = 8
+
+Poisson mean for 45 minutes: 12 per 45 minutes. 
+m = 12
+%===================================================================%
+
+\subsection{Question 5 : Poisson Distribution}
+
+Emission rate = 1.2 per minute
+
+In the notes the Poisson mean is denoted $\lambda$ . However in the Murdoch Barnes tables it is denoted m.
+
+$\lambda = 1.2$
+
+
+
+%====================================================================%
+
+\[P(X=0) = 1 - P(X\geq 1)\]
+
+From tables $P(X \leq 1) = 0.699$
+
+
+$P(X \leq 4) = 0.0338 $
+
+
+\section{Question 4 : Poisson Distribution}
+
+\begin{itemize}
+	\item Poisson mean for 1 hours: 16 per hour.
+	
+	$m = 16$
+	
+	\item Poisson mean for 30 minutes: 8 per 30 minutes.
+	
+	$m = 8$
+	
+	\item Poisson mean for 45 minutes: 12 per 45 minutes. 
+	$m = 12$
+\end{itemize}
+
+
+
+
+%===================================================================%
+
+\subsection{Question 5 : Poisson Distribution}
+
+Emission rate = 1.2 per minute
+
+In the notes the Poisson mean is denoted $\lambda$ . However in the Murdoch Barnes tables it is denoted m.
+
+$\lambda = 1.2$
+
+
+
+%====================================================================%
+
+\[P(X=0) = 1 - P(X\geq 1)\]
+
+From tables $P(X \leq 1) = 0.699$
+
+
+$P(X \leq 4) = 0.0338 $
+
+\subsection{Poisson }
+\begin{itemize}
+\item M=15
+(1/2 hour or 30 minutes)
+
+\item 5 minute period 
+m=2.5 
+
+\item X : No of arrivals
+
+\item P(X=0) when M = 2.5
+
+\[P(X=0) = 1 - P(X \geq 1) (Complement)\]
+\[= 1 - 0.9179\]
+\[= 0.0821\]
+
+
+\end{itemize}
+
+
+\end{document}

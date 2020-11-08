@@ -1,0 +1,142 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+	
+	%------------------------------------- %
+\section{Computer Output}
+Statistical Procedures were performed using a statistical programming language called $R$.
+A brief description of each procedure is provided. For each procedures, identify the null and alternative hypotheses, the $p-$value, and your conclusion for this test.
+
+
+\begin{itemize}
+	\item If the $p-$value is less than 0.05 : reject the null hypothesis.
+	\item If the $p-$value is greater than 0.05 : fail to reject the null hypothesis.
+\end{itemize}
+% prop.test
+% Shapiro Wilk
+% Grubb's
+% var test
+\subsection*{Test 1. Single Sample Test for Proportions}
+\begin{itemize}
+	\item Sample size ($n$) = 500
+	\item Number of successes ($x$) = 280
+	\item Expected value under null hypothesis (Usually $\pi$, but here as $p$)
+\end{itemize}
+\begin{framed}
+	\begin{verbatim}
+	> prop.test(x=280,n=500,p=0.60)
+	
+	1-sample proportions test with continuity correction
+	
+	data:  280 out of 500, null probability 0.6
+	X-squared = 3.1688, df = 1, p-value = 0.07506
+	alternative hypothesis: true p is not equal to 0.6
+	95 percent confidence interval:
+	0.5151941 0.6038700
+	sample estimates:
+	p 
+	0.56 
+	> 
+	\end{verbatim}
+\end{framed}
+\newpage
+	\subsection*{Question 11 - Shapiro-Wilk Test}
+	Interpret the output from the three Shapiro-Wilk tests. What is the null and alternative hypotheses? State your conclusion for each of the three tests.
+	\begin{framed}
+		\begin{verbatim}
+		> shapiro.test(X)
+		
+		Shapiro-Wilk normality test
+		
+		data:  X
+		W = 0.9001, p-value = 0.113
+		>
+		\end{verbatim}
+	\end{framed}
+	\begin{framed}
+		\begin{verbatim}
+		> shapiro.test(Y)
+		
+		Shapiro-Wilk normality test
+		
+		data:  Y 
+		W = 0.8073, p-value = 0.006145
+		>
+		\end{verbatim}
+	\end{framed}
+	\begin{framed}
+		\begin{verbatim}
+		> shapiro.test(Z)
+		
+		Shapiro-Wilk normality test
+		
+		data:  Z
+		W = 0.9292, p-value = 0.372
+		\end{verbatim}
+	\end{framed}
+
+\subsection*{Test 2. F Test for equality of variance}
+\begin{itemize}
+	\item In this procedure, we determine whether or not two \textit{\textbf{populations}} have the same variance.
+	\item The assumption of equal variance of two populations underpins several inference procedures. This assumption is tested by comparing the variance of samples taken from both populations.
+	\item The null and alternative hypotheses are as follows:
+	\[ H_0: \sigma^2_1 = \sigma^2_2 \]
+	\[ H_1: \sigma^2_1 \neq \sigma^2_2 \]
+\end{itemize}
+\begin{framed}
+	\begin{verbatim}
+	> var.test(X,Y)
+	
+	F test to compare two variances
+	
+	data:  X and Y
+	F = 2.5122, num df = 9, denom df = 9, p-value = 0.1862
+	alternative hypothesis: true ratio of variances
+	is not equal to 1
+	95 percent confidence interval:
+	0.6239986 10.1141624
+	sample estimates:
+	ratio of variances 
+	2.512215 
+	\end{verbatim}
+\end{framed}
+
+\subsection*{Test 3. Shapiro Wilk's Test for Normality}
+\begin{itemize}
+	\item We will often be required to determine whether or not a data set is normally distributed.
+	This assumption underpins many statistical models.
+	\item The null hypothesis is that the data set is normally distributed.
+	\item The alternative hypothesis is that the data set is not normally distributed.
+	\item One procedure for testing these hypotheses is the Shapiro-Wilk test, implemented in \texttt{R} using the command \texttt{shapiro.test()}.
+\end{itemize}
+\begin{framed}
+	\begin{verbatim}
+	> shapiro.test(X)
+	
+	Shapiro-Wilk normality test
+	
+	data:  X
+	W = 0.9849, p-value = 0.1012
+	
+	
+	\end{verbatim}
+\end{framed}
+
+\end{document}	
