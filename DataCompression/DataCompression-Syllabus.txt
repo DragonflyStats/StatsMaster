@@ -1,0 +1,15 @@
+Data Compression Syllabus
+=============================
+- Minimum redundancy coding; 
+- data compression and information theory; 
+- adaptive Huffman coding; 
+- arithmetic coding; 
+- statistical modelling;
+- dictionary-based compression; 
+- sliding window compression; 
+- LZ278 compression; 
+- speech compression; 
+- graphics compression; 
+- fractual image compression.
+
+ 

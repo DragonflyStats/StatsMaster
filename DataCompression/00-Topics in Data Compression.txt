@@ -1,0 +1,152 @@
+Topics in Data Compression
+average length of shannon-fano coding,
+code effcientcy,
+code efficiency,
+code efficiency huffman coding,
+coding efficiency,
+compression codes,
+data compresion,
+data compression,
+
+efficiency of hauffman coding,
+fano codierung,
+find coding efficiency with shannon,
+gamma code compression,
+image compression coding redundancy,
+
+la comprssion et codage,
+optimalcode fano,
+shannon fano coding procedure,
+the code efficiency,
+type of data compression,
+average code length	,
+
+average code word length	,
+average codeword length	,
+average length in huffman coding	,
+coad word length	,
+code length	,
+computing average	,
+discrete mathematics basic coding thoery	,
+discrete mathematics code words	,
+encoding and decoding discrete maths	,
+find the average code length	,
+haming word code minimum code word size	,
+codeword length in huffmen coding	,
+average codeword length in coding	,
+huffman code average length	,
+huffman codewords	,
+length of message word coding theory	,
+mathematics in computing	,
+maths for computing	,
+the average length of huffman	,
+
+Lossless and Lossy Data Compression
+Run Length Coding
+Run-length coding
+Quantisation
+Statistical coding
+Dictionary-based coding
+Transform-based coding
+Motion prediction
+Compression problems
+Algorithmic solutions
+Compression and decompression
+Compression performance
+Limits on lossless compression
+Run-length coding ideas
+Hardware data compression (HDC)
+Huffman coding
+Huffman’s idea
+Huffman encoding algorithm
+Decoding algorithm
+Observation on Huffman coding
+Shannon-Fano coding
+Shannon-Fano algorithm
+Observation on Shannon-Fano coding
+Compression algorithms
+Symmetric and asymmetric compression
+Coding methods
+Question of unique decodability
+Prefix and dangling suffix
+Prefix codes
+Kraft-McMillan inequality
+Arithmetic coding
+Model
+Coder
+Encoding
+Unique-decodability
+Observation
+Encoding main steps
+Defining an interval
+Encoding algorithm
+Observation
+Decoding
+Renormalisation
+Coding a larger alphabet
+LZW coding
+Encoding
+Decoding
+Observations
+LZ family
+A typical compression step
+The decompression algorithm
+Observations
+LZ family
+Bitmap images
+Resolution
+Displaying bitmap images
+Vector graphics
+Storing graphic components
+Displaying vector graphic images
+Difference between vector and bitmap graphics
+Combining vector graphics and bitmap images
+Rasterising
+Vectorisation
+Colour
+RGB colour model
+RGB representation and colour depth
+LC representation
+Classifying images by colour
+Bi-level image
+Gray-scale image
+Colour image
+Classifying images by appearance
+Continuous-tone image
+Discrete-tone image
+Cartoon-like image
+Colour depth and storage
+Image formats
+Lossless image compression
+Bi-level image
+Grayscale and colour images
+Reflected Gray codes (RGC)
+Dividing a grayscale image
+Predictive encoding
+JPEG lossless coding
+Lossy compression
+Distortion measure
+Progressive image compression
+Transforms
+Karhunen-Loeve Transform (KLT)
+Lossless and lossy data compression
+
+Lossless compression
+
+Lossy compression
+
+Main compression techniques
+
+Run-length coding
+
+Quantisation
+
+Statistical coding
+
+Dictionary-based coding
+
+Transform-based coding
+
+Motion prediction
+
+Compression problems

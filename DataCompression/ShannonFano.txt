@@ -1,0 +1,8 @@
+Shannon Fano codes
+========================
+Shannon Fano coding technique is one of the first algorithms which purpose is to create code words with minimum redundancy. The basic idea is in creating code words with variable code length, like in the case of Huffman codes, which were invented few years later. Practically speaking, Shannon Fano coding technique has plenty common things with Huffman coding ( which has greater practical use ).
+
+As it was mentioned, Shannon Fano coding is based on variable length code words. This means that some particular symbols of message ( which is to be coded ) may be represented with shorter code word than other symbols of the message. The criterion for estimating the length of some code word is the probability of incidence for symbol which is represented by that code word. As the probability gets higher, the code word become shorter.
+
+Although Shannon Fano coding produce code words that doesn't have same code length, it provides such code in which the code words are uniquely decodable. Yet, the code words must be uniquely decodable, exclusive of the order in which the code words are lined up.
+
