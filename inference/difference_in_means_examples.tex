@@ -1,0 +1,150 @@
+
+%--------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 1: Difference in Means (a) }
+Two sets of patients are given courses of treatment under two different drugs. The benefits
+derived from each drug can be stated numerically in terms of the recovery times. There are 40 patients in treatment group 1 (i.e. Drug 1), and 45 patients in treatment group 2 (i.e. Drug 2). The mean recovery time and standard deviations are as follows:
+\begin{itemize}
+\item Drug 1:  $n_1$ = 40 , $\bar{x}_1$ = 3.3 days and $s_1 = 1.524$
+\item Drug 2:  $n_2$ = 45 , $\bar{x}_2$ = 4.3 days and $s_2 = 1.951 $
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 1: Difference in Means (b) }
+\begin{itemize}
+\item The first step in hypothesis testing is to specify the null hypothesis and an alternative hypothesis.
+\item When testing differences between mean recovery times, the null hypothesis is that the two population means are equal.
+\item That is, the null hypothesis is:\\
+$H_0: \mu_1 = \mu_2$ ( The population means are equal)\\
+$H_1: \mu_1 \neq \mu_2$ (The population means are different)
+\end{itemize}
+
+
+
+(Remark: Two Tailed Test, therefore $k = 2$, and $\alpha = 0.05$)
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 1: Difference in Means (c) }
+\begin{itemize}
+\item The observed difference in means is 1 day.
+\item The relevant formula for the standard error is
+\[ S.E(\bar{x}_1 - \bar{x}_2) = \sqrt{{s^2_1\over n_1}+{s^2_2 \over n_2}} \]
+\item  \[ S.E(\bar{x}_1 - \bar{x}_2) = \sqrt{{(1.524)^2 \over 40}+{(1.951)^2 \over 45}}   \]
+\item  \[ S.E(\bar{x}_1 - \bar{x}_2) = 0.377\mbox{ days}\]
+\end{itemize}
+\end{frame}
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 1: Difference in Means (d) }
+\begin{itemize}
+\item The Test statistic is therefore
+\[ TS = {\mbox{observed} - \mbox{null} \over \mbox{Std. Error}}  = {1 - 0 \over 0.377 } = 2.65 \]
+\item Two Tailed Test, therefore $k = 2$, and $\alpha = 0.05$. Also two large samples. The CV is 1.96.
+\end{itemize}
+\end{frame}
+
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 1: Difference in Means (e) }
+\textbf{Decision Rule}
+\[ |TS| > CV ?  \]
+\begin{itemize}
+\item If Yes: Reject the null Hypothesis
+\item If No : Fail to reject the Null Hypothesis
+\end{itemize}
+$|2.65|$ is greater than 1.96. We reject the null hypothesis. There is a significant difference in the effectiveness of the two drug treatments.
+\end{frame}
+
+
+
+%--------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Two Small Samples Case}
+\begin{itemize}
+\item Previously we have looked at large samples, now we will consider small samples.
+\item (For the sake of clarity, I will not use small samples that have a combined sample size of greater than 30.
+\item Additionally we require the assumption that both samples have equal variance. This assumption \textbf{must} be tested with another formal hypothesis test. We will revisit this later, and in the mean time, assume that the assumption of equal variance holds.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Two Small Samples Case}
+\begin{itemize}
+\item The key differences between the large sample case and the small sample cases arise in the following steps.
+    \begin{itemize}
+    \item The standard error is computed in a different way (see next slide).
+    \item The degrees of freedom used to compute the critical value is $(n_X-1) + (n_Y - 1)$) or equivalently ($n_X + n_Y - 2$).
+    \item Also - a formal test of equality of variances is required beforehand (End of Year Exam)
+    \end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Two Small Samples Case: Standard Error}
+Computing the standard error requires a two step calculation. From the formulae, we have the two equations below. The first term $s_p^2$ is called the \textbf{\textit{pooled variance}} of the combined samples.
+\begin{eqnarray*}
+s_p^2&=&\frac{s_X^2(n_X-1)+s_Y^2(n_Y-1)}{n_X+n_Y-2}.\\
+S.E.(\bar{X}-\bar{Y})&=&\sqrt{s_p^2\left(\frac{1}{n_X}+\frac{1}{n_Y}\right)}.\\
+\end{eqnarray*}
+\end{frame}
+
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 2: Difference in Means (a) }
+\begin{itemize}
+\item For a random sample of 10 light bulbs for a particular brand, the mean bulb life is 4,000 hr with a sample standard deviation of 200 hours.
+\item For another brand of bulbs, a random sample of 8 has a sample mean lifetime of 4,300 hours
+and a sample standard deviation of 250 hours. \item Test the hypothesis that there is no difference between the
+mean operating life of the two brands of bulbs, using the 5 percent level of significance
+\end{itemize}
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Example 2: Difference in Means (b) }
+\begin{itemize}\item $n_1 = 10$ and $n_2 = 8$.
+\item $\bar{x}_1 = 4000$, $\bar{x}_2 = 4,300 $ , therefore  $\bar{x}_1 - \bar{x}_2 = -300$ hours
+\item $s_1  = 200$, $s_2 = 250$ hours.
+\item Small sample - Degrees of freedom $n_1 + n_2 - 2 = 10 + 8 - 2 = 16$
+\end{itemize}\end{frame}
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 2: Difference in Means (c) }
+\textbf{Pooled variance estimate}
+\[ s^2_p = {(n_1 - 1)s^2_1  + (n_2 - 1)s^2_ 2\over n_1 + n_2 - 2 } = {(9 \times 200^2 ) +( 7 \times 250^2) \over 16 }  \]
+\[ s^2_p  = 49843.75 \]
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 2: Difference in Means (d) }
+\textbf{Computing the Standard Error}
+\[ S.E(x_1 - x_2) = \sqrt{s^2_p \left({1\over n_1}+{1\over n_2} \right)}\]
+
+\[ S.E(x_1 - x_2) = \sqrt{49843.75 \left({1\over 10}+{1\over 8} \right)}\]
+
+\[ S.E(x_1 - x_2) = \sqrt{11214.84} = 105.9\]
+
+\end{frame}
+
+%-------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example 2: Difference in Means (e) }
+\textbf{Test Statistic and Critical Value}\\
+\begin{itemize}
+\item The Test Statistic is \[ TS  = {(-300) - 0 \over 105.9}  = -2.83 \]
+\item The Critical Value is determined with $\alpha = 0.05$, $k=2$, $df = 16 $
+\item $CV = 2.120$
+\item We can now apply the decision rule : Is the absolute value of the Test Statistic greater than the Critical Value?
+\item Is $2.83 > 2.12$? Yes We reject $H_0$. There is evidence of a difference in means.
+\end{itemize}
+\end{frame}
+
+\end{document}

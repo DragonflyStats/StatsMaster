@@ -1,0 +1,27 @@
+\section{Confidence Intervals: Example}
+
+\begin{itemize}
+\item The length of life of a type of battery is estimated from a sample of 100 test items taken from a large population. 
+\item Sample results show that the mean length of life is 57.4 hours with a standard deviation of 15.1 hours. \\ \bigskip
+\item  Construct a 
+95\% confidence interval for the mean length of life of all of these batteries.
+\end{itemize}
+
+
+
+
+
+
+With a sample standard deviation of 15.1 and a sample size of 100, the standard error is as follows:
+
+
+\[ S.E. (\bar{x}) = \frac{15.1}{\sqrt{100}} \]
+
+
+
+With a sample standard deviation of 15.1 and a sample size of 100, the standard error is as follows:
+
+
+\[ 57.4 \pm \left( 1.96 \times 1.51 \right) \]
+
+\end{document}

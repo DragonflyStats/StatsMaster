@@ -1,0 +1,641 @@
+
+%---------------------------------------------------------%
+\section{The Standard Normal (``Z”) Distribution}
+ 
+A random variable that has a normal distribution with a mean of zero and a standard deviation of one is said to have a standard normal probability distribution.  It is often nick-named the "z" distribution.
+ 
+Importantly, probabilities relating to the z distribution are comprehensively tabulated in Murdoch Barnes table 3.
+
+Given a value of k (with k between 0 and 4), the probability of a  standard normal "z" random variable being greater than (or equal to) k is given in Murdoch Barnes table 3 (page 71). 
+
+ 
+
+\subsubsection{Example 1 }
+
+Find  $P(Z \geq 1.80)$
+
+note  1.80 = 1.8 + 0.00
+
+    The row is 1.8
+    The column is 0.00
+
+
+	& 0.00	& 0.01	& 0.02	& 0.03	& ....  \\ \hline
+....	&	&	& 	&	& 	\\ \hline
+1.7	& 0.0446& 	& 	& ....	&	\\ \hline
+1.8	& 0.0359& 0.0351& 	& ....	&	\\ \hline
+1.9	& 0.0287&	&	& ....	&	\\ \hline
+....	&	&	&	&	&	\\ \hline
+
+Answer  $P(Z geq 1.80 = 0.0359)$
+
+
+
+
+
+\subsubsection{Example 2}  
+
+Find  $P(Z geq 1.96)$
+
+note  1.96 = 1.9 + 0.06
+
+    The row is 1.9
+    The column is 0.06
+
+	&....	&0.05	&0.06	&0.07	&.... \\ \hline
+....	&	&	&	&	&     \\ \hline
+1.8	&	&	&0.0314	&	&     \\ \hline
+1.9	&	&0.0256	&0.0250	&0.0244	&     \\ \hline
+2.0	&	&	&....	&	&    \\ \hline	
+....	&	&	&	&	&	\\ \hline
+
+Answer $P(Z geq 1.96)  = 0.0250$
+%===========================================================%
+\section{Complement and Symmetry Rules}
+
+Any normal distribution problem can be solved with some combination of the following rules.
+
+ 
+\subsection*{a. The Complement rule}
+this rue applies to all continuous probability distributions, i.e. the normal distribution, the exponential distribution and the uniform distribution.
+(Common to all continuous random variables) 
+
+\[P(Z \geq k)   = 1 - P(Z \leq k)\]
+
+\[P(Z \leq k)   = 1 - P(Z \geq k)\]
+
+
+Example
+\[P(Z \leq 1.96)   = 1 - P(Z \geq 1.96)\]
+\[P(Z \leq 1.96)   = 1 - 0.0250 = 0.9750\]
+
+%============================================================%
+
+\subsection*{b. The Symmetry rule}
+ 
+This rule is based on the property of symmetry mentioned previously.
+
+ \[ P(Z \leq -k)  = P(Z \geq k) \]
+
+Only the probabilities corresponding to values between 0 and 4 are tabulated in Murdoch Barnes.
+
+If we have a negative value of k, we can use the symmetry rule.  
+Example 
+
+Find  $P(Z \leq -1.8)$
+
+\noindent \textbf{Solution:} 
+
+$P(Z \leq -1.8) = P(Z \geq 1.8) $ = 0.0359
+
+%============================================================%
+
+\noindent \textbf{Example }
+Find the probability of a "z" random variable greater than (or equal to) -1.8?
+Find  $P(Z \geq -1.8)$
+\noindent \textbf{Solution }
+
+(From a previous question, $P(Z \leq -1.8) = 0.0359$)
+
+\[P(Z \geq -1.8) = 1 - P(Z \leq -1.8) \]
+\[P(Z \geq -1.8)= 1 - 0.0359 = 0.9641\]
+
+
+%============================================================% 
+
+ 
+\noindent \textbf{Example }
+
+Find the probability of a "z" random variable being between -1.8 and 1.96?
+Find  $P(-1.80 \leq Z \leq 1.96)$
+
+Solution 
+
+\begin{itemize}
+\item Consider the complment event of being in this interval: a combination of being too low or two high. 
+
+\item The probability of being too low for this interval is $P(Z \leq -1.8) = 0.0359$    (from before)
+
+\item The probability of being too high for this interval is $P(Z \geq 1.96) = 0.0250$   (from before)
+
+\item Therefore the probability of being outside the interval is  0.0359 + 0.0250 = 0.0609.
+
+\item Therefore the probability of being inside the interval is 1- 0.0609 = 0.9391
+
+\end{itemize}
+ \[P(-1.80 \leq Z \leq 1.96) = 0.9391\]
+
+%============================================================% 
+
+ 
+Solving using the z distribution
+When we have a normal distribution with any mean $\mu$  and any standard deviation $\sigma$ , 
+we answer probability questions about the distribution by first converting all values to corresponding values of the standard normal ("z") distribution. 
+
+The formula used to convert any random variable "x" ( with mean $\mu$ and standard deviation $\sigma$ specified)  
+to the standard normal ("z") distribution is given as follows. 
+
+
+\[ z = \frac{x- \mu}{\sigma} \]
+
+ 
+ $z$ is the standard normal random variable with a mean of zero and a standard deviation of 1. 
+
+It can be thought of as a measure of how many standard deviations that a value "x" is from mean $\mu$ .
+
+Remarks
+
+A value of x equal to mean $\mu$  results in a z -value of 0
+ 
+\[ z = \frac{\mu - \mu}{\sigma} = \frac{0}{\sigma} = 0\]
+
+
+Thus we can see that a value of "x" corresponding to its mean $\mu$ corresponds to a z-value at its mean , which is 0.
+
+A value of "x" that is one standard deviation above its mean (i.e. $x=\mu +\sigma$  ), we see that the corresponding z value is 1.
+
+
+Thus a value of x that is one standard deviation away from it's mean yields a z-value of 1.
+%====================================================================%
+
+\subsection{Example}
+Given that the mean $\mu  = 100$ and that the standard deviation $\sigma  = 2.5$, what is the "z-value" for normal random variable x = 106?
+
+\[ z  = \frac{x-\mu}{\sigma}   = \frac{106-100}{2.5}  = \frac{6}{2.5} = 2.40\]
+
+%-----------------------------------------------%
+
+Relationship between "x value" and "z  value"
+
+[VERY IMPORTANT]
+
+If   z  = \frac{x-\mu}{\sigma}		( $z$  and $x$  are some values )
+
+then we can say  \[P(X \geq x) = \P(Z \geq z)\]
+
+or equivalently
+
+
+\[P(X \leq x) = \P(Z \leq z)\]
+
+From previous example 
+
+\[P(X \geq 106) = \P(Z \geq 2.40)\]
+ 
+
+From Murdoch Barnes Table 3, 
+
+\[\P(Z \geq 2.40) = 0.00820\] 
+
+
+Therefore 
+ 
+
+\[P(X \geq 106) = 0.00820\] 
+%-------------------------------------------------------%
+[Finish] 
+
+ 
+
+Example : 
+The distribution of the exam scores in a statistics distribution is normally distributed with mean $\mu=45$  and standard deviation 
+$\sigma=16$
+  .
+
+You receive a mark of 49.
+\begin{itemize}
+\item[(i)]
+What is the probability of someone scoring higher than you?
+
+\item[(ii)] What percentage of people scored above the mean but lower than you?
+\end{itemize}
+%-------------------------------------------------------%
+Solution to part 1
+
+Let $X$ be the score variable in the statistics exam
+
+$P(X \geq 49)$ 
+
+1) Find the  "z-value" corresponding to a score of 49 , given that mean $mu=45$   and standard deviation  $\sigma=16$ .
+
+\[ z  = \frac{x-\mu}{\sigma}   = \frac{49-45}{16}  = \frac{4}{16} =0.25\]
+
+By definition  
+
+2) From Murdoch Barnes table 3 we can find out the value of   . 
+
+note  0.25 = 0.2 + 0.05
+
+\begin{itemize}
+\item    The row is 0.2
+\item    The column is 0.05
+\end{itemize}
+
+	& ....	& 0.04	& 0.05	 & 0.06	& .... \\ \hline
+0.0	&	&	& 0.4801 & 	& 	\\ \hline
+0.1	&	&	& 0.4404 &	& 	\\ \hline
+0.2	&	&	& 0.4013 &	& 	\\ \hline
+....	&	&	&	 & 	&	\\ \hline
+
+so  
+
+%===================================================================%
+
+Solution to part 2
+
+If  the probability of scoring higher than you is 0.4013, the probability of scoring lower than you is 0.5987  
+(from the complement rule , 1 - 0.4013 )
+
+
+
+
+
+
+
+
+
+
+
+%===================================================================%
+
+MA4102 Lectures (Week 12)
+Normal Distribution : Worked Examples
+
+Remark : This document will be emailed to the class later today.
+
+
+Important points from yesterday's class.
+
+\begin{itemize}
+    
+\item[(i)] Using Murdoch Barnes Table 3 to find   for some value k
+    
+\item[(i)] The Complement and Symmetry Rule
+
+            Complement   
+
+           (only for continuous random variables)
+
+            Symmetry   
+
+\item[(i)] Computing "z -values" using the conversion formula.
+
+             
+
+            where   and   are values
+\item[(i)] Relationship between "x value" and "z  value"
+            If    
+
+            then  
+
+\end{itemize}
+%===================================================================%
+
+
+
+ 
+Spring 2007 /2008	[Page 126]
+A company’s annual earnings are known to be normally distributed with a mean of €15 million and a standard deviation of €2 million. Determine the probability that in 2008 the company earns:
+
+\begin{itemize}
+\item[(i)]           less than €15 million  ,
+\item[(ii)]          greater than €17 million  ,
+\item[(iii)]         between €13 and €17 million  .
+\end{itemize}
+Solution 
+
+X is the company’s earnings in a given year, in millions.
+
+i)  Find  
+
+Remark
+
+The mean is  €15 million. By definition 50% of the random variable values are less than the mean of the normal distribution.
+
+But let’s do this question using a procedure that we can use for all questions.
+
+Step 1
+First , we find the z-value that corresponds to x = 15 
+(remember   and   )
+     
+
+Therefore we can say   =  
+
+ 
+Step 2
+
+The Murdoch Barnes tables are tabulated to give   for some value  . 
+
+We can compute   using the complement rule
+
+   = 1 -  
+
+From the tables   = 0.500
+
+Therefore    = 1 - 0.500 = 0.500
+
+If    = 0.5 , necessarily   = 0.5     [    Answer    ] 
+
+%======================================================================%
+
+
+ii)  Find  
+    
+First , we find the z-value that corresponds to x = 17 
+(remember   and   )
+     
+
+    Therefore we can say   =  
+
+The Murdoch Barnes tables are tabulated to give   for some value  . 
+We can evaluate   as 0.1587
+
+If    = 0.1587 , necessarily   = 0.1587     [    Answer    ] 
+
+%======================================================================%
+
+
+(iii)  Probability of being between €13 and €17 million .
+
+         
+
+Easier to compute the complement event  - being either too low or too high.
+
+1)	 Too high
+
+          =? 
+    
+        Answer from part (ii) 0.1587
+
+2)	Too low
+        
+        = ?
+    
+     First find the z value for x = 13
+
+      
+
+    Therefore we can say   =  
+
+     Use the symmetry rule to evaluate  
+
+      =  
+    From part (ii) we found   =0.1587
+
+    Therefore   = 0.1587
+
+    Therefore   = 0.1587
+
+\begin{framed}
+Remark : 
+
+We have a chain of equivalent statements.
+
+If A = B , B = C, and C=D, then A = D 
+\end{framed} 
+
+    
+3)	Putting it all together
+
+    Too Low: probability is 0.1587
+
+    Too High: probability is also 0.1587
+
+    Outside interval : "Too low" or "Too high" = 0.3174
+
+    Inside interval : 1 - 0.3174 = 0.6826
+                
+       = 0.6826     [    Answer    ] 
+     
+%======================================================================%
+ 
+Spring 2006 /2007  [page 133] 
+
+The duration of Mr. Jones’ morning commute to work is normally distributed with a mean of 35 minutes and a standard deviation of 5 minutes. Determine the probability that Mr. Jones’ commute is
+
+\begin{itemize}
+\item[(i)]    less than 32 minutes,
+\item[(ii)]   greater than 39 minutes,
+\item[(iii)]   between 33 and 38 minutes.
+\end{itemize}
+
+\noindent \textbf{Solution}
+
+$X$ is the normal random variable describing travelling times
+
+i)   =? 
+First , we find the z-value that corresponds to x = 32 
+(remember   and   )
+     
+
+Therefore we can say    =  
+
+We can evaluate    using the symmetry rule
+
+    =  
+
+    From Murdoch Barnes table 3         = 0.2743
+
+    Therefore    = 0.2743         [  Answer ] 
+
+
+%======================================================================%
+
+ii)   =? 
+First , we find the z-value that corresponds to x = 39 (remember   and   )
+
+        
+
+Therefore we can say    =  
+
+From Murdoch Barnes table 3      = 0.2119   
+Therefore    = 0.2119            [  Answer ] 
+
+
+%======================================================================%
+
+Part iii) 
+        
+Probability of being between 33 and 38 minutes 
+
+     
+
+Easier to compute the complement event  - being either too low or too high.
+
+1)	Too high
+
+       =? 
+First, we find the z-value that corresponds to x = 38  (remember  and   )
+
+        
+
+     Therefore we can say    =  
+
+     From Murdoch Barnes table 3      = 0.2743  
+     Therefore    = 0.2743         
+
+
+%======================================================================% 
+2)	 Too low
+
+      =? 
+First, we find the z-value that corresponds to x = 33  (remember  and   )
+     
+
+ Therefore we can say    =  
+
+  We can evaluate    using the symmetry rule
+
+        =  
+
+  From Murdoch Barnes table 3         = 0.3446
+
+  Therefore    = 0.3446         
+
+
+%======================================================================%
+
+3)	Putting it all together
+
+\begin{description}    
+\item[Too Low:] probability is 0.2753
+\item[Too High:] probability is also 0.3446
+\end{description}
+
+\[    \mbox{Outside interval} : \mbox{"Too low" + "Too high"} = 0.6199\]
+
+    Inside interval : 1 - 0.6199 = 0.3801
+                
+
+%======================================================================%    
+
+   = 0.3801     [    Answer    ] 
+     
+
+%=======================================================================%
+
+
+Example Question 18 Page 59
+The mean time spent waiting by customers before their queries are dealt with at an information centre is 10 minutes.
+
+The waiting time is normally distributed with standard deviation with a standard deviation of 3 minutes.
+
+\begin{itemize}
+\item[(i)] What percentage of customers will be waiting longer than 15 minutes
+
+\item[(ii)] 90% of customers will be dealt with in at most 12 minutes. Is this statement true or false?
+Justify your answer.
+
+\item[(iii)] What percentage of customers will wait between 3 and 6 minutes before their query is dealt with?
+
+\end{itemize}
+
+%------------------------------------%
+\noindent \textbf{Solutions}
+
+Let x be the normal random variable describing waiting times
+
+    i)   =? 
+First, we find the z-value that corresponds to x = 15  (remember   and   )
+     
+
+Therefore we can say   =  
+
+The Murdoch Barnes tables are tabulated to give   for some value  . 
+We can evaluate   as 0.0475
+
+If    = 0.0475 , necessarily   = 0.0475     [    Answer    ] 
+
+%=======================================================================%   
+
+Part ii )
+
+    "90% of customers will be dealt with in at most 12 minutes."
+
+To answer this question, we need to know    
+
+ First , we find the z-value that corresponds to x = 12  (remember   and   )
+ 
+
+The Murdoch Barnes tables are tabulated to give   for some value  . 
+
+
+
+We can evaluate    using the complement rule
+
+      = 1 -  
+
+We can evaluate   as 0.2514
+
+Therefore   = 1 - 0.2514 = 0.7486
+
+ 
+If    = 0.7486 , necessarily   = 0.7486    
+
+74.86% of customers will be dealt with in at most 12 minutes.
+        
+The statement that 90% will be dealt with in at most 12 minutes is false.
+    
+       [    Answer    ] 
+
+%=======================================================================%
+
+iii)  What percentage will wait between 3 and 6 minutes ?
+
+      = ?
+
+Solution 
+
+Compute the probability of being too low, and the probability of being too high for the interval.
+
+The probability of being inside the interval is the complement of the combination of these events.
+
+1)	Too low
+    
+  = ?
+
+First, we find the z-value that corresponds to x = 3  (remember  and   )
+
+ 
+    
+
+We can evaluate    using the symmetry rule
+  =  
+    
+We can evaluate   as 0.00990
+Therefore    = 0.00990
+
+If    = 0.00990 , necessarily    = 0.00990
+
+    2)Too high
+
+     = ?
+
+First , we find the z-value that corresponds to x = 6  (remember  and   )
+ 
+Therefore we can say   =  
+    
+      =  
+
+            symmetry    =  
+
+       =   = 1-0.0918 = 0.9082
+
+3	putting it together
+    
+    Prob(Too low) = 0.0099
+    Prob(Too high) = 0.9082
+    Prob(Outside) = 0.0099 +  0.9082 = 0.9181
+
+    Therefore Prob(Inside) = 1- 0.9181 = 0.0819 
+
+      = 0.0819              [    Answer    ] 
+
+
+%=======================================================================%
+
+
+
+
+
+

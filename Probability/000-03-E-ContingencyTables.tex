@@ -1,0 +1,637 @@
+
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+	
+%=========================================================%
+
+\section{What is a contingency table?}
+
+
+
+
+A contingency table is essentially a display format used to analyse and record the relationship between two or more categorical variables. It is the categorical equivalent of the scatterplot used to analyse the relationship between two continuous variables.
+
+%-------------------------------------------------------%
+{
+\section{Contingency Tables}
+	Suppose there are 100 students in a first year college intake.  \begin{itemize} \item 44 are male and are studying computer science, \item 18 are male and studying engineering \item 16 are female and studying computer science, \item 22 are female and studying engineering. \end{itemize}
+	
+	We assign the names $M$, $F$, $C$ and $E$ to the events that a student, randomly selected from this group, is male, female, studying computer science, and studying engineering respectively.
+}
+%-------------------------------------------------------%
+{
+	\textbf{Contingency Tables}
+	The most effective way to handle this data is to draw up a table. We call this a \textbf{\emph{contingency table}}.
+	A contingency table is a table in which all possible events (or outcomes) for one variable are listed as
+	row headings, all possible events for a second variable are listed as column headings, and the value entered in
+	each cell of the table is the frequency of each joint occurrence.
+	
+	
+	\begin{center}
+		\begin{tabular}{|c||c|c||c|}
+			\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			& C & E & Total \\ \hline \hline
+			M & 44 & 18 & 62 \\ \hline
+			F & 16 & 22 & 38 \\ \hline \hline
+			Total & 60 & 40 & 100 \\ \hline
+		\end{tabular}
+	\end{center}
+	
+}
+%-------------------------------------------------------%
+{
+	\textbf{Contingency Tables}
+	It is now easy to deduce the probabilities of the respective events, by looking at the totals for each row and column.
+	\begin{itemize}
+		\item P(C) = 60/100 = 0.60
+		\item P(E) = 40/100 = 0.40
+		\item P(M) = 62/100 = 0.62
+		\item P(F) = 38/100 = 0.38
+	\end{itemize}
+	\textbf{Remark:}\\
+	The information we were originally given can also be expressed as:
+	\begin{itemize}
+		\item $P(C \cap M) = 44/100 = 0.44$
+		\item $P(C \cap F) = 16/100 = 0.16$
+		\item $P(E \cap M) = 18/100 = 0.18$
+		\item $P(E \cap F) = 22/100 = 0.22$
+	\end{itemize}
+}
+%-------------------------------------------------------%
+{
+	\textbf{Joint Probability Tables}
+	
+	A \textbf{\emph{joint probability table}} is similar to a contingency table, but for that the value entered in
+	each cell of the table is the probability of each joint occurrence. Often, the probabilities in such a table are based
+	on observed frequencies of occurrence for the various joint events.
+	\begin{center}
+		\begin{tabular}{|c||c|c||c|}
+			\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			& C & E & Total \\ \hline \hline
+			M & 0.44 & 0.18 & 0.62 \\ \hline
+			F & 0.16 & 0.22 & 0.38 \\ \hline \hline
+			Total & 0.60 & 0.40 & 1.00 \\ \hline
+		\end{tabular}
+	\end{center}
+}
+%-------------------------------------------------------%
+{
+	\textbf{Marginal Probabilities}
+	\begin{itemize}
+		\item In the context of joint probability tables, a  \textbf{\emph{marginal probability}} is so named because it is a marginal total of
+		a row or a column. \item Whereas the probability values in the cells of the table are probabilities of joint occurrence, the marginal
+		probabilities are the simple (i.e. unconditional) probabilities of particular events.
+		\item From the first year intake example, the marginal probabilities are $P(C)$, $P(S)$, $P(M)$ and $P(F)$ respectively.
+	\end{itemize}
+	
+}
+%-------------------------------------------------------%
+{
+	\textbf{Conditional Probabilities : Example 1}
+	
+	Recall the definition of conditional probability:
+	\[ P(A|B) = \frac{P(A \cap B)}{P(B)} \]
+	
+	Using this formula, compute the following:
+	\begin{enumerate}
+		\item $P(C|M)$ : Probability that a student is a computer science student, given that he is male.
+		\item $P(E|M)$ : Probability that a student studies engineering, given that he is male.
+		\item $P(F|E)$ : Probability that a student is female, given that she studies engineering.
+		\item $P(E|F)$ : Probability that a student studies engineering, given that she is female.
+	\end{enumerate}
+	Refer back to the contingency table to appraise your results.
+}
+%-------------------------------------------------------%
+{
+	\textbf{Conditional Probabilities : Example 1}
+	
+	\textbf{Part 1)} Probability that a student is a computer science student, given that he is male.
+	\[ P(C|M) = \frac{P(C \cap M)}{P(M)}  = \frac{0.44}{0.62} = 0.71 \]
+	\textbf{Part 2)} Probability that a student studies engineering, given that he is male.
+	\[ P(E|M) = \frac{P(E \cap M)}{P(M)}  = \frac{0.18}{0.62} = 0.29 \]
+	
+}
+
+%-------------------------------------------------------%
+{
+	\textbf{Conditional Probabilities : Example 1}
+	
+	\textbf{Part 3)} Probability that a student is female, given that she studies engineering.
+	\[ P(F|E) = \frac{P(F \cap E)}{P(E)}  = \frac{0.22}{0.40} = 0.55 \]
+	
+	\textbf{Part 4)} Probability that a student studies engineering, given that she is female.
+	\[ P(E|F) = \frac{P(E \cap F)}{P(F)}  = \frac{0.22}{0.38} = 0.58 \]
+	
+	
+	Remark: $P(E \cap F)$ is the same as $P(F \cap E)$.
+	
+	
+}
+%-------------------------------------------------------%
+{
+	\textbf{Multiplication Rule}
+	The multiplication rule is a result used to determine the probability that two events, $A$ and $B$, both occur.
+	The multiplication rule follows from the definition of conditional probability.\\ \bigskip
+	
+	The result is often written as follows, using set notation:
+	\[ P(A|B)\times P(B) = P(B|A)\times P(A) \qquad \left( = P(A \cap B) \right) \]
+	
+	Recall that for independent events, that is events which have no influence on one another, the rule simplifies to:
+	\[P(A \cap B)  = P(A)\times P(B) \]
+}
+%-------------------------------------------------------%
+{
+	\textbf{Multiplication Rule}
+	From the first year intake example, check that
+	\[ P(E|F)\times P(F) = P(F|E)\times P(E)\]
+	\begin{itemize}
+		\item $P(E|F)\times P(F) = 0.58 \times 0.38  = 0.22$
+		\item $P(F|E)\times P(E) = 0.55 \times 0.40  = 0.22$
+	\end{itemize}
+}
+%------------------------------------------------------------%
+{
+	\textbf{Law of Total Probability}
+	The law of total probability is a fundamental rule relating marginal probabilities to conditional probabilities. The result is often written as follows, using set notation:
+	\[ P(A)  = P(A \cap B) + P(A \cap B^c) \]
+	
+	where $P(A \cap B^c)$ is probability that event $A$ occurs and $B$ does not.\\ \bigskip
+	
+	
+	Using the multiplication rule, this can be expressed as
+	\[ P(A) = P(A | B)\times P(B) + P(A | B^{c})\times P(B^{c}) \]
+}
+%------------------------------------------------------------%
+{
+	\textbf{Law of Total Probability}
+	From the first year intake example , check that
+	\[ P(E)  = P(E \cap M) + P(E \cap F) \]
+	with $ P(E) = 0.40$, $ P(E \cap M) = 0.18$ and  $ P(E \cap F) = 0.22$
+	\[ 0.40  = 0.18 + 0.22 \]
+	\textbf{Remark:}  $M$ and $F$ are complement events.
+	
+}
+\newpage
+
+%-------------------------------------------------------%
+{
+	\section{Contingency Tables}
+	Suppose there are 100 students in a first year college intake.  \begin{itemize} \item 44 are male and are studying computer science, \item 18 are male and studying engineering \item 16 are female and studying computer science, \item 22 are female and studying engineering. \end{itemize}
+	
+	We assign the names $M$, $F$, $C$ and $E$ to the events that a student, randomly selected from this group, is male, female, studying computer science, and studying engineering respectively.
+}
+%-------------------------------------------------------%
+{
+	\subsection{Contingency Tables}
+	The most effective way to handle this data is to draw up a table. We call this a \textbf{\emph{contingency table}}.
+	A contingency table is a table in which all possible events (or outcomes) for one variable are listed as
+	row headings, all possible events for a second variable are listed as column headings, and the value entered in
+	each cell of the table is the frequency of each joint occurrence.
+	
+	
+	\begin{center}
+		\begin{tabular}{|c||c|c||c|}
+			\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			& C & E & Total \\ \hline \hline
+			M & 44 & 18 & 62 \\ \hline
+			F & 16 & 22 & 38 \\ \hline \hline
+			Total & 60 & 40 & 100 \\ \hline
+		\end{tabular}
+	\end{center}
+	
+}
+%-------------------------------------------------------%
+{
+	\subsection{Contingency Tables}
+	It is now easy to deduce the probabilities of the respective events, by looking at the totals for each row and column.
+	\begin{itemize}
+		\item P(C) = 60/100 = 0.60
+		\item P(E) = 40/100 = 0.40
+		\item P(M) = 62/100 = 0.62
+		\item P(F) = 38/100 = 0.38
+	\end{itemize}
+	\textbf{Remark:}\\
+	The information we were originally given can also be expressed as:
+	\begin{itemize}
+		\item $P(C \cap M) = 44/100 = 0.44$
+		\item $P(C \cap F) = 16/100 = 0.16$
+		\item $P(E \cap M) = 18/100 = 0.18$
+		\item $P(E \cap F) = 22/100 = 0.22$
+	\end{itemize}
+}
+%-------------------------------------------------------%
+{
+	\subsection{Joint Probability Tables}
+	
+	A \textbf{\emph{joint probability table}} is similar to a contingency table, but for that the value entered in
+	each cell of the table is the probability of each joint occurrence. Often, the probabilities in such a table are based
+	on observed frequencies of occurrence for the various joint events.
+	\begin{center}
+		\begin{tabular}{|c||c|c||c|}
+			\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			& C & E & Total \\ \hline \hline
+			M & 0.44 & 0.18 & 0.62 \\ \hline
+			F & 0.16 & 0.22 & 0.38 \\ \hline \hline
+			Total & 0.60 & 0.40 & 1.00 \\ \hline
+		\end{tabular}
+	\end{center}
+
+	\subsection{Law of Total Probability}
+	The law of total probability is a fundamental rule relating marginal probabilities to conditional probabilities. The result is often written as follows, using set notation:
+	\[ P(A)  = P(A \cap B) + P(A \cap B^c) \]
+	
+	where $P(A \cap B^c)$ is probability that event $A$ occurs and $B$ does not.\\ \bigskip
+	
+	
+	Using the multiplication rule, this can be expressed as
+	\[ P(A) = P(A | B)\times P(B) + P(A | B^{c})\times P(B^{c}) \]
+	
+	%------------------------------------------------------------%
+	{
+		\noindent \textbf{Law of Total Probability}
+		From the first year intake example , check that
+		\[ P(E)  = P(E \cap M) + P(E \cap F) \]
+		with $ P(E) = 0.40$, $ P(E \cap M) = 0.18$ and  $ P(E \cap F) = 0.22$
+		\[ 0.40  = 0.18 + 0.22 \]
+		\textbf{Remark:}  $M$ and $F$ are complement events.
+		
+		
+
+	\subsection{Marginal Probabilities}
+	\begin{itemize}
+		\item In the context of joint probability tables, a  \textbf{\emph{marginal probability}} is so named because it is a marginal total of
+		a row or a column. \item Whereas the probability values in the cells of the table are probabilities of joint occurrence, the marginal
+		probabilities are the simple (i.e. unconditional) probabilities of particular events.
+		\item From the first year intake example, the marginal probabilities are $P(C)$, $P(E)$, $P(M)$ and $P(F)$ respectively.
+	\end{itemize}
+	
+}
+%-------------------------------------------------------%
+{
+	\subsection{Conditional Probabilities : Example 1}
+	
+	Recall the definition of conditional probability:
+	\[ P(A|B) = \frac{P(A \cap B)}{P(B)} \]
+	
+	Using this formula, compute the following:
+	\begin{enumerate}
+		\item $P(C|M)$ : Probability that a student is a computer science student, given that he is male.
+		\item $P(E|M)$ : Probability that a student studies engineering, given that he is male.
+		\item $P(F|E)$ : Probability that a student is female, given that she studies engineering.
+		\item $P(E|F)$ : Probability that a student studies engineering, given that she is female.
+	\end{enumerate}
+	Refer back to the contingency table to appraise your results.
+}
+%-------------------------------------------------------%
+{
+	\subsection{Conditional Probabilities : Example 1}
+	
+	\textbf{Part 1)} Probability that a student is a computer science student, given that he is male.
+	\[ P(C|M) = \frac{P(C \cap M)}{P(M)}  = \frac{0.44}{0.62} = 0.71 \]
+	\textbf{Part 2)} Probability that a student studies engineering, given that he is male.
+	\[ P(E|M) = \frac{P(E \cap M)}{P(M)}  = \frac{0.18}{0.62} = 0.29 \]
+	
+}
+
+%-------------------------------------------------------%
+{
+	\subsection{Conditional Probabilities : Example 1}
+	
+	\textbf{Part 3)} Probability that a student is female, given that she studies engineering.
+	\[ P(F|E) = \frac{P(F \cap E)}{P(E)}  = \frac{0.22}{0.40} = 0.55 \]
+	
+	\textbf{Part 4)} Probability that a student studies engineering, given that she is female.
+	\[ P(E|F) = \frac{P(E \cap F)}{P(F)}  = \frac{0.22}{0.38} = 0.58 \]
+	
+	
+	Remark: $P(E \cap F)$ is the same as $P(F \cap E)$.
+	
+	
+}
+%-------------------------------------------------------%
+{
+	\subsection{Multiplication Rule}
+	The multiplication rule is a result used to determine the probability that two events, $A$ and $B$, both occur.
+	The multiplication rule follows from the definition of conditional probability.\\ \bigskip
+	
+	The result is often written as follows, using set notation:
+	\[ P(A|B)\times P(B) = P(B|A)\times P(A) \qquad \left( = P(A \cap B) \right) \]
+	
+	Recall that for independent events, that is events which have no influence on one another, the rule simplifies to:
+	\[P(A \cap B)  = P(A)\times P(B) \]
+}
+%-------------------------------------------------------%
+{
+	\subsection{Multiplication Rule}
+	From the first year intake example, check that
+	\[ P(E|F)\times P(F) = P(F|E)\times P(E)\]
+	\begin{itemize}
+		\item $P(E|F)\times P(F) = 0.58 \times 0.38  = 0.22$
+		\item $P(F|E)\times P(E) = 0.55 \times 0.40  = 0.22$
+	\end{itemize}
+}
+
+
+\end{document}\newpage
+%-------------------------------------------------------%
+{
+	\subsection{Contingency Tables}
+	Suppose there are 100 students in a first year college intake.  \begin{itemize} \item 44 are male and are studying computer science, \item 18 are male and studying statistics \item 16 are female and studying computer science, \item 22 are female and studying statistics. \end{itemize}
+	\bigskip
+	We assign the names $M$, $F$, $C$ and $S$ to the events that a student, randomly selected from this group, is male, female, studying computer science, and studying statistics respectively.
+}
+%-------------------------------------------------------%
+{
+	\subsection{Contingency Tables}
+	The most effective way to handle this data is to draw up a table. We call this a \textbf{\emph{contingency table}}.
+	\\A contingency table is a table in which all possible events (or outcomes) for one variable are listed as
+	row headings, all possible events for a second variable are listed as column headings, and the value entered in
+	each cell of the table is the frequency of each joint occurrence.
+	
+	
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+			& C & S & Total \\ \hline
+			M & 44 & 18 & 62 \\ \hline
+			F & 16 & 22 & 38 \\ \hline
+			Total & 60 & 40 & 100 \\ \hline
+		\end{tabular}
+	\end{center}
+	
+}
+%-------------------------------------------------------%
+{
+	\subsection{Contingency Tables}
+	It is now easy to deduce the probabilities of the respective events, by looking at the totals for each row and column.
+	\begin{itemize}
+		\item P(C) = 60/100 = 0.60
+		\item P(S) = 40/100 = 0.40
+		\item P(M) = 62/100 = 0.62
+		\item P(F) = 38/100 = 0.38
+	\end{itemize}
+	\textbf{Remark:}\\
+	The information we were originally given can also be expressed as:
+	\begin{itemize}
+		\item $P(C \cap M) = 44/100 = 0.44$
+		\item $P(C \cap F) = 16/100 = 0.16$
+		\item $P(S \cap M) = 18/100 = 0.18$
+		\item $P(S \cap F) = 22/100 = 0.22$
+	\end{itemize}
+}
+
+%-------------------------------------------------------%
+{
+	\subsection{Conditional Probability (1)}
+	
+	The definition of conditional probability:
+	\[ P(A|B) = \frac{P(A \cap B)}{P(B)} \]
+	
+	\begin{itemize}
+		\item $P(B)$ Probability of event B.
+		\item [ $P(A)$ Probability of event A. ]
+		\item $P(A|B)$ Probability of event A given that B has occurred.
+		\item $P(A \cap B)$ Joint Probability of event A and event B.
+		\item Will be given tomorrow.
+	\end{itemize}
+	
+}
+
+
+%-------------------------------------------------------%
+{
+	\subsection{Conditional Probabilities (2)}
+	
+	Compute the following:
+	\begin{enumerate}
+		\item $P(C|M)$ : Probability that a student is a computer science student, given that he is male.
+		\item $P(S|M)$ : Probability that a student studies statistics, given that he is male.
+		\item $P(F|S)$ : Probability that a student is female, given that she studies statistics.
+	\end{enumerate}
+	
+}
+%-------------------------------------------------------%
+{
+	\subsection{Conditional Probabilities (3)}
+	
+	\textbf{Part 1)} Probability that a student is a computer science student, given that he is male.
+	\[ P(C|M) = \frac{P(C \cap M)}{P(M)}  = \frac{0.44}{0.62} = 0.71 \]
+	\textbf{Part 2)} Probability that a student studies statistics, given that he is male.
+	\[ P(S|M) = \frac{P(S \cap M)}{P(M)}  = \frac{0.18}{0.62} = 0.29 \]
+	
+}
+
+%-------------------------------------------------------%
+{
+	\subsection{Conditional Probabilities (4)}
+	
+	\textbf{Part 3)} Probability that a student is female, given that she studies statistics.
+	\[ P(F|S) = \frac{P(F \cap S)}{P(S)}  = \frac{0.22}{0.40} = 0.55 \]
+	
+	
+	
+	
+}
+
+	%-------------------------------------------------------%
+	{
+		\textbf{Contingency Tables}
+		Suppose there are 100 students in a first year college intake.  \begin{itemize} \item  44 are male and are studying computer science, \item  18 are male and studying engineering \item  16 are female and studying computer science, \item  22 are female and studying engineering. \end{itemize}
+		
+		We assign the names $M$, $F$, $C$ and $E$ to the events that a student, randomly selected from this group, is male, female, studying computer science, and studying engineering respectively.
+	}
+	%-------------------------------------------------------%
+	{
+		\textbf{Contingency Tables}
+		The most effective way to handle this data is to draw up a table. We call this a \textbf{\emph{contingency table}}.
+		A contingency table is a table in which all possible events (or outcomes) for one variable are listed as
+		row headings, all possible events for a second variable are listed as column headings, and the value entered in
+		each cell of the table is the frequency of each joint occurrence.
+		
+		
+		\begin{center}
+			\begin{tabular}{|c||c|c||c|}
+				\hline
+				% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+				& C & E & Total \\ \hline \hline
+				M & 44 & 18 & 62 \\ \hline
+				F & 16 & 22 & 38 \\ \hline \hline
+				Total & 60 & 40 & 100 \\ \hline
+			\end{tabular}
+		\end{center}
+		
+	}
+	%-------------------------------------------------------%
+	{
+		\textbf{Contingency Tables}
+		It is now easy to deduce the probabilities of the respective events, by looking at the totals for each row and column.
+		\begin{itemize}
+			\item  P(C) = 60/100 = 0.60
+			\item  P(E) = 40/100 = 0.40
+			\item  P(M) = 62/100 = 0.62
+			\item  P(F) = 38/100 = 0.38
+		\end{itemize}
+		\textbf{Remark:}\\
+		The information we were originally given can also be expressed as:
+		\begin{itemize}
+			\item  $P(C \cap M) = 44/100 = 0.44$
+			\item  $P(C \cap F) = 16/100 = 0.16$
+			\item  $P(E \cap M) = 18/100 = 0.18$
+			\item  $P(E \cap F) = 22/100 = 0.22$
+		\end{itemize}
+	}
+	%-------------------------------------------------------%
+	{
+		\textbf{Joint Probability Tables}
+		
+		A \textbf{\emph{joint probability table}} is similar to a contingency table, but for that the value entered in
+		each cell of the table is the probability of each joint occurrence. Often, the probabilities in such a table are based
+		on observed frequencies of occurrence for the various joint events.
+		\begin{center}
+			\begin{tabular}{|c||c|c||c|}
+				\hline
+				% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+				& C & E & Total \\ \hline \hline
+				M & 0.44 & 0.18 & 0.62 \\ \hline
+				F & 0.16 & 0.22 & 0.38 \\ \hline \hline
+				Total & 0.60 & 0.40 & 1.00 \\ \hline
+			\end{tabular}
+		\end{center}
+	}
+	%-------------------------------------------------------%
+	{
+		\textbf{Marginal Probabilities}
+		\begin{itemize}
+			\item  In the context of joint probability tables, a  \textbf{\emph{marginal probability}} is so named because it is a marginal total of
+			a row or a column. \item  Whereas the probability values in the cells of the table are probabilities of joint occurrence, the marginal
+			probabilities are the simple (i.e. unconditional) probabilities of particular events.
+			\item  From the first year intake example, the marginal probabilities are $P(C)$, $P(E)$, $P(M)$ and $P(F)$ respectively.
+		\end{itemize}
+		
+	}
+	%-------------------------------------------------------%
+	{
+		\textbf{Conditional Probabilities : Example 1}
+		
+		Recall the definition of conditional probability:
+		\[ P(A|B) = \frac{P(A \cap B)}{P(B)} \]
+		
+		Using this formula, compute the following:
+		\begin{enumerate}
+			\item  $P(C|M)$ : Probability that a student is a computer science student, given that he is male.
+			\item  $P(E|M)$ : Probability that a student studies engineering, given that he is male.
+			\item  $P(F|E)$ : Probability that a student is female, given that she studies engineering.
+			\item  $P(E|F)$ : Probability that a student studies engineering, given that she is female.
+		\end{enumerate}
+		Refer back to the contingency table to appraise your results.
+	}
+	%-------------------------------------------------------%
+	{
+		\textbf{Conditional Probabilities : Example 1}
+		
+		\textbf{Part 1)} Probability that a student is a computer science student, given that he is male.
+		\[ P(C|M) = \frac{P(C \cap M)}{P(M)}  = \frac{0.44}{0.62} = 0.71 \]
+		\textbf{Part 2)} Probability that a student studies engineering, given that he is male.
+		\[ P(E|M) = \frac{P(E \cap M)}{P(M)}  = \frac{0.18}{0.62} = 0.29 \]
+		
+	}
+	
+	%-------------------------------------------------------%
+	{
+		\textbf{Conditional Probabilities : Example 1}
+		
+		\textbf{Part 3)} Probability that a student is female, given that she studies engineering.
+		\[ P(F|E) = \frac{P(F \cap E)}{P(E)}  = \frac{0.22}{0.40} = 0.55 \]
+		
+		\textbf{Part 4)} Probability that a student studies engineering, given that she is female.
+		\[ P(E|F) = \frac{P(E \cap F)}{P(F)}  = \frac{0.22}{0.38} = 0.58 \]
+		
+		
+		Remark: $P(E \cap F)$ is the same as $P(F \cap E)$.
+		
+		
+	}
+	%-------------------------------------------------------%
+	{
+		\textbf{Multiplication Rule}
+		The multiplication rule is a result used to determine the probability that two events, $A$ and $B$, both occur.
+		The multiplication rule follows from the definition of conditional probability.\\ \bigskip
+		
+		The result is often written as follows, using set notation:
+		\[ P(A|B)\times P(B) = P(B|A)\times P(A) \qquad \left( = P(A \cap B) \right) \]
+		
+		Recall that for independent events, that is events which have no influence on one another, the rule simplifies to:
+		\[P(A \cap B)  = P(A)\times P(B) \]
+	}
+	%-------------------------------------------------------%
+	{
+		\textbf{Multiplication Rule}
+		From the first year intake example, check that
+		\[ P(E|F)\times P(F) = P(F|E)\times P(E)\]
+		\begin{itemize}
+			\item  $P(E|F)\times P(F) = 0.58 \times 0.38  = 0.22$
+			\item  $P(F|E)\times P(E) = 0.55 \times 0.40  = 0.22$
+		\end{itemize}
+	}
+	%------------------------------------------------------------%
+	{
+		\textbf{Law of Total Probability}
+		The law of total probability is a fundamental rule relating marginal probabilities to conditional probabilities. The result is often written as follows, using set notation:
+		\[ P(A)  = P(A \cap B) + P(A \cap B^c) \]
+		
+		where $P(A \cap B^c)$ is probability that event $A$ occurs and $B$ does not.\\ \bigskip
+		
+		
+		Using the multiplication rule, this can be expressed as
+		\[ P(A) = P(A | B)\times P(B) + P(A | B^{c})\times P(B^{c}) \]
+	}
+	%------------------------------------------------------------%
+	{
+		\textbf{Law of Total Probability}
+		From the first year intake example , check that
+		\[ P(E)  = P(E \cap M) + P(E \cap F) \]
+		with $ P(E) = 0.40$, $ P(E \cap M) = 0.18$ and  $ P(E \cap F) = 0.22$
+		\[ 0.40  = 0.18 + 0.22 \]
+		\textbf{Remark:}  $M$ and $F$ are complement events.
+		
+	}
+	
+	%------------------------------------------------------------%
+	{
+		\textbf{Bayes' Theorem}
+		Bayes' Theorem is a result that allows new information to be used to update the conditional probability of an event.
+		\bigskip
+		
+		Recall the definition of conditional probability:
+		\[ P(A|B) = \frac{P(A \cap B)}{P(B)} \]
+		
+		
+		Using the multiplication rule, gives Bayes' Theorem in its simplest form:
+		
+		\[ P(A|B) = \frac{P(B|A)\times P(A)}{P(B)} \]
+		
+	}
+	
+\end{document}	

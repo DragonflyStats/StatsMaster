@@ -1,0 +1,387 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+%------------------------------------------------------------------------------------------------%
+\tableofcontents{3}
+\chapter{5. Random Variables}
+
+
+
+
+
+\section{Random Experiments}
+
+\begin{itemize}
+
+\item Typical examples of a random experiment are
+
+\begin{itemize}
+\item { a role of a die,}
+
+\item { a toss of a coin,}
+
+\item { drawing a card from a deck.}
+\end{itemize}If the experiment is yet to be performed we refer to possible outcomes
+or possibilities for short. \vspace{0.2cm}
+\item If the experiment has been performed, we
+refer to realized outcomes or \textbf{realizations}
+\end{itemize}
+
+
+{
+\subsection{Random Variables}
+There are two types of random variable - discrete and continuous. The distinction between both types will be important later on in the course.\\ \bigskip
+
+\textbf{Examples}
+\begin{itemize}
+\item A coin is tossed ten times. The random variable X is the number of tails that are noted.
+X can only take the values $\{0, 1, ..., 10\}$, so $X$ is a discrete random variable.
+\item A light bulb is burned until it burns out. The random variable Y is its lifetime in hours.
+Y can take any positive real value, so Y is a continuous random variable.
+\end{itemize}
+}
+
+
+
+
+\subsection{Random Variables}
+\begin{enumerate}
+\item Random Variables
+\item Expected Values of RVs
+\end{enumerate}
+
+
+
+
+
+
+\subsection{Random Variables}
+\begin{itemize} \item The outcome of an experiment need not be a number, for example, the outcome when a coin is tossed can be `heads' or `tails'. \item
+However, we often want to represent outcomes as numbers. \item
+A \textbf{\emph{random variable}} is a function that associates a unique numerical value with every outcome of an experiment.
+\item The value of the random variable will vary from trial to trial as the experiment is repeated.
+\item Numeric values can be assigned to outcomes that are not usually considered numeric. \item For example, we could assign a `head' a value of $0$, and a `tail' a value of $1$, or vice versa.
+\end{itemize}
+
+
+
+%=======================================================================================%
+
+\section{Random Variables}
+A random variable is defined as a numerical event whose value is determined by a chance process.
+When probability values are assigned to all possible numerical values of a random variable X, either by a listing
+or by a mathematical function, the result is a probability distribution. \\
+\\
+The sum of the probabilities for all the possible numerical outcomes must equal 1.0. Individual probability values may be denoted by the symbol $f(x)$,
+which indicates that a mathematical function is involved, by $P(x = X)$, which recognizes that the random
+variable can have various specific values, or simply by $P(X)$.
+
+%============================================================================%
+
+
+
+\section{Random Variables}
+\begin{enumerate}
+\item Random Variables
+\item Expected Values of RVs
+\end{enumerate}
+{
+%%- \frametitle{Random Variables}
+Hence, the random variable $X$ should be thought of as the
+unknown numerical result of an experiment to be carried out ($X$ is
+described by a distribution).
+
+A realisation, denoted by a small letter, is a known result of an
+experiment already carried out.
+
+
+\begin{description}
+\item[X] : random variable name (e.g Height)
+\item[x] : realisation (e.g. 1.82 metres) 
+\end{description}
+
+
+
+%---------------------------------------%
+\subsection{Types of Probability Distribution}
+\begin{itemize}
+\item A probability distribution is a mathematical approach to quantifying uncertainty.
+
+\item There are two main classes of probability distributions: Discrete and continuous. 
+
+\begin{itemize}
+\item Discrete distributions describe variables that take on discrete values only (typically the positive integers), 
+\item Continuous distributions describe variables that can take on arbitrary values in a continuum (typically the real numbers).
+\end{itemize}
+
+
+\end{itemize}
+
+
+
+
+
+
+\section{Probability Distributions}
+
+Probability Distributions will covered in detail in this course as part of the \texttt{R} component (i.e. weeks 8-13).
+
+It is worth bearing in mind that all of the material that will be covered in the \texttt{R} section of the course can just as easily be implemented using MATLAB. In fact substantial use is made of these commands in real world applications, particularly in Finance and Engineering.
+As such we will briefly look at some.
+
+
+
+%======================================================= %
+
+
+{
+\begin{itemize}
+
+\item Suppose we have a set of \textbf{n} items.
+\item From that set, we create a subset of \textbf{k} items.
+\item The \textbf{order} in which items are selected is recorded. (The ordering of selected items is very important.) 
+\item The total number of \textbf{ordered subsets} of \textbf{k} items chosen from a set of \textbf{n} items is
+
+\[\frac{n!}{n-k!}\]
+\end{itemize}
+}
+%----------------------------------------------------------------------------------------------------%
+
+
+
+
+
+
+
+\section*{Joint probability tables}
+A joint probability table is a table in which all possible events (or outcomes) for one variable are listed as
+row headings, all possible events for a second variable are listed as column headings, and the value entered in
+each cell of the table is the probability of each joint occurrence. 
+
+Often, the probabilities in such a table are based
+on observed frequencies of occurrence for the various joint events. The table
+of joint-occurrence frequencies which can serve as the basis for constructing a joint probability table is called a
+contingency table.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+
+
+
+\section{Random Variables}
+\begin{enumerate}
+\item Random Variables
+\item Expected Values of RVs
+\end{enumerate}
+
+%%- \frametitle{Random Variables}
+Hence, the random variable $X$ should be thought of as the
+unknown numerical result of an experiment to be carried out ($X$ is
+described by a distribution).
+
+A realisation, denoted by a small letter, is a known result of an
+experiment already carried out.
+
+
+\begin{description}
+\item[X] : random variable name (e.g Height)
+\item[x] : realisation (e.g. 1.82 metres) 
+\end{description}
+
+
+\section{Introduction to Distributions}
+
+\noindent \textbf{Random Variables}
+\begin{itemize}
+\item A random variable is a variable whose value is determined by the outcome of a random phenomenon.
+The statistical techniques we've learned so far deal with variables, not events, so we need to define a
+variable in order to analyze a random phenomenon.
+\item A discrete random variable has a finite number of possible values, while a continuous random variable
+can take all values in a range of numbers.
+\end{itemize}
+
+%------------------------------------------------------------------------------------------ %
+
+
+\begin{itemize}
+\item The probability distribution of a random variable tells us the possible values of the variable and how
+probabilities are assigned to those values.
+\item The probability distribution of a discrete random variable is typically described by a list of the
+values and their probabilities. Each probability is a number between 0 and 1, and the sum of the
+probabilities must be equal to 1.
+
+\item The probability distribution of a continuous random variable is typically described by a density
+curve. \item The curve is defined so that the probability of any event is equal to the area under the
+curve for the values that make up the event, and the total area under the curve is equal to 1. \item One
+example of a continuous probability distribution is the normal distribution.
+
+\item We use the term parameter to refer to a number that describes some characteristic of a population. \item  We
+rarely know the true parameters of a population, and instead estimate them with statistics. \item Statistics
+are numbers that we can calculate purely from a sample. \item The value of a statistic is random, and will
+depend on the specific observations included in the sample.
+
+\item The law of large numbers states that if we draw a bunch of numbers from a population with mean ¹,
+we can expect the mean of the numbers $\bar{y}$ to be closer to $\mu$ as we increase the number we draw. This
+means that we can estimate the mean of a population by taking the average of a set of observations
+drawn from that population.
+\end{itemize}
+
+
+\noindent 
+\textbf{Discrete random variables}
+\begin{itemize}
+\item For a discrete random variable observed values can occur only at isolated points along a scale of values. \item For a six sided dice, the only possible observed values are 1, 2, 3, 4, 5 and 6. It is not possible to observe values such as 5.732.
+\end{itemize}
+
+
+\begin{itemize}
+
+\item Therefore, it is possible that all numerical values for the variable can be listed in a table with accompanying
+probabilities. 
+\item
+There are several standard probability distributions that can serve as models for a wide variety of discrete random variables involved in business applications. 
+
+\item  The standard models described in this course are
+the binomial, hypergeometric, and Poisson probability distributions.
+
+\item For a continuous random variable all possible fractional values of the variable cannot be listed, and
+therefore the probabilities that are determined by a mathematical function are portrayed graphically by a
+probability density function, or probability curve.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\noindent \textbf{Random Variables}
+Remark: We will call random variables R.V.s for short.
+We associate a number with each outcome of the experiment and the particular numerical value of the random variable depends on the outcome.
+
+For example, consider the experiment of picking an employee at random from an office. We are interested in the number of years work experience the employee has.
+
+
+The outcome of the experiment could be one year, two years and so on. The random variable is the number of experience the employee has and the value of the random variable can change every time we repeat the experiment.
+
+
+We can repeat the experiment of picking an employee at random many times and count the number of times that the outcome was one year, two years and so on.
+Recall that the probability p = r/n where
+
+\begin{itemize}
+	\item n is the number of time we carry out an experiment (i.e.    “number of trials”) 
+	\item r is the number of times we get the result we are interested in (i.e. “number of successes”)
+	
+	
+\end{itemize}
+
+
+
+We can therefore associate probabilities with the various possible values that the random variable might take.
+
+The values of the random variable and the associated probabilities form a probability distribution.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|} \hline
+Years (R.V.)   & 1& 2& 3& 4& 5\\ \hline 
+Probability& 0.2& 0.3& 0.3& 0.1& 0.1\\ \hline 
+\end{tabular} 
+\end{center}
+
+
+\begin{itemize}
+\item The value of the random variable is unknown before we carry out the experiment.
+\item But by using the probability distribution in the table above, we can say that the probability that an employee selected at random will have one years experience is 0.2 or 20\%. \[P(X = 1) = 0.20). \]
+\item Although experiments have outcomes that are naturally described using numbers, other do not. For example, an employee might be asked if they enjoy their work. The random variable is enjoyment of work, and the outcomes are yes and no.
+
+\item We can arbitrarily assign the value zero to an employee who says no and one to an employee who says yes.
+
+\item In this way, the random variable still provides a numerical description of the outcome of the experiment.
+Many methods of statistical analysis assume that data collected follows a known probability distribution. We will later examine the most commonly used probability distributions.
+
+\end{itemize}
+
+
+
+\section{Introduction to Distributions}
+
+\noindent \textbf{Random Variables}
+\begin{itemize}
+\item A random variable is a variable whose value is determined by the outcome of a random phenomenon.
+The statistical techniques we've learned so far deal with variables, not events, so we need to define a
+variable in order to analyze a random phenomenon.
+\item A discrete random variable has a finite number of possible values, while a continuous random variable
+can take all values in a range of numbers.
+\end{itemize}
+
+
+
+
+
+\subsection{Probability Mass Function}
+\begin{itemize} 
+\item  a probability mass function (pmf) is a function that gives the probability that a discrete random variable is exactly equal to some value. 
+\item  The probability mass function is often the primary means of defining a discrete probability distribution 
+\end{itemize}
+
+
+}
+
+
+\subsection{Random Variables}
+For example, if a coin is tossed three times, the number of heads obtained can be 0, 1, 2 or 3. The probabilities of each of these possibilities can be tabulated as shown:
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline Number of Heads & 0 & 1 & 2 & 3 \\ 
+\hline Probability & 1/8  & 3/8  & 3/8 & 1/8 \\ 
+\hline 
+\end{tabular} 
+
+A discrete variable is a variable which can only take a countable number of values. In this example, the number of heads can only take 4 values (0, 1, 2, 3) and so the variable is discrete. The variable is said to be random if the sum of the probabilities is one. 
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Discrete Probability Distributions}
+
+\begin{itemize}
+
+\item  Over the next set of lectures, we are now going to look at two important discrete probability distributions
+
+\item  The first is the \textbf{\emph{binomial}} probability distribution.
+
+\item  The second is the Poisson probability distribution.
+
+\item  In \texttt{R}, calculations are performed using the \texttt{binom} family of functions and \texttt{pois} family of functions respectively.
+\end{itemize}
+
+\end{document}
+

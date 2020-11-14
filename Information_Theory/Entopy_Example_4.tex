@@ -1,16 +1,16 @@
 ﻿%----------------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{Entropies: Example (a)}
+\medskip
+\noindent \textbf{Entropies: Example (a)}
 \begin{itemize}
 \item The input source to a noisy communication channel is a random variable X over the
 four symbols $\{a, b, c, d\}$. \item  The output from this channel is a random variable Y over these same
 four symbols.
 \end{itemize}
 
-\end{frame}
+
 %----------------------------------------------------------------Part 2 %
-\begin{frame}
-\frametitle{Entropies: Example (b)}
+\medskip
+\noindent \textbf{Entropies: Example (b)}
 The joint distribution of these two random variables is as follows:\\ \bigskip
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}
@@ -22,10 +22,10 @@ y=c & 1/32&1/32 & 1/16 & 0\\ \hline
 y=d & 1/32& 1/32& 1/16 & 0\\ \hline 
 \end{tabular}
 \end{center}
-\end{frame}
+
 %----------------------------------------------------------------Part 2 %
-\begin{frame}
-\frametitle{Entropies: Example (c)}
+\medskip
+\noindent \textbf{Entropies: Example (c)}
 \begin{itemize}
 \item Write down the marginal distribution for $X$ and compute the marginal entropy $H(X)$.
 \item Write down the marginal distribution for $Y$ and compute the marginal entropy $H(Y )$.
@@ -34,11 +34,11 @@ y=d & 1/32& 1/32& 1/16 & 0\\ \hline
 \item What is the conditional entropy $H(X|Y)$?
 \item What is the mutual information $I(X;Y)$ between the two random variables?
 \end{itemize}
-\end{frame}
+
 %----------------------------------------------------------------------------------%
 %----------------------------------------------------------------Part 2 %
-\begin{frame}
-\frametitle{Entropies: Example (d)}
+\medskip
+\noindent \textbf{Entropies: Example (d)}
 The marginal distribution of these two random variables is as follows:\\ \bigskip
 \begin{center}
 \begin{tabular}{|c|c|c|c|c||c|}
@@ -51,11 +51,11 @@ y=d & 1/32& 1/32& 1/16 & 0& \alert{0.125}\\ \hline \hline
 \alert{P(X)} & \alert{0.25}& \alert{0.25}& \alert{0.25} & \alert{0.25}&\\ \hline
 \end{tabular}
 \end{center}
-\end{frame}
 
 
-\begin{frame}
-\frametitle{Entropies: Example (e)}
+
+\medskip
+\noindent \textbf{Entropies: Example (e)}
 \begin{itemize}
 
 \item H(X) , the entropy of X, is computed as\\
@@ -67,10 +67,10 @@ y=d & 1/32& 1/32& 1/16 & 0& \alert{0.125}\\ \hline \hline
 
 
 \end{itemize}
-\end{frame}
 
-\begin{frame}
-\frametitle{Entropies: Example (f)}
+
+\medskip
+\noindent \textbf{Entropies: Example (f)}
 \begin{itemize}
 
 \item To compute the joint entropy $H(X,Y)$,  we will use $H(X,Y) = -\sum P(x_i,y_y) \mbox{log}_2P(x_i,y_j)$
@@ -81,21 +81,21 @@ y=d & 1/32& 1/32& 1/16 & 0& \alert{0.125}\\ \hline \hline
 \item Solving
 \[ H(X,Y) = [4 \times -{1\over 32} \mbox{log}_2 {1\over 32} ] + [6 \times -{1\over 16} \mbox{log}_2 {1\over 16} ] + \ldots + [1 \times -{1\over 4} \mbox{log}_2 {1\over 4} ] \]
 \end{itemize}
-\end{frame}
+
 %---------------------------------------------------------------------------------------------------------------------------------------%
 
-\begin{frame}
-\frametitle{Entropies: Example (g)}
+\medskip
+\noindent \textbf{Entropies: Example (g)}
 \begin{itemize}
 \item Simplifying\[ H(X,Y) = [4 \times -{1\over 32} \mbox{log}_2 {1\over 32} ] + [6 \times -{1\over 16} \mbox{log}_2 {1\over 16} ] + \ldots + [1 \times -{1\over 4} \mbox{log}_2 {1\over 4} ] \]
 \item Simplifying \[H(X,Y) = [-{4\over 32} \times -5 ] + [-{6\over 16} \times -4 ] + [-{2\over 8} \times -3 ] + [ -{1\over 4} \times -2]\]
 \item $H(X,Y) = 27/8$ b.
 \end{itemize}
-\end{frame}
+
 %---------------------------------------------------------------------------------------------------------------------------------------%
 
-\begin{frame}
-\frametitle{Entropies: Example (h)}
+\medskip
+\noindent \textbf{Entropies: Example (h)}
 From last lecture, two useful relationships among the types of entropies are
 \begin{itemize}
 \item $H(X,Y)=H(X|Y)+H(Y) $
@@ -107,12 +107,12 @@ Re-arranging these formulae
 \item $H(X,Y)-H(Y) = H(X|Y) $
 \item $H(X,Y)-H(X) = H(Y|X) $
 \end{itemize}
-\end{frame}
+
 
 %---------------------------------------------------------------------------------------------------------------------------------------%
 
-\begin{frame}
-\frametitle{Entropies: Example (i)}
+\medskip
+\noindent \textbf{Entropies: Example (i)}
 Re-arranging these formulae
 \begin{itemize}
 \item $H(X|Y) = H(X,Y)-H(Y) = 27/8 - 14/8 = 13/8$ b. \bigskip
@@ -123,15 +123,15 @@ Re-arranging these formulae
 \item Remark $1.75 =14/8$ and $2 = 16/8$.\\\bigskip
 \item Also: we will derive $H(Y|X$ and $H(X|Y)$ from first principles in a tutorial.
 \end{itemize}
-\end{frame}
+
 %---------------------------------------------------------------------------------------------------------------------------------------%
 
-\begin{frame}
-\frametitle{Entropies: Example (j)}
+\medskip
+\noindent \textbf{Entropies: Example (j)}
 There are three alternative ways to obtain the answer:
 \begin{itemize}
 \item $I(X; Y ) = H(Y ) - H(Y |X)$ = $7/4 - 11/8 = 3/8$ b.
 \item $I(X; Y ) = H(X) - H(X|Y)$ = $2 - 13/8 = 3/8$ b.
 \item $I(X; Y ) = H(X) + H(Y ) - H(X,Y )$ = $2 + 7/4 - 27/8 = (16+14-27)/8 = 3/8$b.
 \end{itemize}
-\end{frame}
+

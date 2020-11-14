@@ -1,0 +1,617 @@
+
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+\subsection{Set Theory : Union and Intersection}
+
+Set theory is used to represent relationships among events.\\ \bigskip
+
+\noindent \textbf{Union of two events:}\\
+The union of events A and B is the event containing all the sample points
+belonging to A or B or both. This is denoted $A\cup B$, (pronounce as ``A union
+B").\\ 
+
+
+
+\section{The Complement Event}
+
+\begin{itemize} 
+
+\item The complement of an event $A$ is the set of all outcomes in the sample
+space that are not included in the outcomes of event $A$.
+\item We call the complement event of $A$ as $A^c$.
+\item The complement event of a die throw resulting in an even number is the
+die throwing an odd number.
+\item Question: if there is a $40\%$ chance of a randomly selected student being male, what is the probability of the selected student being female?
+\end{itemize}
+
+\section{Set Theory : Union and Intersection}
+
+Set theory is used to represent relationships among events.\\ \bigskip
+
+\noindent \textbf{Union of two events:}\\
+The union of events A and B is the event containing all the sample points
+belonging to A or B or both. This is denoted $A\cup B$, (pronounce as ``A union
+B").\\ \bigskip
+\noindent \textbf{Intersection of two events:}\\
+The intersection of events A and B is the event containing all the sample
+points common to both A and B. This is denoted $A\cap B$, (pronounce as ``A intersection
+B").
+
+
+In general, if A and B are two events in the sample space S, then
+\begin{itemize} 
+\item $A \subseteq B$ (A is a subset of B) = `if A occurs, so does B
+\item $\varnothing$ (the empty set) = an impossible event
+\item $S$ (the sample space) = an event that is certain to occur
+\end{itemize}
+
+
+
+\section{Random Experiments and  Events}
+
+%\frametitle{Random experiment}
+\begin{itemize}
+\item \textbf{Sample Space}, S. For a given experiment the sample space, S, is the set of all
+possible outcomes.
+\item \textbf{Event}, E. This is a subset of S. If an event E occurs, the outcome of the experiment is contained in E.
+\end{itemize}
+
+
+
+
+Sample spaces abound and are infinite in number. But there are a few that are frequently used for examples in introductory statistics. Below are the experiments and their corresponding sample spaces:
+
+\begin{itemize}
+\item For the experiment of flipping a coin, the sample space is {Heads, Tails} and has two elements.
+
+\item For the experiment of flipping two coins, the sample space is {(Heads, Heads), (Heads, Tails), (Tails, Heads), (Tails, Tails) } and has four elements.
+\end{itemize}
+
+%==================================================================================== %
+{ 
+\begin{itemize}
+
+\item For the experiment of flipping three coins, the sample space is {(Heads, Heads, Heads), (Heads, Heads, Tails), (Heads, Tails, Heads), (Heads, Tails, Tails), (Tails, Heads, Heads), (Tails, Heads, Tails), (Tails, Tails, Heads), (Tails, Tails, Tails) } and has eight elements.
+
+
+\item For the experiment of flipping n coins, where n is a positive whole number, the sample space consists of 2n elements. There are a total of $C(n, k)$ ways to obtain k heads and $n - k$ tails for each number k from 0 to n.
+
+\item For the experiment consisting of rolling a single six-sided die, the sample space is 
+\[\{1, 2, 3, 4, 5, 6\} \]
+\end{itemize}
+\smallskip
+\begin{itemize}
+\item For the experiment of rolling two six-sided dice, the sample space consists of the set of the 36 possible pairings of the numbers 1, 2, 3, 4, 5 and 6.
+\item For an experiment of drawing from a standard deck of cards, the sample space is the set that lists all 52 cards in a deck. For this example the sample space could only consider certain features of the cards, such as rank or suit.
+\end{itemize}
+
+\noindent \textbf{Basics of Probability}
+%====================================%
+\begin{itemize}
+\item \textbf{Random Experiment}
+A random experiment is one whose outime is determined by chance.
+
+\item \textbf{Sample Space}
+In a probabilistic experiment, the sample space is the set of all possible outcomes of the experiment. 
+Suppose the probabilistic experiment is the toss of a dice. The six numbers that can appear face up, 
+from 1 to 6, are the 6 possible outcomes of the experiment. Hence, the sample space is:
+\[S={1,2,3,4,5,6}\]
+
+\item \textbf{Sample Points}
+In a probabilistic experiment, a sample point is one of the possible outcomes of the experiment. The set of all sample points is called sample space.
+
+\item \textbf{Events}
+An event *A* is merely collection of outcomes, or in other words, a subset of the sample space.
+\end{itemize}
+
+\textbf{Sample Spaces and Events}
+\begin{itemize}
+\item  The set of all possible outcomes of a probability experiment is called a \textbf{\emph{sample space}}, which is usually denoted by $\boldsymbol{S}$.
+\item  The sample space is an exhaustive list of all the possible outcomes of an experiment. We call individual elements of this list \textbf{\emph{sample points}}.
+\item  Each possible outcome is represented by one and only one sample point in the sample space.
+\end{itemize}
+
+\section{Sample Spaces}
+
+% [http://cnx.org/content/m16845/latest/]
+\begin{itemize}
+\itemA complete list of all possible outcomes of a random experiment is called \textbf{sample space }or possibility space and is denoted by $\mathcal{S}$.
+
+
+\itemA sample space is a set or collection of outcome of a particular random experiment.
+
+\item For example, imagine a dart board. You are trying to find the probability of getting a bullseye. The dart board is the sample space. The probability of a dart hitting the dart board is 1.0.
+\item For another example, imagine rolling a six sided die. The sample space is $\{1, 2, 3, 4, 5, 6\}$.
+\end{itemize}
+
+\section{Sample Spaces}
+Consider a couple that have two children. Treating the gender of the children as an \textit{\textbf{ordered pair}} outcome of a random experiment, the sample space is 
+\[\boldsymbol{S} = \{ (b,b), (b,g), (g,b), (g,g)\}.\]
+
+Let us assume that each sample point is \textit{\textbf{equiprobable}}, with probability 0.25 for each sample point.
+
+
+
+%% {-1cm}
+Find the probability that both children are girls if it is known that: 
+
+\begin{itemize}
+\item[(a)] at least one of the children is a girl,
+\item[(b)] the older child is a girl. 
+\end{itemize}
+
+
+
+
+%% {-1.5cm}
+\textbf{Part a} \\
+Find the probability that both children are girls if it is known that at least one of the children is a girl.
+\[\boldsymbol{S} = \{ (b,b), (b,g), (g,b), (g,g)\}.\]
+
+
+
+
+%% {-1.5cm}
+\textbf{Part b} \\
+Find the probability that both children are girls if it is known that the older child is a girl.
+\[\boldsymbol{S} = \{ (b,b), (b,g), (g,b), (g,g)\}.\]
+
+
+\section{Definitions}
+
+%------------------------------------------------------------------%
+\textbf{Experiments and Outcomes}
+\begin{itemize}
+\item  In the study of probability any process of observation is referred to as an \textbf{\emph{experiment}}.
+\item  The results of an experiment (or other situation involving uncertainty) are called the \textbf{\emph{outcomes }}of the experiment.
+\item  An experiment is called a \textbf{\emph{random experiment}} if the outcome can not be predicted.
+\item  Typical examples of a random experiment are \begin{itemize} \item  a role of a die, \item  a toss of a coin, \item  drawing a card from a deck.
+\end{itemize}
+\item  If the experiment is yet to be performed we refer to `possible outcomes' or `possibilities' for short. If the experiment has been performed, we refer to `realized outcomes' or `realizations'.
+\end{itemize}
+
+
+
+
+\subsection*{Random experiment}
+\begin{itemize}
+\item \textbf{Sample Space, S}. For a given experiment the sample space, S, is the set of all
+possible outcomes.
+\item \textbf{Event, E}. This is a subset of S. If an event E occurs, the outcome of the
+experiment is contained in E.
+\end{itemize}
+
+
+
+
+%--------------------------------------------------------%
+\begin{framed}
+\textbf{Example} 
+For each of the following experiments, write out the sample space.
+\begin{itemize}
+\item  Experiment: Rolling a die once
+\begin{itemize}
+\item  Sample space $\boldsymbol{S} = \{1,2,3,4,5,6 \}$ \end{itemize}
+\item  Experiment:  Tossing a coin
+\begin{itemize}
+\item  Sample space $\boldsymbol{S} = \{\mbox{ Heads },\mbox{ Tails} \}$ \end{itemize}
+\item  Experiment:  Measuring a randomly selected person's height (cms)
+\begin{itemize} \item  Sample space $\boldsymbol{S} = \mbox{ The set of all possible real numbers }$
+\end{itemize}\end{itemize}
+\end{framed}
+
+
+
+
+\section{Sample Spaces and Events}
+
+\begin{itemize}
+\item The set of all possible outcomes of a probability experiment is called a
+\textbf{\emph{sample space}}, which is usually denoted by \textbf{\emph{S}}.
+\item The sample space is an exhaustive list of all the possible outcomes of an
+experiment. We call individual elements of this list \textbf{\emph{sample points}}.
+\item Each possible outcome is represented by one and only one sample point
+in the sample space.
+\end{itemize}
+
+
+%--------------------------------------------------------------------------------%
+{
+\subsection{Events}
+
+\textbf{Events}
+\begin{itemize}
+\item 
+An \textbf{\emph{event}} is a specific outcome, or any collection of outcomes of an experiment.
+\item  Formally, any subset of the sample space is an event.
+\item  Any event which consists of a single outcome in the sample space is called an \textbf{\emph{elementary}}  or \textbf{\emph{simple event}}.
+\item  Events which consist of more than one outcome are called \textbf{\emph{compound events}}.
+\item  For example, an elementary event associated with the die example could be the ``die shows $3$".
+\item  An compound event associated with the die example could be the ``die shows an even number".
+\end{itemize}
+
+
+
+
+
+
+\begin{framed}
+\noindent \textbf{Examples of Events}
+
+\noindent Consider the experiment of rolling a die once. Here the sample space
+is given as $S = \{ 1,2,3,4,5,6\}$. \\ The following are examples of possible events.
+
+
+\begin{multicols}{2}
+\begin{itemize} 
+\item A = score $< 4$ = $\{ 1,2,3\}$.
+\item B = `score is even' = $\{ 2,4,6\}$.
+\item C = `score is 7' = 0
+\item $A\cup B$ = `the score is $< 4$  or even or both' = $\{ 1,2,3,4,6\}$
+\item $A\cap B$ = `the score is $< 4$  and even = $ \{ 2 \}$
+\item $A^c$ =`event A does not occur' = $ \{ 4,5,6\}$
+\end{itemize}
+\end{multicols}
+\end{framed}
+{
+\textbf{Examples of Events}
+Consider the experiment of rolling a die once. From before, the sample space is given as $S = \{1,2,3,4,5,6\}$. The following are examples of possible events.
+
+\begin{itemize}
+\item  $A$ = score $< 4$ = $\{1,2,3\}$.
+\item  $B$ = `score is even' $= \{2,4,6\}$
+\item  $C$ = `score is 7' = $\boldsymbol{\oslash}$\\
+\item  $A \cup B$ = `the score is $< 4$ or even or both' = $\{1,2,3,4,6\}$\\
+\item  $A \cap B$ = `the score is $< 4$ and even' = $\{2\}$\\
+\item  $A^C$  = 'event $A$ does not occur' = $\{4,5,6\}$
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Probability}
+If there are n possible outcomes to an experiment, and $m$ ways in which event $A$ can happen, then the probability of event $A$ ( which we write as $P(A)$) is
+\[P(A) = \frac{m}{n}.\]
+
+The probability of the event $A$ may be interpreted as the proportion of times that event $A$ will occur if we repeat the random experiment an infinite number of times.\\ \bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Rules}
+\begin{enumerate}
+\item  $0 \leq P(A) \leq 1$ ; the probability of any event lies between 0 and 1 inclusive.
+\item  P(S) = 1 ; the probability of the sample space is always equal to 1.
+\item  $P(A^c) = 1- P(A)$; how to compute the probability of the complement.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Random experiment}
+\begin{itemize}
+\item \textbf{Sample Space}, S. For a given experiment the sample space, S, is the set of all
+possible outcomes.
+\item \textbf{Event}, E. This is a subset of S. If an event E occurs, the outcome of the experiment is contained in E.
+\end{itemize}
+
+
+\subsection{The Complement Event}
+
+\begin{itemize}
+
+\item The complement of an event $A$ is the set of all outcomes in the sample
+space that are not included in the outcomes of event $A$.
+\item We call the complement event of $A$ as $A^c$.
+\item The complement event of a die throw resulting in an even number is the
+die throwing an odd number.
+\item Question: if there is a $40\%$ chance of a randomly selected student being male, what is the probability of the selected student being female?
+\end{itemize}
+
+
+\subsection{Probability}
+If there are n possible outcomes to an experiment, and m ways in which event
+A can happen, then the probability of event A ( which we write as P(A)) is
+\[ P(A) = \frac{m}{n} \]
+
+The probability of the event A may be interpreted as the proportion of times
+that event A will occur if we repeat the random experiment an infinite number
+of times.\\ \bigskip
+
+\textbf{Rules}:\\
+\begin{itemize}
+\item[1] $0 \leq P(A) \leq 1 $: the probability of any event lies between 0 and 1
+inclusive.
+\item[2] $P(S) = 1$ : the probability of the sample space is always equal to 1.
+\item[3] $P(A^c) = 1-P(A)$ : how to compute the probability of the complement.
+\end{itemize}
+
+\section{Sample Spaces and Events}
+
+
+
+%==================================================================%
+
+
+\subsection{Random experiment}
+\begin{itemize}
+\item \textbf{Sample Space}, S. For a given experiment the sample space, S, is the set of all
+possible outcomes.
+\item \textbf{Event}, E. This is a subset of S. If an event E occurs, the outcome of the experiment is contained in E.
+\end{itemize}
+%==================================================================%
+
+
+\section{Common Sample Spaces}
+
+
+
+\subsection{Sample Space (2)}
+Consider a random experiment in which a coin is tossed once, and a number between 1 and 4 is selected at random.
+Write out the sample space $S$ for this experiment.
+
+\bigskip
+
+\[ S = \{(H,1),(H,2),(H,3),(H,4),(T,1),(T,2),(T,3),(T,4)\} \]
+
+( $H$ and $T$ denoted `Heads' and `Tails' respectively. )
+
+\newpage
+
+
+\section{Sample Spaces - V2}
+%--------------------------------------------------------%
+{
+
+
+\begin{itemize}
+
+\item The sample space for a given set of events is the set of all possible outcomes of that event. 
+
+\item The sample space is commonly denoted $S$.
+
+\item 
+For example, the sample space of a toss of two coins, each of which may land heads (H) or tails (T), is the set of all possible outcomes, i.e. $\{HH, HT, TH,TT\}$.
+
+\item Members of the sample space set are commonly called \textbf{sample points.}
+
+
+\item Suppose one urn contains three balls; one red, one blue and one green, and a second urn contain three balls; numbered 1, 2, and 3. \item An experiment consists of two balls being drawn at random (i.e. one from each urn).
+
+\item Write out the sample space for this experiment.
+
+\end{itemize}
+
+
+\begin{itemize}
+
+\item Where $R$,$B$ and $G$ are red, blue and green respectively.
+
+\item Answer: 
+
+\[S = \{(R,1),(R,2),(R,3),(B,1),(B,2),(B,3),(G,1),(G,2),(G,3) \}\]
+
+\end{itemize}
+
+
+%--------------------------------------------------------%
+\newpage 
+
+\subsection{Sample Space}
+
+\begin{itemize}
+\item Consider a coin toss game played by players A and B. \item Player A tosses a fair coin three times, with the number of heads being the score for player A. \item Player B tosses a coin four times, with the number of heads being the score for player B.
+\item Questions
+\begin{itemize}
+\item[a.] Write out the sample space for the scores for both players A and B.
+\item[b.] Write out the sample space for the scores of C, where C is the difference of the two scores (i.e. B-A)
+\item[c.] Are the sample points for the sample space of A and B equally probable? Provide a brief justification for your answer.
+\end{itemize}
+
+
+\end{itemize}
+
+\subsection{Sample Space}
+
+\begin{itemize}
+\item $S_A$ : $\{0,1,2,3\}$ 
+\item $S_B$ : $\{0,1,2,3,4\}$ 
+\item $S_C$ : $\{-3,-2,\ldots,3,4\}$
+\item Events are not equiprobable. Probability of 1 head is different than for 3 heads for A. Recall Probability Trees.
+\end{itemize}
+
+%===============================================%
+
+\subsection*{Sample Question: Probability of Two Dice Rolls}
+
+Two dice A and B are cast. What is the probability of getting
+\begin{itemize}
+\item[1] a total of 2 or a total of 6?
+\item[2] a total greater than 9?
+\item[3] a total which is three times as great as other possible totals?
+\end{itemize}
+
+\bigskip
+\noindent \textbf{Sample Space for Ordered Pair of Dice Rolls}
+
+
+{
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|c|}
+\hline
+\phantom{space}& \phantom{sp} \textbf{1}\phantom{sp}&\phantom{sp} \textbf{2}\phantom{sp}&\phantom{sp} \textbf{3}\phantom{sp}&\phantom{sp} \textbf{4}\phantom{sp}&\phantom{sp} \textbf{5} \phantom{sp}&\phantom{sp}\textbf{6}\phantom{sp}\\ \hline\hline
+\textbf{1}&(1,1)&3(1,2)&(1,3)&(1,4)&(1,5)&(1,6) \\ \hline
+\textbf{2}&(2,1)&(2,2)&(2,3)&(2,4)&(2,5)&(2,6) \\ \hline
+\textbf{3}&(3,1)&(3,2)&(3,3)&(3,4)&(3,5)&(3,6) \\ \hline
+\textbf{4}&(4,1)&(4,2)&(4,3)&(4,4)&(4,5)&(4,6) \\ \hline
+\textbf{5}&(5,1)&(5,2)&(5,3)&(5,4)&(5,5)&(5,6) \\ \hline
+\textbf{6}&(6,1)&(6,2)&(6,3)&(6,4)&(6,5)&(6,6) \\ \hline
+\end{tabular}
+\end{center}
+
+\noindent \textbf{Sample Space}: $\{ (1,1),(1,2),(1,3), \ldots (6,6)\}$
+}
+\bigskip
+
+\noindent \textbf{Sample Space for Sum of Dice Rolls}
+
+{
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|c|c|}
+\hline
+\phantom{space}& \phantom{sp} \textbf{1}\phantom{sp}&\phantom{sp} \textbf{2}\phantom{sp}&\phantom{sp} \textbf{3}\phantom{sp}&\phantom{sp} \textbf{4}\phantom{sp}&\phantom{sp} \textbf{5} \phantom{sp}&\phantom{sp}\textbf{6}\phantom{sp}\\ \hline\hline
+\textbf{1}&2&3&4&5&6&7 \\ \hline
+\textbf{2}&3&4&5&6&7&8 \\ \hline
+\textbf{3}&4&5&6&7&8&9 \\ \hline
+\textbf{4}&5&6&7&8&9&10 \\ \hline
+\textbf{5}&6&7&8&9&10&11 \\ \hline
+\textbf{6}&7&8&9&10&11&12 \\ \hline
+\end{tabular}
+\end{center}
+
+
+\noindent \textbf{Sample Space}: $\{ 1,2,3,4,5,6,7,8,9,10,11,12\}$
+}
+%----------------------------------------%
+
+
+\noindent \textbf{Probability}
+
+\begin{itemize}
+\item A total of 2 or 6
+
+\[ E_1 = \{ (1,1) \} \qquad \therefore  P(E_1)  = \frac{1}{36} \]
+(Remark : how many outcomes have a sum of "2" out of the 36 outcomes?)
+\medskip
+\item A total of  6
+
+\[ E_1 = \{ (1,5), (5,1), (4,2), (2,4), (3,3) \} \qquad \therefore  P(E_2)  = \frac{5}{36} \]
+(Remark : how many outcomes have a sum of "6" out of the 36 outcomes?)
+\medskip
+\item A total greater than 9 
+
+\[ E_3 = \{ (4,6) , (5,5), (6,4), (6,5), (6,6), (3,3)\} \qquad \therefore P(E_2)  = \frac{6}{36} \]
+\medskip
+\item  A total which is three times as great as other possible totals. \\
+
+These totals are 6, 9 and 12.
+
+\[ E_4 = \{ (1,5) , (2,4), (4,2), (1,5), (3,3), (6,3), (4,5) (5,4) , (6,6) \} \qquad \therefore  P(E_3)  = \frac{10}{36} \]
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{verbatim}
+
+
+%---------------------------------------------------------------------------------------------------------------%
+%----R Code ----
+%---------------------------------------------------------------------------------------------------------------%
+n=60000
+Y=numeric(n)
+for ( i in 1:n){
+
+X=floor(runif(100,1,7))
+Y[i]=sum(X)
+}
+
+Y
+hist(Y,breaks=seq(300,400,by=10),main=c("Totals of 100 Die Throws"),cex.lab=1.4,font.lab=2,xlab=c("Total Score"))
+
+hist(Y,breaks=seq(300,400,by=20),main=c("Totals of 100 Die Throws"),cex.lab=1.4,font.lab=2,xlab=c("Total Score"))
+
+
+
+Z=seq(1:n)
+Y/Z
+
+plot(Y/Z,type="l",col="red",main=c("Die Rolls: Running Average"),font.lab=2,ylab="Average Value", xlab=
+" Number of Throws")
+abline(h=3.5,col="green")
+
+
+#####################################################
+
+plot(Z,Z.y,pch=16,col="red",ylim=c(2.5,5.5),main=c("Variance"),font.lab=2,ylab=" ", xlab="X: Green  Y: Blue  Z: Red" )
+
+points(Y,Y.y,pch=16,col="blue" )
+points(X,X.y,pch=16,col="green" )
+points(c(1000,1000,1000),c(3,4,5),pch=18,cex=1.2)
+lines(c(1000,1000),c(2.75,5.25),lty=3)
+
+
+
+n=100000
+Y=numeric(n)
+for ( i in 1:n){
+
+X=floor(runif(100,1,7))
+Y[i]=sum(X)
+}
+
+Y
+hist(Y,breaks=seq(270,430,by=2),main=c("Totals of 100 Die Throws (n= 100,000)"),cex.lab=1.4,font.lab=2,xlab=c("Total Score")) 
+
+
+\end{verbatim}
+
+
+%=================================================================================%
+
+
+
+
+
+
+
+\subsection{Examples of Sample Spaces}
+\begin{itemize}
+\itemThe following list consists of sample spaces of examples of random experiments and their respective outcomes.
+
+\itemThe tossing of a coin, sample space is $\{Heads, Tails\}$.
+
+\item The roll of a die, sample space is {1, 2, 3, 4, 5, 6}
+
+\item The selection of a numbered ball (1-50) in an urn, sample space is $\{1, 2, 3, 4, 5, ...., 50\}$
+
+\item Percentage of calls dropped due to errors over a particular time period, sample space is $\{2\%, 14\%, 23\%, ......\}$
+
+\item The time difference between two messages arriving at a message centre, sample space is {0, ...., infinity}
+
+\item The time difference between two different voice calls over a particular network, sample space is {0, ...., infinity}
+\end{itemize}
+
+
+
+
+
+
+
+\end{document}

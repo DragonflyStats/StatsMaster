@@ -1,0 +1,491 @@
+\documentclass{beamer}
+
+\usepackage{amsmath}
+
+\begin{document}
+\begin{frame}
+\tableofcontents
+\end{frame}
+\section{Counting methods and probability}
+
+%Chapter 4
+
+Essential reading
+Epp $9CilOﬂS 6.1, 6.2, 6.3, 6.4 or M&B Sections 3.2, 3.3, 3.4, 3.5, 4.1
+Keywords
+Counting in which order is important, the Multiplication Principle, the Addition Principle,
+permutations and the factorial notation, counting in which order is not important, the
+Principle of Inclusion-Exclusion, counting using sets, probability.
+Many of the problems that arise in discrete mathematics, probability
+and their applications involve counting the number of ways in which
+some operation can be performed or counting the number of items
+satisfying some given speciﬁcations. We shall consider two types of
+counting problems depending on whether or not the items we are
+counting are affected by order.
+\end{frame}
+%=============================================================================================================== %
+\begin{frame}
+The basic counting methods
+Learning objectives for this section
+I Illustrating a counting problem by a rooted tree
+I Using the Multiplication Principle
+I How to distinguish between combinations and permutations
+I The number of permutations of length r chosen from a set 01 n objects
+I The number of combinations of r objects chosen from a set of n distinct objects
+I Factorial notation
+I Deciding whether an (ordered) sequence or an (unordered) set is the correct type
+of solution to a given counting problem
+I Counting problems involving permutations and combinations
+Counting in which order is important
+Consider the following two related examples.
+
+\begin{frame}
+
+\end{frame}
+\begin{frame}
+Example 4.1 
+
+From the menu for a school meal, you may select one of
+three starters, one of ﬁve main dishes and one of two desserts. How
+many different meals consisting of a starter, a main course and a
+dessert is it possible to order?
+
+Example 4.2 You toss a coin six times in succession; when it comes
+down showing “heads”, you record a 1 and when it comes down
+showing “tails”, you record a 0. How many different sequences of 0’s
+and 1‘s is it possible to obtain?
+
+\end{frame}
+\begin{frame}
+You can easily solve these small problems by enumerating the
+possibilities (i.e. making a list and checking that you haven't left any
+out). But we would really like a general method for solving
+problems of this type, larger as well as smaller ones.
+\end{frame}
+\begin{frame}
+The problem described in Example 4.1 can be divided into stages.
+\begin{description}
+\item[Stage 1] Select one of the three starters;
+\item[Stage 2] Select one of the ﬁve main dishes.
+\end{description}
+Each of the 3 choices at Stage 1 is followed by one of 5 choices
+at Stage 2, giving 3 >< 5 = 15 different combinations of starter
+and main dish.
+\end{frame}
+\begin{frame}
+\begin{description}
+\item[Stage 1] Select one of the two desserts.
+\end{description}
+Each of these 15 combinations of starter and main dish can be
+followed by any one of 2 choices for dessert at Stage 3, giving a
+total of3 >< 5 >< 2 = 30 different meals.
+l 1.starter l 2. main course l 3. dessert l
+3 choices >< 5 choices >< 2 choices = E
+This approach gives the following useful counting principle.
+\end{frame}
+\begin{frame}
+\frametitle{The Multiplication Principle}
+Suppose that a process can be completed in Ic stages. If there are m1
+choices at Stage 1 and each of these can be followed by m2 choices at
+Stage 2, . . ., andﬁnally each of the m;€_1 choices at Stage (lc — 1) can
+be followed by nit, choices at Stage la, then the number of different
+outcomes of the process is given by the product mun; . . . mk.
+We can illustrate the above process by means of a rooted tree, as
+described in Chapter 3.
+Starters
+m1 = 3
+so root has deg. 3
+Main courses
+m2 = 5
+DES5EIts
+ITL3 = 2
+The rooted tree has 30 leaves
+corresponding io the 771117121113 = 3 >< 5 >< 2 : 30 meal choices
+\end{frame}
+%=============================================================================================================== %
+\begin{frame}
+
+Figure 4.1 : There are 30 possible school meals
+The root of the tree corresponds to the beginning of the process, the
+edges leaving the root correspond to the m1 choices of Stage 1, the
+vertices at the ﬁrst level to the ml different outcomes from Stage 1,
+and so on. The resulting tree will have mung . . . mk external
+vertices, all belonging to level k, corresponding to the different
+outcomes from the whole process. Figure 4.1 shows the rooted tree
+depicting the 30 possible school meals of Example 4.1.
+\end{frame}
+%=============================================================================================================== %
+\begin{frame}
+
+Now let us turn to the solution of Example 4.2. We need to calculate
+the number of possible sequences of six symbols, each of which is
+either a 1 or a 0. We can regard this as a 6-stage problem in which
+we have just two choices at stage 1 and each of these is followed by
+two choices at stage 2, and so on. Thus we may apply the
+\end{frame}
+%=============================================================================================================== %
+\begin{frame}
+Multiplication Principle with ml = m2 = . . . = TTL6 = 2.
+Hence the number of ways of completing the 6 stages is
+(2 >< 2 >< 2 >< 2 >< 2 >< 2) : 2“, which gives the total number of
+different sequences as 64.
+1 2 3 4 5 6
+Record: 2 >< 2 >< 2 >< 2 >< 2 >< 2 = 64 outcomes
+choices at stage 3
+Figure 4.2: There are 64 possible outcomes from tossing a coin 6 times.
+Example 4.3 We now draw the tree diagram to illustrate Example 4.2.
+(a) The full tree has 7 levels (height 6).
+(b) It is a binary tree.
+(c) The ﬁrst three levels of the tree are shown in Figure 4.3.
+1st toss: 1 0
+2nd toss: 1 Ll
+Figure 4.3: The start of the binary tree illustrating Example 4.2.
+(d) Due to space restrictions we leave it to you to draw the
+remaining four levels of the tree. There will be 64 external
+vertices at level 7.
+\end{frame}
+\begin{frame}
+\frametitle{The number of binary strings}
+A ﬁnite sequence of zeros and ones is known as a binary string.
+Each digit (O or 1) in the string is called a bit and a binary string of n
+The basic counting methods
+51
+
+
+
+ClS102 Mathematics ior computing volume 2
+bits is called an n-bit binary string. Thus O1 is a 2»bit binary string
+and 10110 is a 5-bit binary string. The complete list of solutions to
+\end{frame}
+\begin{frame}
+Example 4.2 gives all the 6-bit binary strings. Generalizing the
+method of Example 4.2 by which we showed that there are exactly
+2° 6-bit binary strings, we can prove the following result.
+\end{frame}
+\begin{frame}
+Theorem 4.1 There are 2" different n.-bit binary strings.
+Proof. We can construct any n-bit binary string in n stages, where for
+i = 1, 2, . . . ,n, stage 1'. consists of choosing the ith digit in the
+sequence. At each stage, we have exactly 2 choices, regardless of
+which choice we made at the previous stage. Thus we may apply the
+Multiplication Principle with ml = in; = . . . = mu = 2, giving 2”
+11.-bit binary strings altogether;
+\end{frame}
+\section{Permutations and the factorial notation}
+\begin{frame}
+\frametitle{Permutations and the factorial notation}
+Example 4.4 Four playing cards, the Ace, King, Queen and Jack of
+hearts, are shuffled and then dealt, face up, in a row. In how many
+different orders can these cards be laid down?
+\bigskip
+This is a 4-stage problem; there are 4 possibilities for the card that is
+turned up ﬁrst; when this has been decided, it leaves just 3
+possibilities for the card that is turned up next; this in turn leaves 2
+possibilities for the card that is turned up third and just 1 possibility
+for the ﬁnal card. Thus the total number of different arrangements
+is \[4 \times 3 \times 2 \times 1 =24\] by the Multiplication Principle. 
+\end{frame}
+\begin{frame}
+Here is the
+corresponding tree diagram:
+Q
+Q
+i
+Any arrangement of a set of 11, distinct items that puts these items in
+an order is called a permutation of the set. Thus we have shown
+above that there are 24 different permutations of a set containing 4
+elements.
+\end{frame}
+%=============================================================================================================== %
+\begin{frame}
+Example 4.5 Suppose that we repeat Example 4.4 using all the 13
+cards in one suit. We now have a 13-stage problem and the total
+number of permutations of the cards is 13 >< 12 >< . .. x 3 >< 2 >< 1. We
+denote this number by the symbol 13!, read “13 factorial”.
+In general, for any n 3 1, the notation 11! , read “vi factorial”, stands
+for the product n >< (n — 1) >< (n — 2) >< ... >< 3 >< 2 >< 1. For algebraic
+reasons, it is convenient to deﬁne
+O! = 1.
+We shall explain later why this is so.
+The algorithm we considered in Example 2.2 computes n! by simply
+52
+
+
+
+iterating a while-loop which multiplies together all the positive
+integers between n and 1.
+
+\end{frame}
+\begin{frame}
+\frametitle{Factorials}
+Notice that for n Z 1, factorials are deﬁned recursively, using the
+recurrence relation
+\[n! = n \times (n-1)! \] 
+By using this recurrence relation it is possible to make a recursive
+function to calculate nl.
+
+Generalizing Examples 4.4 and 4.5, we have the following result.
+\end{frame}
+\begin{frame}
+Theorem 4.2 Suppose that we have a set of n distinct items. The number
+of ordered lists without repetition that we can make from these is nl.
+This Theorem follows from the Multiplication Principle as Figure 4.4
+indicates. An alternative statement of Theorem 4.2 is:
+Theorem 4.2‘ There are nl permutations of a set with n distinct items.
+List: i Pos 1 i Pos 2 i Pos 3 i Pos n — 1 | Pos n i
+i i i l l
+2) >< >< 2 >< 1
+n ><(n—1)><(1i— =
+when Pos 1 has been chosen,
+there are only n 7 1 items when Pos 1 2 have been chosen
+left to choose from ’ . ’
+there are only n ~ 2 items
+left to choose from
+Figure 4.4: There are nl ways of making an ordered list of n distinct objects
+\end{frame}
+\begin{frame}
+Example 4.6 The number of ordered lists ot 1" elements chosen from TL
+Suppose that in Example 4.5, we lay down just four of the 13 cards
+in a row. Using the Multiplication Principle we see that the number
+of different arrangements possible is
+13!
+>< >< >< 9!
+13 12 11 10= .
+The following result generalizes Example 4.6 above.
+Theorem 4.3 Suppose that n and /r are positive integers, with r § n.
+Then the number of ordered lists ofr distinct items chosen from a set of
+n distinct elements is
+nl
+n(n— 1)('7L —2)...(n — (r — 1)) = (n7T)!.
+Proof. Choosing r objects from n is an r»stage process where we
+have n choices at stage 1, n — 1 choices at stage 2, n — 2 choices at
+stage 3, and so on up to stage 1' where we have n — (vi — 1) choices.
+Hence the required number of lists is
+(n—1)(n~2)...(n~('r~1)),
+The basic counting methods
+I
+53
+
+
+
+4.1.2
+C|S102 Mathematics ior computing volume 2
+which is the left hand side. To see that the right hand side is also
+equal to this is a straightforward calculation:
+n! _ n(11.—1)(n—2)...(n—1"+1) (n—r)(n—'r—1)...
+I\-7
+>~
+(n—r)! _ (n.—r)(n—r—1)...
+= n(n—l)(n—2)...(n—r+1)
+= n(n—1)(n—2)...(n—(r—1)).I
+Counting in which order is not important
+We next consider the problem of counting the number of ways of
+choosing a subset from a given set. Recall that sets are unordered,
+so that for example
+{a, n, if} = {t, (1, 
+This means that when we are selecting subsets, the order in which
+the items are selected is not important.
+\end{frame}
+\begin{frame}
+Example 4.7 We consider two fundamentally different problems:
+(a) A President, Secretary and Treasurer for the student Computing
+Society are elected from among 45 students. Given that no
+student can ﬁll more than one of these posts, how many
+different selections are possible?
+\end{frame}
+\begin{frame}
+(b) A set of three students is to be chosen from a class of 45
+students to represent the class on the Staff-Student Consultative
+Committee. How many different selections are possible?
+In (a), the order of selection is important, because it is not
+unimportant which of the elected persons gets the post of President,
+who gets the post of Secretary and who gets the post of Treasurer.
+Hence by the Multiplication Principle, the number of different
+selections is 45 >< 44 x 43.
+In (b), there are 45 ways of choosing the ﬁrst student, then 44 ways
+of choosing the second and ﬁnally 43 ways of choosing the third.
+This gives us 45 >< 44 x 43 ways of choosing an ordered list of three
+students, just as for (a) above. But this time we are not interested in
+the order in which the students are chosen; all that interests us is
+the set of students selected. Suppose that A, B , C, is an ordered list
+of three students. Then we would get the some set {A B, C} of
+students from any of the following six ordered lists:
+A,B,C; A,C.B; B,A,C; B,C,A; C,A,B; C,B,A.
+You will recognize that any of the six possible permutations of a set
+of three items will give rise to the same unordered set. Thus among
+the 45 >< 44 >< 43 different ordered lists of three students, each
+possible set of three students occurs exactly 6 = 3! times. Thus the
+number of different sets of three students is
+45 >< 44 >< 43 45!
+3! 42! 3!
+In general, we call a subset of r items chosen from a set of n distinct
+items a combination of 1- items chosen from n items. The
+54
+I\)
+>-1
+
+
+
+following result generalizes Example 4.7.
+Theorem 4.4 The number of different combinations of r items chosen
+. . .
+from n items is 
+Proof. There are  different ordered lists that we could make of
+T items chosen from 77 items. But given any subset of 7‘ items, we can
+form 1"! different ordered lists of its elements. Thus the elements of
+each subset of r items occur on 1-! different lists. Hence the number
+of different subsets that can be chosen is  I
+We denote the number of combinations of 1" items chosen from n
+items by the binomial coefﬁcient  read “n choose '1'". Thus
+(7)  <4-H
+Other books may use different notations for  Among these are
+C (71. r), CI‘ and "CT, but as the  is the most universally
+recognized, we shall not be using other symbols on this course. You
+are also encouraged not to use these other notations for binomial
+coefﬁcients.
+\end{frame}
+%=============================================================================================================== %
+\begin{frame}
+Example 4.8 Bill knows 7 children.
+(a) He has 4 cinema tickets and thus wants to take 3 of the children
+to the cinema. In how many possible ways can he select 3
+children to take to the cinema?
+Answer: 
+This selection is unordered as we are selecting a set of 3
+children to accompany Bill. The order in which the children are
+chosen is not important as the end result is the same: they all
+end up with one cinema ticket each.
+(b) The next day Bill has three tasks to do: (1) he has to do the
+dishes; (2) he has to eat lunch at a nice restaurant and (3) he
+has to solve his maths assignment. ln how many possible ways
+can he select 3 children to help him with his tasks?
+Answer: 7 >< 6 >< 5.
+\end{frame}
+\begin{frame}
+This selection is ordered because the three tasks are very
+different, some are much more pleasant than others (e.g.
+solving the maths assignment is obviously everybody’ s favourite,
+while nobody wants to do dishes!). This is thus a 3-stage
+problem where stage i, for i = 1, 2, 3, is choosing somebody to
+help with task (i). The answer thus follows from Theorem 4.3.
+\end{frame}
+\begin{frame}
+We can immediately deduce the following identity for binomial
+coefficients from equation (4.1).
+
+Lemma 4.5 Let n and r be integers with 0 g r § n. Then
+n _ vi _ n!
+n—v' _ r _(7l*’f)l7‘l‘
+
+Proof. Computing (TIL) and  using the equation (4.1) both yield
+the fraction on the right hand side. I
+
+\end{frame}
+\begin{frame}
+Although Lemma 4.5 follows immediately from equation (4.1), we
+would expect that there should also be an underlying logical reason
+why Lemma 4.5 holds. This logical reason is illustrated by the
+following example.
+Example 4.9 It is required to make cloth covers for the notice board
+for each of the 17 different sports clubs in the Athletic Union. There
+is only sufficient green cloth for 13 boards and the remainder are to
+be covered in blue.
+\end{frame}
+\begin{frame}
+There are  ways of choosing 13 boards to be covered in green,
+(leaving 4 boards to be covered blue); or, looked at the other way
+round, there are  ways of choosing 4 boards to be covered in blue
+(leaving 13 boards to be covered in green). This is just two different
+ways of counting all ways of getting 13 green boards and 4 blue, so
+it is clear that both expressions should give the same answer. Thus,
+17 17 17><16><15><14
+(13)'<4>' 4><3><2><1 "2380
+\end{frame}
+\begin{frame}
+We can now give a reason why we should put 0! = 1. There is only
+one way of selecting a subset of size 0 from a set of n items (we
+choose none of them); similarly there is only one way of choosing a
+subset of size n from a set of n items (we choose all of the items).
+Thus we would expect  : 1 and  : 1. You will see this holds in
+equation (4.1) if we deﬁne 0! to be equal to 1. With this deﬁnition,
+which must have seemed rather mysterious when it was ﬁrst given,
+the expression  =  holds for all values of r where
+O § 'r § 7L.
+\end{frame}
+\begin{frame}
+Summary of strategies for counting problems
+When you are faced with a counting problem, you need to analyse it
+very carefully before applying one of the formulae we have derived
+in this section. If you rely solely on memorising the formulae you
+may use the wrong one! We have encountered three main types of
+counting problems:
+
+\end{frame}
+\section{Summary of counting strategies}
+\begin{frame}
+\frametitle{Sequences with repetition allowed}
+
+In this type, we are required to find the number of possible sequences where
+each term is drawn from a given set and repetitions are allowed.
+Examples of this type: Binary strings; codes, such as telephone
+numbers, car numbers, codewords, etc. ; integers which can be
+formed from a given set of digits.
+Solution to this type: If the number of choices for each term of the
+sequence is a constant number n, say, then the solution is n",
+where r is the length of the sequence.
+\end{frame}
+\begin{frame}
+\frametitle{Sequences with no repetitions allowed}
+In this type, we are required to find the number of possible sequences where
+each term is drawn from a given set and repetitions are not allowed.
+Examples of this type: Permutations of a set; lists; arrangements of
+objects in a row; integers with distinct digits; teams in which
+each person is chosen to perform a distinct task, etc.
+Solution to this type: The number of different arrangements of r
+distinct objects chosen from a set of n distinct objects is L!
+(n—r)!
+56
+
+\end{frame}
+\begin{frame}
+
+Choosing subsets ot a given set
+In this type, we are interested only in choosing the subset and the order in which
+the elements are selected is not important.
+Examples of this type: Teams, groups and subsets where the
+members are not chosen to fulﬁll different functions; hands of
+cards, etc.
+Solution to this type: The number of ways of selecting a subset of
+size r from a set of size n is  = 
+\end{frame}
+%=============================================================================================================== %
+\begin{frame}
+4.2 Counting using sets
+Learning objectives for this section
+I Deﬁnition of what it means for sets A1, A2, . . . ,A,, to be pairwise disjoint
+I Definition of what it means for sets A1, A2. . . . .An to partition a set S
+I Statement and use of the Addition Principle
+I Statement and use of the Principle of Inclusion-Exclusion of Theorem 4.6 to count
+the number of elements in the union of two arbitrary sets A and B
+I Using Venn diagrams (or the Principle oi Inclusion-Exclusion extended to three
+sets) to find the size of a union of three finite sets
+I Using the Addition Principle and Theorem 4.6 in coniunction with the basic
+counting methods for permutations and combinations we learnt in the previous
+section
+In Volume 1, Chapter 2, we deﬁned the size or cardinality of a
+ﬁnite set S to be the number of elements in S and denoted this by
+lSl. In this section, we shall ﬁnd a way of counting the number of
+elements in the union of two or more sets.
+Example 4.10 Finding the cardinality of a union of sets
+Let A = {1,2,3} , B = {O,4.5} and C = {3,4,5,6}.
+(a) A U B = {O,1,2,3,4,5}, so that lALJ Bl = 6 = |Al + |B|.
+(b) A U C = {1,2.3.4.,5,6}, so that lA U Cl = 6.
+But in this case, lA| + lC| = 3 + 4 = 7.
+(c) BLJC = {O,3,4,5,6}, so that |BLJCl = 5.
+But in this case, lBl + lCl = 3 +4 = 7.
+Then:
+Counting using sets
+57
+
+
+

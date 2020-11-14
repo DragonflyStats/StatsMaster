@@ -1,0 +1,392 @@
+
+
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+\section{Experiments and Outcomes}
+
+
+\begin{itemize}
+\item In the study of probability any process of observation is referred to as an
+\textit{\textbf{experiment}}.
+\vspace{0.2cm}
+\item The results of an experiment (or other situation involving uncertainty)
+are called the \textit{\textbf{outcomes}} of the experiment.
+\vspace{0.2cm}
+\item An experiment is called a random experiment if the outcome can not be
+predicted.
+\end{itemize}
+
+	\section{Statistics}
+		\subsection{Population of Interest}
+		{ \textbf{Population of Interest}}
+		\begin{itemize}\itemsep0.2cm
+			\item Statistics is the collection and analysis of data.
+			\item Based on our analysis we make conclusions about a { population} of interest.
+			\item These conclusions then allow us to make \emph{informed} decisions.\\[0.8cm]
+		\end{itemize}
+		For example, let's say we are interested in the average income of a recent UL graduate (1-3 years since graduation say).\\[0.5cm]
+		
+		The { population} is \emph{all} previous UL students who graduated in the last 3 years.\\[0.5cm]
+		
+		Can we contact every individual in the population?
+		
+		
+		\subsection{Representative Sample}
+		{ \textbf{Representative Sample}}
+		Can we contact every individual in the population? - { No!} This is very rarely possible. Even if it was possible, it is unnecessary, time-consuming and expensive. We can understand the population \emph{without} seeing it in its entirety.\\[0.6cm]
+		Instead we work with a { sample} of individuals from the population of interest; we may contact 100 recent graduates for example.\\[0.6cm]
+		Of course, we must be careful about how we collect our sample. It must be { representative} of the population in question.\\[0.6cm]
+		For example, if we only asked computer science graduates about their income level, our sample would not represent the specified population - \emph{all graduates} - leading to biased results.
+		
+		
+		\subsection{Random Sampling}
+		{ \textbf{Random Sampling}}
+		We must use a { random sampling} method to ensure that a representative sample is selected $\Rightarrow$ { unbiased results}.\\[0.6cm]
+		Random sampling is any method whereby all individuals in the population have an equal chance of being selected.\\[0.6cm]
+		For example, let's assume that 10,000 students have graduated in the last 3 years. We can assign a number to each graduate (1-10,000) and then use a random number generator to select 100 numbers in the range 1-10,000. This produces a random sample of 100 graduates.\\[0.6cm]
+		In R this can be achieved via \boxed{\text{\texttt{sample(1:10000,size=100)}}}.\\[0.2cm]
+		Of course it is also possible using C or Java.
+		
+		
+		
+		\subsection{Parameter Vs Statistic}
+		{ \textbf{Parameter Vs Statistic}}
+		We are interested in some feature of the population (average income of a UL graduate from our previous example).\\[0.5cm]
+		The true value of this feature is known as the { parameter}, i.e., the value based on the \emph{whole} population.\\[0.5cm]
+		The parameter value is \emph{unknown} and must be \emph{estimated from the sample}.\\[0.5cm]
+		Our estimate of the parameter is called the { statistic}, i.e., the value calculated using our sample. For example, the average income in our sample of 100 graduates.\\[0.7cm]
+		Memory Aid: \emph{``P'' is for population and parameter.\newline
+			\phantom{Memory Aid:} ``S'' is for sample and statistic.}
+		
+		
+		\subsection{Parameter Vs Statistic: Symbols}
+		{ \textbf{Parameter Vs Statistic: Symbols}}
+		It is important to know the symbols used to denote particular features of interest. In this course we deal with { proportions} and { means}.
+		
+		\begin{itemize}\itemsep0.4cm
+			\item { Proportion}
+			\begin{itemize}\itemsep0.2cm
+				\item \emph{Examples}: the proportion of unemployed individuals, of individuals in favour of some government policy, of viruses classed as ``high-threat'', of times a user wins in online poker etc.
+				\item \emph{Parameter:} The population proportion is {\boldmath$p$}.
+				\item \emph{Statistic:} The sample proportion is {\boldmath$\hat p$} (pronounced ``p-hat'').
+			\end{itemize}
+			\item { Mean} (i.e., the arithmetic average)
+			\begin{itemize}\itemsep0.2cm
+				\item \emph{Examples:} the mean income of UL graduates, annual rainfall, lifetime of a laptop, age of users of some Android application, number bugs in some piece of software etc.
+				\item \emph{Parameter:} The population mean is {\boldmath$\mu$} (the Greek letter ``mu'').
+				\item \emph{Statistic:} The sample mean is {\boldmath$\bar x$} (pronounced ``x-bar'').
+			\end{itemize}
+		\end{itemize}
+		
+		
+		\section{Data}
+		\subsection{Data Types}
+		{ \textbf{Data Types}}
+		There are two main types of data (the second subdivides further into two groups):\\[0.5cm]
+		\begin{enumerate}[1.]\itemsep0.8cm
+			\item { Categorical}
+			\begin{itemize}\itemsep0.3cm
+				\item Labels / words which define various categories.
+			\end{itemize}
+			\item { Numerical}
+			\begin{itemize}\itemsep0.3cm
+				\item { Discrete}: Only a limited number of values (usually integers).
+				\item { Continuous}: Any (decimal) value in a particular range.
+			\end{itemize}
+		\end{enumerate}
+		
+		
+		
+		
+		\subsection{Question 3: Classify the Data Type}
+		{ \textbf{Question 3: Classify the Data Type}}
+		
+		\begin{itemize}\itemsep0.2cm
+			\item Your age in years (20, 21, 30 etc.)
+			\item Temperature
+			\item Opinion of maths (dislike, indifferent, like)
+			\item Processor speed (gigahertz)
+			\item Number of bugs in an application
+			\item Employment status (unemployed, employed, retired)
+			\item Gender (male, female)
+			\item Time taken to process some task
+			\item Distance
+			\item Paying attention in class (yes, no)
+			\item File size (gigabytes)
+		\end{itemize}
+		
+		
+		
+		
+		\subsection{Categorical $\Rightarrow$ Proportions. Numerical $\Rightarrow$ Means.}
+		{ \textbf{Categorical $\Rightarrow$ Proportions. Numerical $\Rightarrow$ Means.}}
+		Recall: the main features we deal with are { proportions} and { means}.\\[0.2cm]
+		\begin{itemize}\itemsep0.5cm
+			\item Categorical data: calculate the \emph{proportion} of each category. For example, consider the variable ``paying attention in class'' with two categories - ``yes'' and ``no''. We calculate the proportion of individuals paying attention and the proportion not paying attention.
+			\item Numerical data: calculate the \emph{mean}. For example, consider the variable ``income of a UL graduate''. We calculate the mean income.\\[0.6cm]
+		\end{itemize}
+		
+		Note: we can also split a numerical variable by a categorical variable and \emph{compare} the means in each group, e.g., mean income for UL graduates who got a 1.1 degree versus those who got a 2.1.
+		
+		
+		
+		\subsection{Visualising Data}
+		{ \textbf{Visualising Data}}
+		
+		We would like to ``see'' the data. This is more helpful than attempting to eyeball the individual values - especially if we have collected a large sample.\\[0.4cm]
+		
+		In particular we would like to discover the { distribution of data} which describes how various categories or values are \emph{distributed}, i.e., how likely they are to occur.\\[0.6cm]
+		
+		The type of data determines the type of graph:\\[0.2cm]
+		\begin{itemize}\itemsep0.3cm
+			\item Categorical data: { Bar chart}
+			\item Numerical data: { Histogram}
+		\end{itemize}
+		
+		
+		
+		
+		
+		
+		
+\section{Lecture 3A}
+
+\begin{itemize}
+\item[1] Finish off Graphical Procedures
+ \begin{itemize}
+ \item[1.a] Bar-plots : useful for Discrete Probability Distributions
+ \item[1.b] Box-plots : used as a visual aid later in the course.
+ \end{itemize}
+\item[2] The binomial distribution
+\begin{itemize}
+\item[2.a] What is a binomial experiment?
+\item[2.b] The binomial distribution formula
+\item[2.c] Simple Example
+\end{itemize}  
+\end{itemize}
+
+\section{Lecture 3B}
+\begin{itemize}
+\item[1.] The Choose operator
+\end{itemize}
+\newpage
+
+
+
+
+
+%--------------------------------------------------------%
+
+\section{Descriptive Statistics}
+
+{
+
+\subsection{Descriptive Statistics}
+
+\begin{itemize}
+\item Measures of Centrality
+\begin{itemize}
+\item Mean
+\item Median
+\end{itemize}
+\item Measures of Dispersion
+\begin{itemize}
+\item Range
+\item Variance
+\item Standard Deviation
+\end{itemize}
+% \item Quantiles
+% \item Distribution of data ( Skewed or Symmetric )
+\end{itemize}
+
+}
+%--------------------------------------------------------%
+{
+\subsection{Measures of Centrality}
+
+\begin{itemize}
+\item Measures of centrality give one representative number for the location of the centre of the distribution of data.
+\item
+The most common measures are the \textbf{\emph{mean}} and the \textbf{\emph{ median }}.
+\item We must make a distinction between a sample mean and a population mean: The sample mean is simply the average of all the items in a sample.  \item The population mean (often represented by the Greek letter $\mu$) is simply the average of all the items in a population. \item Because a population is usually very large, the population mean is usually an unknown constant.
+\item We will return to the matter of population means in due course. For now, we will look at sample means.
+\end{itemize}
+
+}
+%----------------------------------------------------------------%
+{
+\subsection{Sample Mean}
+
+\begin{itemize}
+\item The sample mean is an estimator available for estimating the population mean . It is a measure of location, commonly called the average, often denoted $\bar{x}$, where $x$ is the data set.
+\item
+Its value depends equally on all of the data which may include outliers. It may not appear representative of the central region for skewed data sets.
+\item
+It is especially useful as being representative of the whole sample for use in subsequent calculations.
+\item The sample mean of a data set is defined as :
+\[ \bar{x} = { \sum x_i\over n}\]
+\item $\sum x_i$ is the summation of al the elements of $x$, and $n$ is the sample size.
+\end{itemize}
+}
+%----------------------------------------------------------------%
+{
+\subsection{Computing the sample mean}
+
+Suppose we roll a die 8 times and get the following scores: $x = \{ 5, 2, 1, 6, 3, 5, 3, 1\}$ \\ \bigskip
+
+What is the sample mean of the scores $\bar{x}$?
+\[ \bar{x}  = {5 + 2 +  1 +  6 +  3 +  5 +  3 +  1 \over 8 } = {26 \over 8} =  3.25 \]
+
+
+
+}
+
+%--------------------------------------------------------%
+[fragile]
+\subsection{Using \texttt{R} to compute mean (and median)}
+When implementing this in R, we would use the following code
+
+\begin{verbatim}
+> # create the "vector" x with the required values
+> x=c(5, 2, 1, 6, 3, 5, 3, 1)
+>
+> mean(x)
+[1] 3.25
+>
+> # See next slides first.
+> sort(x)
+[1] 1 1 2 3 3 5 5 6
+> median(x)
+[1] 3
+\end{verbatim}
+
+
+
+
+%--------------------------------------------------------%
+[fragile]
+\subsection{Using \texttt{R} to compute mean (and median)}
+When implementing this in R, we would use the following code
+
+\begin{verbatim}
+> x1=c(96, 48, 27, 72, 39, 70, 7, 68, 99 )
+> sort(x1)
+[1]  7 27 39 48 68 70 72 96 99
+> median(x1)
+[1] 68
+>
+> x2=c(96, 48 ,27 ,72, 39, 70, 7, 68)
+> sort(x2)
+[1]  7 27 39 48 68 70 72 96
+> median(x2)
+[1] 58
+\end{verbatim}
+
+
+%--------------------------------------------------------%
+{
+\subsection{Dispersion }
+
+\begin{itemize}
+\item The data values in a sample are not all the same. This variation between values is called \textbf{ \emph{dispersion}}.
+
+\item When the dispersion is large, the values are widely scattered; when it is small they are tightly clustered.
+
+%The width of diagrams such as dot plots, box plots, stem and leaf plots is greater for samples with more dispersion and vice versa.
+
+\item
+There are several measures of dispersion, the most common being the variance and  standard deviation. These measures indicate to what degree the individual observations of a data set are dispersed or 'spread out' around their mean.
+
+\item
+In engineering and science, high precision is associated with low dispersion.
+\end{itemize}
+
+\subsection{Range}
+
+\begin{itemize}
+\item The range of a sample (or a data set) is a measure of the spread or the dispersion of the observations. \item It is the difference between the largest and the smallest observed value of some quantitative characteristic and is very easy to calculate.
+
+\item A great deal of information is ignored when computing the range since only the largest and the smallest data values are considered; the remaining data are ignored.
+
+\item The range value of a data set is greatly influenced by the presence of just one unusually large or small value in the sample (outlier).
+\end{itemize}
+
+\textbf{Example}
+
+
+The range of $\{65,73,89,56,73,52,47\}$ is $ 89-47 = 42$.
+
+% If the highest score in a 1st year statistics exam was 98 and the lowest 48, then the range would be 98-48 = 50.
+
+
+%-----------------------------------------------------------------------------------------%
+\section{Simpson's Paradox}
+
+\subsection{Example}
+\begin{itemize}
+	\item Say a company tests two treatments for an illness. In trial No. 1, treatment A cures 20\% of its cases (40 out of 200) and treatment B cures 15\% of its cases (30 out of 200). In trial No. 2, treatment A cures 85\% of its cases (85 out of 100) and treatment B cures 75\% of its cases (300 out of 400)....
+	\item
+	So, in two trials, treatment A scored 20\% and 85\%. Also in two trials, treatment B scored only 15\% and 75\%. No matter how many people were in those trials, treatment A (at 20\% and 85\%) is surely better than treatment B (at 15\% and 75\%)?
+	\item
+	No, Treatment B performed better. It cured 330 (300+30) out of the 600 cases.
+	\item
+	(200+400) in which it was tried--a success rate of 55\%. By contrast, treatment A cured 125 (40+85) out of the 300 cases (200+100) in which it was tried, a success rate of only about 42\%.
+\end{itemize}
+
+%-----------------------------------------------------------------------------------------%
+
+\section{The Ecological Fallacy}
+Ecological fallacy: The aggregation bias, which is the unfortunate consequence of making inferences for individuals from aggregate data. It results from thinking that relationships observed for groups necessarily hold for individuals. The problem is that it is not valid to apply group statistics to an individual member of the same group.
+ 
+
+%=====================================================%
+\subsection{1.6 Sampling Distribution}
+\begin{itemize}
+\item  Suppose we observed a large number of samples of size n of the
+height of Irish adults. The distribution of the sample means would
+look like the distribution below:
+\item 
+If an appropriate sampling frame were used, then this sampling
+distribution would be centred around the true mean height of the
+population.
+\item 
+The larger the sample size, the more concentrated the distribution
+around the true population mean.
+\end{itemize}
+%=====================================================%
+\subsection{1.7 Critical analysis of a poll}
+To assess the credibility of a study, we should ask the following
+questions.
+\begin{enumerate}
+\item Who carried out the survey? (This
+person/organisation might have a hidden agenda).
+\item What methods were used in choosing a sample? How
+large is the sample? (sampling bias, precision)
+\item How was the information gained? This may well
+affect the validity of the data obtained. The reaction
+of an interviewee to the interviewer is important.
+\item How were the questions formulated? (see example on
+buying environmentally friendly goods).
+\item What was the response rate? A low response rate
+could lead to bias, as non-responders may well differ
+from respondents.
+\end{enumerate}
+\end{document}

@@ -1,0 +1,2059 @@
+
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+%=================================================%
+
+\textbf{Introduction to Statistics}
+
+Worksheets and Worked Examples
+
+
+Basic Probability Questions
+Q1a.  Two fair dice are thrown. What is the probability of at least one odd number? 
+Q1b.  What is the probability of at least one odd number if four fair dice are thrown?
+
+%=================================================%
+
+\textbf{Introduction to Statistics}
+
+
+Example 1 
+A fair die is thrown. The number shown on the die is the random variable X. Tabulate the possible outcomes. 
+Solution 
+X takes the six possible outcomes 1, 2, 3, 4, 5, 6 which each have probability 1/6 (i.e. one sixth). 
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline k & 1 & 2 & 3 & 4 & 5 & 6 \\ 
+\hline $\Pr( X=k)$ & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 & 1/6 \\ 
+\hline 
+\end{tabular} 
+
+%=================================================%
+
+\textbf{Introduction to Statistics}
+
+Example 2 
+Two unbiased spinners, one numbered 1, 3, 5, 7 and the other numbered 1, 2, 3 are spun. The random variable X is the sum of the two results. 
+Find the probability distribution for X.
+
+
+
+Solution 
+Listing all the possible outcomes is best done in a table. 
+
+
+
+
+%=================================================%
+
+\textbf{Introduction to Statistics}
+
+
+Chi Square
+The table below shows the relationship between gender and party identification in a US state.
+
+
+DemocratIndependentRepublicanTotal
+Male27973225577
+Female16547191403
+Total444120416980
+
+Test for association between gender and party affiliation at two appropriate levels
+and comment on your results.
+
+%=================================================%
+
+\textbf{Introduction to Statistics}
+
+Set out the null hypothesis that there is no association between method of computation
+and gender against the alternative, that there is. Be careful to get these the correct way
+round!
+
+H0: There is no association.
+H1: There is an association.
+
+Work out the expected values. For example, you should work out the expected value for
+the number of males who use no aids from the following: (95/195) × 22 = 10.7.
+
+
+\newpage
+Structure
+Structure of Resource
+
+1) Descriptive Statistics
+2) Probability Distributions
+3) Inference: Confidence Intervals
+4) Inference: Hypothesis Testing
+5) Simple Linear Regression
+6) Chi Square Tests
+
+%=============================================================%
+Part 1 Statistics 
+Gamblers Ruin Monte Carlo 
+Revision of normal distribution
+statistical process control and Six Sigma
+histograms density curves and boxplots
+some remarks on binomial distribution
+%=============================================================%
+Part 2 Describing,Exploring and Comparing Data
+Part 3 Revision of Normal Distribution
+3.1 Overview
+3.2 The standard normal distributions
+3.3 Applications of normal distributions
+3.4 Sampling distributions and estimators
+3.5 The central limit theorem
+3.6 Determining normality
+
+%=============================================================%
+Part 4A Estimates and Samples Sizes
+Part 4B Sampling distributions
+significance alpha
+central limit theorem
+p-values Type I and Type II errors
+inference procedures
+Testing normality
+%=============================================================%
+Part 5 Hypothesis testing and inference procedures
+5.1 Overiew
+5.2 Basics of Hypothesis Testing
+5.3 Testing a claim about a proportion
+5.4 Testing a claim about a mean sigma known
+5.5 Testing a claim about a mean sigma unknown
+confidence intervals margin of error standard error
+
+%=============================================================%
+Chapter 6A Hypothesis testing about two samples
+6.1 Overview
+6.2 Inferences about two proportions
+6.3 Inference about two means (Independent Samples)
+6.4 Inferences about Matched Pairs (The Paired t-test)
+%=============================================================%
+Part 6B More Inference Procedures
+Outliers Grubbs test
+shapiro wilk test
+Non parametric tests 
+Wilcoxon test
+kolmogorov smirnov test
+chi square goodness of fit table
+%=============================================================%
+Part 7 Correlation and Simple Linear Regression
+Slope and Intercept estimates
+prediction
+interpolation extrapolation
+Correlation and Causation
+Spurious Correlation 
+Definitions 
+%=============================================================%
+Part 7B Multiple Linear Regression
+Akaike information criterion
+Adjusted r squared
+overfitting 
+multicollinearity
+%=============================================================%
+Part 8 Multinomial Experiments and Contingency Tables
+8.1 Overview
+8.2 Multinomial Experiments: Goodness of fit
+8.3 contingency tables
+
+\newpage
+%==============================================================================================%
+
+For this component of the module, students will need to familiarise themselves with the Murdoch Barnes statistical tables.
+
+The necessary sections are provided in handbook.
+
+Section 1 Data and Sampling
+
+%==============================================================================================%
+
+1.2   Introduction 
+
+The aim of statistics is to provide insight by means of numbers.
+
+Difference between and experiment and an observational study
+
+Experiment: Researcher has ability to control important variables.
+
+Observational Study: Researcher does not have ability to control important variables
+
+
+%==============================================================================================%
+
+Example 1:  Health Insurance [pg 4]
+No it is an observational study. The researcher has no influence on the how they respond.
+
+Example 2:  advertising  [pg4]
+Yes this was an experiment. The researcher was able to control how much TV advertising each student watched.
+
+
+%==============================================================================================%
+
+
+\section{1.4   Sampling}
+
+We often read headlines in newspapers saying things like “80\% of the population are satisfied with the government’s performance”. How can the newspaper make such a statement when they haven’t asked everyone in the country their opinion of the government? 
+
+The newspaper has taken a representative subset of the population and assumed that what happens for that subset is what happens for the whole population. Is this assumption valid? 
+
+
+
+
+%==============================================================================================%
+
+\begin{itemize}
+\item 
+How do you select a representative subset? What mistakes can you make selecting this subset and what can be done to correct these mistakes? 
+\item Without understanding the concepts behind selecting a subset of the population i.e. sampling, we can make serious errors in our conclusions about the population.  
+\end{itemize}
+
+
+
+
+
+
+
+\textbf{Measures of Dispersion}
+
+\textbf{Examples of Quantiles}\\
+Quartiles are just one type of quantile.
+\begin{itemize}
+\item Percentiles
+\item Deciles
+\end{itemize}
+
+
+
+
+
+%=================================================%
+
+\textbf{The Binomial Distribution}
+
+
+
+In the last class, we looked at how to compute the mean, variance and standard deviation. 
+
+As these are key outcomes of this part of the course, we shall briefly go over this material again 
+
+The mean (i.e. average) value is denoted with a bar over the set name i.e. " ".
+
+
+(pronounced “x bar”)  is the sample mean.
+
+
+
+%=================================================%
+
+\textbf{The Binomial Distribution}
+
+
+Example
+
+A sample data set   comprised of five values.          
+
+
+
+What is the sample mean value of data set " " (i.e. What is   ?)
+
+
+
+The sample mean is 44
+
+%=================================================%
+
+\textbf{Measures of Centrality and Dispersion}
+
+
+2.2.3 Measures of Centrality and Dispersion for Grouped data
+[Page 27]
+
+: Frequency of class i
+: Midpoint of class i
+
+Sample variance for grouped data
+
+
+
+Sample variance for grouped data
+
+%=================================================%
+
+
+Median
+
+
+
+
+
+Lower limit of median class
+
+:      Sample Size
+
+:    cumulative frequency to class m-1
+
+:   frequency of median class 
+
+:   width of frequency class
+
+%=================================================%
+
+MidpointFrequencyCmlt Freq
+420 - 439429.588
+440 - 459449.51725
+460 - 479469.51237 (median in here)
+480 - 499489.5845
+500 - 519509.5752
+520 - 539529.5456
+540 - 559549.5258
+560 - 579569.5462
+580 - 599589.5264
+600 - 619609.5670
+Total70
+
+
+%=================================================%
+
+
+
+The median is in the third class interval
+
+The lower limit of the third class is 460
+
+The width is 20 (not 19)
+
+There is a frequency of 12 in that interval
+
+The sample size n = 70
+
+
+%=================================================%
+
+
+[Rest on Overhead]
+
+Mean  493.21
+Variance 3017.888
+Std.Dev 54.935 
+
+[Page 29]
+
+
+
+
+
+
+
+
+
+
+%---------------------------------------------------------------------%
+{
+\textbf{Week 4 (from Lecture 4A)}
+\begin{itemize}
+\item  The first midterm is to take place Monday of Week 5 at 4pm.
+\item  The first midterm will cover:
+\begin{itemize}
+\item  Basic Probability
+\item  Descriptive statistics (mean, median variance etc)
+\item  Discrete probability distributions (binomial and Poisson)
+\item  The exponential distribution
+\item  Some of the normal distribution will be included.
+\end{itemize}
+\end{itemize}
+}
+
+{
+\textbf{Overview of Current Part of Course}
+Probability Distributions (Question 2 for End Of Year Exam)
+\begin{itemize}
+\item  Discrete Probability Distributions
+\begin{itemize}
+\item  Binomial Probability Distribution (Week 3)
+\item  Geometric Probability Distribution (Week 3)
+\item  Poisson Probability Distribution (Week 3/4)
+\end{itemize}
+
+\item  Continuous Probability Distributions
+\begin{itemize}
+\item  Exponential Probability Distribution (Week 4)
+\item  Uniform Probability Distribution (Week 4)
+\item  Normal Probability Distribution (Week 4/5)
+\end{itemize}
+\end{itemize}
+}
+
+
+
+
+
+
+\section{Continuous Distributions}
+\begin{itemize}
+\item  (The Continuous Uniform Distribution, Not examinable)
+\item  The Exponential Distribution (Examinable for midterm)
+\item  The Normal Distribution
+\item  The Standard Normal (Z) Distribution.
+\item  Applications of Normal Distribution
+\end{itemize}
+
+
+\textbf{Confidence Interval for a Mean (Small Sample)}
+\begin{itemize}
+\item  The mean operating life for a random sample of $n = 10$ light bulbs is $\bar{x} = 4,000$ hours, with the sample
+standard deviation $s = 200$ hours. \item  The operating life of bulbs in general is assumed to be approximately normally distributed.\item 
+We estimate the mean operating life for the population of bulbs from which this sample was taken, using a 95 percent
+confidence interval as follows:
+
+\[4,000\pm(2.262)(63.3)  = (3857,4143)\]
+\end{itemize}
+
+
+
+
+\textbf{Confidence Interval for a Mean (Small Sample)}
+\begin{itemize}
+\item  The point estimate is 4,000 hours. The sample standard deviation is 200 hours, and the sample size is 10. Hence \[S.E(\bar{x} ) = { 200 \over \sqrt{10}} = 63.3\]
+
+\item  From last slide, the t quantile with $df=9$ is 2.262.
+\end{itemize}
+
+
+
+
+
+\begin{itemize}
+\item The normal distribution
+\item The Central Limit Theorem
+\item Sampling Distributions
+\item Standard error
+\item $p-$ values
+\item Testing for Normality
+\end{itemize}
+
+
+%-------------------------------------------------------------
+
+\begin{itemize}
+\item \textbf{Standard Error}
+Hypothesis Testing
+\[\sqrt{\frac{\pi (1- \pi}{n}}\]
+
+\item \textbf{Standard Error}
+Confidence Intervals
+
+\[\sqrt{\frac{\bar{p} (1- \bar{p}}{n}}\]
+\end{itemize}
+
+
+
+
+\subsection{Move to Scratchpad}
+\begin{itemize}
+\item In a group of 24 adults, only 6 people watch televised pay to view
+sports events. \item A visitor successively asks two people chosen at random from the
+community whether they watch these TV programmes.
+\item What distribution should be used in this instance? \item What is the probability
+that the second person chosen does watch them?
+\end{itemize}
+
+
+
+
+
+%----------------------------------------------------------------------------------------------------%
+{
+
+{\section{The Variance}
+\begin{itemize}
+\item Suppose a continuous uniform distribution has following parameters
+\begin{itemize}
+\item minimum $a=1$
+\item maximum $b=9$
+\end{itemize}
+\item What is the probability of $X$ being between $5$ and $8$?
+\begin{itemize}\item The lower bound $L$ is 5
+\item The upper bound $U$ is 8
+\end{itemize}
+\item What is $P( 5 \leq X \leq 8 )$?
+\end{itemize}
+\[
+P( 5 \leq X \leq 8 ) = \boldsymbol{{ 8 - 5 \over 9 - 1} = { 3 \over 8} = 0.375}
+\]
+}
+%--------------------------------------------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+\section*{Question 5 - Sampling}
+A lot contains 13 items of which 4 are defective. Three items are drawn at random from the lot one after the other. Find the probability $p$ that all three are non-defective.
+
+\subsection{Pooled Standard Deviations}
+
+Sample sizes and degrees of freedom
+
+
+Suppose one has two independent samples,
+
+x1, ..., xm and y1, ..., yn, and wishes
+to test the hypothesis that the mean of the
+x population is equal to the mean
+of the y population:
+
+\begin{itemize}
+\item $H_0$ : μx = μy.
+\item 
+\end{itemize}
+
+Let
+
+X and Y denote the sample means of the xs and ys and let sx and sy
+denote the respective standard deviations.
+
+The standard test of this hypothesis
+H0 is based on the t statistic
+
+\[TS =\frac{X-Y}{Sp(1/m )+ (1/n)}\]
+
+
+$S_p$ is the pooled standard deviation
+
+
+Sp=(m -1)sx2+ (n -1)sy2m+n-2
+
+Under the hypothesis
+
+$H_0$, the test statistic T has a t distribution with $m+n−2$
+degrees of freedom when both the xs and ys are independent random samples from normal distributions the standard deviations of the x and y populations, $\sigma_x$ and $\sigma_y$, are equal
+
+Suppose the level of significance of the test is set at $\alpha$. Then one will reject $H_o$
+
+when$|T| ≥ t_{(n+m−2,\alpha/2)}$,where tdf,α is the (1 − ) quantile of a t random variable with df degrees of
+freedom.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Other Stuff}
+
+It is a one tailed test
+
+$H_o$  : $\mu = 80 $
+$H_a$  : $\mu \neq 80$ 
+
+The significance level is 5% (or 0.05)
+
+what is the column to use?
+
+what is the degrees of freedom 
+Is it a large sample or a small sample?
+
+
+
+\[\sqrt{3}{1.09 \times 1.08 \times 1.07}]\]
+
+
+\[\sqrt{ \frac{\hat{p} 1- \hat{p}}{n} }\]
+
+
+\[\sqrt{ \frac{\hat{p_1} 1- \hat{p_1}}{n_1} + \frac{\hat{p_2} 1- \hat{p_2}}{n_2}}\]
+
+
+
+Binomial Distribution
+
+There are n independent trials
+The probability of a success is
+
+
+
+
+
+
+
+
+
+\subsection{Grouped Data}
+
+The table below gives the number of thunderstorms reported in a particular summer
+month by 100 meteorological stations.
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+Number of thunderstorms: &0& 1 &2 &3 &4 &5 \\ \hline
+Number of stations: & 22 & 37 & 20 & 13 & 6 & 2 \\ \hline
+\end{tabular}
+
+\begin{itemize}
+\item[(a)] Calculate the sample mean number of thunderstorms.
+\item[(b)] Calculate the sample median number of thunderstorms.
+\item[(c)] Comment briefly on the comparison of the mean and the median.
+\end{itemize}
+%------------------------------------------------%
+% 12 Normal Approximation of Binomial
+% PMS April 2006 
+In a certain large population 45\% of people have blood group A. 
+A random sample of 300 individuals is chosen from this population.
+Calculate an approximate value for the probability that more than 115 of the sample
+have blood group A.
+
+If X is the number in the sample with group A, then X has a binomial (300, 0.45)
+distribution, so
+\[ E[X] = 300 \times 0.45 = 135 \] and 
+\[ Var[X] = 300 \times 0.45 \times 0.55 = 74.25 \].
+Then, using the continuity correction,
+
+\[ P(X > 115) = P(X > 115.5)\]
+\[ 1- \frac{115.5 - 135}{\sqrt{74.25} } \]
+%-----------%
+
+
+\[  P(X > 115.5) = 1 -\theta(-2.26) = \theta(2.26) = 0.99\]
+
+%=========================================================% 
+% PMS Autumn 2008 Question 1
+The mean of a sample of 30 claims is \$5,200.
+Six have mean of \$ 8000 (i.e. group 1)
+Ten have mean of \$ 3100 (i.e. group 2)
+
+Compute the mean for the remaining claims
+
+\[\mbox{Total Costs} = (Cost for Group 1) + (Cost for Group 2) + (Cost from Group 3)\]
+
+\begin{itemize}
+\item Total Cost for all three groups : $\$5200 \times 30 = \$156000$
+\item Cost for Group 1 : $\$8000 \times 6 = \$48000$
+\item Cost for Group 2 : $\$3100 \times 10 = \$31000$
+\end{itemize}
+
+Necessarily the cost for group 3 is $\$77000$
+
+The mean claim for group 3 is therefore
+
+\[ \frac{\$77000}{14} = \$5500 \]
+
+%=========================================================% 
+
+% PMS SPring 2006 Question 6
+Poisson/Binomial/Exponential
+
+\begin{itemize}
+\item  Poisson
+
+Find P(X=0) for Poisson Mean (m=0.5)
+
+
+\[ P(X=0) = \frac{e^{-0.5}}{0!}  = 0.606 \]
+
+
+%=================%
+\item Binomial
+
+%\[ { 3 \choose 1} \times (0.606)^2 \times (1-0.606)^1 = 0.434 \]
+
+
+
+%=================%
+\item Exponential
+
+No Claim in the next two years
+\[= (0.606)^2 = 0.368\]
+
+
+\item Time Until Next Claim
+
+$\mu= 0.5$
+
+$T \approx exp(0.5)$
+
+\item$P(XT >2) = exp(-1) = 0.368$
+
+\end{itemize}
+
+
+
+%http://www.profsullivan.com/storage/chapter%204%20notes.pdf
+% http://mi.eng.cam.ac.uk/~rwp/Maths/eg/2012_maths_p9.pdf
+
+%----------------------------------------------%
+
+
+
+
+
+\subsection{Dice Roll Example}
+
+Suppose someone asks you to play the following game. Roll a die. If the die shows a 1, 2, 3, or 4, 
+you lose \$10. If the die shows a 5, you win \$15. If the die shows a 6, you win \$30. What is your expected 
+value?
+
+%--------------------------------------------------------------------%
+
+The mean and standard deviation of the following
+
+We are told the following piece of information $\bar{x} = 44$
+So what is the coefficient of determination?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Poisson Approximation}
+
+n  = 25
+p = 0.1, 0.2
+
+Poisson approximation of Binomial ( letting $m=np$
+
+\begin{itemize}
+\item $m_1 = 2.5$
+\item $m_2 = 5$
+\end{itemize}
+
+Find $P(X\geq 5)$ 
+
+$ P(X\leq 4)  = 1 - P(X\geq 5) $
+
+From Tables 
+0.89118
+0.44049
+
+(Rest : Compare to Real Answers)
+
+%========================================================%
+% PMS Spring 2006 Question 3
+
+A random sample of 10 is taken from a normal distribution of $\mu=20$ and $\sigma^2=1$. Let $s^2$ be the sample variance.
+
+Find $P(S^2>1)$
+
+\subsection*{Solution}
+
+\[ \frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}\]
+
+\[ 9S^2 \sim \chi^2_{9}\]
+
+
+\[ P(S^2>1) = P(\chi^2_{9}>9) = 1.05627 = 0.437\]
+
+%========================================================%
+
+PMS Spring 2008 
+\[f(x,y) = \frac{4}{3}(1-xy) \mbox{   }0<x<1,0<y<1  \]
+
+The Marginal PDF of X and Y is given by 
+
+\[f(x) = \frac{2}{3}(2-x) \mbox{   }0<x<1 \]
+\[f(x,y) = \frac{2}{3}(2-y) \mbox{   }0<y<1  \]
+
+Show that the conditional expectation of $Y$ given $X$ is given by
+
+\[ f(y|x) = \frac{2(1-xy}{2-7} \mbox{   }0<y<1\]
+
+\textbf{Solution}
+
+\[ f(y|x) = \frac{f(x,y)}{f(x)} = \frac{\frac{4}{3}(1-xy)}{\frac{2}{3}(2-x)} = \frac{2(1-xy)}{2-x}\]
+
+
+
+
+
+\subsection{Question 1 : Probability Distribution}
+
+\noindent \textbf{Introduction}\\
+
+Consider playing a game in which you are winning when a \textbf{\emph{fair die}} is showing `six'
+and losing otherwise.
+
+\subsection{Part 1}If you play three such games in a row, find the probability mass function (pmf) of the number
+X of times you have won.
+
+{
+\begin{itemize}
+\item Firstly: what type of probability distribution is this?
+
+\item Is this the distribution \textbf{\emph{discrete}} or  \textbf{\emph{continuous}}?
+
+\item The outcomes are whole numbers - so the answer is discrete.
+
+\item So which type of discrete distribution? (We have two to choose from. See first page of formulae)
+
+
+\item \textbf{Binomial:} characterizing the number of \textbf{\emph{successes}} in a series of \textbf{\emph{$n$ independent trials}}, with the \textbf{\emph{probability of a success}} in each trial being $p$.
+
+\item \textbf{Poisson:}  characterizing the \textbf{\emph{number of occurrences}} in a \textbf{\emph{unit space}} (i.e. a unit length, unit area or unit volume, or a unit period in time), where $\lambda$ is the the number of occurrences per unit space.
+
+\end{itemize}
+}
+
+
+
+\textbf{Example}\\
+
+In the above example where the die is thrown repeatedly, lets work out $P(X \leq t)$ for some values of t.
+
+P(X $\leq$ 1) is the probability that the number of throws until we get a 6 is less than or equal to 1. So it is either 0 or 1. 
+
+\begin{itemize}
+\item P(X = 0) = 0 
+\item $P(X = 1) = 1/6$.
+\item  Hence $P(X \leq 1) = 1/6$
+\end{itemize}
+
+Similarly, $P(X \leq 2) = P(X = 0) + P(X = 1) + P(X = 2)$\\ = 0 + 1/6 + 5/36 = 11/36
+
+
+
+
+\subsection*{Question 10. } % 10 Marks
+
+\begin{itemize}
+\item[a.] (1 Mark) The observation of the air pressure at a volume of 5 cubic metres was 19.87 bars.
+Calculate the residual from the regression model corresponding to this observation.
+\item[b.] (3 marks) Using the table above to justify your conclusion, test the null hypothesis that there
+is no monotonic (systematic) relationship between volume and pressure. State the null
+and alternative hypotheses clearly.
+\item[c.] (2 marks) Briefly explain why the use of linear regression to describe pressure as a function
+of volume is inappropriate.
+\end{itemize}
+
+
+
+
+\subsection{Standardisation Formula}
+
+\begin{equation}
+Z = \frac{ X - \mu } {  \sigma }
+\end{equation}
+%--------------------------------------------------------%
+\subsection{Pooled Standard Deviations}
+
+Sample sizes and degrees of freedom
+
+
+Suppose one has two independent samples,
+
+x1, ..., xm and y1, ..., yn, and wishes
+to test the hypothesis that the mean of the
+x population is equal to the mean
+of the y population:
+
+\begin{itemize}
+\item $H_0$ : μx = μy.
+\item 
+\end{itemize}
+
+Let
+
+X and Y denote the sample means of the xs and ys and let sx and sy
+denote the respective standard deviations.
+
+The standard test of this hypothesis
+H0 is based on the t statistic
+
+\[TS =\frac{X-Y}{Sp(1/m )+ (1/n)}\]
+
+
+$S_p$ is the pooled standard deviation
+
+
+Sp=(m -1)sx2+ (n -1)sy2m+n-2
+
+Under the hypothesis
+
+$H_0$, the test statistic T has a t distribution with $m+n−2$
+degrees of freedom when both the xs and ys are independent random samples from normal distributions the standard deviations of the x and y populations, $\sigma_x$ and $\sigma_y$, are equal
+
+Suppose the level of significance of the test is set at $\alpha$. Then one will reject $H_o$
+
+when$|T| ≥ t_{(n+m−2,\alpha/2)}$,where tdf,α is the (1 − ) quantile of a t random variable with df degrees of
+freedom.
+
+
+
+
+\begin{center}
+\begin{tabular}{|c||c|}
+\hline 
+Type 1 & Type 2 \\ \hline \hline
+$n_1$ = 100 & $n_2$ = 100 \\ \hline
+$\bar{x}_1$ = 25 hours & $\bar{x}_1$ = 23 hours \\ \hline
+$s_1$ = 4 hours & $s_1$ = 3 hours \\ \hline
+\end{tabular} 
+\end{center}
+
+%-------------------------------- %
+
+\[ S.E.(\bar{x}_1 - \bar{x}_2)  = \sqrt{\frac{s^2_1}{n_1} + \frac{s^2_2}{n_2}}\]
+
+\[ S.E.(\bar{x}_1 - \bar{x}_2)  = \sqrt{\frac{4^2}{100} + \frac{3^2}{100}}\]
+
+\[ S.E.(\bar{x}_1 - \bar{x}_2)  =\sqrt{ 25/100}\]
+
+%------------------------------------------------------------------- %
+
+
+\textbf{Two Sample Tests}
+\noindent \textbf{\emph{Test Statistic}}
+\[TS = \frac{(25-23) - 0}{?} = 2.?\]
+
+\noindent \textbf{\emph{Critical Value}}\\
+The crtical value is 1.645.
+\begin{itemize}
+\item Large aggregate sample
+\item One-tailed procedure
+\item Significance level $\alpha=0.05$
+\end{itemize}
+
+
+
+
+
+
+
+
+\chapter{Probability Distributions}
+
+
+
+\textbf{Review Question 5 : Choose Operator}
+Evaluat the following
+\begin{itemize}
+\item $^{10}C_0$ 
+\item $^{10}C_1$
+\item $^6C_3$
+\end{itemize}
+Solutions
+\begin{itemize}
+\item $^{10}C_0  = 10! / (10! \times 0!) = 1$
+\item $^{10}C_1 =  10! / (9! \times 1!) =  = 1$
+\item $^6C_3$
+\end{itemize}
+
+
+\textbf{Review Question 5 :  Probability}
+If A and B are events such that $P(A|B^c) = 2P(A|B)$ and $P(B^c) = 2P(B)$.
+(The event $B^c$ is the complement of event B.) Compute the probability: $P(B^c|A)$ 
+
+\begin{itemize}
+\item Complement events: $P(B^c) = 1 - P(B)$. Also we are told $P(B^c) = 1-P(B)= 2P(B)$
+\item Necessarily $1 = 3P(B)$. Therefore $P(B) = 1/3$ and  $P(B^c)=2/3$
+\item Total Probability: $P(A) = P(A \mbox{ and } B) + P(A \mbox{ and } B^c)$
+\item
+\end{itemize}
+
+
+
+
+
+
+
+%
+%\section{Diagrammatic Explanation}
+%{ \textbf{Diagrammatic Explanation}}
+%\begin{displaymath}
+%\xymatrixcolsep{1.5cm}
+%\xymatrixrowsep{2cm}
+%\xymatrix{
+%\boxed{\text{\Huge Population}} \ar@{->}[r] \ar@/_2.2pc/[d]\ar@/_1.5pc/[d]\ar@/_0.8pc/[d]\ar@{->}[d]\ar@/^0.8pc/@{->}[d]\ar@/^1.5pc/@{->}[d]\ar@/^2.2pc/[d] &
+%\begin{tikzpicture}[baseline=(char.base)]
+%\node(char)[draw,shape=ellipse]{Parameter};
+%\end{tikzpicture} \\
+%\boxed{\text{Sample}} \ar@{->}[r] &
+%\begin{tikzpicture}[baseline=(char.base)]
+%\node(char)[draw,shape=ellipse]{Statistic};
+%\end{tikzpicture} \ar@{.>}[u]}
+%\end{displaymath}
+%
+%\begin{textblock}{1}(2.1,3.8)
+%\xymatrixrowsep{1cm}
+%\xymatrix{\\\ar@/^1.5pc/@{.}[u]}
+%\end{textblock}
+%\begin{textblock}{5}(2.2,3.3)
+%{\footnotesize\emph{The group of all individuals of interest (large in size)}}
+%\end{textblock}
+%
+%\begin{textblock}{1}(2.7,11.4)
+%\xymatrixrowsep{0.7cm}
+%\xymatrix{&\ar@/_1pc/@{.}[ld]\\&}
+%\end{textblock}
+%\begin{textblock}{5.5}(0.5,13)
+%{\footnotesize\emph{A subset of individuals selected from the population (small relative to the population size)}}
+%\end{textblock}
+%
+%\begin{textblock}{1}(1.7,10)
+%\xymatrixcolsep{1.5cm}
+%\xymatrix{&\ar@/^0.5pc/@{.}[l]}
+%\end{textblock}
+%\begin{textblock}{3.5}(0.3,7.5)
+%{\footnotesize\emph{Selection process must generate a representative sample}}
+%\end{textblock}
+%\begin{textblock}{3.5}(0.1,10.7)
+%{\footnotesize\emph{(random sampling)}}
+%\end{textblock}
+%
+%\begin{textblock}{1}(13.4,3.8)
+%\xymatrixrowsep{1.3cm}
+%\xymatrix{\\\ar@/_1.5pc/@{.}[u]}
+%\end{textblock}
+%\begin{textblock}{4}(11.4,1.6)
+%{\footnotesize\emph{The true value of the feature of interest (unknown - must be estimated)}}
+%\end{textblock}
+%
+%\begin{textblock}{1}(13,11.4)
+%\xymatrixrowsep{1.2cm}
+%\xymatrix{\\\ar@/_1.8pc/@{.}[u]}
+%\end{textblock}
+%\begin{textblock}{4.5}(9.4,13)
+%{\footnotesize\emph{The feature of interest calculated using the sample data}}
+%\end{textblock}
+%
+%\begin{textblock}{1}(11.8,7)
+%\xymatrixcolsep{0.7cm}
+%\xymatrix{\\&\ar@/_0.4pc/@{.}[l]}
+%\end{textblock}
+%\begin{textblock}{3}(13.2,7.5)
+%{\footnotesize\emph{An unbiased statistic estimates the parameter}}
+%\end{textblock}
+%
+%
+%
+
+
+%\subsection{Question 3}
+%{ \textbf{Question 3}}
+%two populations.... picture quality..\\[0.4cm]
+%\begin{enumerate}[a)]
+%\item What is the population?
+%\item What is the sample?
+%\item What is the parameter? What is its value?
+%\item What is the statistic? What is its value?
+%\item Identify any potential bias.
+%\end{enumerate}
+%
+
+
+
+
+
+
+
+
+
+
+
+\section{Random Samples}
+\begin{itemize}
+\item Consider two random samples drawn from X and Y respectively.
+\item When these observations are plotted on a scatterplot, it
+may be the case that some sort of relationship \textbf{appears} to exist (when in fact it doesn't).
+\item The smaller the number of observations, the more likely this erroneous conclusion will occur.
+\end{itemize}
+
+
+
+%=================================================%
+
+\subsection{Introduction to Statistics}
+
+2.2.3 Grouped Data Median  [Pg 27]
+
+
+
+
+
+Lower limit of median class
+
+:      Sample Size
+
+:    Cumulative frequency to class m-1
+
+:   frequency of median class 
+
+:   width of frequency class
+
+%=================================================%
+
+\subsection{Introduction to Statistics}
+
+\begin{verbatim}
+MidpointFrequencyCmlt Freq
+420 - 439429.58≤ 4398
+440 - 459449.517≤ 45925
+66469.512≤ 47937 
+480 - 499489.58≤ 49945
+500 - 519509.57≤ 51952
+520 - 539529.54≤ 53956
+540 - 559549.52≤ 55958
+560 - 579569.54≤ 57962
+580 - 599589.52≤ 59964
+600 - 619609.56≤ 61970
+Total70
+\end{verbatim}
+%=================================================%
+
+\subsection{Introduction to Statistics}
+
+
+
+
+
+Remark : The 26th to 37th items are in the third class.
+(m = 3)
+
+Lower limit of median class460
+
+:      Sample Size70
+
+:    Cumulative frequency to class m-125
+
+:   frequency of median class 12
+
+:   width of frequency class20
+
+The sample size n = 70
+
+Therefore  
+
+Median is estimated as 
+%=================================================%
+
+
+
+
+
+
+
+%--------------------
+
+\end{document}
+
+
+
+%-----------------------
+
+The formulae for geometric distribution is
+
+%P(X=k) = (1-p)^{k-1} \times p^k%
+
+P(X\leq 4 ) = ?
+
+%P(X=k) = (1-0.2)^{4-1} \times 0.2^4%
+
+%-----------------------
+
+% The uniform distribution
+
+What is the probability of an outcome less than 4?
+
+This is equivalent to the probability of an outcome between 2 and 4.
+
+so we let $L$ = 2 and $U$ = 4
+
+${4-2 \over 8 - 2} = {2 \over 6} = 1/3
+%-----------------------
+Degress of freedmom n-1
+For values between 31 and 40 we can use degrees freedom = 40
+For samples sizes between 41 and 60, we can use degrees of freedom 60
+For samples sizes between 61 and 120, we can use degrees of freedom 120
+For samples larger than 120, we can use $\infty$
+%
+%--------------------
+Discrete data has distinct whole number values with no intermediate points.
+For example, the number of employees in a company is discrete data.
+%----------------------------------------------------
+Contingency Tables
+The probability of throwing a total of 10 with 2 dices
+Probability of $x$ \emph{given} that $y$ has occured.
+There are 100 students in a firs year college intake. 36 are amles and are studying accounting
+9 are male and ard studying economics
+45 are female and studying accounting
+13 are female and studying economics.
+First, lets label this events.
+$M$
+$F$
+$A$
+$E$
+Lets construct a table to handle this data.
+%--------------------------------------------------------------
+Inference Procedure
+b)The mean and variance of height in a sample of 25 Irish students are 174cm and 100cm2, respectively.
+i)Test the hypothesis that the mean height of all Irish students is 170cm at a significance level of 5%. 
+%-------------------------------------------------------------
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%=================================================%
+
+{Measures of Centrality and Dispersion}
+ 
+
+2.2.3 Measures of Centrality and Dispersion for Grouped data
+[Page 27]
+
+  : Frequency of class i
+  : Midpoint of class i
+
+Sample variance for grouped data
+
+ 
+
+Sample variance for grouped data
+ 
+%=================================================%
+
+
+Median
+
+ 
+
+
+
+       Lower limit of median class
+
+ :      Sample Size
+
+ :    cumulative frequency to class m-1
+
+  :   frequency of median class 
+
+  :   width of frequency class
+ 
+%=================================================%
+
+MidpointFrequencyCmlt Freq
+420 - 439429.588
+440 - 459449.51725
+460 - 479469.51237 (median in here)
+480 - 499489.5845
+500 - 519509.5752
+520 - 539529.5456
+540 - 559549.5258
+560 - 579569.5462
+580 - 599589.5264
+600 - 619609.5670
+Total70
+
+ 
+%=================================================%
+
+
+
+The median is in the third class interval
+
+The lower limit of the third class is 460
+
+The width is 20 (not 19)
+
+There is a frequency of 12 in that interval
+
+The sample size n = 70
+
+ 
+%=================================================%
+
+
+[Rest on Overhead]
+
+Mean  493.21
+Variance 3017.888
+Std.Dev 54.935 
+
+[Page 29]
+ 
+
+
+
+
+
+
+
+%============================================================ %
+
+An experiment is
+
+An observational study is
+
+This is an experiment because the outcomes are a response to conditions set by the study.
+
+
+
+
+
+Definitions
+Population
+Sample
+Statistic: value based on a sample. Commonly used as an estimate for the parameter value.
+
+Parameter value
+Sampling Frame:
+Databases
+
+
+%============================================================ %
+
+
+Section 2 Graphical methods
+
+Pie Charts – hard to make out what is going on.
+Some aesthetic use i.e. breaking up a long page of text.
+
+
+
+
+%============================================================ %
+
+An experiment is
+
+An observational study is
+
+This is an experiment because the outcomes are a response to conditions set by the study.
+
+
+
+
+%============================================================ %
+
+
+Definitions
+Population
+Sample
+Statistic: value based on a sample. Commonly used as an estimate for the parameter value.
+
+Parameter value
+Sampling Frame:
+Databases
+
+
+%============================================================ %
+
+
+Section 2 Graphical methods
+
+Pie Charts – hard to make out what is going on.
+Some aesthetic use i.e. breaking up a long page of text.
+
+
+%============================================================ %
+\section{Probability}
+
+
+\begin{itemize}
+\item Law of total probability
+
+\item Independent events
+
+\item Conditional probability
+\end{itemize}
+
+
+%============================================================ %
+
+
+Given that event B has already occurred ,   what is the probability of event A
+
+P( A | B)  “probability of A given B”
+
+P( A and B) “ probability of A and B”
+
+\t{Complement event}\\
+
+What is the probability of A not happening
+What is the probability of outcomes not included in A.
+
+
+%============================================================ %
+
+
+Section 4: Probability Distributions
+
+Expected value of the outcome
+
+E[X]
+
+By definition the expected value is the value that 50% of the the outcomes are greater than.By extension 50% of values are less than the Expected value.
+\[
+P( X \geq E[X])  = 0.50 \]
+\[ P(X \leq E[X]) = 0.50\]
+
+
+
+Exercises on Murdoch Barnes table 6
+
+Find the following
+
+$e^{-0.6}$
+
+$e^{-1.4}$
+
+$e^{-3.2}$
+
+
+
+
+{
+
+\t{This Presentation}
+\begin{enumerate}
+\item Contingency Tables
+\item Conditional Probability: Worked Examples
+\item Joint Probability Tables
+\item The Multiplication Rule
+\item Law of Total Probability
+\end{enumerate}
+
+}
+
+%------------------------------------------------------------%
+{
+{Law of Total Probability}
+
+\vspace{-1cm}
+\begin{itemize}
+\item The law of total probability is a fundamental rule relating marginal probabilities to conditional probabilities.\item  The result is often written as follows:
+
+\[ P(A)  = P(A \cap B) + P(A \cap B^c) \]
+
+
+\item Here $P(A \cap B^c)$ is joint probability that event $A$ occurs and $B$ does not.
+\end{itemize}
+}
+%------------------------------------------------------------%
+{
+{Law of Total Probability}
+
+
+
+
+Using the multiplication rule, this can be expressed as
+
+\[ P(A) = \left[ P(A | B)\times P(B) \right] + \left[ P(A | B^{c})\times P(B^{c}) \right] \]
+
+\[ P(A)  = P(A \cap B) + P(A \cap B^c) \]
+}
+%------------------------------------------------------------%
+{
+{Law of Total Probability}
+
+From the first year intake example , check that
+\[ P(E)  = P(E \cap M) + P(E \cap F) \]
+with $ P(E) = 0.40$, $ P(E \cap M) = 0.18$ and  $ P(E \cap F) = 0.22$
+\[ 0.40  = 0.18 + 0.22 \]
+
+\normalsize
+\t{Remark:}  $M$ and $F$ are complement events.
+
+}
+
+
+
+
+
+
+
+\chapter{2. Descriptive Statistics}
+
+
+
+
+
+
+\section{Revision of basic measures}
+
+
+% \frametitle{Measures of Centrality}
+The most common measures of centrality are the mean and median.
+
+\textbf{Median} Another measure of location just like the mean. The value that divides the frequency distribution in half when all data values are listed in order. It is insensitive to small numbers of extreme scores in a distribution. Therefore, it is the preferred measure of central tendency for a skewed distribution (in which the mean would be biased) and is usually paired with the \textbf{interquartile range} (IQR) as the accompanying measure of dispersion.
+
+
+
+
+
+
+
+
+
+
+\section{Distributions}
+\numberwithin{equation}{section} $X \sim \mbox{Bin}(n,p)$
+
+\begin{equation}
+P(X = k) = { n \choose k } p^{k} (1-p)^{n-k}
+\end{equation}
+
+\begin{equation}
+{ n \choose k } = \frac{n!}{k!(n-k)!}
+\end{equation}
+
+
+
+
+
+\[P(B|A) = { P(A \mbox{ and } B) \over P(A) }\]
+
+\[P(A|B) = { P( A \mbox{ and }B) \over P(B) }\]
+%========================================================================= %
+
+It is a one tailed test
+$H_o$  : $\mu = 80 $
+$H_a$  : $\mu \neq 80$
+The significance level is 5% (or 0.05)
+what is the column to use?
+what is the degrees of freedom
+Is it a large sample or a small sample?
+
+\begin{eqnarray}
+\bar{x} =
+s^2 = 16
+CV =\sqrt{3}{1.09 \times 1.08 \times 1.07}
+=\sqrt{ \frac{\hat{p} 1- \hat{p}}{n} }
+=\sqrt{ \frac{\hat{p_1} 1- \hat{p_1}}{n_1} + \frac{\hat{p_2} 1- \hat{p_2}}{n_2}}
+\end{eqnarray}
+
+
+
+\begin{itemize}
+\item The gamma distribution can be parameterized in terms of a shape parameter $\alpha$ = k and an inverse scale parameter $\beta$, called a rate parameter.
+\item A random variable X that is gamma-distributed with shape $\alpha$ and rate $\beta$ is denoted
+\[
+X \sim  \textrm{Gamma}(\alpha,\beta)
+\]
+\end{itemize}
+
+{
+
+\[\scriptstyle\mathbf{E}[ X] = \frac{\alpha}{\beta}\]
+
+
+\[
+\scriptstyle \operatorname{Var}[ X] = \frac{\alpha}{\beta^2}
+\]
+}
+
+\begin{itemize}
+\item
+By the central limit theorem, if $\alpha$ is large, then gamma distribution can be approximated by the normal distribution with mean and standard deviation\[\mu = \frac{\alpha}{\beta}\] 
+\[\sigma=\frac{\sqrt{\alpha}}{\beta}\]
+
+
+\item That is, the distribution of the variable  
+{
+
+\[Z=\frac{X-\frac{\alpha}{\beta}}{\frac{\sqrt{\alpha}}{\beta}}\]} tends to the standard normal distribution as $ \alpha \longrightarrow \infty$.
+\end{itemize}
+
+{
+
+\[
+\scriptstyle \mbox{ Point Estimate } \pm  \left[ \operatorname{ Quantile } \times \operatorname{Standard Error } 
+\right] 
+\]}
+
+
+
+
+
+Binomial Distribution
+There are n independent trials
+The probability of a success is
+$\sum_x$
+$\sum_y$
+$\sum_xy$
+$\sum_x^2$
+$\sum_y^2$
+$n=10$
+
+
+
+
+
+
+
+
+
+%Ma4402
+%in the following sequence, evaluate the  term a4
+%a_n = 2n^2 + 3n-7
+%a_n =n+2 
+%:: 5 to n 
+%
+%question 2
+%use the rafio test to show that this.sequen e is convergenf.
+%Use the series ro estomate the value of to thee decimql places.
+%Writinf your resulta into the table below.
+%
+%question 3
+%kepler's problem cor.an orbir with eccentrity and mean anomaly 1 onvolves find the eoot of the function 
+%The angle is.measured in radians.
+
+
+3
+
+
+
+
+
+P-values
+SPSS only reports the p-value to the third decimal place. If you double click on the p-value in your output it should show you more decimal places (version 14+). You should never report the p-value as 0 if SPSS gives a p-value as.000 report it as p<.001.
+
+In short, however, this is a significant value. You should reject H0.
+
+
+
+Correlation  Coefficient
+what is the linear coeffi ient.of the aboce data set
+we are gicen the follpwing pieces of data
+
+%\begin{itemize}
+%
+%\item \sum x
+%\item \sum y \item \sum xy \item \sum x2 \item sum y2
+%\end{itemize}
+one important piece of.informafion we are not given direcrly is the sample size n
+but we can work this out easily by looking at the data sef.
+
+There are ten pairs of data so n is 10
+
+lets compute the top half of the equation first
+
+so we get 365.10
+
+now lets look at the first half of the bottom
+then we get the square root of this
+
+The correlation coefficient is herefore 0.89
+
+Interpret this: This is a very high strong positive linear relationship.
+
+\[\sqrt{\hat{p} \times (1-\hat{p} ) \over n}\]
+
+
+%--------------------------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+
+
+
+\section{Syllabus}
+\begin{itemize}
+\item Descriptive Statistics \item Probability Distributions \item
+Statistical Inference \item Information Theory
+\end{itemize}
+
+On successful completion of this module, students should be able
+to:
+
+\begin{enumerate}
+\item Apply probability theory to problem solving. \item Employ
+the concepts of random variables and probability distributions to
+problem solving.
+
+\item Apply information theory to solve problems in data
+compression and transmission.
+
+\item Analyse rates and proportions.
+
+\item Perform hypothesis tests for a variety of statistical
+problems.
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\section*{Exercise 29}
+
+Add up all the numbers for 1 to 50
+\begin{itemize}
+\item  Using the sum() command.
+\item  using a ‘for’ loop.
+\end{itemize}
+
+
+
+
+
+
+
+
+\begin{itemize}
+\item This distribution is \textbf{Binomial}
+\item A success here is throwing a six
+\item An independent trial is a roll of a die
+\item There are 3 independent trials ($n=3$)
+\item The probability of a success is 1 in 6 ($p=1/6$)
+\item (Lets look at the formulae to see what we have to work with)
+\end{itemize}
+
+
+
+
+
+
+\begin{itemize}
+\item Exercise 14: question on trigonometric functions omitted.
+\item Exercise 17: inverse cosine function is acos()
+\begin{verbatim}
+> cos(pi)
+[1] -1
+> acos(-1)
+[1] 3.141593
+>
+\end{verbatim}
+\item Exercise 18: use the standard normal distribution to generate random numbers, unless told otherwise.
+
+\begin{verbatim}
+> rnorm(4)
+[1] -1.68732684 -0.62743621  0.01831663  0.70524346
+\end{verbatim}
+\item Exercise 18: We have not covered the material for parts 5, 10 and 11 yet.
+\end{itemize}
+
+
+
+
+
+\section*{Exercise 20}
+
+Construct a vector of the 0.9, 0.95, 0.975 and 0.99 quantiles of the $t-$ distribution (degrees of freedom = 16).
+For hep with the $t-$ distribution use the command '?qt'.
+
+\begin{verbatim}
+> perc =c(0.9, 0.95, 0.975, 0.99)
+> perc
+[1] 0.900 0.950 0.975 0.990
+> qt(perc, 16)
+[1] 1.336757 1.745884 2.119905 2.583487
+\end{verbatim}
+
+What is the 0.975 quantile for the $t-$ distribution when the degrees of freedom is 40?
+(N.B. This exercise is relevant to forthcoming topics, such as confidence intervals.)
+
+\begin{verbatim}
+
+> qt(0.975, 40)
+[1] 1.336757 1.745884 2.119905 2.583487
+\end{verbatim}
+
+\section*{Exercise 21}
+
+\begin{table}[ht]
+\begin{center}
+\begin{tabular}{rlllrrl}
+\hline
+& Make & Model & Cylinder & Weight & Mileage & Type \\
+\hline
+1 & Honda & Civic & V4 & 2170.00 & 33.00 & Sporty \\
+2 & Chevrolet & Beretta & V4 & 2655.00 & 26.00 & Compact \\
+3 & Ford & Escort & V4 & 2345.00 & 33.00 & Small \\
+4 & Eagle & Summit & V4 & 2560.00 & 33.00 & Small \\
+5 & Volkswagen & Jetta & V4 & 2330.00 & 26.00 & Small \\
+6 & Buick & Le Sabre & V6 & 3325.00 & 23.00 & Large \\
+7 & Mitsbusihi & Galant & V4 & 2745.00 & 25.00 & Compact \\
+8 & Dodge & Grand Caravan & V6 & 3735.00 & 18.00 & Van \\
+9 & Chrysler & New Yorker & V6 & 3450.00 & 22.00 & Medium \\
+10 & Acura & Legend & V6 & 3265.00 & 20.00 & Medium \\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+\section{Syllabus}
+
+
+The concept of a random sample, the sampling distribution of the sample mean with applications to confidence intervals, hypothesis testing, and sample size determination, the sampling distribution of the sample proportion with applications to confidence intervals, hypothesis testing, and sample size determination, comparing two means, comparing two proportions, the chi-squared test of independence, Simpson's Paradox, simple linear regression, correlation, residuals.
+
+\smallskip
+On successful completion of this module, students should be able to:
+
+\begin{itemize}
+\item[1.] Calculate probabilities based on the normal distribution.
+
+\item[2.] Construct and use control charts based on individual measurements, subgroup means and subgroup ranges.
+
+\item[3.] Interpret computer output from common statistical software packages for basic statistical inference procedures such as hypothesis testing and confidence intervals for: a mean, a proportion, difference between independent means, and differences between independent proportions.
+
+\item[4.] Calculate the required sample size for tests of hypothesis and confidence intervals based on a single parameter.
+
+\item[5.] Interpret computer output and diagnostic plots from common statistical software packages for simple linear regression and multiple linear regression.
+
+\item[6.] Test the statistical significance of the difference between several conditional frequency distributions and outline the chi-squared formula used for the test.
+
+\end{itemize}
+
+
+%-------------------------------------------------------%
+
+
+\chapter{Further Inference}
+
+
+
+
+%-----------------%  Random Variables %------------------%
+
+
+%--------------------------------------------------------------------------------------%
+
+
+
+
+
+
+
+
+\noindent\textbf{Part 2} Suppose that you are playing thirty such games and X is the number of times you have won.
+What are possible values for X?
+
+
+\bigskip
+
+\noindent \textbf{Answer: }The random variable $X$ can take any value between 0 and 30.  $k \in \{0,1,2,\ldots 30\}$
+
+
+
+\noindent\textbf{Part 3} What a well-known distribution describes pmf of X? Identify its parameters. Write the formula
+for the pmf.
+
+\begin{itemize}
+\item We actually covered this already. The distribution is the binomial distribution.
+\item The parameters are similar, except that the number of independent trials is now 30.
+\item So $n=30$  and $p = 1/6$
+\item $X \sim \mbox{Bin}(30,1/6)$
+\item A General Formula for the PMF is
+\[P(X=k) =  { 30 \choose k} (1/6)^k (5/6)^{30-k}   \]
+\item where $k \in \{0,1,2,\ldots 30 \}$
+\end{itemize}
+
+
+
+
+
+
+
+
+\noindent\textbf{Part 5} What is the expected value of the number X of wins when you are playing thirty games?\\
+
+\bigskip
+
+\noindent\textbf{Part 6} What is the Standard Deviation of X in this case?
+
+\bigskip
+
+\begin{itemize}
+\item From formulae: The expected value is $E(X) = n\times p = 30 \times (1/6) = 5$
+\item From formulae: The variance is $Var(X) = n\times p\times (1-p) = 30 \times (1/6) \times (5/6) = 4.1666$
+\item The standard deviation $\sigma$ is the square root of the variance : $\sigma = \sqrt{4.1667}$
+\end{itemize}
+
+
+\newpage
+
+
+
+
+
+
+
+
+\noindent\textbf{Part 2} Suppose that you are playing thirty such games and X is the number of times you have won.
+What are possible values for X?
+
+
+\bigskip
+
+\noindent \textbf{Answer: }The random variable $X$ can take any value between 0 and 30.  $k \in \{0,1,2,\ldots 30\}$
+
+
+
+\noindent\textbf{Part 3} What a well-known distribution describes pmf of X? Identify its parameters. Write the formula
+for the pmf.
+
+\begin{itemize}
+\item We actually covered this already. The distribution is the binomial distribution.
+\item The parameters are similar, except that the number of independent trials is now 30.
+\item So $n=30$  and $p = 1/6$
+\item $X \sim \mbox{Bin}(30,1/6)$
+\item A General Formula for the PMF is
+\[P(X=k) =  { 30 \choose k} (1/6)^k (5/6)^{30-k}   \]
+\item where $k \in \{0,1,2,\ldots 30 \}$
+\end{itemize}
+
+
+
+
+
+
+
+
+\noindent\textbf{Part 5} What is the expected value of the number X of wins when you are playing thirty games?\\
+
+\bigskip
+
+\noindent\textbf{Part 6} What is the Standard Deviation of X in this case?
+
+\bigskip
+
+\begin{itemize}
+\item From formulae: The expected value is $E(X) = n\times p = 30 \times (1/6) = 5$
+\item From formulae: The variance is $Var(X) = n\times p\times (1-p) = 30 \times (1/6) \times (5/6) = 4.1666$
+\item The standard deviation $\sigma$ is the square root of the variance : $\sigma = \sqrt{4.1667}$
+\end{itemize}
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection*{Using \texttt{R} for Linear Models}
+\begin{itemize}
+\item Simple linear regression
+\begin{itemize}
+\item The \texttt{lm()} command
+\end{itemize}
+\item Scatter plots
+\item Pearson's correlation
+\item Importance of ``summary()" and ``names()"
+\item Accessing importance values in data objects
+\end{itemize}
+
+
+
+
+
+\subsection{Quantiles}
+
+The quantile function is the inverse of the cumulative
+distribution function. The p-quantile is the value with the
+property that there is probability p of getting a value less than
+or equal to it. The median is by definition the 50\% quantile.
+
+Theoretical quantiles are commonly used for the calculation of
+confidence intervals and for power calculations in connection with
+designing and dimensioning experiments.
+
+
+
+
+
+
+
+
+\subsection{Critical values for Z}
+
+Calculate Z as shown above. Look up the critical value of Z in the table below, where N is the number of values in the group. If your value of Z is higher than the tabulated value, the P value is less than 0.05.
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Computing an approximate P value}
+
+You can also calculate an approximate P value as follows.
+
+
+N is the number of values in the sample, Z is calculated for the suspected outlier as shown above.
+Look up the two-tailed P value for the student t distribution with the calculated value of T and N-2 degrees of freedom. Using Excel, the formula is =TDIST(T,DF,2) (the '2' is for a two-tailed P value).
+
+
+Multiply the P value you obtain in step 2 by N. The result is an approximate P value for the outlier test. This P value is the chance of observing one point so far from the others if the data were all sampled from a Gaussian distribution. If Z is large, this P value will be very accurate. With smaller values of Z, the calculated P value may be too large.
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+\end{document}

@@ -1,0 +1,96 @@
+﻿\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+\chapter{6. Discrete Probability Distributions}
+
+\noindent \textbf{Discrete probability distributions}
+
+The discrete probability distributions that described in this course are
+\begin{itemize}
+\item the binomial distribution, 
+\item the geometric distribution,
+\item the hypergeometric distribution, 
+\item the Poisson distributions.
+\end{itemize}
+
+
+\section{Discrete Probability Distributions}
+\begin{itemize}
+\item Over the next set of lectures, we are now going to look at two important discrete probability distributions
+
+\item The first is the \textbf{\emph{binomial}} probability distribution.
+
+\item The second is the Poisson probability distribution.
+
+\item In \texttt{R}, calculations are performed using the \texttt{binom} family of functions and \texttt{pois} family of functions respectively.
+\begin{multicols}{2}
+\begin{itemize}
+\item[$\ast$] Poisson
+\item[$\ast$] Binomial
+\item[$\ast$] Geometric
+\item[$\ast$] Hypergeometric 
+\end{itemize}
+\end{multicols}
+\end{itemize}
+%---------------------------------------------------------------------%
+
+
+
+\subsection{The Cumulative Distribution Function}
+\begin{itemize}
+\item The Cumulative Distribution Function, denoted $F(x)$, is a common way that the probabilities
+of a random variable (both discrete and continuous) can be summarized.
+\item The Cumulative Distribution Function, which also can be
+described by a formula or summarized in a table, is defined as:
+\[F(x) = P(X \leq x) \]
+\item The notation for a cumulative distribution function, F(x), entails using a capital
+"F".  (The notation for a probability mass or density function, f(x), i.e. using a lowercase "f". The notation is not interchangeable.
+\end{itemize}
+
+
+%---------------------------------------------------------------------%
+
+\begin{framed}
+\textbf{Useful Results for Discrete Random Variables}
+
+\begin{itemize}
+\item $P(X \leq 1) = P(X=0) + P(X=1)$
+\item $P(X \leq r) = P(X=0)+ P(X=1) + \ldots P(X= r)$
+\item $P(X \leq 0) = P(X=0)$
+\item $P(X = r) = P(X \geq r ) - P(X \geq r + 1)$
+\item \textbf{Complement Rule}: $P(X \leq r-1) = P(X < r) = 1 - P(X \geq r)$
+\item \textbf{Interval Rule}:$ P(a \leq X \leq  b)= P(X \geq a) - P(X \geq b + 1).$
+\end{itemize}
+\end{framed}
+
+
+
+\section{The Cumulative Distribution Function}
+\begin{itemize}
+\item The Cumulative Distribution Function, denoted $F(x)$, is a common way that the probabilities
+of a random variable (both discrete and continuous) can be summarized.
+\item The Cumulative Distribution Function, which also can be
+described by a formula or summarized in a table, is defined as:
+\[F(x) = P(X \leq x) \]
+\item The notation for a cumulative distribution function, F(x), entails using a capital
+"F".  (The notation for a probability mass or density function, f(x), i.e. using a lowercase "f". The notation is not interchangeable.
+\end{itemize}
+
+
+\end{document}

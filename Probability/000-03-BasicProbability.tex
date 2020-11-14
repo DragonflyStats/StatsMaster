@@ -1,0 +1,324 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{enumerate}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+
+\section*{MA4603 - Lecture 3B - Appendix}
+(Remark : It would advised to keep this sheet handy for future SULIS homewworks)
+%Probability Theory
+%Tutorial Sheet 1
+Basics of Probability
+
+
+Addition Rule
+Indepedent Events
+%======================================================%
+
+The complement rule in Probability
+
+
+$P(C^{\prime}) = 1- P(C)$
+
+
+
+
+If the probability of C is $70 \%$ then the probability of $C^{\prime}$ is $30\%$
+
+
+
+
+
+
+
+Question 1
+Events  (Important the event names are explained)
+
+\begin{description}
+\item[F:] Student plays footballP(F) = 50%
+\item[S:] Student does SwimmingP(S) = 20%
+\item[F and S:]            Student takes part in both swimming and football  
+P(S and F) = 15%
+\end{description}
+Find P (F or S)
+
+Use addition rule
+
+\[P (F or S)  =  P(F) + P(S) – P( Fand S)\]
+\[=  50\% + 20 \% - 15\% =    55\%\]
+
+
+(We subtract 15\% to stop the “boths” getting counted twice)
+
+Probability of playing neither
+This is the complement event of playing one or both sports.
+\[P(Neither) = 1 –  P( F or S)  = 45\%\]
+
+\begin{enumerate}
+\item 
+2 components A and B.
+\begin{description}
+\item[P(A)] = event that A is workingP(A) = 0.98
+\item[P(B)] = event that B is workingP(B) = 0.95
+\item[P(A and B)] = event that both A and B are working = $P(A) \times P(B) = 0.98 \times 0.95 = 0.931$
+\end{description}
+
+\item 
+Lots of useless information.
+Complement event of at least one working is that they are both broken.
+
+Answer  100 – 4\% = 96%
+
+\item 
+
+
+\begin{verbatim}
+Events 
+A components from supplier A  P (A) = 0.8 
+B components from supplier B  P (B) = 0.2 
+F = resistor fails test
+
+1\% Probability of a Failure given that component is from Supplier A.      P(F|A) = 0.01
+3\% Probability of a Failure given that component is from Supplier B.      P(F|B) = 0.03
+
+\end{verbatim}
+Probability of flaw : P(F)
+Failed resistors either come from A or B
+\[P( F) =  P ( F \mbox{ and } A)  +  P( F \mbox{ and } B)\]
+Use conditional Probability  rule
+\[P(F) = P(F|A)\times P(A)  + P(F|B)\times P(B)\]
+
+\[P(F)  =  ( 0.01 x 0.8 ) + ( 0.03 x 0.2) = (0.008) + (0.06) = 0.014\]
+Answer 1.4%
+
+
+Part ii
+Given that a component failed, what was the probability of coming from A
+P(A|F) 
+
+P(A|F) = P(A and F)  / P(F)We found P(A and F) earlier ; 0.008
+
+P(A|F) = 0.008/0.014 =  0.57[answer : 57%]
+
+
+
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
+% Question 5 in lectures
+% Answer P(D) =0.0395 (3.95%)
+% P(C|D) = 0.0506(5.06%)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%
+%
+% x=seq(2,18,length=1600)
+% y=dnorm(x,10,2)
+% plot(x,y,type="l",  col="black")
+% x=seq(10,12.4,length=240)
+% y=dnorm(x,10,2)
+% polygon(c(10,x,12.4),c(0,y,0),col="wheat")
+% abline(h=0)
+% text(14,0.15,"P(10 < X < 12.4)")
+%
+%
+%
+%
+% x=seq(2,18,length=1600)
+% y=dnorm(x,10,2)
+% plot(x,y,type="l",  col="black")
+% L=2
+% U=9.7
+% x=seq(L,U,length=((U-L)*100) )
+% y=dnorm(x,10,2)
+% polygon(c(L,x,U),c(0,y,0),col="wheat")
+% abline(h=0)
+% text(14,0.15,"P(10 < X < 12.4)")
+%
+%
+%abline(v=10)
+
+
+
+
+
+
+
+
+\section*{Probability}
+\subsection*{Question 1 Part A}
+
+Consider the experiment where three coins are flipped. \\[-0.2cm]
+\begin{enumerate}[(i)]
+\item List all possible outcomes. \item  Calculate $\Pr(\text{more heads than tails})$? \item Calculate $\Pr(\text{two tails})$?
+\end{enumerate}
+Remark: draw out a probability tree
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%=====================================%
+\subsection*{Question 3 Part A - Simple Addition Rule for Probability}
+
+\begin{itemize}
+\item P(M) = 0.60
+\item P(CS) = 0.40
+\item P(M and CS) = 0.20
+\end{itemize}
+\[  P(M \cup CS) = P(M) + P(CS) - P(M \cap CS) 
+\\
+= 0.60 + 0.40 -0.20 
+= 0.80
+\] 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\textbf{Combining Probabilities - Worked Example}
+
+Bayes Rule is given in the Formulae  
+
+We can rearrange it as follows  
+
+
+%--------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------%
+
+\section{Combining Probabilities - Worked Example}
+We can now write our equation in terms of all the information we have :
+
+ANS
+
+For the second part, we simply use Bayes Rule again, using information we have determined previously
+
+
+The Addition Rule for Probability
+
+$P(A \cup B ) = P(A) + P(B) - P(A \cap B)$
+
+\[{8 \choose 2} =\frac{8!}{2!(8-2)!} \quad = \frac{8\times7\times6!}{2!\times 6!} = \frac{8\times7}{2\times 1} \quad = \frac{56}{2} \quad = 28\]
+
+%---------------------------------------------------------------%
+
+\section{Probability Rules}
+
+There are two rules which are very important.
+\begin{itemize}
+\item All probabilities are between 0 and 1 inclusive
+\[0 \leq P(E) \leq 1\]
+\item The sum of all the probabilities in the sample space is 1
+\end{itemize}
+
+\section{Addition Rule}
+The addition rule is a result used to determine the probability that event $A$ or
+event $B$ occurs or both occur. The result is often written as follows, using set
+notation:
+\[ P(A\cup B) = P(A) + P(B)- P(A \cap B)\] 
+\begin{itemize}
+\item $P(A)$ = probability that event $A$ occurs.
+\item $P(B)$ = probability that event $B$ occurs.
+\item $P(A\cup B)$ = probability that either event $A$ or event $B$ occurs, or both
+occur.
+\item $P(A\cap B)$ = probability that event $A$ and event $B$ both occur.
+\end{itemize}\bigskip
+
+\noindent \textbf{Remark:} $P(A\cap B)$ is subtracted to prevent the relevant outcomes being
+counted twice.
+
+
+
+
+\section{Probability: Addition Rule for Any Two Events}
+
+\begin{itemize}
+\item For any two events A and B, the probability of A or B is the sum of the probability of A and the probability of B minus the probability of both A and B:
+\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]
+\vspace{-0.2cm}
+\item We subtract the probability of $A \cap B$ to prevent it getting counted twice.
+
+\item \textit{($A \cup B$ and $A \cap B$ denotes  ``A or B" and ``A and B" respectively) }
+
+\item If events A and B are \textbf{mutually exclusive}, then the probability of A or B is the sum of the probability of A and the probability of B:
+
+\[P(A \cup B) = P(A) + P(B)\]
+
+\item If A and B are mutually exclusive, then the probability of both A and B is zero.
+\end{itemize}
+\end{document}
+

@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{framed}
+
+\begin{document}
+
+
+\Huge
+\[\mbox{Statistics and Probability}\]
+\LARGE
+\[\mbox{Probability Functions}\]
+
+\Large
+\[\mbox{www.stats-lab.com}\]
+\[\mbox{Twitter: @StatsLabDublin}\]
+
+\newpage
+
+%------------------------------------------------------------------------------------%
+{\LARGE
+\begin{center}
+\textbf{Probability Functions}\\
+\end{center}
+\bigskip
+The random variable $X$ has probability density function given by
+
+\[f_X(x) = 3e^{-3x}\]
+
+defined over the region $x>0$. Let $Y=e^x$.
+\begin{enumerate}
+\item Compute $E(Y)$ (i.e. Compute $E(e^x)$).
+\item Compute $\mbox{Var}(Y)$.
+\end{enumerate}
+\bigskip
+\textbf{Remarks}
+\begin{itemize}
+\item $e^0=1$
+\item $e^{-\infty} =0$
+\end{itemize}
+
+}
+%------------------------------------------------------------------------------------%
+\newpage
+{\LARGE
+\begin{center}
+\textbf{Probability Functions}\\
+\end{center}
+\bigskip
+\textbf{Question 1:}
+Compute $E(Y)$:
+\begin{framed}
+\[ E(X) = \int^{\infty}_{0}x\;f_X(x) \;dx\]  
+\end{framed}
+
+\[E(Y) = \int^{\infty}_{0}Y\;3e^{-3x} \;dx\]
+
+\[E(e^x) = \int^{\infty}_{0}e^x\;3e^{-3x} \;dx\]
+}
+\newpage
+{\LARGE
+\begin{center}
+\textbf{Probability Functions}\\
+\end{center}
+\[E(e^x) = \int^{\infty}_{0}e^x\;3e^{-3x} \;dx\]
+}
+
+%------------------------------------------------------------------------------------%
+\newpage
+{\LARGE
+\begin{center}
+\textbf{Probability Functions}\\
+\end{center}
+\bigskip
+\textbf{Question 2:}
+Compute $\mbox{Var}(Y)$.\bigskip
+\begin{framed}
+\[ \mbox{Var}(Y) = E(Y^2) - E(Y)^2  \]
+\end{framed}
+\begin{center}
+N.B:  $  Y^2 = (e^{x})^2$ =  $e^{2x}$
+\end{center}
+\bigskip
+\bigskip
+\[\mbox{E}(Y^2) = \int^{\infty}_{0}Y^2\;3e^{-3x} \;dx\]
+
+
+}
+\newpage
+{\LARGE
+\begin{center}
+\textbf{Probability Functions}\\
+\end{center}
+\[E(e^{2x}) = \int^{\infty}_{0}e^{2x}\;3e^{-3x} \;dx\]
+}
+
+\newpage
+{\LARGE
+\begin{center}
+\textbf{Probability Functions}\\
+\end{center}
+\begin{framed}
+\[ \mbox{Var}(Y) = E(Y^2) - E(Y)^2  \]
+\end{framed}
+}
+\end{document}

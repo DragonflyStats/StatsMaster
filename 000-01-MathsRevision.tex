@@ -1,0 +1,556 @@
+
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+% \tableofcontents
+
+
+
+
+\section{Notation for Data Set}
+
+\begin{itemize}
+	\item Suppose that we have a data set with $n$ observations. For each observation, a measure is recorded. Conventionally the measures are denoted $x$ unless a more suitable notation is available. 
+	\item A subscript can be used to indicate which observation the measure is for.
+	\item Hence we would write a data set as follows; $(x_{1}, x_{2},x_{3} , x_{1} \dots x_{n})$ (i.e. the first, second, third ... $n$th observation).
+\end{itemize}
+
+
+\section{Relational operators}
+\begin{itemize}
+	\item $>$  means `is greater than
+	\item $\geq$ means `is greater than or equal to
+	\item $<$ means `is less than
+	\item $\leq$ means `is less than or equal to
+	\item $\neq$ means `is not equal to
+	\item $\approx$ or $\simeq$ means `is approximately equal to
+\end{itemize}
+
+
+
+
+
+\section{Factorials Numbers}
+
+A factorial is a positive whole number, based on a number $n$ , and which is written as $``n!"$. The factorial $n!$ is defined as follows:
+
+\[n!  =n \times (n-1) \times (n-2) \times \ldots \times 2 \times 1 \]
+The factorial function (symbol: !) just means to multiply a series of descending natural numbers. \\ \bigskip
+
+Remark $n!  =n \times (n-1)!$\\ \bigskip
+
+	
+\noindent \textbf{ Example: }
+	
+	\begin{itemize}
+		\item $3!  = 3 \times 2  \times 1 = 6 $
+		
+		\item $4!  = 4 \times 3! = 4 \times 3 \times 2 \times 1 = 24$
+	\end{itemize}
+	Remark $0! = 1$ not $0$.
+	
+\textbf{ Example: }
+
+\begin{multicols}{2}
+\begin{itemize}
+\item $4! = 4 \times 3 \times 2 \times 1 = 24$
+\item $7! = 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 5,040$
+\item $3!  = 3 \times 2  \times 1 = 6 $
+\item $1! = 1$
+\item $0! = 1 $
+\end{itemize}
+\end{multicols}
+
+\[ (n+1)! = (n+1) \times n! \] 
+Equivalently
+
+\[n! = n \times (n-1)!  = n \times (n-1) \times (n-2)! = \ldots \]
+
+\begin{itemize}
+\item $4!  = 4 \times 3! = 4 \times 3 \times 2 \times 1 = 24$
+\item $5! = 5 x 4!$
+\item $6! = 6 x 5!$  and so on
+\item $6! = 6 \times 5!  = 6 \times 5 \times 4!$
+\end{itemize}
+
+
+\begin{itemize}
+	\item  $n!$ and $k!$ are the coefficients of $n$ and $k$ respectively.
+	\item  $n! = n \times (n-1) \times (n-2) \times \ldots \times 2 \times 1$
+	\item  For example $5! = 5\times4\times3\times2\times1 = 120$
+	\item  $n! = n \times (n-1)!$
+	\item  Importantly $0! = 1$ not 0.
+\end{itemize}
+
+
+\begin{itemize}
+
+	
+	\item factorials 
+	\[ n! = (n)\times (n-1)\times(n-2) \times \ldots \times 1 \]
+	\begin{itemize}
+		\item $5! = 5 \times 4 \times 3 \times 2 \times 1 = 120 $
+		\item $3! = 3 \times 2 \times 1$
+	\end{itemize}
+\end{itemize}	
+
+
+\newpage
+	\subsection{Example: Factorials }
+	
+	\noindent \textbf{Examples:}
+	
+	\begin{itemize}
+		\item $4! = 4 \times 3 \times 2 \times 1 = 24$
+		\item $7! = 7 \times 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 5,040$
+		\item $1! = 1$
+		\item $0! = 1 $
+	\end{itemize}
+	Importantly 
+	\[n! = n \times (n-1)!  = n \times (n-1) \times (n-2)! \]
+	For Example
+	\[6! = 6 \times 5!  = 6 \times 5 \times 4! \]
+	
+	%%- \textbf{Factorials Numbers}
+	
+	
+	\begin{itemize}
+		\item $3!  = 3 \times 2  \times 1 = 6 $
+		
+		\item $4!  = 4 \times 3! = 4 \times 3 \times 2 \times 1 = 24$
+		
+		\item factorials 
+		\[ n! = (n)\times (n-1)\times(n-2) \times \ldots \times 1 \]
+		\begin{itemize}
+			\item $5! = 5 \times 4 \times 3 \times 2 \times 1 = 120 $
+			\item $3! = 3 \times 2 \times 1$
+		\end{itemize}
+		\item Zero factorial : Remark $0! = 1$ not $0$.
+		\[ 0! =  1 \]
+	\end{itemize}
+	
+
+\section{Choose Operator \ Binomial Coefficients}
+
+For the positive integer $n$ and non-negative integer $k$ ( with $k\leq n$), the choose operater is calculated as follows:
+
+\[ {n \choose k} = \frac{n!}{k! \times (n-k)!} \]
+
+\begin{framed}
+	
+\[ {n \choose r} = \frac{n!}{(n-r)! r!} \]
+\smallskip
+\[ {6 \choose 3} = \frac{6!}{(6-3)! 3!} = \frac{6!}{3! \times 3!}\]
+\smallskip
+\[ \frac{6!}{3! \times 3!} = \frac{6 \times 5 \times 4 \times 3!}{3! \times 3!} = \frac{120}{6} = 120\]
+\smallskip
+\[ {6 \choose 2} = \frac{6!}{2! \times (6-2)!} = \frac{6!}{2! \times 4!}  \]\[\mbox{   } = \frac{6 \times 5 \times 4!}{2! \times 4!} 
+= 30/2 =15 \]
+
+\end{framed}
+
+
+More examples of Binomial coefficients on blackboard.
+
+
+
+\noindent \textbf{Example}
+
+\[{3\choose 1}  = { 3! \over 1! \times(3-1)!} { 3 \times 2! \over 1! \times 2!} = \frac{3}{1} = 3 \]
+
+
+%--------------------------------------------------------------------------------------%
+
+\textbf{The Choose Operator}
+(Remember $0!$  is always equal to 1)
+\begin{multicol}{2}
+\begin{itemize}
+	\item ${3 \choose 0} = 1$
+	\item ${3 \choose 1} = 3$
+	\item ${3 \choose 2} = 3$
+	\item ${3 \choose 3} = 1$
+\end{itemize}
+\end{multicol}
+
+
+
+Exercises: Evaluate the following:
+
+\begin{itemize}
+	\item[1] ${5 \choose 2}$
+	\item[2] ${5 \choose 0}$
+	\item[3] ${10 \choose 1}$
+	\item[4] ${10 \choose 9}$
+\end{itemize}
+
+
+
+
+
+
+
+\section{Binomial Coefficients}
+
+For the positive integer $n$ and non-negative integer $k$ ( with $k\leq n$), the choose operater is calculated as follows:
+
+\[ {n \choose k} = \frac{n!}{k! \times (n-k)!} \]
+
+
+
+
+
+Evaluate the following:
+		\subsection*{More Exercises}				
+		Evaluate the following:
+		\begin{multicols}{3}
+			\begin{enumerate}
+				\item[(i)] ${5 \choose 2}$
+				\item[(ii)] ${5 \choose 0}$
+				\item[(iii)] ${6 \choose 3}$
+				\item[(iv)] ${6 \choose 6}$
+				\item[(v)] ${10 \choose 1}$
+				\item[(vi)] ${10 \choose 9}$
+			\end{enumerate}        
+		\end{multicols}	
+
+
+
+	{
+		
+		\begin{framed}
+			
+			\[ {n \choose k} = \frac{n!}{k! \times (n-k)!} \]
+		\end{framed}		
+		\begin{multicols}{2}
+			\begin{itemize}
+				\item ${6 \choose 2} = 15$
+				\item ${5 \choose 2} = 10$  
+				\item ${4 \choose 0} = 1$  
+				\item ${4 \choose 3} = 4$  
+			\end{itemize}
+		\end{multicols}	
+		
+		
+		
+		\subsection*{Formula}
+		\[ \binom nk  = \frac{n!}{k!(n-k)!} = \frac{n(n-1)\ldots(n-k+1)}{k(k-1)\dots 1},\]
+		which can be written using factorials as  whenever $k\leq n$
+		
+{
+	\textbf{Binomial Coefficients}
+	
+	In the last class, we came across binomial coefficients. Informally, binomial coefficients are the number of ways $k$ items can be selected from a group of $n$ items. 
+	The binomial coefficient indexed by n and k is usually written as $^nC_k$ or
+	\[ {n \choose k}\].
+	$C$ is colloqially known as the ``choose operator".
+	
+	\[ {n \choose k} = \frac{n!}{k! \times (n-k)!} \]
+	
+	(We call the operator the choose operator. We will use both notations interchangeably.)
+	
+	
+
+}
+%---------------------------------------------------------------------------%
+{
+	\textbf{Probability Mass Function}
+	(Formally defining something mentioned previously)
+	\begin{itemize} \item a probability mass function (pmf) is a \textbf{\emph{function}}
+		that gives the probability that a discrete random variable is exactly equal to some
+		value.
+		\[P(X=k)\]
+		\item The probability mass function is often the primary means of defining a discrete
+		probability distribution
+		\item It is conventional to present the probability mass function in the form of a table.
+		\item The p.m.f of a value $k$ is often denoted $f(k)$.
+	\end{itemize}
+}
+%--------------------------------------------------------------------------------------%
+{
+	\textbf{ Binomial Example 1 }
+	(Revision from Last Class)\\
+	Suppose a die is tossed 5 times. What is the probability of getting exactly 2 fours?
+	
+	\textbf{Solution:} This is a binomial experiment in which the number of trials is equal to 5, the number of successes is equal to 2, and the probability of success on a single trial is 1/6 or about 0.167. 
+	\\
+	\bigskip
+	Therefore, the binomial probability is:
+	
+	\[P(X=2) = ^5C_2 \times (1/6)^2 \times (5/6)^3 = 0.161\]
+}
+
+%--------------------------------------------------------------------------------------%
+{
+	\textbf{ Binomial Example 2 }
+	Suppose there is a container that contains 6 items.  The probability that any one of these items is defective is 0.3. Suppose all six items are inspected. 
+	\begin{itemize}
+		\item What is the probability of 3 defective components?
+		\item What is the probability of 4 defective components?
+	\end{itemize}
+	
+	\[ P(3\text{ defects}) = f(3) = P(X = 3) = {6\choose 3}0.3^3 (1-0.3)^{6-3} = 0.1852 \]
+	\[ P(4\text{ defects}) = f(4) = P(X = 4) = {6\choose 4}0.3^4 (1-0.3)^{6-4} = 0.0595 \]
+}
+		
+
+\subsection{Binomial Coefficients}
+
+
+
+\[ \binom nk  = \frac{n!}{k!(n-k)!} = \frac{n(n-1)\ldots(n-k+1)}{k(k-1)\dots 1},\]
+which can be written using factorials as  whenever $k\leq n$
+
+
+Evaluat the following
+\begin{itemize}
+	\item $^{10}C_0$ 
+	\item $^{10}C_1$
+	\item $^6C_3$
+\end{itemize}
+Solutions
+\begin{itemize}
+	\item $^{10}C_0  = 10! / (10! \times 0!) = 1$
+	\item $^{10}C_1 =  10! / (9! \times 1!) =  = 1$
+	\item $^6C_3$
+\end{itemize}
+
+
+
+\subsection{Binomial Coefficients}
+
+\[ \binom 5 2  = \frac{5!}{2!\;(5-2)!} = \frac{5.4.3!}{2! .3!} = \frac{5.4}{2.1} = 10\]
+
+
+\[ \binom 5 0   = \frac{5!}{0!\;(5-0)!} = \frac{5!}{0! .5!} = \frac{5!}{2!} = 1\]
+Recall $0! =1$
+
+\begin{itemize}
+	\item In the last class, we came across binomial coefficients. Informally, binomial coefficients are the number of ways $k$ items can be selected from a group of $n$ items. 
+	
+	\item The binomial coefficient indexed by n and k is usually written as $^nC_k$ or
+	\[ {n \choose k}\].
+	
+	\item $C$ is colloqially known as the ``choose operator".
+	
+	\[ {n \choose k} = \frac{n!}{k! \times (n-k)!} \]
+	
+	\item (We call the operator the choose operator. We will use both notations interchangeably.)
+	
+	
+\end{itemize}
+
+
+
+\begin{itemize}
+	\item $n!$ and $k!$ are the coefficients of $n$ and $k$ respectively.
+	\item $n! = n \times (n-1) \times (n-2) \times \ldots \times 2 \times 1$
+	\item For example $5! = 5\times4\times3\times2\times1 = 120$
+	\item $n! = n \times (n-1)!$
+	\item Importantly $0! = 1$ not 0.
+\end{itemize}
+\[ {6 \choose 2} = \frac{6!}{2! \times (6-2)!} = \frac{6!}{2! \times 4!}  \]\[\mbox{   } = \frac{6 \times 5 \times 4!}{2! \times 4!} 
+= 30/2 =15 \]
+More examples of Binomial coefficients on blackboard.
+
+
+
+\[ { 52 \choose 5 } = 2598960 \]
+
+
+
+Easier example
+
+\[ { 8 \choose 3 } = \frac{8!}{3! \times 5!} \]
+
+
+We can divide above and below by (5!), leaving us with
+
+\[ \frac{8 \times 7 \times 6}{3 \times 2 \times 1} = 56 \]   
+
+There are 56 way to pick 3 objects at random from group of 8 objects.
+
+	
+		
+		
+
+\section{Maximum, Minimum and Range}
+
+\subsection{Range}
+\begin{itemize}
+\item The Range is simply the difference between the maximum value
+\end{itemize}
+
+\begin{framed}
+	\begin{itemize}
+		\item The \textbf{range} of a set of data is the difference between the highest and lowest values in the data set.
+		\item Consider the following data set
+		\[  \{ 	 39,  23,  34,  41,  37,  27,  44 \}\]
+		\item The highest value (i.e. the maximum) is 44.
+		\item The lowest value (i.e. the minimum) is 23.
+		\item The range is the difference is between these two numbers: 
+		\[ \mbox{Range } = 44 - 23 = 21. \] 
+	\end{itemize}
+\end{framed}
+
+
+
+
+
+
+
+
+
+In this frst homework, we will focus on some simple calculations, and simple concepts. The learning outcome is to familiarise yourself with the SULIS homework system
+
+\begin{itemize}
+	\item Calculate the range of the following data set
+	\[3, 7, 5, 13, 20, 23, 39, 23, 40, 23, 14, 12, 56, 23, 29\]
+	%% 330/15 =22
+	\item Calculate the range of these numbers:
+	\[3, -7, 5, 13, -2\]
+	%% 2.4
+	\item For each of these data sets, determine the sample size.
+\end{itemize}
+
+
+
+\section{Summation}
+The summation sign $\sum$ is commonly used in most areas of statistics.
+Given $x_1 = 3, x_2= 1, x_3 = 4, x_4 = 6, x_5= 8 $ find:
+
+\[
+(i) \displaystyle\sum_{i=1}^{i=n} x_{i}  \hspace{3cm}
+(ii) \displaystyle\sum_{i=3}^{i=4} x_{i}^2
+\]
+\begin{eqnarray*}(i) \displaystyle\sum_{i=1}^{i=n} x_{i} &=& x_1 + x_2 +  x_3 +  x_4 + x_5 \\  &=& 3 +1 +4 +6 + 8 \\ &=& \textbf{22} \end{eqnarray*}
+
+\[ (ii) \displaystyle\sum_{i=1}^{i=n} x_{i}^2 = x_3^2 + x_4^2  = 9 + 16 = \textbf{25} \]
+
+\noindent When all elements of a data set are used, a simple version of the summation notation can be used.
+$\displaystyle\sum_{i=1}^{i=n} x_{i}$  can simply be written as $\sum x$
+
+
+\subsection*{Example}
+Given that $p_1= 1/4, p_2= 1/8, p_3= 1/8,p_4= 1/3, p_5 = 1/6$ find:
+
+\begin{itemize}
+	\item $\displaystyle\sum_{i=1}^{i=n} p_{i} \times x_{i}$
+	\item $\displaystyle\sum_{i=1}^{i=n} p_{1} \times x_{i}^2$
+\end{itemize}
+
+
+
+
+
+
+
+
+\section{Summation}
+The summation sign $\sum$ is commonly used in most areas of statistics.
+Given $x_1 = 3, x_2= 1, x_3 = 4, x_4 = 6, x_5= 8 $ find:
+
+\[
+(i) \displaystyle\sum_{i=1}^{i=n} x_{i}  \hspace{3cm}
+(ii) \displaystyle\sum_{i=3}^{i=4} x_{i}^2
+\]
+\begin{eqnarray*}(i) \displaystyle\sum_{i=1}^{i=n} x_{i} &=& x_1 + x_2 +  x_3 +  x_4 + x_5 \\  &=& 3 +1 +4 +6 + 8 \\ &=& \textbf{22} \end{eqnarray*}
+
+\[ (ii) \displaystyle\sum_{i=1}^{i=n} x_{i}^2 = x_3^2 + x_4^2  = 9 + 16 = \textbf{25} \]
+
+\noindent When all elements of a data set are used, a simple version of the summation notation can be used.
+$\displaystyle\sum_{i=1}^{i=n} x_{i}$  can simply be written as $\sum x$
+
+
+
+
+\subsection*{Example}
+Given that $p_1= 1/4, p_2= 1/8, p_3= 1/8,p_4= 1/3, p_5 = 1/6$ find:
+
+\begin{itemize}
+	\item $\displaystyle\sum_{i=1}^{i=n} p_{i} \times x_{i}$
+	\item $\displaystyle\sum_{i=1}^{i=n} p_{1} \times x_{i}^2$
+\end{itemize}
+
+
+
+
+\section{The Exponential Function }
+
+\[ f(x) = e^{x} \]
+
+For most statistical analyses that you are likely to encounter, the value of x is likely to be negative or less than one.
+
+\[ f(x) = e{-1} \]
+
+\[ f(x) = e^{0.5} \]
+
+
+\newpage
+
+\begin{framed}
+	{
+		\large
+Combinations formula
+\[ ^{n}C_k  = {n! \over k!  \times (n-k)!} \]
+
+\begin{itemize}
+	\item Remark $n! = n \times (n-1)! $
+	\item 0! = 1
+\end{itemize}
+
+\medskip
+Show that
+\[ ^{n}C_0  = 1 \]
+
+\textbf{Solution: }
+\[ ^{n}C_0  = {n! \over 0!  \times (n-0)!} =  {n! \over n!} = 1 \]
+
+
+Show that
+\[ ^{n}C_1  = n \]
+
+\textbf{Solution: }
+\[ ^{n}C_1  = {n! \over 1!  \times (n-1)!} =  {n \times (n-1)! \over (n-1)!} = n \]
+
+\bigskip
+
+Compute $ ^{7}C_2  $\\
+
+\textbf{Solution: }
+\[ ^{7}C_2  = {7! \over 2!  \times (7-2)!} =  {7 \times 6 \times 5! \over 2! \times 5!} = {42 \over 2} =21  \]
+
+
+
+Compute $ ^{11}C_1  $\\
+
+\textbf{Solution: }
+\[ ^{11}C_1  = {11! \over 1!  \times 10!} =  {11 \times 10! \over 1 \times 10!} = 11 \]
+}
+\end{framed}
+
+	\subsection{Example 1}
+	
+	\[ \binom 5 2  = \frac{5!}{2!\;(5-2)!} = \frac{5.4.3!}{2! .3!} = \frac{5.4}{2.1} = 10\]
+	
+	\subsection*{Example 2}
+	
+	\[ \binom 5 0   = \frac{5!}{0!\;(5-0)!} = \frac{5!}{0! .5!} = \frac{5!}{2!} = 1\]
+	Recall $0! =1$
+
+\end{document}

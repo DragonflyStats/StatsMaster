@@ -1,0 +1,31 @@
+
+\begin{verbatim}
+Cx=	75	;	Cy=	40
+Ax=	25	;	Ay=	100
+Bx=	75	;	By=	160
+Dx=	125	;	Dy=	210
+Bx=	75	;	By=	160
+Ex=	125	;	Ey=	110
+
+Xs=c(Cx,Ax,Bx,Dx,Bx,Ex)
+Ys=c(Cy,Ay,By,Dy,By,Ey)
+plot(Xs,Ys,pch=18,col="red",ylim=c(0,240),xlim=c(0,200))
+
+lines(Xs,Ys,col="red",lwd=2)
+
+text(38,70,"B wins",col="purple",font=2)
+text(38,134,"A wins",col="purple",font=2)
+
+text(88,190,"A wins",col="purple",font=2)
+text(88,134,"B wins",col="purple",font=2)
+
+#############################################
+
+text(14,108,"A at 3",col="tomato",font=2)
+text(14,92,"B at 4",col="tomato",font=2)
+
+
+text(Cx+17,Cy,"P = 0.50",col="violetred2",font=2)
+text(Dx+17,Dy,"P = 0.25",col="violetred2",font=2)
+text(Ex+17,Ey,"P = 0.25",col="violetred2",font=2)
+\end{verbatim}

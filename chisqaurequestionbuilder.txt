@@ -1,0 +1,26 @@
+
+colsum1 <- 160;colsum2<-120;colsum3<-120;
+rowsum1 <- 150; rowsum2 <- 150; rowsum3<-100;
+
+grandtotal <- sum(rowsum1,rowsum2,rowsum3);
+E1 <- (rowsum1*colsum1)/ grandtotal;
+E2 <- (rowsum1*colsum2)/ grandtotal;
+E3 <- (rowsum1*colsum3)/ grandtotal;
+E4 <- (rowsum2*colsum1)/ grandtotal;
+E5 <- (rowsum2*colsum2)/ grandtotal;
+E6 <- (rowsum2*colsum3)/ grandtotal;
+E7 <- (rowsum3*colsum1)/ grandtotal;
+E8 <- (rowsum3*colsum2)/ grandtotal;
+E9 <- (rowsum3*colsum3)/ grandtotal;
+
+
+Temp<-diff(sort(sample(1:30,4)))
+Ob1 <- 5*sample(1:10,1);
+Ob2 <- 5*sample(4:10,1);
+Ob3 <- rowsum1 -(Ob1+Ob2);
+Ob4 <- 5*sample(4:10,1);
+Ob5 <- 5*sample(1:10,1);
+Ob6 <- rowsum1 -(Ob4+Ob5);
+
+
+cat("\n",c(Ob1,Ob2,Ob3),"\n",c(Ob4,Ob5,Ob6),"\n","Suppose that the expected value in each cell is 50","\n","---------","\n",c(E1,E2,E3),"\n",c(E4,E5,E6),"\n",c(E7,E8,E9),"\n","---------")

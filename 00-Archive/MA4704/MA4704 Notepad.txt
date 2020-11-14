@@ -1,0 +1,51 @@
+%-------------------------------%
+
+
+1) Z-score 
+2) Chebsyhev's Inequality
+3) Paired t-test
+4) Matrices
+5) Venn Diagrams
+6) Rooted Trees
+7) Variance
+8) 
+
+
+
+
+%---------------------%
+
+\frametitle{Chebyshev's Inequality}
+Let $X$ be a random 
+variable with finite 
+expected value $\mu$ 
+and finite non-zero 
+variance $\sigma^2$. 
+Then for any real number
+$k$ (where k > 0),
+
+\[
+    \Pr(|X-\mu|\geq k\sigma) \leq \frac{1}{k^2}.
+\]
+%---------------------%
+
+$s_d$	Standard Deviation of differences
+$n$ sample size
+{ S_d \over \sqrt{n}} Standard Error of Differences
+$bar{D}$  mean difference
+$\hat{P}$ sample proportion
+
+$\bar{X}$ mean of Sample X
+
+Let us assume
+\begin{itemize}
+\item 1)The population variance is known
+\item 2)The sample size is small.
+\end{itemize}
+
+The confidence level is 95%
+This mmeans that the significance level is 5%.
+Confidence Intervals are always two-tailed procedures.
+
+%-------------------------%
+

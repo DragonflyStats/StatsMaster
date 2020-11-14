@@ -1,0 +1,1885 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+(Time constraints may require continuation in Week 3.)
+
+MA4505 Week 9   Questions from Tutorial Sheets 3 and 4.
+
+
+%% Posted on youtube Channel Early December 2014
+
+
+
+%================================================================================%
+
+
+
+%================================================================================%
+
+
+
+\subsection{Question 3.2 }
+
+
+What is the probability of getting a number divisible by 3 in each of 3 throws of a dice?
+
+
+
+
+Solution
+
+
+
+Numbers divisible by 3 : 3 and 6            probability of throwing 3 or 6:   
+
+
+
+Probability of throwing 3 or 6 three times in a row  ( Each throw of a dice is an independent event.)
+
+
+
+P[3T] = P[T]P[T]P[T]=133=127
+
+%================================================================================%
+
+
+
+
+
+Question 3.3 
+
+
+
+
+
+
+Question 3.4 
+
+
+The following contingency table shows the age and sex of derby winners
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+age =3
+
+
+age =4 
+
+
+age =5
+
+
+Total
+
+
+
+
+Stallion
+
+
+10
+
+
+30
+
+
+20
+
+
+60
+
+
+
+
+Filly
+
+
+20
+
+
+20
+
+
+10
+
+
+50
+
+
+
+
+Total
+
+
+30
+
+
+50
+
+
+30
+
+
+110
+
+
+
+
+A winner is chosen at random. Calculate the probability that
+
+i) the horse is a filly
+
+ii) the horse won as a 5-year old.
+
+iii) the horse was a stallion, given it won as a 3-year old
+
+iv) the horse was a 4-year old, given it was a filly.
+
+
+
+
+Solutions
+
+
+110 derby winners. 50 winners were fillies.                                              answer 
+
+= 50/110 = 45.45 %
+
+
+30 winners were 5 years old                                                    answer 
+
+= 30/110 = 27.27%
+
+
+
+30 winners were three year olds. Of that 30, 10 were stallions.       
+
+answer = 10/30 = 33.33%
+
+
+50 winners were fillies. Of that 50, 20 were 4 year olds                                                  answer (iv) = 20/50 = 40%
+
+%================================================================================%
+
+
+
+
+
+%================================================================================%
+
+
+
+\subsection{Question 3.6 - Binomial}
+
+A dice is thrown 5 times. Calculate the probability of
+i.
+Obtaining exactly one six
+
+
+ii)    Obtaining at least one six
+bi.
+Calculate the (theoretical) mean and variance of the number of sixes obtained?
+
+
+
+P(x=k)=nkpk(1-p)n-k
+
+
+
+
+
+
+Part 1 
+
+
+P(x=1)=51(16)1(56)4
+
+
+51=5!1!4!= 5
+
+
+P(x=1)= 5(16)1(56)4= 0.401 
+
+
+%================================================================================%
+
+
+Part 2
+
+
+obtaining at least one head is complement of obtaining zero heads
+
+
+P(x1)= 1 - p(x=0)
+
+
+
+P(x=0)=50(16)0(56)5
+
+
+50=5!0!5!= 1
+
+
+P(x1)= 1- 0.401 =0.599 
+
+%================================================================================%
+
+
+
+
+
+
+
+
+
+
+
+\section*{Question 21 - Boxplots}
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+		4 & 6 & 8 & 9 & 17 & 17 & 18 & 19 & 20 & 22 \\
+		22 & 27 & 28 & 29 & 31 & 35 & 38 & 39 & 40 & 46 \\
+		48 & 56 & 56 & 57 & 57 & 58 & 58 & 60 & 61 & 62 \\
+		64 & 66 & 68 & 69 & 74 & 75 & 78 & 79 & 80 & 82 \\
+	\end{tabular} 
+	
+\end{center}
+
+lower fence?
+Upper fence?
+Any values above or below fences?
+
+
+		
+
+
+
+
+
+
+
+
+\subsection{ Prosecutor's Fallacy}
+
+
+
+$	P(B|A) = { P(A \mbox{ and } B) \over P(A) } $
+
+$	P(A|B) = { P( A \mbox{ and }B) \over P(B) } $
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Other Stuff}							
+
+It is a one tailed test
+
+$H_o$  : $\mu = 80 $
+$H_a$  : $\mu \neq 80$ 
+
+The significance level is 5% (or 0.05)
+
+what is the column to use?
+
+what is the degrees of freedom 
+Is it a large sample or a small sample?
+
+
+
+\[	\sqrt{3}{1.09 \times 1.08 \times 1.07}]\]
+
+
+\[	\sqrt{ \frac{\hat{p} 1- \hat{p}}{n} }\]
+
+
+\[	\sqrt{ \frac{\hat{p_1} 1- \hat{p_1}}{n_1} + \frac{\hat{p_2} 1- \hat{p_2}}{n_2}}\]
+
+
+
+Binomial Distribution
+
+There are n independent trials
+The probability of a success is
+
+
+%------------------------------------------- %
+
+\noindent \textbf{Calculus For Random Variables}
+
+
+The random variables $X$ has the probability density function $f(X)$ given by:
+\[ f(x) = kx^2(1-x), \phantom{space} 0 \leq x \leq 1 \]
+
+\begin{itemize}
+	\item[1.] Compute the value for $k$,
+	\item[2.] Compute the mean and variance for $X$,
+	\item[3.] Determine the cumulative distribution function $F(x)$,
+	\item[4.] Compute the probability that X lies within one standard deviation of its mean.
+\end{itemize}
+
+%-------------------------------------- %
+
+\noindent \textbf{Calculus For Random Variables}
+
+% \vspace{-2.8cm}
+\textbf{Part 1}\\
+The definite integral of $f(x)$ between 0 and 1 must equal 1.
+
+\[ \int^1_0 f(x)\;dx = \int^1_0 kx^2(1-x)\;dx = \int^1_0 kx^2-kx^3\;dx  \]
+
+
+
+% \vspace{-0.5cm}
+\textbf{Part 1}\\
+The definite integral of $f(x)$ between 0 and 1 must equal 1.
+
+\[ \int^1_0 f(x)\;dx = \int^1_0 kx^2(1-x)\;dx = \int^1_0 kx^2-kx^3\;dx  \]
+
+\[ = \left[\frac{kx^3}{3} \right]^1_0  - \left[\frac{kx^4}{4} \right]^1_0
+\phantom{sce} = \frac{k}{3} - \frac{k}{4} \phantom{sce} = \frac{k}{12} \phantom{sce}(= 1)
+\] 
+
+\[ \boldsymbol{k = 12}\]
+
+%=================================================%
+\textbf{Part 2 :  Compute the Mean and Variance}\\
+\[ \mathrm{E}(x) = \int^1_0 x\; f(x)\;dx  \]
+
+\[ \mathrm{Var}(x) = \mathrm{E}(x^2)  - [\mathrm{E}(x)]^2   \]
+
+\[ \mathrm{E}(x^2) = \int^1_0 x^2\; f(x)\;dx \]
+
+\textbf{Part 2 :  Compute the Mean and Variance}\\
+\[ \mathrm{E}(x) \; = \; \int^1_0 x\; f(x)\;dx \;   \]
+\[ \mathrm{E}(x) \; = \int^1_0 x(12x^2-12x^3)\;dx  \; = \int^1_0 12x^3-12x^4\;dx  \]
+
+
+
+\[ \mathrm{E}(x) \; = \; \int^1_0 x\; f(x)\;dx \;   \]
+\[ \mathrm{E}(x) \; = \int^1_0 x(12x^2-12x^3)\;dx  \; = \int^1_0 12x^3-12x^4\;dx  \]
+
+\[ \mathrm{E}(x)  = \left[\frac{12x^4}{4}-\frac{12x^5}{5} \right]^1_0 = \frac{6}{5} \]
+
+
+\textbf{Part 2 :  Compute the Mean and Variance}\\
+\[ \mathrm{E}(x^2) \; = \; \int^1_0 x^2\; f(x)\;dx \;   \]
+\[ \mathrm{E}(x^2) \; = \int^1_0 x^2(12x^2-12x^3)\;dx  \; = \int^1_0 12x^4-12x^5\;dx  \]
+
+
+\[ \mathrm{E}(x^2) \; = \; \int^1_0 x^2\; f(x)\;dx \;   \]
+\[ \mathrm{E}(x^2) \; = \int^1_0 x^2(12x^2-12x^3)\;dx  \; = \int^1_0 12x^4-12x^5\;dx  \]
+
+\[ \mathrm{E}(x)  = \left[\frac{12x^5}{5}-\frac{12x^6}{6} \right]^1_0 = \frac{2}{5} \]
+
+
+
+\[ \mathrm{Var}(x) = \mathrm{E}(x^2)  - [\mathrm{E}(x)]^2   \]
+
+\[ \mathrm{Var}(x) = \frac{2}{5}  - \left(\frac{3}{5}\right)^2  \]
+
+%--------------------------------- %
+
+\noindent \textbf{Calculus For Random Variables}
+
+% \vspace{-2.90cm}
+\textbf{Part 3 : Determine the cumulative distribution function $F(x)$.}
+
+\[F(x) = \int_o^x f(u) \;du  =  \int_o^x 12u^2-12u^3 \;du\]
+
+
+
+
+\[F(x) = \int_o^x f(u) \;du  =  \int_o^x 12u^2-12u^3 \;du\]
+
+\[ F(x) = \left[\frac{12u^3}{3} - \frac{12u^4}{4} \right]^x_0 \]
+
+\[ F(x) = \left[\frac{12x^3}{3} - \frac{12x^4}{4} \right] = \boldsymbol{ 4x^3 - 3x^4 } \]
+
+
+
+\textbf{Part 4 :}
+\[P(1 \leq X \leq 2) =  \int_1^2 12x^2-12x^3 \;dx\]
+
+
+
+
+
+\begin{itemize}
+	\item Research was carried out on the number of flights leaving a particular airport last year. 
+	
+	\item Of 170 fights that departed on one particular day, 107 flights were to destinations within Europe. 
+	\item Out of all these 170 flights, 36 departures were delayed. 
+	
+	\item Of the 36 delayed flights, 12 were to destinations outside Europe. 
+	
+	
+\end{itemize}
+
+%---------------------------------------- %
+
+
+
+Assume that these numbers are representative of a typical 
+day at this airport. Construct a frequency table and hence a probability table.\\ \bigskip
+\textbf{Frequency Table}\\ \bigskip
+\begin{tabular}{|c|c|c||c|}
+	\hline  &  \phantom{sp} Europe \phantom{sp} & \phantom{sp} Outside \phantom{sp} &\phantom{sp} Total\phantom{sp}  \\ 
+	\hline On Time  & 83 & 51 & 134 \\ 
+	\hline Late & 24 & 12 & 36 \\ \hline
+	\hline Total  & 107 & 63  & 170  \\ 
+	\hline 
+\end{tabular} 
+
+
+
+%---------------------------------------- %
+
+
+
+\subsection{Grouped Data}
+
+The table below gives the number of thunderstorms reported in a particular summer
+month by 100 meteorological stations.
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+	Number of thunderstorms: &0& 1 &2 &3 &4 &5 \\ \hline
+	Number of stations: & 22 & 37 & 20 & 13 & 6 & 2 \\ \hline
+\end{tabular}
+
+\begin{itemize}
+	\item[(a)] Calculate the sample mean number of thunderstorms.
+	\item[(b)] Calculate the sample median number of thunderstorms.
+	\item[(c)] Comment briefly on the comparison of the mean and the median.
+\end{itemize}
+%------------------------------------------------%
+% 12 Normal Approximation of Binomial
+% PMS April 2006 
+In a certain large population 45\% of people have blood group A. 
+A random sample of 300 individuals is chosen from this population.
+Calculate an approximate value for the probability that more than 115 of the sample
+have blood group A.
+
+If X is the number in the sample with group A, then X has a binomial (300, 0.45)
+distribution, so
+\[ E[X] = 300 \times 0.45 = 135 \] and 
+\[ Var[X] = 300 \times 0.45 \times 0.55 = 74.25 \].
+Then, using the continuity correction,
+
+\[ P(X > 115) = P(X > 115.5)\]
+\[ 1- \frac{115.5 - 135}{\sqrt{74.25} } \]
+
+%=========================================================% 
+% PMS Autumn 2008 Question 1
+The mean of a sample of 30 claims is \$5,200.
+Six have mean of \$ 8000 (i.e. group 1)
+Ten have mean of \$ 3100 (i.e. group 2)
+
+Compute the mean for the remaining claims
+
+\[\mbox{Total Costs} = (Cost for Group 1) + (Cost for Group 2) + (Cost from Group 3)\]
+
+\begin{itemize}
+	\item Total Cost for all three groups : $\$5200 \times 30 = \$156000$
+	\item Cost for Group 1 : $\$8000 \times 6 = \$48000$
+	\item Cost for Group 2 : $\$3100 \times 10 = \$31000$
+\end{itemize}
+
+Necessarily the cost for group 3 is $\$77000$
+
+The mean claim for group 3 is therefore
+
+\[ \frac{\$77000}{14} = \$5500 \]
+
+%=========================================================% 
+
+% PMS SPring 2006 Question 6
+Poisson/Binomial/Exponential
+
+\begin{itemize}
+	\item  Poisson
+	
+	Find P(X=0) for Poisson Mean (m=0.5)
+	
+	
+	\[ P(X=0) = \frac{e^{-0.5}}{0!}  = 0.606 \]
+	
+	
+	%=================%
+	\item Binomial
+	
+	%	\[ { 3 \choose 1} \times (0.606)^2 \times (1-0.606)^1 	= 0.434 \]
+	
+	
+	
+	%=================%
+	\item Exponential
+	
+	No Claim in the next two years
+	\[	= (0.606)^2 = 0.368\]
+	
+	
+	\item 	Time Until Next Claim
+	
+	$\mu= 0.5$
+	
+	$T \approx exp(0.5)$
+	
+	\item	$P(XT >2) = exp(-1) = 0.368$
+	
+\end{itemize}
+
+
+
+%http://www.profsullivan.com/storage/chapter%204%20notes.pdf
+% http://mi.eng.cam.ac.uk/~rwp/Maths/eg/2012_maths_p9.pdf
+
+%----------------------------------------------%
+
+
+
+
+
+\subsection{Dice Roll Example}
+
+Suppose someone asks you to play the following game. Roll a die. If the die shows a 1, 2, 3, or 4, 
+you lose \$10. If the die shows a 5, you win \$15. If the die shows a 6, you win \$30. What is your expected 
+value?
+
+%--------------------------------------------------------------------%
+
+The mean and standard deviation of the following
+
+We are told the following piece of information $\bar{x} = 44$
+So what is the coefficient of determination?
+
+
+
+\end{documents}
+
+
+
+
+
+
+\subsection{Exercise: Counting}
+% 2007 Q8
+Given S is the set of all 5 digit binary strings, E is the set of a 5 digit
+binary strings beginning with a 1 and F is the set of all 5 digit binary strings ending
+with two zeroes.
+\begin{itemize}
+	\item[(a)] Find the cardinality of S, E and F.
+	\item[(b)] Draw a Venn diagram to show the relationship between the sets S, E and F.
+	Show the relevant number of elements in each region of your diagram.
+\end{itemize}
+%-------------------------------------------------------------------------%	
+\subsection{Exercise: Combinations}
+
+A committee of 4 must be chosen from 3 females and 4 males.
+
+\begin{itemize}
+	\item In how many ways can the committee be chosen.
+	\item In how many cans 2 males and 2 females be chosen.
+	\item Compute the probability of a committee of 2 males and 2 females are chosen.
+	\item Compute the probability of at least two females.
+\end{itemize}
+
+
+\textbf{Part 1}
+
+We need to choose 4 people from 7:
+
+This can be done in
+
+\[
+^7 C_4  = {7!  \over 4! \times 3!} =  {7 \times 6 \times 5 \times 4!  \over 4! \times 3!} = 35 \mbox{ ways.}
+\]
+
+
+\textbf{Part 2}
+
+With 4 men to choose from, 2 men can be selected in \[
+^4 C_2  = {4!  \over 2! \times 2!} =  {4 \times 3 \times 2!  \over 2! \times 2!} = 6\mbox{ ways.}
+\]
+
+Similarly 2 women can be selected from 3 in
+\[
+^3 C_2  = {3!  \over 2! \times1!} =  {3 \times 2!  \over 2! \times 1!} = 3\mbox{ ways.}
+\]
+
+%% ----------------------------------%%
+%--------------------------------------------------------%
+{
+\subsection{Example of Combinations}
+	
+	\textbf{Part 2}
+	
+	Thus a committee of 2 men and 2 women can be selected in $ 6 \times 3  = 18 $ ways.\\
+	\bigskip
+	\textbf{Part 3}
+	
+	The probability of two men and two women on a committee is
+	\[ {\mbox{Number of ways of selecting 2 men and 2 women} \over \mbox{Number of ways of selecting 4 from 7}} = {18 \over 35 }\]
+	
+	
+	
+	\textbf{Part 4}
+	\begin{itemize}
+		\item The probability of at least two females is the probability of 2 females or 3 females being selected.
+		\item We can use the addition rule, noting that these are two mutually exclusive events.
+		\item From before we know that probability of 2 females being selected is 18/35.
+		\item We have to compute the number of ways of selecting 1 male from 4 (4 ways) and the number of ways of selecting three females from 2 ( only 1 way)
+		\item The probability of selecting three females is therefore ${4 \times 1 \over 35} = 4/35$
+		\item So using the addition rule
+		\[ Pr(\mbox{ at least 2 females }) = Pr(\mbox{ 2 females }) + Pr(\mbox{ 3 females }) \]
+		\[ Pr(\mbox{ at least 2 females })  = 18/35 + 4/35 = 22/35 \]
+	\end{itemize}
+	
+}
+
+
+\subsection{Worked Example 1}
+An ordered sequence of four digits is formed by choosing digits without
+repetition from the set $\{1, 2, 3, 4, 5, 6, 7\}$ .
+
+\begin{itemize}
+	\item[(i)] the total number of such sequences; (780)
+	\item[(ii)] the number of sequences which begin with an odd number; (480) N(A)
+	\item[(iii)] the number of sequences which end with an odd number; (480) (NB)
+	\item[(iv)] the number of sequences which begin and end with an odd number;(240)
+	\item[(v)] the number of sequneces which begin with an odd number or end with an
+	odd number or both; (720)
+	\item[(vi)] the number of sequences which begin with an odd number or end with an
+	odd number but not both. (480)
+\end{itemize}
+
+
+
+\newpage
+
+(Time constraints may require continuation in Week 3.)
+
+
+
+%----------------------------------------------------------------------% 
+% 2000 - Q4
+(a)(a)    A communications channel transmits digits 0 and 1.  However, due to interference the digit transmitted is incorrectly received with probability 0.2.  In order to increase accuracy an engineer decides to use majority decoding and transmits 00000 instead of a single 0.  The receiver will assume a 0 was transmitted if 3 or more zeroes are received. 
+
+\item[(i)]                  What is the probability that the message will be incorrectly decoded?
+\item[(ii)]                If 5 digits are transmitted, what is the expected (average) number of digits transmitted incorrectly?
+\item[(iii)]               What is the probability that exactly two of the 5 digits will be transmitted incorrectly?
+
+%----------------------------------------------------------------------% 
+
+(b)(b)   Telephone calls arrive at a switchboard at the rate of 40 per hour.  Assume that the telecentre operators take 3 minutes to deal with a customer query.  Calculate the probability of :
+
+
+\begin{enumerate}[(i)]
+	\item                  2 or more calls arriving in any 3 minute period.
+	\item                  No phone calls arriving in a 3 minute period
+	\item                 Exactly one phone call arriving in any 3 minute period
+	\item              Average and standard deviation of the number of phone calls arriving in a 3 minute period.
+\end{itemize}
+%----------------------------------------------------------------------% 
+
+(c)(c)    A power supply unit for a computer is assumed to follow an exponential distribution with a mean life of 1,000 hours.  What is the probability that the unit will:
+
+
+\begin{enumerate}[(i)]
+\item  fail in the first 100 hours
+\item  survive more than 800 hours
+
+\end{enumerate}
+
+
+
+
+
+	
+	
+	%------------------------------------------------------------------------%
+	{\noindent  \textbf{Problem}
+	
+		A  government agency carries out a large-scale random survey of public
+		attitudes towards the recession. 200 of the 900 workers surveyed indicated they
+		were worried about losing their job. 
+		
+		
+		\noindent \textbf{Introduction}
+		The objective of the survey is to obtain an assessment of the views or opinions of students studying in the Faculty of Business and Accounting studies at a specific university.
+		\vspace{0.4cm}
+		We would like to know p which is the ``proportion of successes". For instance, p could be:
+		\begin{itemize} \item the proportion of U.S. citizens that support Obama,
+			\item  the proportion of smokers among adults age 18 or over,
+			\item the proportion of people worldwide infected by the H1N1 virus.
+		\end{itemize}
+		
+		\noindent \textbf{The Sample Proportion}
+		\begin{itemize}
+			\item The sample proportion is computed from the sample.
+			\item It is the proportion of `successes' in the sample.
+			\item Suppose we are interested in the number of people who like geese.
+		\end{itemize}
+		
+		
+		Using these values, we can calculate the standard error with this expression.
+		
+		\[
+		S.E. (\hat{P}) = \sqrt{ { 0.60 \times 0.40 \over 400}}
+		\]
+		
+		\vspace{0.1cm}
+		
+		However, it is easier to perform such calculates when working in terms of percentages.
+		
+		\vspace{0.1cm}
+		\[
+		S.E. (\hat{P}) = \sqrt{ { 60 \times 40 \over 400}}  \;[\%]
+		\]
+\subsection{Sample Proportion Problem}
+		A pet food supplier is studying the difference between two of its stores. It is
+		particularly interested in the time it takes before customers receive the products
+		they have ordered. Using standard notation, the data of delivery times from
+		the two stores is as follows:
+		\begin{tabular}{|l|c|c|}
+			\hline
+			& Store A  & Store A  \\ \hline 
+			$\bar{x}$ & 34.3 days & 38.6 days \\ \hline
+			S & 2.5 days & 3.4 days \\ \hline 
+			Sample Size & 41 & 31 \\ \hline
+			\hline
+		\end{tabular}
+		
+		\begin{itemize}
+			\item Use an appropriate hypothesis test to see if there is a difference in the
+			average delivery times for the two stores. \item Test at two appropriate levels
+			and comment on your findings. \end{itemize}
+
+		
+		\begin{itemize}
+			\item $\mbox{Test Statistic}= { 150\; - \;0 \over 30 }$\\
+			\item $\mbox{Statistic} : \hat{P}_{1} - \hat{P}_{2}$\\
+		\end{itemize}
+		
+\subsection{Exponential Distribution Problem}
+		
+		
+		\[
+		P (X > 15) = e ^{-15\lambda}
+		= e ^{-3 / 2}
+		= 0.22
+		\]
+		
+		
+		What is the probability that a customer will spend more than 15 minutes in the bank given that he is still in the bank after 10 minutes?
+		\[
+		P (X > 15|X > 10) = P (X > 5) = e
+		= e ^{-3 / 2}
+		= 0.604
+		\]
+		
+\subsection{Confidence Interval Problem}
+	
+	Suppose we want to estimate the average weight of an adult american male. We draw a random sample of 100 men from the population  and weigh them.\\ \vspace{0.3cm} We find that the average man in our sample weighs 180 pounds, and the standard deviation of the sample is 30 pounds.\\ What is the 95\% confidence interval?
+	
+	
+	
+\noindent  \textbf{Problem}
+	
+	\begin{itemize}
+		\item
+		\textbf{Identify a sample statistic} - Since we are trying to estimate the mean weight in the population, we choose the mean weight in our sample (180) as the sample statistic.
+		
+		
+		\item \textbf{Select a confidence level}  -In this case, the confidence level is defined for us in the problem. We are working with a 95\% confidence level.
+		
+		
+		\item \textbf{Find the margin of error} - Previously, we described how to compute the margin of error.
+	\end{itemize}
+	
+	
+	
+
+	
+	Using these values, we can calculate the standard error with this expression.
+	
+	\vspace{0.1cm}
+	\[
+	\mbox{Std. Error}(\bar{X})  = \sqrt{{30^2\over 100}} = \sqrt{9}
+	= 3\]
+	
+	\vspace{0.1cm}
+	
+	The Standard Error is 3lbs.
+	
+	
+	
+}
+
+
+\noindent  \textbf{Outline of the Survey}
+	The objective of the survey is to obtain an assessment of the views or opinions of students studying in the Faculty of Business and Accounting studies at a specific university.
+	
+	\vspace{0.4cm}
+	
+	The Survey is broken into three parts - A,B and C. \\ \vspace{0.2cm}
+	
+	A - Questions in this section are of ``Likert'' type. The data obtained here is ordinal (Categorical) although we treat it as if it were interval (Numerical) for the analysis.\\
+	\vspace{0.2cm}
+	B - One question asking people to indicate what School they are from - nominal (Categorical) data.\\
+	\vspace{0.2cm}
+	C - Another Likert question.
+
+
+\subsection{VaVaVoom}
+
+\begin{itemize}
+\item The plant in Austria produces 80\% of the cars.
+
+\item The plant in Belgium produces 20\% of the cars.
+
+\item A randomly chosen car was build at Austrian plant
+
+\item A randomly chosen car was built at the Belgian plant
+
+%S: A randomly chosen car has standard
+\end{itemize}
+
+
+
+\begin{center}
+\begin{tabular}{cccccccccc}
+	\hline 
+	4 & 6 & 8 & 9 & 17 & 17 & 18 & 19 & 20 & 22 \\ 
+	
+	22 & 27 & 28 & 29 & 31 & 35 & 38 & 39 & 40 & 46 \\ 	
+	48 & 56 & 56 & 57 & 57 & 58 & 58 & 60 & 61 & 62 \\ 	
+	64 & 66 & 68 & 69 & 74 & 75 & 78 & 79 & 80 & 82 \\ \hline
+
+\end{tabular} 
+\end{center}
+
+
+lower fence?
+Upper fence?
+
+Any values above or below fences?
+
+
+
+
+\subsection{ Prosecutor's Fallacy}
+
+
+
+$	P(B|A) = { P(A \mbox{ and } B) \over P(A) } $
+
+$	P(A|B) = { P( A \mbox{ and }B) \over P(B) } $
+
+
+
+
+
+
+
+
+
+
+\subsection{Other Stuff}							
+
+It is a one tailed test
+
+$H_o$  : $\mu = 80 $
+$H_a$  : $\mu \neq 80$ 
+
+The significance level is 5% (or 0.05)
+
+what is the column to use?
+
+what is the degrees of freedom 
+Is it a large sample or a small sample?
+
+
+
+\[	\sqrt{3}{1.09 \times 1.08 \times 1.07}]\]
+
+
+\[	\sqrt{ \frac{\hat{p} 1- \hat{p}}{n} }\]
+
+
+\[	\sqrt{ \frac{\hat{p_1} 1- \hat{p_1}}{n_1} + \frac{\hat{p_2} 1- \hat{p_2}}{n_2}}\]
+
+%================================================================%
+
+\textbf{The F-test}
+\begin{description}
+	\item[H\_0:] Both variances are equal
+	\item[H\_a:] The variances are different.
+\end{description}
+
+
+Compute the test statistic.
+
+Divide the larger variance by the smaller variance.
+
+The degrees of freedom are as follows
+\begin{itemize}
+	\item $\nu_1$ size of sample with larger variance
+	\item $\nu_2$ size of sample with smaller variance
+\end{itemize}
+
+There are 5 values tabulated
+We use the one for a significance level of 0.05
+Carefully read the tables.
+
+
+Binomial Distribution
+
+There are n independent trials
+The probability of a success is
+\begin{itemize}
+	\item	$\sum_x$
+	\item 				$\sum_y$
+	\item				$\sum_xy$
+	\item				$\sum_x^2$
+	\item 				$\sum_y^2$
+	\item 				$ n=10$
+\end{itemize}		
+
+
+%------------------------------------------- %
+
+
+
+
+\subsection{Counting Problems - Question 1}
+
+\begin{itemize}
+	\item Research was carried out on the number of flights leaving a particular airport last year. 
+	
+	\item Of 170 fights that departed on one particular day, 107 flights were to destinations within Europe. 
+	\item Out of all these 170 flights, 36 departures were delayed. 
+	
+	\item Of the 36 delayed flights, 12 were to destinations outside Europe. 
+	
+	
+\end{itemize}
+
+%---------------------------------------- %
+
+
+
+Assume that these numbers are representative of a typical 
+day at this airport. Construct a frequency table and hence a probability table.\\ \bigskip
+\textbf{Frequency Table}\\ \bigskip
+\begin{tabular}{|c|c|c||c|}
+	\hline  &  \phantom{sp} Europe \phantom{sp} & \phantom{sp} Outside \phantom{sp} &\phantom{sp} Total\phantom{sp}  \\ 
+	\hline On Time  & 83 & 51 & 134 \\ 
+	\hline Late & 24 & 12 & 36 \\ \hline
+	\hline Total  & 107 & 63  & 170  \\ 
+	\hline 
+\end{tabular} 
+
+
+
+%---------------------------------------- %
+
+
+
+
+\textbf{Probability Table} \\ \bigskip
+\begin{tabular}{|c|c|c||c|}
+	\hline  &  \phantom{sp} Europe \phantom{sp} & \phantom{sp} Outside \phantom{sp} & \phantom{sp} Total\phantom{sp}  \\ 
+	\hline On Time  & 48.82\% & 30.00\% & 78.82\% \\ 
+	\hline Late & 14.12\% & 7.06\% &  21.18\% \\ \hline
+	\hline Total  & 62.94\% & 30.06\% & 100.00\% \\ 
+	\hline 
+\end{tabular} 
+
+
+
+Using the probability table answer the following questions. \\
+\bigskip
+For a randomly chosen flight departing from this airport, what is the probability that it: 
+\begin{itemize}
+	\item[(a)] Departs on time? 
+	\item[(b)] Departs with a delay and is a flight outside Europe? 
+	
+	\item[(c)] Departs on time or is a flight outside Europe? 
+	\item[(d)] Departs on time, given that you know it is a flight within Europe? 
+	
+	\item[(e)] Is a flight within Europe, given that you know that it departs on time?
+\end{itemize}
+%-------------------------------------------------------------------------------%
+Q1
+
+A telecommunications company has two servers from different suppliers. The Operations Director randomly selected 9 months from the previous year’s figures.  The down time figures for each server is as follows (down time per month in hours)
+
+
+Server 1	Server 2
+1	5.3	5.4
+2	5.4	5.5
+3	5.5	6.1
+4	5.2	5.0
+5	5.1	5.1
+6	5.6	5.2
+7	5.4	5.3
+8	5.5	5.4
+9	5.6	5.9
+
+
+(a)	You are required to construct a box plot for each server’s output and to comment on the salient features of each plot.  Is there evidence from the box plots to reject the hypothesis that there is no difference in the down time between the two servers?  Use the box plot to justify your comments. 							(8 marks)
+
+(b)	Compare and contrast the Mean and the Median as measures of location
+(2 marks)
+
+(c)	Two independent resistors are located in a simple circuit as shown below.  You are required to calculate the probability that the signal will travel from x to y.  Resistor A has a mean time of 20 hours to failure and Resistor B a mean time of 40 hours.  Assume that the respective failure rates follow an exponential distribution.  What is the probability that signal integrity will be maintained between x and y for 30 or more hours?
+(10 marks)
+
+
+
+
+
+(c)	A random sample of 100 resistors revealed that 5 were outside specification.  You are requested to construct a 95% confidence interval for the proportion of resistors that are defective (outside spec.).
+
+If the company wished to estimate the defective rate to within + or - 2% with 99% confidence, how big a sample would need to be undertaken to provide the relevant information?
+(8 marks)
+
+
+
+
+Q3
+Two facilities, one in Limerick and the other in Galway produce identical products on similar lines.  The production manager randomly selected 9 weeks from the previous year’s production.  The number of units produced in each facility was recorded in thousands as follows:
+
+Limerick	Galway
+1	3.8	3.7
+2	3.9	3.8
+3	4.0	3.6
+4	3.7	3.3
+5	3.6	3.4
+6	4.1	3.5
+7	3.9	3.6
+8	4.0	3.7
+9	4.1	3.4
+
+
+
+Limerick	Galway
+Sample Mean	3.90	3.56
+Standard Deviation	0.173	x
+
+(a)	Fill in the missing section from the above table			(2 marks)
+(b)	Does the data provide sufficient evidence to support the hypothesis that the populations are of equal variances?  Use a 5% level of significance and indicate clearly all calculations made. 					(9 marks)
+(c)	You are required to test the hypothesis that there is no statistical difference between the number of units produced at each plant.  Use a test with a 5% probability of a Type 1 error.					(9 marks)
+
+
+%-----------------------------------------------------------------------------%
+\subsection{2005 Question 4}
+(a)	Under what circumstances is it appropriate to use the binomial distribution when calculating probabilities?					(1 mark)
+
+(b) 	Flextronics supply PCB boards to Dell.  You are a production manager with Dell.  There is a constant probability of 0.01 that a board will be defective.  You select 50 boards at random.  What is the probability that:
+\begin{itemize}
+	\item[(i)]	0 boards will be defective
+	(ii)	1 or more boards will be defective
+	(iii)	2 or less boards will be defective			
+	
+	%---------------------------------%
+	
+	% Question 4 continued
+	
+	(c)	Flaws occur in an LCD display at the rate of 0.4 per square mm.  Calculate the probability that:
+	(i)	exactly 2 flaws will occur in a square mm section
+	(ii)	exactly 3 flaws will occur in a 5 square mm section
+	(iii)	5 or more flaws will occur in a 10 square mm section
+	(6 marks)
+	
+%------------------------------------------------------------------------------------% 
+
+(d)	A production manager for a contract manufacturer in electronic sub assembly has 3 suppliers of motherboards. 
+
+	•	Supplier A provides 50% of the boards, with B and C providing 30% and 20% respectively.  
+	•	Supplier A boards have a 2% defect rate, with B and C at 1% and 3% respectively, i.e. the conditional probability that a mother board fails given that A was the supplier = 0.01.  
+	A board selected randomly from any of the three suppliers fails on mechanical test.  What is the probability that the board was supplied by Supplier A? i.e. what is the conditional probability that A supplied the board given that the board failed a random test?
+	(7 marks)
+	
+	%-----------------------------------------------------------------------------------%
+	
+	Q5
+	A wood scientist wanted to establish if there was a relationship between the adhesive strength of laminated wood and the dwell time in press machine. A random sample of 7 different times and their corresponding adhesive strengths in pounds per square inch were recorded as follows:
+	
+	
+	X	Y
+	Time (in minutes)	Pull Strength
+	1	4.3	2.8
+	2	4.4	3.1
+	3	4.6	3
+	4	4.8	3.4
+	5	5.2	3.6
+	6	5.4	3.8
+	7	5.5	4
+	
+	\sumxy =117.04	 \sumx2 = 168.05	 \sumx = 34.2	\sumy = 23.7      \sumy2 = 81.41
+	%------------------------------------------------------------%
+	
+	Q5 continued
+	
+	(a) 	You are required to 
+	i.	Draw a scattergram and comment on its features
+	ii.	Find the regression equation and plot the regression equation on scattergram
+	iii.	Use a 5% level of significance to test the hypothesis that R correlation coefficient equals Zero. Interpret your answer.
+	(8 marks)
+	
+	The data was entered into Minitab and the following outputs were generated
+	
+	Predictor	Coef		SE Coef	T		P
+	Constant			0.4597		-2.06		0.095
+	Hours				0.09369	 9.46		0.000
+	
+	S= 0.1112	R-Sq = 94.7%		R-Sq(adj) = 93.7%
+	
+	
+	(b) 	You are requested to explain how the T-value of 9.46 was calculated and to 
+	interpret the corresponding P value of 0.000
+	(4 marks)
+	
+	
+	
+	(c)	Fill in the blanks from the following tables and explain the relationship between F value of 89.51 and the T-value of 9.46 in section (b)
+	(8 marks)
+	Analysis of Variance
+	Source			DF		SS		MS		F		P
+	Regression		x		1.1067		1.1067		89.51		0.000
+	Residual Error		x		xx		xxx		
+	Total			x		1.1686
+	
+	
+	
+	Observation		Time		Pull Strength		Fitted value	Residual
+	2			4.4		3.1			x		x
+	
+	%-----------------------------------------------------------------------------------%
+	
+	-2-
+	
+	MA4704 Technological Maths 4 
+	
+	Q1
+	A multinational company has two sub suppliers, one in Taiwan and the other in mainland China.  Both plants have similar production facilities and are dedicated exclusively to supplying a company based in Ireland with components.
+	The number of defects per shipment is recorded as follows:
+	
+	SubS 1	16	18	19	22	22	25	28	28	28	31	33	27	23
+	SubS 2	22	23	25	27	27	28	30	32	33	35	36	38	38
+	
+	(a)	You are required to construct a box plot for each plant’s output and to comment on the salient features of each plot.  Is there evidence from the box plots to reject the hypothesis that there is no difference in the defect figures between the two facilities?  Use the box plot to justify your comments.
+	(8 marks)
+	
+	(b)	Compare and contrast the Mean and the Median as measures of location
+	(2 marks)
+	
+	(c)	The mean of three numbers: w, y, z is x
+	
+	\item[(i)]Expressx in terms of w, y, z
+	\item[(ii)] If a and b are constants express the means of 
+	aw + b;   ay + b;   az + b
+	in terms of  
+	(10 marks)
+	
+	%---------------------------------------------------------------------------------------------------------------------------%
+	
+	\subsection{Question 2}
+	
+	(a)	
+	Assume that Z scores are normally distributed with a mean of Zero and a
+	standard deviation of 1
+	
+	\begin{itemize} 
+		\item[(i)] 	P (0< Z < a)  =  0.1685 			 Find   a 
+		\item[(ii)]            P(- b \leq Z < b) =  0.95		            	 Find   b
+		\item[(iii)]             P(Z £ c)  =       0.3015 			 Find   c
+	\end{itemize}
+	
+	%---------------------------------------------------%
+	
+	(b) 	\item[(i)]P(EF) denotes the conditional probability of “E given F”. 
+	Write down an equation to express the relationship between 
+	P(F), P(EF) and P ( E  F)
+	\item[(ii)]E and F are events such that   P(EF) = ½ ,   P(EF) =  ⅓ 
+	and P ( E  F) = 1/7
+	Find P(E F)
+	\item[(iii)]Are the events E and F in part \item[(ii)]independent? Give a reason for your answer.										(7 marks)	
+	
+	%---------------------------------------------------%
+	
+	(c)	An assembly plant has two suppliers, one based in England (E) and the other in Spain (S).  
+	60% of the components are supplied by the Spanish factory and the remaining 40% by the English base factory.  
+	The defect rate in the English plant is 5% and in the Spanish plant is 6%.
+	
+	\begin{itemize}
+		\item[(i)]	If a component is randomly selected from the production floor in Ireland what is the probability that it will fail?
+		\item[(ii)]	If a motherboard fails what is the probability that the component which caused the failure was sourced in England?
+	\end{itemize}
+	
+	% MA4704 (7 marks)
+	
+	
+
+	
+	%---------------------------------------------------%
+	
+	(c)	XYZ Ltd supplies motherboards to Dell.  You are a production manager with Dell.  There is a constant probability of 0.4 that a board will be defective.  You select 100 boards at random.  Using the log tables for the binomial distribution what is the probability that
+	
+	\begin{itemize}
+		\item[(i)] 0 boards will be defective?
+		\item[(ii)] 2 or more boards will be defective?
+		\item[(iii)]	5 or less boards will be defective?
+	\end{itemize}
+	% (6 marks)
+	(d)	Use the normal approximation to the binomial to answer (i), \item[(ii)]and \item[(iii)]in part (c) above.
+	%(6 marks)
+	
+	%------------------------------------------------------------------------------------------------------------------------------------------------%
+	
+	\section{Question 4}
+	In the British General Election, from a random sample of 900 voters, 468 people said they would vote for the Labour Party.  
+	
+	(a) 	You are required to construct a 95\% Confidence Interval based on survey data for the proportion of people who will vote for the Labour Party in the election.
+	% (2 marks)
+	
+	%------------------------------------------------------------------------------------------------------------------------------------------------%
+	(b)	If the leadership of the Labour Party wanted the error in the survey to be $\pm 1\%$ at a 95\% Confidence Interval, how many people should they interview
+	
+	\begin{itemize}
+		\item[(i)]	Using the survey results as a prior estimate of the proportion of people supporting the Labour Party
+		% (4 marks)
+		\item[(ii)]	If no prior information were available, how many people would need to be surveyed?
+		%(5 marks)
+	\end{itemize}
+	%-----------------%
+	(c)	The Labour Party claims that a majority of the British population (p = 50%) support them.  Based on the survey results, is there any evidence to reject this hypothesis at the 1% level of significance? 
+	%	(9 marks)
+	
+	%-------------------------------------------------------------------------------%
+	
+	\section{Question 5} 
+	
+	The National Roads Authority is studying the relationship between the number of bidders on a Motorway project and the winning (lowest) bid for the project.  Of particular interest is whether the number of bidders increases or decreases with the amount of the winning bid.
+	
+	Observation number 	Number of Bidders (x)	Winning Bids
+	(y)
+	1	5	4.0
+	2	8	6.9
+	3	4	3.9
+	4	9	7.8
+	5	3	2.7
+	6	6	6.1
+	7	4	4.4
+	8	7	6.2
+	
+	\sumxy =	1932 	\sumx2 =	2116 	\sumx =	46	\sumy =  42	\sumy2 = 1764 
+	
+	
+	(a) You are required 
+	(i)To draw a Scatter Gram and comment on its features
+	\item[(ii)]Find the regression equation and plot the regression equation on the scattergram
+	\item[(iii)]Use a 5% level of significance to test the hypothesis that R correlation coefficient equals zero.  Interpret your answer.
+	(12 marks)
+	
+	%-----------------------------------------%
+	
+	(b) The above data was entered into Minitab and the following output was generated:
+	You are requested to fill in the blanks in the following table:
+	Analysis of Variance
+	
+	Source      	      DF          SS          MS         F        P
+	Regression      	        x         20.160      20.160   x         0.000
+	Residual Error         x        xx              xxx
+	Total             	        x         21.460
+	
+	
+	Observation    Number of Bidders	Winning Bid	Fitted value	Residual
+	2	8			        6.9 		      x			      x
+	
+	(8 marks)
+	
+	%-----------------------------------------------------------------%
+
+
+
+	%----------------------------------------------------------------------% 
+	% 2000 - Q5
+	The surface finish of a metal part is thought to be linearly related to the cutting speed of the machine which produces it.  Surface finish is measured on an arbitrary scale from 0 to 20, with 0 being the roughest finish.  The following data have been observed:
+	
+	Surface finish (Y)4.895.956.326.007.709.509.739.50
+	Speed (RPM) (X)1213141516171819
+	
+	\item[(i)]                  Draw a scatter diagram to illustrate the data
+	\item[(ii)]                Find the value of the correlation coefficient
+	\item[(iii)]               Using a significance level of a = 0.05, test the claim that there is no linear correlation between surface finish and speed
+	\item[(iv)]              Find the equation of the regression line and plot the regression line on the scatter diagram
+	(v)(v)                Estimate the surface finish if the machine speed is set at 17rpm. 
+	
+	
+	Note that:
+	Sy = 59.59
+	Sx = 124
+	Sy2 = 469.71
+	Sx2 = 2075
+	Sxy983.58
+	
+	
+
+
+
+\section{Poisson Approximation}
+
+n  = 25
+p = 0.1, 0.2
+
+Poisson approximation of Binomial ( letting $m=np$
+
+\begin{itemize}
+	\item $m_1 = 2.5$
+	\item $m_2 = 5$
+\end{itemize}
+
+Find $P(X\geq 5)$ 
+
+$ P(X\leq 4)  = 1 - P(X\geq 5) $
+
+From Tables 
+0.89118
+0.44049
+
+(Rest : Compare to Real Answers)
+
+%========================================================%
+% PMS Spring 2006 Question 3
+
+A random sample of 10 is taken from a normal distribution of $\mu=20$ and $\sigma^2=1$. Let $s^2$ be the sample variance.
+
+Find $P(S^2>1)$
+
+\subsection*{Solution}
+
+\[ \frac{(n-1)S^2}{\sigma^2} \sim \chi^2_{n-1}\]
+
+\[ 9S^2 \sim \chi^2_{9}\]
+
+
+\[ P(S^2>1) = P(\chi^2_{9}>9) = 1.05627 = 0.437\]
+
+%========================================================%
+
+PMS Spring 2008 
+\[f(x,y) = \frac{4}{3}(1-xy) \mbox{   }0<x<1,0<y<1  \]
+
+The Marginal PDF of X and Y is given by 
+
+\[f(x) = \frac{2}{3}(2-x) \mbox{   }0<x<1 \]
+\[f(x,y) = \frac{2}{3}(2-y) \mbox{   }0<y<1  \]
+
+Show that the conditional expectation of $Y$ given $X$ is given by
+
+\[ f(y|x) = \frac{2(1-xy}{2-7} \mbox{   }0<y<1\]
+
+\textbf{Solution}
+
+\[ f(y|x) = \frac{f(x,y)}{f(x)} = \frac{\frac{4}{3}(1-xy)}{\frac{2}{3}(2-x)} = \frac{2(1-xy)}{2-x}\]
+
+%========================================================%
+\subsection{Joint Probability Tables}
+% PMS Autumn 2009 Question 8
+
+Find $E[X|Y=2]$
+
+\begin{tabular}{ccccc}
+	& X=0  & X=1  & X=2  &              \\ \hline
+	Y=1 & 0.15 & 0.2  & 0.25 & P(Y=1) = 0.6 \\ \hline
+	Y=2 & 0.05 & 0.15 & 0.20 & P(Y=2) = 0.4 \\ \hline
+	& P(X=0) = 0.2  & P(X=1) = 0.35  & P(X=2)=0.45  &              \\ \hline
+\end{tabular}
+% TABLE HERE
+
+
+
+\textbf{Solution}
+\[   \frac{(0 \times 0.05) + (1 \times 0.15)+(2 \times 0.2) }{0.4}  = \frac{0.55}{0.4}  \] 
+
+$E[X|Y=2] = 1.375$
+
+
+%----------------------------------------------------------------%
+
+
+
+\subsection{Question 1 : Probability Distribution}
+
+\noindent \textbf{Introduction}\\
+
+Consider playing a game in which you are winning when a \textbf{\emph{fair die}} is showing `six'
+and losing otherwise.
+
+\subsection{Part 1}If you play three such games in a row, find the probability mass function (pmf) of the number
+X of times you have won.
+
+{
+	\begin{itemize}
+		\item Firstly: what type of probability distribution is this?
+		
+		\item Is this the distribution \textbf{\emph{discrete}} or  \textbf{\emph{continuous}}?
+		
+		\item The outcomes are whole numbers - so the answer is discrete.
+		
+		\item So which type of discrete distribution? (We have two to choose from. See first page of formulae)
+		
+		
+		\item \textbf{Binomial:} characterizing the number of \textbf{\emph{successes}} in a series of \textbf{\emph{$n$ independent trials}}, with the \textbf{\emph{probability of a success}} in each trial being $p$.
+		
+		\item \textbf{Poisson:}  characterizing the \textbf{\emph{number of occurrences}} in a \textbf{\emph{unit space}} (i.e. a unit length, unit area or unit volume, or a unit period in time), where $\lambda$ is the the number of occurrences per unit space.
+		
+	\end{itemize}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+%----------------------------------------%
+
+
+
+
+%----------------------------------------%
+%----------------------------------------%
+
+
+
+\textbf{Example}\\
+
+In the above example where the die is thrown repeatedly, lets work out $P(X \leq t)$ for some values of t.
+
+P(X $\leq$ 1) is the probability that the number of throws until we get a 6 is less than or equal to 1. So it is either 0 or 1. 
+
+\begin{itemize}
+	\item P(X = 0) = 0 
+	\item $P(X = 1) = 1/6$.
+	\item  Hence $P(X \leq 1) = 1/6$
+\end{itemize}
+
+Similarly, $P(X \leq 2) = P(X = 0) + P(X = 1) + P(X = 2)$\\ = 0 + 1/6 + 5/36 = 11/36
+
+
+
+	
+\subsection*{Question 10. } % 10 Marks
+
+\begin{itemize}
+	\item[a.] (1 Mark) The observation of the air pressure at a volume of 5 cubic metres was 19.87 bars.
+	Calculate the residual from the regression model corresponding to this observation.
+	\item[b.] (3 marks) Using the table above to justify your conclusion, test the null hypothesis that there
+	is no monotonic (systematic) relationship between volume and pressure. State the null
+	and alternative hypotheses clearly.
+	\item[c.] (2 marks) Briefly explain why the use of linear regression to describe pressure as a function
+	of volume is inappropriate.
+\end{itemize}
+
+
+
+
+
+
+
+% - Section 1 Probability
+% - Section 2 Discrete Probability Distributions
+% - Section 3 Normal Distribution and Sampling Distributions
+% - Section 4 Single Sample Inference
+% - Section 5 Two Sample Inference
+% - Section 6 Information Theory
+% - Section 7 Data Compression
+
+
+
+MA4413 Tutorials for Week 9
+Q1. An IT competency test, used for staff recruitment, is devised so as to give a normal distribution of scores with a mean of 100. A random sample of 49 experienced IT users  who are given the test achieve a mean score of 121 with a standard deviation of 14. 
+
+•	Perform a hypothesis test to assess whether this group of IT Users is unusual (i.e. have a different mean from the general population).
+•	Compute a 95\% confidence interval for the group.
+
+
+
+Q5. The quality control manager at the Telektronic Company considers the production of telephone answering machines to be ’out of control’ when the overall rate of defects exceeds 4%. 
+Testing of a random sample of 150 machines revealed that 9 are defective. The production manager claims that production is not out of control and no corrective action is necessary. Use a 0.05 significance level to test the production manager’s claim.
+
+
+
+
+
+Q7 
+
+
+
+
+
+
+\subsection{Standardisation Formula}
+
+\begin{equation}
+Z = \frac{ X - \mu } {  \sigma }
+\end{equation}
+
+
+
+Q8. A study was carried out in which researchers collected crime data. Of those convicted of
+arson, 50 were drinkers and 43 abstained. Of those convicted of fraud, 63 were drinkers and 144
+abstained. Use a 0.01 level of significance to test the claim that the proportion of drinkers among
+convicted arsonists is greater than the proportion of drinkers convicted of fraud.
+
+
+
+
+
+Q10. A bank is concerned about the amount of debt being accrued by customers using its credit
+cards. The board of directors voted to institute an expensive monitoring system if the mean for all
+the bank’s customers is greater than €2000. The bank randomly selected 50 credit-card holders and
+determined the amounts they charged. For this sample group, the mean is €2177 and the standard ‘
+deviation is € 1257. Using a 0.05 level of significance,  test the claim that the mean amount charged
+is greater than €2000. Will the monitoring system be implemented? 
+
+
+
+
+
+
+
+Q1
+
+A multinational corporation (MNC) has two manufacturing facilities – one in Limerick, the other in Texas, both producing identical products and employing roughly the same number of ‘direct’ employees, i.e. directly involved in manufacturing.  The Operations Director randomly selected 9 weeks from the previous years production figures.  Each of the weeks chosen, employees worked 5 full days and no overtime.  The production figures for each facility is as follows (units in thousands)
+
+
+Ireland	Texas
+1	3.8	3.7
+2	3.9	3.8
+3	4.0	3.6
+4	3.7	3.3
+5	3.6	3.4
+6	4.1	3.5
+7	3.9	3.6
+8	4.0	3.7
+9	4.1	3.4
+
+
+(a)	You are required to construct a box plot for each factory’s output and to comment on the salient features of each plot.  Is there evidence from the box plots to reject the hypothesis that there is no difference in the production figures between the two facilities?  Use the box plot to justify your comments. 							(8 marks)
+
+(b)	Compare and contrast the Mean and the Median as measures of location
+(2 marks)
+
+(c)	Two independent resistors are located in a simple circuit as shown below.  The probability that A and B works is 0.8 and 0.7 respectively.  You are required to calculate the probability that the signal will travel from x to y.  If the two resistors were arranged in series, what difference would this make to the probability of the signal reaching y?
+(10 marks)
+
+
+
+(c)	A random sample of 100 parts (from (a) above) revealed that for 4 of those parts, the critical diameter measurements were outside spec.  You are requested to construct a 95\% confidence interval for the proportion defective.
+
+If the company wished to estimate the defective rate to within + or - 2\% with 99\% confidence, how big a sample would need to be undertaken to provide the relevant information?
+(8 marks)
+
+
+
+
+Q3
+The data from Question 1 (reproduced below) should be used to answer the following question.
+
+Ireland	Texas
+1	3.8	3.7
+2	3.9	3.8
+3	4.0	3.6
+4	3.7	3.3
+5	3.6	3.4
+6	4.1	3.5
+7	3.9	3.6
+8	4.0	3.7
+9	4.1	3.4
+
+
+
+Ireland	Texas
+Sample Mean	3.90	3.56
+Standard Deviation	0.173	x
+
+(a)	Fill in the missing section from the above table			(2 marks)
+(b)	Does the data provide sufficient evidence to support the hypothesis that the populations are of equal variances?  Use a 5% level of significance and indicate clearly all calculations made. 					(9 marks)
+(c)	You are required to test the hypothesis that there is no statistical difference between the number of units produced at each plant.  Use a test with a 5% probability of a Type 1 error.					(9 marks)
+
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(c)	A random sample of 100 resistors revealed that 5 were outside specification.  You are requested to construct a 95\% confidence interval for the proportion of resistors that are defective (outside spec.).
+
+If the company wished to estimate the defective rate to within + or - 2\% with 99\% confidence, how big a sample would need to be undertaken to provide the relevant information?
+(8 marks)
+
+
+
+
+Q3
+Two facilities, one in Limerick and the other in Galway produce identical products on similar lines.  The production manager randomly selected 9 weeks from the previous year’s production.  The number of units produced in each facility was recorded in thousands as follows:
+
+Limerick	Galway
+1	3.8	3.7
+2	3.9	3.8
+3	4.0	3.6
+4	3.7	3.3
+5	3.6	3.4
+6	4.1	3.5
+7	3.9	3.6
+8	4.0	3.7
+9	4.1	3.4
+
+
+
+Limerick	Galway
+Sample Mean	3.90	3.56
+Standard Deviation	0.173	x
+
+(a)	Fill in the missing section from the above table			(2 marks)
+(b)	Does the data provide sufficient evidence to support the hypothesis that the populations are of equal variances?  Use a 5% level of significance and indicate clearly all calculations made. 					(9 marks)
+(c)	You are required to test the hypothesis that there is no statistical difference between the number of units produced at each plant.  Use a test with a 5% probability of a Type 1 error.					(9 marks)
+
+
+%-----------------------------------------------------------------------------%
+\subsection{2005 Question 4}
+(a)	Under what circumstances is it appropriate to use the binomial distribution when calculating probabilities?					(1 mark)
+
+(b) 	Flextronics supply PCB boards to Dell.  You are a production manager with Dell.  There is a constant probability of 0.01 that a board will be defective.  You select 50 boards at random.  What is the probability that:
+\begin{itemize}
+	\item[(i)]	0 boards will be defective
+	(ii)	1 or more boards will be defective
+	(iii)	2 or less boards will be defective			
+\end{itemize}	
+	%---------------------------------%
+	
+	% Question 4 continued
+	
+	(c)	Flaws occur in an LCD display at the rate of 0.4 per square mm.  Calculate the probability that:
+	(i)	exactly 2 flaws will occur in a square mm section
+	(ii)	exactly 3 flaws will occur in a 5 square mm section
+	(iii)	5 or more flaws will occur in a 10 square mm section
+	(6 marks)
+	
+
+
+	
+	MA4704 Technological Maths 4 
+	
+	Q1
+	A multinational company has two sub suppliers, one in Taiwan and the other in mainland China.  Both plants have similar production facilities and are dedicated exclusively to supplying a company based in Ireland with components.
+	The number of defects per shipment is recorded as follows:
+	
+	SubS 1	16	18	19	22	22	25	28	28	28	31	33	27	23
+	SubS 2	22	23	25	27	27	28	30	32	33	35	36	38	38
+	
+	(a)	You are required to construct a box plot for each plant’s output and to comment on the salient features of each plot.  Is there evidence from the box plots to reject the hypothesis that there is no difference in the defect figures between the two facilities?  Use the box plot to justify your comments.
+	(8 marks)
+	
+	(b)	Compare and contrast the Mean and the Median as measures of location
+	(2 marks)
+	
+	(c)	The mean of three numbers: w, y, z is x
+	
+	\item[(i)]Express x in terms of w, y, z
+	\item[(ii)] If a and b are constants express the means of 
+	aw + b;   ay + b;   az + b
+	in terms of  
+	(10 marks)
+	
+	%---------------------------------------------------------------------------------------------------------------------------%
+	
+	\subsection{Question 2}
+	
+	(a)	
+	Assume that Z scores are normally distributed with a mean of Zero and a
+	standard deviation of 1
+	
+	\begin{itemize} 
+		\item[(i)] 	P (0< Z < a)  =  0.1685 			 Find   a 
+		\item[(ii)]           $ P(- b \leq Z < b) =  0.95	$	            	 Find   b
+		\item[(iii)]             P(Z £ c)  =       0.3015 			 Find   c
+	\end{itemize}
+	
+	%---------------------------------------------------%
+%	
+%	(b) 	\item[(i)]P(EF) denotes the conditional probability of “E given F”. 
+%	Write down an equation to express the relationship between 
+%	P(F), P(EF) and P ( E  F)
+%	\item[(ii)]E and F are events such that   P(EF) = ½ ,   P(EF) =  ⅓ 
+%	and P ( E  F) = 1/7
+%	Find P(E F)
+%	\item[(iii)]Are the events E and F in part \item[(ii)]independent? Give a reason for your answer.										(7 marks)	
+%	
+
+	
+	%------------------------------------------------------------------------------------------------------------------------------------------------%
+	
+	\section{Question 4}
+	In the British General Election, from a random sample of 900 voters, 468 people said they would vote for the Labour Party.  
+	
+	(a) 	You are required to construct a 95\% Confidence Interval based on survey data for the proportion of people who will vote for the Labour Party in the election.
+	% (2 marks)
+	
+	%------------------------------------------------------------------------------------------------------------------------------------------------%
+	(b)	If the leadership of the Labour Party wanted the error in the survey to be $\pm 1\%$ at a 95\% Confidence Interval, how many people should they interview
+	
+	\begin{itemize}
+		\item[(i)]	Using the survey results as a prior estimate of the proportion of people supporting the Labour Party
+		% (4 marks)
+		\item[(ii)]	If no prior information were available, how many people would need to be surveyed?
+		%(5 marks)
+	\end{itemize}
+	%-----------------%
+	(c)	The Labour Party claims that a majority of the British population (p = 50%) support them.  Based on the survey results, is there any evidence to reject this hypothesis at the 1% level of significance? 
+	%	(9 marks)
+	
+	%-------------------------------------------------------------------------------%
+	
+	\section{Question 5} 
+	
+	The National Roads Authority is studying the relationship between the number of bidders on a Motorway project and the winning (lowest) bid for the project.  Of particular interest is whether the number of bidders increases or decreases with the amount of the winning bid.
+	
+	Observation number 	Number of Bidders (x)	Winning Bids
+	(y)
+	1	5	4.0
+	2	8	6.9
+	3	4	3.9
+	4	9	7.8
+	5	3	2.7
+	6	6	6.1
+	7	4	4.4
+	8	7	6.2
+	
+%%	\sumxy =	1932 	\sumx2 =	2116 	\sumx =	46	\sumy =  42	\sumy2 = 1764 
+	
+	
+	(a) You are required 
+	(i)To draw a Scatter Gram and comment on its features
+	\item[(ii)]Find the regression equation and plot the regression equation on the scattergram
+	\item[(iii)]Use a 5% level of significance to test the hypothesis that R correlation coefficient equals zero.  Interpret your answer.
+	(12 marks)
+	
+	%-----------------------------------------%
+	
+	(b) The above data was entered into Minitab and the following output was generated:
+	You are requested to fill in the blanks in the following table:
+	Analysis of Variance
+	
+	Source      	      DF          SS          MS         F        P
+	Regression      	        x         20.160      20.160   x         0.000
+	Residual Error         x        xx              xxx
+	Total             	        x         21.460
+	
+	
+	Observation    Number of Bidders	Winning Bid	Fitted value	Residual
+	2	8			        6.9 		      x			      x
+	
+	(8 marks)
+	
+	%-----------------------------------------------------------------%
+
+
+
+
+\section{Example}
+
+An accounting firm wishes to test the claim that no more than 1\% of a large
+number of transactions contains errors. In order to test this claim, they
+examine a random sample of 144 transactions and find that exactly 3 of
+these are in error.
+
+An accounting firm wishes to test the claim that no more than 5% of a large
+number of transactions contains errors. In order to test this claim, they examine a
+random sample of 225 transactions and find that exactly 20 of these are in error.
+\section{Example}
+
+In the past, 18\% of shoppers have bought a particular brand of breakfast cereal.
+After an advertising campaign, a random sample of 220 shoppers is taken and 55 of the sample have bought this brand of cereal.
+
+Write down the null and the alternative hypothesis for this problem, and state whether it is a one tailed or two tailed test
+
+The conventional treatment for a disease has been shown to be effective in
+80\% of all cases. A new drug is being promoted by a pharmaceutical
+company; the Department of Health wishes to test whether the new treatment
+is more effective than the conventional treatment.
+
+Write down the null and the alternative hypothesis for this problem, and state whether it is a one tailed or two tailed test
+
+
+
+
+
+
+%-------------------------------------------------%
+\end{document}

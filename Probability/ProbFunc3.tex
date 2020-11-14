@@ -1,0 +1,94 @@
+\documentclass{beamer}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{framed}
+\usepackage{graphics}
+
+\begin{document}
+
+\begin{frame}
+\Huge
+\[ \mbox{Statistics and Probability} \]
+\LARGE
+\[ \mbox{Probability Distributions} \]
+\bigskip
+\Large
+\[ \mbox{www.Stats-Lab.com} \]
+\[ \mbox{Twitter: @StatsLabDublin} \]
+\bigskip
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Statistics and Probability}
+\Large
+\[f(x) = \frac{3x^2 + 2x}{2} \]
+
+defined over the region $0 \leq x \leq 1$
+
+Find $P(X >0.8 | X >0.6)$
+$E(X)$
+$Var(X)$
+$cov(X, \frac{1}{X})$
+
+\end{frame}
+%------------------------------------------------------------------------%
+
+\begin{frame}
+\frametitle{Statistics and Probability}
+\Large
+\[  P(X >0.8 | X >0.6) = \frac{P(X >0.8)}{P(X >0.6)}    \]
+
+Two Calculations
+\begin{itemize}
+\item $P(X >0.8)$
+\item $P(X >0.6)$
+\end{itemize}
+
+\[P(X > a) =  1-P(X<a) = 1- \int^{a}_{0} f_X(x)dx\]
+\end{frame}
+%------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Statistics and Probability}
+\Large
+\[P(X<0.8) = \int^{0.8}_{0} \frac{3}{2}x^2 + x dx   \]
+
+\end{frame}
+%------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Statistics and Probability}
+\Large
+\[P(X<0.8) = \int^{0.8}_{0} \frac{3}{2}x^2 + x dx   \]
+
+\[ P(X<0.8) = \left[ \frac{3x^3}{4}  + \frac{x^2}{2}\right]^{0.8}_{0}  \]
+
+\[ P(X<0.8) = (0.384 + 0.32) - (0+0) = 0.704 \]
+
+\[P(X>0.8) =  1 - P(X<0.8) = 1-0.704 = 0.296 \]
+
+\end{frame}
+%------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Statistics and Probability}
+\Large
+\[P(X<0.8) = \int^{0.8}_{0} \frac{3}{2}x^2 + x dx   \]
+
+\end{frame}
+%------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Statistics and Probability}
+\Large
+\[P(X<0.8) = \int^{0.8}_{0} \frac{3}{2}x^2 + x dx   \]
+
+\[ P(X<0.8) = \left[ \frac{3x^3}{4}  + \frac{x^2}{2}\right]^{0.8}_{0}  \]
+
+\[ P(X<0.8) = (0.384 + 0.32) - (0+0) = 0.704 \]
+
+\[P(X>0.8) =  1 - P(X<0.8) = 1-0.704 = 0.296 \]
+
+\end{frame}
+
+%------------------------------------------------------------------------%
+\end{document}

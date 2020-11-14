@@ -1,0 +1,246 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{amscd}
+
+\usepackage{subfiles}
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{amsthm, amsmath}
+\usepackage{amsbsy}
+\usepackage{framed}
+\usepackage[usenames]{color}
+\usepackage{listings}
+\lstset{% general command to set parameter(s)
+	basicstyle=\small, % print whole listing small
+	keywordstyle=\color{red}\itshape,
+	% underlined bold black keywords
+	commentstyle=\color{blue}, % white comments
+	stringstyle=\ttfamily, % typewriter type for strings
+	showstringspaces=false,
+	numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, %
+	frame=shadowbox,
+	rulesepcolor=\color{black},
+	columns=fullflexible
+} %
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+%\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+%\renewcommand{\thetable}{\thesection.\arabic{table}}
+%\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+\author{ } \date{ }
+
+\begin{document}
+%==============================================================================================%
+
+For this component of the module, students will need to familiarise themselves with the Murdoch Barnes statistical tables.
+
+The necessary sections are provided in handbook.
+
+\section{Section 1: Data and Sampling}
+
+\subsection{1.2   Introduction}
+
+The aim of statistics is to provide insight by means of numbers.
+
+Difference between and experiment and an observational study
+
+Experiment: Researcher has ability to control important variables.
+
+Observational Study: Researcher does not have ability to control important variables
+
+
+\begin{description}
+\item[Example 1:]  Health Insurance 	[pg 4]
+No it is an observational study. The researcher has no influence on the how they respond.
+
+\item[Example 2:]  advertising	  	[pg4]
+Yes this was an experiment. The researcher was able to control how much TV advertising each student watched.
+
+\end{description}
+
+
+1.2   Types of Data
+
+Qualitative data: labels or names; usually non-numeric e.g. gender, social class	 		
+
+Quantitative data: indicate how much or how many; numeric data e.g. age, height
+
+		Quantitative
+
+Discrete				Continuous
+
+
+
+\begin{itemize}
+	\item $>$  means `is greater than
+	\item $\geq$ means `is greater than or equal to
+	\item $<$ means `is less than
+	\item $\leq$ means `is less than or equal to
+	\item $\neq$ means `is not equal to
+	\item $\approx$ or $\simeq$ means `is approximately equal to
+\end{itemize}
+
+\subsection{A simple data set}
+Suppose that we have a data set with $n$ observations. For each observation, a measure is recorded. Conventionally the measures are denoted $x$ unless a more suitable notation is available. A subscript can be used to indicate which observation the measure is for.
+Hence we would write a data set as follows; $(x_{1}, x_{2},x_{3} , x_{1} \dots x_{n})$ (i.e. the first, second, third ... $n$th observation).
+
+
+\subsection{Summation}
+The summation sign $\sum$ is commonly used in most areas of statistics.
+Given $x_1 = 3, x_2= 1, x_3 = 4, x_4 = 6, x_5= 8 $ find:
+
+\[
+(i) \displaystyle\sum_{i=1}^{i=n} x_{i}  \hspace{3cm}
+(ii) \displaystyle\sum_{i=3}^{i=4} x_{i}^2
+\]
+
+
+\[(i) \displaystyle\sum_{i=1}^{i=n} x_{i} = x_1 + x_2 +  x_3 +  x_4 + x_5 \]  \[= 3 +1 +4 +6 + 8  = \textbf{22} \]
+
+\[ (ii) \displaystyle\sum_{i=1}^{i=n} x_{i}^2 = x_3^2 + x_4^2  = 9 + 16 = \textbf{25} \]
+
+\noindent When all elements of a data set are used, a simple version of the summation notation can be used.
+$\displaystyle\sum_{i=1}^{i=n} x_{i}$  can simply be written as $\sum x$
+
+
+%---------------------------------------------------------------------------- %
+
+\noindent \textbf{Example}
+Given that $p_1= 1/4, p_2= 1/8, p_3= 1/8,p_4= 1/3, p_5 = 1/6$ find:
+
+\begin{itemize}
+	\item $\displaystyle\sum_{i=1}^{i=n} p_{i} \times x_{i}$
+	\item $\displaystyle\sum_{i=1}^{i=n} p_{1} \times x_{i}^2$
+\end{itemize}
+
+
+
+Discrete: values change by whole numbers or steps e.g. family size
+
+Continuous: can take all values in a given range including decimal places e.g. height
+
+
+\subsection{Scales of Data Measurement}
+
+As well as categorising data into certain types, we can also categorise data by levels or scales of measurement. Again, some levels of measurement are more useful than others. 
+
+Why do we need to know the scale of measurement of our data? Not only do we use different methods of analysis for different types of data but some methods of analysis require the data to be measured at a certain level or scale as well.
+
+
+\begin{itemize}
+\item	Nominal 
+\item	Ordinal
+\item	Interval
+\item	Ratio
+\end{itemize}
+
+
+Qualitative data is usually measured at a nominal or ordinal scale of measurement. 
+
+Nominal: the data gives the person a label or tells us what category a person or object falls into e.g. colour of the car. 
+
+Ordinal: the data has all the properties of nominal data but we also get more information since the order of the data is meaningful e.g. do you think this module is
+
+very easy 	easy 		challenging		very challenging
+
+
+Notice that there is a ranking system present.
+
+Whatever you answer is still just a word i.e. non-numeric but it gives more information than the colour of a car. All students can be ranked depending on what they think of the module.
+
+
+Quantitative data is usually measured at an interval or ratio scale of measurement.
+
+\begin{description}
+\item[Interval:] the data is numeric and has order in the same way as ordinal data has order. We can also measure the difference between two observations e.g. we can measure the difference between two temperatures of 10 degrees and 20 degrees i.e. 10 degrees. 
+
+We cannot measure the difference between two students where one thinks the module is easy and the other finds it challenging i.e. we will not get a meaningful number.
+
+\item[Ratio:] the data is numeric and has all the properties of interval data. The ratio of the data is also meaningful e.g. we can say things like I’m half her age or twice as tall. The data has a meaningful and unique zero point which allows us to say if for example you have zero age, you do not exist. 
+
+Temperature does not have a unique and meaningful zero point. For example, if the temperature is zero degrees Celsius it does not mean temperature does not exist. Temperature does not have a unique zero point - it depends on which temperature scale you are using i.e. zero degrees Fahrenheit also exists
+\end{description}
+
+
+
+Classify the following by data type and scale of measurement: 
+
+1.	Sector of business e.g. manufacturing or service
+2.	Weight
+3.	Cigarette consumption e.g. light, heavy, moderate
+4.	Income
+5.	Number of visits to the doctor per year
+6.	Profit (euros)
+
+
+
+\textbf{Answers}
+
+
+1.  Qual.      Nominal
+2.  Quant.    Ratio
+3.  Qual.      Ordinal
+4.  Quant.    Ratio
+5.  Quant.    Ratio
+6.  Quant.	 Ratio
+
+
+1.4   Sampling
+
+We often read headlines in newspapers saying things like “80\% of the population are satisfied with the government’s performance”. How can the newspaper make such a statement when they haven’t asked everyone in the country their opinion of the government? 
+
+The newspaper has taken a representative subset of the population and assumed that what happens for that subset is what happens for the whole population. Is this assumption valid? 
+
+
+
+	\begin{itemize}
+		\item 
+How do you select a representative subset? What mistakes can you make selecting this subset and what can be done to correct these mistakes? 
+\item Without understanding the concepts behind selecting a subset of the population i.e. sampling, we can make serious errors in our conclusions about the population.  
+\end{itemize}
+
+1.4.1 Definitions [ Very Important ]
+
+First, we need to define some terms. These terms will be illustrated using the example of a pre-election poll on which political party is going to win the election.
+
+Population: the entire group of objects/subjects about which information is wanted. For our example, the population is all adults on the electoral register.
+
+Sample: any subset of a population e.g. a representative subset of individuals from the electoral register.
+
+Unit: any individual member of the population e.g. an individual on the electoral register.
+
+	\begin{description}
+\item[Sampling frame:] a list of the individuals in the population e.g. the electoral register.
+
+\item[Variable:] we can measure its value for each person and its value will change from person to person e.g. the political party the individual will vote for.
+
+\item[Parameter:] this represents some value (e.g. an average value or a percentage) that we are interested in calculating for the population for example the percentage of adults on the electoral register who will vote for a particular political party or the average age of the voters. 
+\end{description}
+
+\end{document}

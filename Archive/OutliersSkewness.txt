@@ -1,0 +1,114 @@
+﻿%-------------------------------------------------------------------------%
+
+\section{Outliers and Skewness}
+{
+		{Outliers}
+	
+	\begin{itemize}
+		\item
+		An outlier is an observation in a data set which is far removed in value from the others in the data set. It is an unusually large or an unusually small value compared to the others. \smallskip
+		\item
+		An outlier might be the result of an error in measurement, in which case it will distort the interpretation of the data, having undue influence on many summary statistics, for example, the mean and variance.
+		\item Outliers are said to \t{\emph{skew}} the distribution of values. \smallskip
+		\item
+		If an outlier is a genuine result, it is important because it might indicate an extreme of behaviour of the process under study. 
+		\smallskip
+		\item For this reason, all outliers must be examined carefully before embarking on any formal analysis. Outliers should not routinely be removed without further justification.
+	\end{itemize}
+}
+
+%-------------------------------------------------------------------------%
+{
+		{Outliers}
+	Compute the sample mean and median of the following data set
+	\[X = \{ 5, 6, 7, 8 ,9,11, 15, 16, 94\}\]
+	
+	\begin{itemize}
+		\item The sample mean $\bar{x} = 19$
+		\item The median of the sample is 9.
+		\item What causes the discrepancy between mean and median?
+		
+		\item Which measure of centrality do you feel is more representative of the data?
+		\begin{itemize}
+			\item The median  - most values are between 5 and 16.
+		\end{itemize}
+	\end{itemize}
+}
+
+%-------------------------------------------------------------------------%
+{
+		{Symmetric and Skewed Distributions }
+	\begin{itemize}
+		\item  A data set is said to be \t{\emph{symmetric}} when data values are distributed in the same way above and below the middle of the sample. \smallskip
+		\item Typically , but not necessarily, distributions are considered to symmetric because the data set does not contain any outliers. (Potentially a symmetric data set may contain outliers on either side of the mean. ) \smallskip
+		\item When data sets are symmetrically distributed, the sample mean and median have values close to each other.
+		\item Distributions are considered to \t{\emph{skewed}} when the data set contains an outlier, or cluster of outliers, distributed away from the main cluster of items, such as in our example.
+		\item When data sets have skewed distribution, the sample mean and median have values different to each other.
+	\end{itemize}
+}
+%-------------------------------------------------------------------------%
+{
+		{Symmetric and Skewed Distributions }
+	\begin{itemize}
+		\item [\t{Important}] When a data set is \t{\emph{symmetric}}, the best measure of centrality is the sample mean. \smallskip
+		\item As the variance is computed using the sample mean, it is considered the best measure of dispersion for symmetrically distributed data. \bigskip
+		\item When a data set is \t{\emph{skewed}}, the best measure of centrality is the median. \smallskip
+		\item The best measure of dispersion for data with skewed distribution is the IQR.
+	\end{itemize}
+}
+
+\section{Skewness and Outliers}
+
+{
+	{Outliers}
+
+\begin{itemize}
+\item
+An outlier is an observation in a data set which is far removed in value from the others in the data set. It is an unusually large or an unusually small value compared to the others.
+\item
+An outlier might be the result of an error in measurement, in which case it will distort the interpretation of the data, having undue influence on many summary statistics, for example, the mean and variance.
+\item Outliers are said to \t{\emph{skew}} the distribution of values.
+\item
+If an outlier is a genuine result, it is important because it might indicate an extreme of behaviour of the process under study. \item For this reason, all outliers must be examined carefully before embarking on any formal analysis. Outliers should not routinely be removed without further justification.
+\end{itemize}
+}
+
+%-------------------------------------------------------------------------%
+{
+	{Outliers}
+Compute the sample mean and median of the following data set
+\[X = \{ 5, 6, 7, 8 ,9,11, 15, 16, 94\}\]
+
+\begin{itemize}
+\item The sample mean $\bar{x} = 19$
+\item The median of the sample is 9.
+\item What causes the discrepancy between mean and median?
+
+\item Which measure of centrality do you feel is more representative of the data?
+\begin{itemize}
+\item The median  - most values are between 5 and 16.
+\end{itemize}
+\end{itemize}
+}
+
+%-------------------------------------------------------------------------%
+{
+	{Symmetric and Skewed Distributions }
+\begin{itemize}
+\item  A data set is said to be \t{\emph{symmetric}} when data values are distributed in the same way above and below the middle of the sample.
+\item Typically , but not necessarily, distributions are considered to symmetric because the data set does not contain any outliers. (Potentially a symmetric data set may contain outliers on either side of the mean. )
+\item When data sets are symmetrically distributed, the sample mean and median have values close to each other.
+\item Distributions are considered to \t{\emph{skewed}} when the data set contains an outlier, or cluster of outliers, distributed away from the main cluster of items, such as in our example.
+\item When data sets have skewed distribution, the sample mean and median have values different to each other.
+\end{itemize}
+}
+%-------------------------------------------------------------------------%
+{
+	{Symmetric and Skewed Distributions }
+\begin{itemize}
+\item When a data set is \t{\emph{symmetric}}, the best measure of centrality is the sample mean.
+\item As the variance is computed using the sample mean, it is considered the best measure of dispersion for symmetrically distributed data. \bigskip
+\item When a data set is \t{\emph{skewed}}, the best measure of centrality is the median.
+\item The best measure of dispersion for data with skewed distribution is the IQR.
+\end{itemize}
+}

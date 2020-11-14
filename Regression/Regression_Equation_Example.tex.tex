@@ -1,0 +1,256 @@
+
+\documentclass[a4]{beamer}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{newlfont}
+\usepackage{amsmath,amsthm,amsfonts}
+%\usepackage{beamerthemesplit}
+\usepackage{pgf,pgfarrows,pgfnodes,pgfautomata,pgfheaps,pgfshade}
+\usepackage{mathptmx} % Font Family
+\usepackage{helvet} % Font Family
+\usepackage{color}
+\mode<presentation> {
+\usetheme{Default} % was Frankfurt
+\useinnertheme{rounded}
+\useoutertheme{infolines}
+\usefonttheme{serif}
+%\usecolortheme{wolverine}
+% \usecolortheme{rose}
+\usefonttheme{structurebold}
+}
+\setbeamercovered{dynamic}
+\title[MA4704]{Technology Maths 4 \\ {\normalsize Lecture 11C}}
+\author[Kevin O'Brien]{Kevin O'Brien \\ {\scriptsize kevin.obrien@ul.ie}}
+\date{Spring 2013}
+\institute[Maths \& Stats]{Dept. of Mathematics \& Statistics, \\ University \textit{of} Limerick}
+\renewcommand{\arraystretch}{1.5}
+%----------------------------------------------------------------------------------------------------------%
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Regression}
+The steps in determining the relationship between two
+quantitative variables are
+\begin{itemize} \item Draw a scatter plot.
+\item If the scatter plot indicates an approximately linear
+relationship, then measure the strength and direction of the
+relationship by calculating the correlation coefficient r.
+\item Calculate the equation of a line which best describes the
+relationship between the variables.
+\end{itemize}
+This line is called the Regression line, or fitted line.
+
+\end{frame}
+%----------------------------------------------------------- %
+\begin{frame}
+\frametitle{Regression}
+We consider the simplest type of regression line where there are only two
+variables
+\begin{itemize}
+\item  one response variable (Y)
+\item one predictor variable (X)
+\end{itemize}
+This is called Simple Linear Regression and the mathematical model is:
+\[ Y = \beta_0 + \beta_1X + \epsilon \]
+
+The true values of $\beta_0$ and  $\beta_1$ are almost always unknown, but are instead estimated from sample data.
+\end{frame}
+%---------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Regression Equation}
+The equation that best describes the relationship between X and Y is called
+the regression equation. The regression equation used in simple linear
+regression is as follows:
+\[ y = \beta_0 + \beta_1x + \epsilon \]
+\begin{itemize}
+\item y = value of the response variable Y
+\item x = value of the predictor variable X
+\item $\beta_0$ = the intercept (where the line cuts the Y-axis)
+\item $\beta_1$ = slope of the regression line
+\item $\epsilon$ = error term (a.k.a. the residual)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Regression Coefficients} Meaning of the Regression Coefficients:
+\begin{itemize} \item $\beta_1$ is the slope of the regression line.
+\item It gives the average change in the response variable Y for each unit
+change in X.
+\item The slope can either be negative or positive.
+\item A positive slope of 5, for example, means that for every 1 unit increase
+in X we can expect an average 5 units increase in Y.
+\item $\beta_0$ indicates the value of Y when X is zero (only holds if the population could
+have X values of 0 - otherwise $\beta_0$ does not have a meaningful interpretation
+in the regression model).
+\end{itemize}
+\end{frame}
+%------------------------------------------------------- %
+\begin{frame}
+\frametitle{Regression Least Square Estimation}
+\begin{itemize}
+\item There are many straight lines that could be drawn to represent the
+relationship between X and Y.
+\item The \textbf{least squares} method is one of the methods that can be used to find
+the straight line that provides the best approximation for the relationship
+between the independent and dependent variables.
+\item This method consists of choosing estimate values of $b_0$ and $b_1$ which minimize the sum
+of the squared vertical distances measured from the data to the line.
+\end{itemize}
+\end{frame}
+%------------------------------------------------------- %
+\begin{frame}
+\frametitle{Regression Least Square Estimation}
+The
+equation of the line obtained using the least squares method is of the form:
+\[ \hat{y} = b_0 + b_1x \]
+where
+\begin{itemize}
+\item $b_0$ = estimated intercept of the line
+\item $b_1$ = estimated slope of the line
+\item $\hat{y}$ = estimated value of the response variable
+\end{itemize}
+\end{frame}
+%--------------------------------------------------------------------- %
+\begin{frame}
+\frametitle{Regression : Least Square Estimation}
+It can be shown, using differential calculus that the values of $b_0$
+and $b_1$ that best estimate the true parameters $\beta_0$ and $\beta_1$ are:
+
+\[ b_1 = \frac{S_{XY}}{S_{XX}}\]
+and
+\[ b_0 = \bar{y} - b_1 \bar{x} \]
+
+$\bar{x}$ and $\bar{x}$ are the sample means of X and Y respectively.
+\end{frame}
+
+
+%---------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Regression Line}
+\begin{itemize}
+\item A regression line is a line drawn through the points on a scatter-plot to summarize the relationship between the variables being studied.\item When it slopes down (from top left to bottom right), this indicates a negative or inverse relationship between the variables; when it slopes up (from bottom right to top left), a positive or direct relationship is indicated.
+
+\item The regression line often represents the regression equation on a scatter-plot.
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Example}
+
+The US Olympic committee are interested in determining if there is a relationship between the experience of a coach and the number of medals won in the Olympics. A random selection of 8 coaches were analyzed and the results are given in the Table below.
+\begin{itemize}
+\item Predictor: Average Years Coaching Experience (x)	
+\item Response : Average Number of Medals Won (y)
+\end{itemize}
+\begin{center}
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  Coach & A & B & C & D & E & F & G & H \\
+  Experience & 5 & 8 & 4 & 9 & 3 & 6 & 4 & 7\\
+  Average Medals &4.0 & 6.9&3.9&7.8&2.7&6.1&4.4&6.2\\
+  \hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Example : Summations}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+	Case &	X	&	Y	&	XY	&	$X^2$	&	$Y^2$	\\  \hline
+A	&	5	&	4	&	20	&	25	&	16	\\
+B	&	8	&	6.9	&	55.2	&	64	&	47.61	\\
+C	&	4	&	3.9	&	15.6	&	16	&	15.21	\\
+D	&	9	&	7.8	&	70.2	&	81	&	60.84	\\
+E	&	3	&	2.7	&	8.1	&	9	&	7.29	\\
+F	&	6	&	6.1	&	36.6	&	36	&	37.21	\\
+G	&	4	&	4.4	&	17.6	&	16	&	19.36	\\
+H	&	7	&	6.2	&	43.4	&	49	&	38.44	\\ \hline
+(sum)	&	46	&	42	&	266.7	&	296	&	241.96	\\ \hline
+\end{tabular}
+\end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Example}
+Compute the Regression Equation, given that
+\begin{itemize}
+\item $\sum xy = 266.7 $
+\item $\sum x^2 = 296 $
+\item $\sum x = 46$	
+\item $\sum y =  42$	
+\item $\sum y^2 = 241.96$
+\end{itemize}
+\end{frame}
+\begin{frame}
+\frametitle{Calculations}
+\begin{itemize}
+\item\item $S_{XY}$
+\[ S_{XY} = \sum xy - \frac{(\sum x)\times (\sum y)}{n} = 266.7 - \frac{46 \times 42}{8} \]
+\[ S_{XY} = 266.7-241.5  = 25.2 \]
+\item $S_{XX}$
+\[ S_{XX} = \sum x^2 - \frac{(\sum x)^2}{n} = 296 - \frac{46 ^2}{8}\]
+\[ S_{XX} = 296 - 264.5 = 31.5 \]
+
+\item $S_{YY}$
+\[ S_{YY} = \sum y^2 - \frac{(\sum y)^2}{n} = 241.96- \frac{42^2}{8} \]
+\[ S_{YY} = 241.96 - 220.5 =  21.46 \]
+\end{itemize}
+\end{frame}
+%------------------------------------------%
+
+\begin{frame}
+\frametitle{Calculations}
+\begin{itemize}
+\item The Slope Estimate is therefore
+\[ b_1 = \frac{S_{XY}}{S_XX} = \frac{25.2}{31.5} =  0.8 \]
+\item The mean values of X and Y are computed as follows
+\[ \bar{X}  = \frac{\sum x}{n} = \frac{46}{8} = 5.75 \]
+\[ \bar{Y}  = \frac{\sum y}{n} = \frac{42}{8} = 5.25 \]
+\item The Intercept Estimate 
+\[ b_0 = \bar{y} - b_1 \bar{x} = 5.25 - (0.8\times 5.75) =0.65 \] 
+\end{itemize}
+\end{frame}
+%------------------------------------------%
+
+\begin{frame}
+\frametitle{Calculations}
+\begin{itemize}
+\item $y$ is an observed value at some value of x,
+\item $\hat{y}$ is a predicted value for some value of x.
+\end{itemize}
+
+\[ \hat{y} = b_0 + b_1x \]
+\[ \hat{y} = 0.65 + 0.8x \]
+\end{frame}
+
+\begin{frame}
+\frametitle{Calculations}
+Suppose we wish to make a prediction as to how many medals, on average, a coach with five years experience would win. 
+Here let $x=5$
+\[ \hat{y} = 0.65 + 0.8(5) = 4.65\]
+\end{frame}
+\end{document}
+%------------------------------------------%
+
+%----------------------------------------------------------------------%
+\end{document}
+
+%---------------------------------------------------------------------%
+
+
+
+
+\end{document} 

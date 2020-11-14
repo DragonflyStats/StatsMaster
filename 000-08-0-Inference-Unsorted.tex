@@ -1,0 +1,221 @@
+\subsection{F-test of equality of variances}
+The test statistic is
+
+\begin{equation} F = \frac{S_X^2}{S_Y^2}\end{equation}
+
+has an F-distribution with $n-1$ and $m-1$ degrees of freedom if the null hypothesis of equality of variances is true.
+
+
+\subsubsection{The F-test}
+$H_0$: Both variances are equal
+$H_a$ : The variances are different.
+Compute the test statistic.
+Divide the larger variance by the smaller variance.
+The degrees of freedom are as follows
+
+$\nu_1$ size of sample with larger variance
+$\nu_2$ size of sample with smaller variance
+
+There are 5 values tabulated
+We use the one for a significance level of 0.05
+Carefully read the tables.
+\section{Inference}
+	\newpage
+	
+
+\section{Finite Population Correction Factor}
+
+If the sample size is more than 5\% of the population size and the sampling is done without replacement, then a correction needs to be made to the standard error of the means.
+
+In the following, N is the population size and n is the sample size. The adjustment is to multiply the standard error by the square root of the quotient of the difference between the population and sample sizes and one less than the population size.  
+
+For the most part, we will be ignoring this in class
+
+
+
+We will use a simplistic system for interpreting significance values (i.e. p-values).
+
+If a p value is less than 0.02 we reject the nyll hypothesis.
+If the p value is greater than 0.05 we fail to reject the null hypothesis
+If the pvalue us between the two thresholds then we deem the procedure to be inconclusive. 
+
+The null hypothesis is that the true correlation coefficient is zero (which is to say, no linear relationship exists). 
+
+
+
+
+\section{Interpreting p-values}
+
+The p-value is the probability of having observed our data (or more extreme data) when the null hypothesis is true 
+
+The smaller the p-value, the less likely it is that the sample results come from a situation where the null hypothesis H0 is true. If the p-value is sufficiently small, we reject the null hypothesis, and support the alternative hypothesis Ha.
+
+\begin{framed}	
+	\textbf{One Sided Tests}
+	\begin{itemize}
+		\item 		p-value  >  0.05   :   no evidence against H0 in favour of Ha
+		
+		\item 	p-value    <  0.05   :   evidence against H0 in favour of Ha
+	\end{itemize}	
+	\textbf{Two Sided Tests}
+	\begin{itemize}
+		\item 	p-value    >  0.025   :   no evidence against H0 in favour of Ha
+		
+		\item 	p-value    <  0.025   :   evidence against H0 in favour of Ha
+	\end{itemize}		
+\end{framed}
+
+
+
+
+
+\subsection{Hypothesis Testing : examples}
+
+\begin{itemize}
+	\item The standard deviation of the life for a particular brand of
+	ultraviolet tube is known to be $S = 500 hr$, and the operating
+	life of the tubes is normally distributed. 
+	\item The manufacturer claims
+	that average tube life is at least 9,000hr. Test this claim at the
+	5 percent level of significance against the alternative hypothesis
+	that the mean life is less than 9,000 hr, and given that for a
+	sample of $n = 18$ tubes the mean operating life was $\bar{X}=
+	8,800 hr.$
+	
+\end{itemize}
+
+\subsection{Hypothesis Testing : Two Populations}
+
+Two samples drawn from two populations are independent samples if
+the selection of the sample from population 1 does not affect the
+selection of the sample from population 2. The following notation
+will be used for the sample and population measurements:
+
+\begin{itemize}
+	\item $p_1$ and $p_2$ = means of populations 1 and 2,
+	
+	\item $\sigma_1$ and $\sigma_2$ = standard deviations of
+	populations 1 and 2,
+	
+	\item $n_l$ and $n_2$ = sizes of the samples drawn from
+	populations 1 and 2 ($n_1 >30 $, $n_2 >30 $),
+	
+	\item $x_1$ and $x_2$, = means of the samples selected from
+	populations 1 and 2,
+	
+	\item $s_{1}$ and $s_{2}$ = standard deviations of the samples
+	selected from populations 1 and 2.
+	
+\end{itemize}
+\subsection{Example}
+The mean height of adult males is 69 inches and the standard
+deviation is 2.5 inches. The mean height of adult females is 65
+inches and the standard deviation is 2.5 inches. Let population 1
+be the population of male heights, and population 2 the population
+of female heights. Suppose samples of 50 each are selected from
+both populations.
+\begin{equation}
+S.E(\bar{X}_{1}-\bar{X}_{2}) =
+\sqrt{\frac{s^2_{1}}{n_{1}}+\frac{s^2_{2}}{n_{2}})}
+\end{equation}
+
+
+	\section{Hypothesis Test}
+	\subsection{Wasking Machine Example}%example: 
+	Suppose a machine produces circular parts for an electrical component. A random sample of 10 circular parts is selected and the variance of the sample is found to be 0.7 centimetres. The machine is producing the correct standard of circular parts if the variance of the diameter is no larger than 0.4cm.
+	
+	Suppose that the sampled measurements are normally distributed. A hypothesis test may be carried out to determine whether or not the machine is producing the correct standard of part.
+	
+	\begin{description}
+		\item[$H_0$] $s^2=0.4$
+		\item[$H_1$] $s^2>0.4$
+	\end{description} 
+	
+	\begin{itemize}
+		\item At a 5\% significance level, the critical value for the test is ? 2 9 ˜ 16.92 . 
+		\item The test statistic is ? 2 = n - 1 s 2 s 2 
+		\item H 0 = 10 - 1 × 0.7 0.4 = 15.75 .
+	\end{itemize}
+	
+	
+	
+	
+	As the test statistic is less than the critical value, there is no evidence to reject the null hypothesis. The machine is therefore producing a sufficient standard of circular parts.
+	
+
+
+\section{Statement of the Null and Alternative Hypotheses}
+\[H_0 : \pi_1 = \pi_2\]
+\[H_1 : \pi_1 \neq \pi_2\]
+
+\[H_0 : \pi_1 - \pi_2 = 0\]
+\[H_1 : \pi_1 -  \pi_2 \neq 0\]
+
+Expected Value of differences under null hypothesis
+
+$\pi_1 - \pi_2 = 0$
+
+
+Significance level = 0.01
+
+\[SE(p_1 - p_2) = \sqrt{\bar{p}(1-\bar{p})\left( \frac{1}{n_1} + \frac{1}{n_2} \right)  }\]
+
+Calculate Pooled Proportion Estimate
+
+\[ \bar{p} = \frac{29 + 62}{1110 + 1553} \]
+
+Test Statistic
+
+\[ \frac{(p_1 - p_2) - (\pi_1 - \pi_2)}{SE(\pi_1 - \pi_2)} \]
+
+
+\begin{itemize}
+	\item Standard Error = 0.007123
+	\item Test Statistic = -1.965
+\end{itemize}
+
+
+
+
+
+\subsection{Example}
+\begin{itemize}
+	\item Suppose that 9 bags of salt granules are selected from the supermarket
+	shelf at random and weighed. The weights in grams are \[812.0, 786.7, 794.1,
+	791.6, 811.1, 797.4, 797.8, 800.8, 793.2.\] 
+	\item Give a 95\% confidence interval for the
+	mean of all the bags on the shelf. Assume the population is normal.
+	
+	
+	Here we have a random sample of size n = 9. The mean is 798.30. The sample
+	variance is $s^2 = 72.76$, which gives a sample standard deviation $s = 8.53$.
+	
+	\item The upper 2.5\% point of the Student's $t$ distribution with n-1 (= 9-1 = 8) degrees of freedom is 2.306.
+	
+	\item The 95\% confidence interval is therefore from 
+	\[(798.30 - 2.306 \times (8.53/\sqrt{9}),\;\; 798.30 + 2.306 \times (8.53/\sqrt{9})\]
+	which is\\
+	\[(798.30 - 6.56, 798.30 + 6.56) = (791.74, 804.86)\]
+	\item \textit{It is sometimes more useful to write this as $798.30 \pm 6.56$.}
+	
+	\item Note that even if we do not assume the population is normal (that assumption is
+	never really true) the Central Limit Theorem might suggest that the confidence interval
+	is nearly right. 
+	\item A larger confidence would increase the length of the interval, so we
+	trade off increased certainty of coverage against a longer interval
+\end{itemize}
+.
+
+
+\subsection{Example} A sample of 50 households in one community
+shows that 10 of them are watching a TV special on the national
+economy. In a second community, 15 of a random sample of 50
+households are watching the TV special. We test the hypothesis
+that the overall proportion of viewers in the two communities does
+not differ, using the 1 percent level of significance, as follows:
+
+
+
+
+%-----------------------------------%
+	

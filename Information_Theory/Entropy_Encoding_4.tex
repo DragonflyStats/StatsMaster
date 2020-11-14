@@ -32,8 +32,8 @@
 
 \begin{document}
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{ ENTROPY CODING}
+\medskip
+\noindent \textbf{ ENTROPY CODING}
 The design of a variable-length code such that its average code word length approaches the
 entropy of the DMS is often referred to as enlmpy coding. In this section we present two examples of
 entropy coding.
@@ -41,9 +41,9 @@ entropy coding.
 	\item Shannon- Fano Coiding
 	\item Huffman Coding
 \end{itemize}
-\end{frame}
+
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+\medskip
 % Page 255
 \frame{A. Shannon-Fun Coding:}
 An efficient code can be obtained by the following simple procedure, known as
@@ -53,11 +53,11 @@ Shannon- Fano algorithm:
 \item[2.] Partition the set into two sets that are as close to equiprobable as possible, and assign 0 to the
 upper set and 1 to the lower set.
 \end{itemize}
-\end{frame}
+
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------%
 % Page 256 Bottom
-\begin{frame}\frametitle{B. Huffman Encoding:}
+\medskip\noindent \textbf{B. Huffman Encoding:}
 In general, Huffman encoding results in an optimum code. Thus, it is the code that has the highest
 efliciency.\\ The Huffman encoding procedure is as follows:
 \begin{itemize}\item[1.] List the source symbols in order of decreasing probability.
@@ -71,7 +71,7 @@ assign 1 to the second probability.
 in the previous reduction step, retaining all assignments made in Step 3.
 \item[5.] Keep regressing this way until the first column is reached.
 \end{itemize}
-\end{frame}
+
 
 %An example of Huffman encoding is shown in Table 10-3.
 %H(X) = 2.36b/symbol
@@ -80,7 +80,7 @@ in the previous reduction step, retaining all assignments made in Step 3.
 
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+\medskip
 10.5. A high-resolution black—and-white TV picture consists of about $2 \times 10^6$  picture elements and 16
 different brightness levels. Pictures are repeated at a rate of 32 per second. All picture elements
 are assumed to be independent, and all levels have equal likelihood of occurrence. Calculate the
@@ -92,12 +92,12 @@ average rate of information conveyed by this TV picture source.\\ \bigskip
 %Hence, by Eq. (10.10)
 %R = rH(X) : 64(l0°)(4) = 256(l0°) b/s Z 256 Mb/s
 
-\end{frame}
 
 
 
-\begin{frame}
-\frametitle{Channel Capacity}
+
+\medskip
+\noindent \textbf{Channel Capacity}
 
 \textbf{A. Channel Capacity per Symbol C:}\\
 The channel cizpucily per symbol of a DMC is detined as
@@ -106,19 +106,19 @@ C. = \mbox{max}I(X; Y) \qquad \mbox{ b/symbol }
 \]
 where the maxiniization is over all possible input probability distributions {P(x,)} on X. Note that the
 channel capacity CA is a function of only the channel transition probabilities that define the channel.
-\end{frame}
+
 %---------------------------------------------------------------------------------------------------------------------------------------------------%
 
-\begin{frame}
-\frametitle{Channel Capacity}
+\medskip
+\noindent \textbf{Channel Capacity}
 \textbf{B. Channel Capacity per Second C:}\\
 If r symbols are being transmitted per second, then the maximum rate of transmission of
 information per second is rC>.. This is the channel capacity per secvml and is denoted by C (bls):
 C : rC, b/s (10.34)
-\end{frame}
+
 %---------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{C. Capacities of Special Channels:}
+\medskip
+\noindent \textbf{C. Capacities of Special Channels:}
 \textbf{ 1. Lossless Channel:}\\
 For a lossless channel, H(X|Y) Z 0 % (Prob. 10.10) and '
 $I(X; Y):1—1(X) $
@@ -128,10 +128,10 @@ source infomation is lost in transmission. Consequently. the channel capacity pe
 Cs : max H(X) = logzm %(10.36)
 \]
 where m is the number of symbols in X.
-\end{frame}
+
 
 %---------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+\medskip
 2. Deterministic Channel:
 For a deterministic channel, H( Y|X) = 0 for all input distributions Pm), and
 I(X; Y) : H(Y) (10.37)
@@ -140,10 +140,10 @@ Thus. the information transfer is equal to the output cntropy. The channel capac
 C. : max H(Y) = 1og2 yi (10.38)
 iron)
 where ri is the number of symbols in Y.
-\end{frame}
+
 
 %---------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+\medskip
 \textbf{3. Naireless Channel:}\\
 Since a noiseless channel is both lossless and deterministic, we have
 I(X; Y) : H(X) = H(Y) (l0.39)
@@ -154,7 +154,7 @@ For the BSC o1`Fig. 10-5. the mutual infomation is (Prob. 10.16)
 1(X: Y) ; 11(Y)-l-p1¤g;1¤+(1·1>)l<>2;;(l—p) (1041)
 and the channel capacity per symbol is
 Ci = 1 +¤1¤>z21¤+(l —p)l<>g2(1 ~p) (10.42)
-\end{frame}
+
 
 
 %---------------------------------------------------------------------------------------------------------------------------------------------------%
@@ -171,18 +171,18 @@ Ci = 1 +¤1¤>z21¤+(l —p)l<>g2(1 ~p) (10.42)
 
 
 
-\begin{frame}
+\medskip
 The unit of I(x)) is the bit (binary unit) if b Z 2, Hartley or decit if b = 10, and nat (natural unir) if
 b Z at It is standard to use b Z 2. Here the unit bit (abbreviated "b“) is a measure ofinlbrrnation
 content and is not to bc confused with the term hit meaning "binary digit." The conversion of these
 units to other units can be achieved by the following relationships.
 
 \[   \]
-\end{frame}
+
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 %  page
-\begin{frame}
-\frametitle{Average Information or Entropy}
+\medskip
+\noindent \textbf{Average Information or Entropy}
 \begin{itemize}
 \item In a practical communication system, we usually transmit long sequences of symbols from an
 information source. \item Thus, we are more interested in the average infornation that a source produces
@@ -190,7 +190,7 @@ than the information content of a single symbol.
 \item The mean value of $ l(x_i)$ over the alphabet of source X with tn different symbols is given by
 \[ \]
 \end{itemize}
-\end{frame}
+
 %\end{document}
 
 %-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
@@ -198,14 +198,14 @@ than the information content of a single symbol.
 
 % page 247 
 
-\begin{frame}
-\frametitle{Information Rate}
+\medskip
+\noindent \textbf{Information Rate}
 If the time rate at which source X emits symbols is r (symbols/s), the lnformation rate R of the
 source is given by
 
 %\[R ; r11(X) b/s (10.10)\]
 
-\end{frame}
+
 
 
 
@@ -213,8 +213,8 @@ source is given by
 
 
 %---------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{ MUTUAL INFORMATION}
+\medskip
+\noindent \textbf{ MUTUAL INFORMATION}
 \textbf{A. Conditional and Joint Entropies:}\\
 Using the input probabilities P(x,), output probabilities $P(y_i)$, transition probabilities P(yJ|>r,),
 and joint probabilities P(x,, yy), we can define the following various entropy functions for a channel
@@ -227,11 +227,11 @@ with m inputs and n outputs:
 \item H = -2 ZP%(>¢..y,) 1022 P(y,|X.) (10-24)
 \item H(X, Y) - -2 Z F%<><..y,)1¤zz P(><r.y;) <10·25)
 \end{itemize}
-\end{frame}
+
 
 %---------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{Conditional and Joint Entropy}
+\medskip
+\noindent \textbf{Conditional and Joint Entropy}
 These entropies can be interpreted as follows: H(X) is the average uncertainty of the channel input,
 and H(Y) is the average uncertainty of the channel output. The conditional entropy H(X]Y) is a
 measure of the average uncertainty remaining about the channel input after the channel output has
@@ -239,9 +239,9 @@ been observed. And H(X] Y) is sometimes called the equivncation of X with respec
 conditional entropy H(Y|X) is the average uncertainty of the channel output given that X was
 transmitted.\item  The joint entropy H(X, Y) is the average uncertainty of the communication channel as a
 whole.\end{itemize}
-\end{frame}
+
 %-----------------------------------------------------------------------------------------------%
-\begin{frame}
+\medskip
 Two useful relationships among the above various entropies are
 \begin{itemize} \item
 $H(X, Y)=H(X|Y)+H(Y) (10,26)$
@@ -250,11 +250,11 @@ $H(X,Y)=H(Y|X)+H(X) (10.27)$
 B. Mutual Information:
 The mutual information 1(X; Y) of a channel is deiined by
 I(X; Y) = H(X)— H(X|Y) b/symbol (10.28)
-\end{frame}
+
 
 %-----------------------------------------------------------------------------------------------%
-\begin{frame} % ULCIS 
-\frametitle{Self Information}Self-information
+\medskip % ULCIS 
+\noindent \textbf{Self Information}Self-information
 This is defined by the following mathematical formula:$I(A) = −logb P(A)$
 
 The self-information of an event measures the amount of one’s surprise
@@ -263,24 +263,24 @@ log_b  {1 \over P(A)} \]
 Note that log(1) = 0, and that $| − log(P(A))|$ increases as P(A) decreases
 from 1 to 0. This supports our intuition from daily experience. For example,
 a low-probability event tends to cause more ``surprise".
-\end{frame}
+
 %---------------------------------------------------------------------------------------------------------------------------------------%
 
 
 
-\begin{frame}
-\frametitle{Code efficiency and Code redundancy}
+\medskip
+\noindent \textbf{Code efficiency and Code redundancy}
 % Pg 253/254
 The parameter $L$ represents the average number of bits per source symbol used in the source coding process.
 The code efficiency is defined as \[\nu = {L_{min} \over L} \]where $L_{min}$ is the minimum possiblve value of $L$. When $\nu$ approaches unity, the codes is said to be efficient. 
 The code redundancy $\gamma$ is defined as $\gamma = 1- \nu$.
-\end{frame}
+
 
 
 %---------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+\medskip
 %page 254
-\frametitle{Source Coding Theorem}
+\noindent \textbf{Source Coding Theorem}
 The source coding theorem states that for zi DMS X with entropy $H(X)$, the average code word length $L$ per symbol is bounded as
 L 2 H(X) (10.52)
 
@@ -289,11 +289,11 @@ Thus, with$ L_{min} \geq H(X)$.
 
 The code efficiency can be rewritten as
 \[\nu = {H(X) \over L} \]
-\end{frame}
+
 
 ---------------------------------------------------------------------------%
-\begin{frame}
-\frametitle{ Kraft inequality}
+\medskip
+\noindent \textbf{ Kraft inequality}
 \begin{itemize}
 \item Let X be a DMS with alphabet ($x _i = \{1, 2, . . . ,m\}$). Assume that the length of the assigned binary
 code word corresponding to x, is n,.
@@ -305,7 +305,7 @@ which is known as the \textbf{Kraft inequality}.
 with code word lengths that satisfy the inequality. But it does not show us how to obtain these code
 words, nor does it say that any code that satisfies the inequality is automatically uniquely decodable
 \end{itemize}
-\end{frame}
+
 
 
 

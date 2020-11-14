@@ -1,0 +1,190 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage{epsfig}
+\usepackage{subfigure}
+%\usepackage{amscd}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{amscd}
+
+\usepackage{subfiles}
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{amsthm, amsmath}
+\usepackage{amsbsy}
+\usepackage{framed}
+\usepackage[usenames]{color}
+\usepackage{listings}
+\lstset{% general command to set parameter(s)
+	basicstyle=\small, % print whole listing small
+	keywordstyle=\color{red}\itshape,
+	% underlined bold black keywords
+	commentstyle=\color{blue}, % white comments
+	stringstyle=\ttfamily, % typewriter type for strings
+	showstringspaces=false,
+	numbers=left, numberstyle=\tiny, stepnumber=1, numbersep=5pt, %
+	frame=shadowbox,
+	rulesepcolor=\color{black},
+	columns=fullflexible
+} %
+%\usepackage[dvips]{graphicx}
+\usepackage{natbib}
+\bibliographystyle{chicago}
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{3.0cm}{2.5cm}{15.5 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.5}
+\pagenumbering{arabic}
+%\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{ill}[theorem]{Example}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{notation}{Notation}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+\renewcommand{\thenotation}{}
+%\renewcommand{\thetable}{\thesection.\arabic{table}}
+%\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+\author{ } \date{ }
+
+\begin{document}
+\section{Confidence Intervals}
+
+\begin{itemize}
+	\item A sample of 300 households in a large town revealed that 183 have home computers.
+	\item Construct a 95\% confidence interval for the proportion of households with home computers in the whole town.
+\end{itemize}
+
+ 
+\textbf{Sample size:}       
+\begin{itemize}
+	\item n =300 :  ( N.B. Large sample)
+\end{itemize}  
+ 
+Estimate:             Sample proportion   
+ 
+    (N.B. Percentages are easier to work with.)
+ 
+\textbf{t-value:}           
+
+\begin{itemize}
+\item 95\% confidence , therefore  = 0.05
+\item two tailed procedure, therefore k = 2
+\item therefore column to use = 0.025
+\end{itemize}
+ 
+                      Large sample:  degrees of freedom =  i.e. bottom row
+ 
+                      therefore t-value is 1.96                   
+ 
+ 
+Standard Error:  from Formulae   
+\[  \frac{p(1-p)}{n}      = \frac{61 \times 39}{300}        = 2.81\%\]
+ 
+ 
+Confidence Interval : 
+\[\mbox{estimate} \pm (\mbox{t-value} \times \mbox{std. error})\]
+ 
+\[  61\% \pm (1.96 \times 2.81\%) \]
+ 
+
+
+\newpage
+
+
+\subsection{Example 2}
+
+\begin{itemize}
+\item The average height of 100 Irish students was 1.72m and the variance 0.0144m2.
+\item 
+Calculate 95\% and 99\% confidence intervals for the average height of the population of Irish students.
+\end{itemize}
+
+ 
+Variance :  0.0144m2.    Standard deviation is therefore 0.12m
+estimate : sample mean  1.72m
+sample size : 100  (large sample)
+ 
+\begin{itemize}
+\item 95\% confidence , therefore  = 0.05
+\item two tailed procedure, therefore k = 2
+\item therefore column to use = 0.025
+\end{itemize}
+ 
+   Large sample
+   degrees of freedom =  i.e. bottom row
+ 
+  therefore t-value is 1.96
+       99\% confidence ,
+       therefore  = 0.01
+       two tailed procedure, therefore k = 2
+       therefore column to use = 0.005
+ 
+       Large sample
+       degrees of freedom =  i.e. bottom row
+ 
+       therefore t-value is 2.576
+                      
+
+Standard Error (from Formulae)     sn        =0.12100       =0.012m
+95\% Confidence Interval : estimate(t-valuestd. error)
+ 
+                           \[ 1.72\pm (1.96 \times 0.012) =\]
+ 
+
+99\% Confidence Interval : estimate(t-valuestd. error)
+ 
+                     \[1.72(2.576\times 0.012) =\]       
+
+
+%----------------------------------------------------------------------% 
+% 2000 - Q6
+ 
+The connectors for mobile phones must have a standard deviation of 2mms or less.  
+A major mobile company takes a random sample from one of its suppliers as follows.
+
+\[ 
+34.2, 33.7, 31.9, 34.3, 31.6, 32.7, 34.1, 35.2, 31.6, 32.9, 33.0, 32.4.
+\] 
+Based on the data from the sample you are required to 
+ 
+
+\begin{itemize} 
+\item[(i)]   Construct a 95% confidence interval for the population variance.
+\item[(ii)]  At the 5\% level of significance is there evidence to support the supplier’s claim that its products are within specification.
+\item[(iii)] Using the sample standard deviation as an estimate of the population standard deviation determine the sample size necessary to estimate the mean length of connectors, assuming that a 99% confidence is required with a margin of error of 0.5 mm
+\end{itemize}
+
+%-----------------------------------------------------------------------------% 
+% 2001 - Q 6 	
+
+A factory that manufactures tyres claims that the nominal depth of the treads is 2mm and from past experience it is known that the standard deviation of such treads is 0.01mm. Assume that the treads of the tyres are distributed Normally. A random sample of 10 tyres is taken and their tread depths (in mm) are found to be 
+
+\begin{verbatim} 
+2.68, 2.13, 2.82, 2.71, 2.36, 2.52, 2.29, 2.77, 2.45, 2.39.
+\end{verbatim} 
+\begin{itemize} 
+\item[(a)] Find a point estimate of the mean depth, $\mu$ of the tyre treads. 	
+ 
+\item[(b)] What is the standard error of the point estimate in (a). 			
+ 
+\item[(c)] Find 95\% confidence limits for the mean depth, µ, of tyre treads. Define a 95\%  confidence interval. 						5
+ 
+\item[(d)] Without formal calculation, discuss whether $\mu$ = 2mm is a plausible  hypothesis,   given the results in (c). 						5
+ 
+\item[(e)] Construct a formal test of the null hypothesis 
+H0 : $\mu$ = 2mm, against the alternative  H1 : $\mu$ = 2mm. Interpret the result ($\alpha = 0.05$).		 										
+ 
+ \end{itemize}
+ 
+
+\end{document}
+

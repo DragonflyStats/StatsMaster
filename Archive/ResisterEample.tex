@@ -1,0 +1,180 @@
+
+
+
+\section*{Question 2}
+
+\begin{itemize}
+\item Ohm's Law: $U = IR$
+
+\begin{itemize}
+\item U: Potential (also known as Voltage)
+\item I: Current
+\item R: Resistance
+\end{itemize}
+
+\item Suppose that the resistance R is a random
+variable having uniform distribution over interval $[1.5, 2.25]$, i.e. $R \sim U(1.5; 2.25)$ \item $U$ has normal
+distribution with the mean 12[V] and standard deviation $1.2[V]$, i.e. $U \sim N(12, 1.2^2)$.\item Assume that
+R and U are independent and solve the following problems.
+\end{itemize}
+
+
+
+\noindent\textbf{Part 1}Find the expected values for R, I. $E[R]$ and $E[I]$
+
+\[ \int^b_a {1 \over x} dx =log(b) - log(a) \]
+
+\begin{itemize}
+\item $R \sim U(a,b)$
+\item From Formulae:  $E(R) = \frac{a+b}{2} = = \frac{1.5 +2.25 }{2} =1.875 $
+\item $E(R) = 1.875[ \Omega]$
+\bigskip
+\item We are told that $E(U) = 12 [V] $
+
+\item \[ E[I] = E \left[{U \over R} \right] =  E[U] \times E[1/R] \]
+\item We need to compute $E[1/R]$
+
+\item Recall \[E[R] =  \int \left[ r f(r) \right] dr \]
+\item Recall \[E[R^2] = \int \left[ r^2 f(r)\right] dr\]
+\item Therefore \[ E[1/R] =  \int \left[1/r f(r)\right] dr  \]
+\item In this case, the density function $f(r)$ is a constant.
+\[f(r) = {1 \over b-a}  = {1 \over 2.25 - 1.5} = {1\over 0.75}\]
+
+\end{itemize}
+
+
+
+\begin{itemize}
+\item \[ E[1/R] =  \int \left[1/r f(fr)\right] dr = f(r) \times \int \left[1/r \right] dr   \]
+\item Density function is a constant
+\[f(r) = {1 \over b-a}  = {1 \over 2.25 - 1.5} = {1\over 0.75}\]
+\item Using the hint
+
+\[ \int^b_a {1 \over r} dr =log(b) - log(a) = log(2.25) - log(1.5)  \]
+
+\item \[ E(1/R) = {log(2.25) - log(1.5)  \over 0.75}  = 0.54063 \]
+
+\item So the answer is
+\[ E(I) = 12 \times 0.54063 = 6.4876 [A] \]
+\end{itemize}
+
+
+
+
+
+
+\noindent\textbf{Part 3} Find the variances for R and I\\
+
+
+hint:
+\[ \int^b_a {1 \over x^2} dx = 1/a - 1/b \]
+
+\begin{itemize}
+
+\item We use a very similar approach to the last part
+\item $R \sim U(a,b)$
+\item From Formulae:  $Var(R) = \frac{(b-a)^2}{12} = \frac{(2.25 - 1.5)^2 }{12}  $
+\item $Var(R) = 0.046875$
+\item We are also told that $Var(U) = 1.2^2 = 1.44 $
+\item Using formulae \[Var(I) = E(I^2) - E(I)^2 \]
+\item We need to compute $E(I^2)$
+\[ E(I^2)= E \left[ \frac{U^2}{R^2} \right] = E[U^2] \times E \left[ \frac{1}{R^2} \right] \]
+
+
+
+\end{itemize}
+
+
+
+
+
+
+
+\begin{itemize}
+
+\item We can say: $Var(U) = E[U^2] - E[U]^2$
+\item We know $Var(U)$ and can compute $E[U]^2$ easily
+\item $1.44 = E[U^2] - 12^2$
+\item Necessarily $ E[U^2] = 145.44$
+
+\item To find $E[1/R^2]$ we use a very similar approach to the last question.
+
+\[ E[1/R^2] =  \int \left[{1 \over r^2} f(r)\right] dr  = f(r) \int {1 \over r^2}  dr  \]
+
+\[ E[1/R^2] = {(1/1.5) - (1/2.25) \over 0.75} = 0.29627 \]
+
+\item Therefore $E[I^2]  = 145.44 \times 0.29627 = 43.09$
+
+\item $Var[I] = E[I] - E[I]^2  = 43.09 - (6.4876)^2 = 1.001[A]$
+
+\end{itemize}
+
+
+
+\noindent\textbf{Part 3} Find the standard deviations for R and I?\\
+
+
+
+\begin{itemize}
+\item Simply compute the square roots of the respective variances.
+\item $\sigma_R = 0.21651 [\Omega]$
+\item $\sigma_I = 1.0005 [A]$
+\end{itemize}
+
+
+
+\noindent\textbf{Part 4} If you observe I=7[A], would yo reconsider this a rather unusual value for current in the view of the obtained values for the mean and the standard deviation of I? Justify your answer\\
+
+
+\begin{itemize}
+\item The expected value of $I$ is 6.4876 [A]
+\item The standard deviation is 1.005
+\item We expect most values to be within $6.48 \pm 1 [A]$
+
+\item The observed value of the current seems to be: close to the mean, and within the range of typical values for current I
+\end{itemize}
+
+\noindent\textbf{Part 5} Find the covariance between R and I\\
+
+
+
+\begin{itemize}
+\item $Cov(R,I) = E(R\times I) - \left(\mu_R \times \mu_I \right)$
+\item Alternatively :$Cov(R,I) = E(R\times I) - \left(E(R) \times E(I) \right)$
+\item Using Ohm's law: $E (I \times R) = E(U)  =12$
+\item $E(I) \times E(R) = 1.875 \times 6.4876 = 12.164$
+\item $Cov(R,I) = -0.164$
+\end{itemize}
+
+
+
+
+\noindent\textbf{Part 6} Evaluate the correlation coefficients between R and I.\\
+
+\begin{itemize}
+\item See Formula
+\[ \rho = \frac{Cov(X,Y)}{\sigma_x \sigma_y} \]
+\item From before $\sigma_I =1.005 [A]$ and $\sigma_R =0.21651 [\Omega]$
+\item
+The correlation coefficient is defined as the ratio between the covariance and the product
+standard deviation
+\[\rho_{R,I} = { -0.164 \over (0.21651 \times 1.005)} = -0.7537 \]
+
+\end{itemize}
+
+
+
+\noindent\textbf{Part 7}Based on the obtained values of characteristics, if you observe R = 2.1[$\Omega
+$], then out of two
+possible values 7.5[A] and 5.2[A] for the current I which you would consider more plausible and
+why?
+
+\begin{itemize}
+\item From the correlation coefficient, we see a fairly strong negative relationship
+\item If we see high values of one variable, we expect lower values of the other.
+\item In this instance, we have a reasonably high value of resistance 2.1, where the max is 2.25.
+\item Therefore we expected a low value for current.
+\item We expect that the value of 5.2 [A] is more likely.
+
+\end{itemize}
+%---------------------------------------------------- %

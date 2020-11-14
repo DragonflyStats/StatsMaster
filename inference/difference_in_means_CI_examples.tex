@@ -1,0 +1,33 @@
+﻿
+%----------------------------------------------------------------------------------------------------%
+\begin{frame}
+\frametitle{Independent samples : Example}
+\begin{itemize}
+\item Two similar machines are making components of a particular length
+in mm. \item Give a $90\%$ confidence interval for the difference in average length between
+the components produced by the two machines. \item  Assume that the populations are normal
+with variance 9 for the first machine and 16 for the second machine.
+\item The results for each machine are\\ \bigskip
+Machine A: $\{ 23.7, 23.0, 22.2, 24.0, 21.2, 23.1, 27.1, 24.0 \}   $ ( $n_1= 8$)\\ \bigskip
+Machine B: $\{23.4, 15.3, 30.9, 18.8, 25.3, 25.2, 32.1\}$  ($n_2=7$) \\
+\end{itemize}
+\end{frame}
+
+%----------------------------------------------------------------------------------------------------%
+\begin{frame}
+
+\frametitle{Independent samples : Example}
+\begin{itemize}
+\item For machine A, $\bar{x}_A = 23.54$. For machine B, $\bar{x}_B = 24.43$. 
+\item Since the variances are known, the quantile for the confidence interval can come from the normal distribution. 
+\item The quantile is $z_{0.05} = 1.645$.
+\item The standard deviation of the difference of the sample means is
+\end{itemize}
+\[ \sqrt{\left({\sigma^2_1 \over n_1}\right)+\left({\sigma^2_2 \over n_2}\right)} = \sqrt{{9\over 8} + {16\over 7}} = 1.847.\]
+
+The $90\%$ confidence interval for the difference between machines A and B is
+
+
+\[(23.54 - 24.43) \pm (1.645 \times 1.847) = −0.89 \pm 3.04 = \alert{(-3.93, 2.15)}. \]
+
+\end{frame}

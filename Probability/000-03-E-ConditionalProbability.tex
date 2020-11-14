@@ -1,0 +1,219 @@
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+\chapter{Conditional Probability}
+\section{Conditional Probability}
+
+The conditional probability of an event is the probability that an event A occurs given that another event B has already occurred. This type of probability is calculated by restricting the sample space that we’re working with to only the set B.
+
+The formula for conditional probability can be rewritten using some basic algebra. Instead of the formula:
+
+\[P(A | B) = \frac{P(A \cap B) }{P( B )}  \]
+
+
+\section{Conditional Probability}
+Suppose $B$ is an event in a sample space $S$ with $P(B) > 0$.
+The probability that an event $A$ occurs once $B$has occurred or, specifically, the
+conditional probability of A given $B$ (written $P(A|B)$), is defined as follows:
+\[ P(A|B) = \frac{P(A\cap B)}{P(B)}\]
+
+\begin{itemize}
+\item This can be expressed as a multiplication theorem
+\[ P(A\cap B) = P(A|B)\times P(B) \]
+\item The symbol $|$ is a vertical line and does not imply division.
+\item Also $P(A|B)$ is not the same as $P(B|A)$.
+\end{itemize}
+Remark: The Prosecutor's Fallacy , with reference to the O.J. Simpson trial.
+
+
+What is the probability of one event given that another event occurs? For example, what is the probability of a mouse finding the end of the maze, given that it finds the room before the end of the maze?
+
+This is represented as:
+
+
+\[P[A | B]\]
+or "the probability of A given B."
+
+\[P(A | B) = \frac{P(A\cap B)}{P(B)}\]
+
+If A and B are independent of one another, such as with coin tosses or child births, then:
+
+
+\[P[A | B] = P[ A ]\]
+Thus, "what is the probability that the next child a family bears will be a boy, given that the last child is a boy."
+
+This can also be stacked where the probability of A with several "givens."
+
+
+\[P[A | B_1, B_2, B_3 ]\]
+or "the probability of A given that B1, B2, and B3 are true?"
+
+
+
+\begin{itemize}
+\item pairwise disjoint sets
+\item The addition principle
+\end{itemize}
+
+
+\section{Conditional Probability}
+
+\[ P(X|Y)  = \frac{P(X \mbox{ and } Y)}{P(Y)} \]
+
+Re-arranging
+\[ P(X \mbox{ and } Y) =  P(X|Y)\times P(Y) \]
+Therefore we can say
+\[ P(F \mbox{ and } A) =  P(F|A)\times P(A) \]\\
+\[ P(F \mbox{ and } B) =  P(F|B)\times P(B) \]
+
+
+
+
+
+\[ P(F \mbox{ and } A) =  P(F|A)\times P(A) \]
+
+\[ P(F \mbox{ and } B) =  P(F|B)\times P(B) \]
+
+
+
+
+\[ P(F \mbox{ and } A) =  P(F|A)\times P(A) = 0.80 \times 0.01\]\\
+\[ P(F \mbox{ and } A) = 0.008\]
+
+\[ P(F \mbox{ and } B) =  P(F|B)\times P(B) = 0.20 \times 0.03\]\\
+\[ P(F \mbox{ and } B) = 0.006\]
+
+%=================================================================================================$
+\textbf{Recall:}
+\[ P(F) = P(F \mbox{ and } A) + P(F \mbox{ and } B) \]
+
+
+
+
+
+
+
+
+\[P[A | B]\]
+or "the probability of A given B."
+
+\[P(A | B) = \frac{P(A\cap B)}{P(B)}\]
+
+If A and B are independent of one another, such as with coin tosses or child births, then:
+
+
+\[P[A | B] = P[ A ]\]
+Thus, "what is the probability that the next child a family bears will be a boy, given that the last child is a boy."
+
+This can also be stacked where the probability of A with several "givens."
+
+
+\[P[A | B_1, B_2, B_3 ]\]
+or "the probability of A given that B1, B2, and B3 are true?"
+
+
+
+%==================================================================%
+\section{Algebaic Results}
+
+
+\subsection{Multiplication Rule}
+The multiplication rule is a result used to determine the probability that two events, $A$ and $B$, both occur.
+The multiplication rule follows from the definition of conditional probability.\\ \bigskip
+
+The result is often written as follows, using set notation:
+\[ P(A|B)\times P(B) = P(B|A)\times P(A) \qquad \left( = P(A \cap B) \right) \]
+
+Recall that for independent events, that is events which have no influence on one another, the rule simplifies to:
+\[P(A \cap B)  = P(A)\times P(B) \]
+
+
+From the first year intake example, check that
+\[ P(E|F)\times P(F) = P(F|E)\times P(E)\]
+\begin{itemize}
+\item $P(E|F)\times P(F) = 0.58 \times 0.38  = 0.22$
+\item $P(F|E)\times P(E) = 0.55 \times 0.40  = 0.22$
+\end{itemize}
+
+\subsection{Law of Total Probability}
+The law of total probability is a fundamental rule relating marginal probabilities to conditional probabilities. The result is often written as follows, using set notation:
+\[ P(A)  = P(A \cap B) + P(A \cap B^c) \]
+
+where $P(A \cap B^c)$ is probability that event $A$ occurs and $B$ does not.\\ \bigskip
+
+
+Using the multiplication rule, this can be expressed as
+\[ P(A) = P(A | B)\times P(B) + P(A | B^{c})\times P(B^{c}) \]
+
+
+From the first year intake example , check that
+\[ P(E)  = P(E \cap M) + P(E \cap F) \]
+with $ P(E) = 0.40$, $ P(E \cap M) = 0.18$ and  $ P(E \cap F) = 0.22$
+\[ 0.40  = 0.18 + 0.22 \]
+\textbf{Remark:}  $M$ and $F$ are complement events.
+
+
+\section{Bayes' Theorem}
+Bayes' Theorem is a result that allows new information to be used to update the conditional probability of an event.
+\bigskip
+
+Recall the definition of conditional probability:
+\[ P(A|B) = \frac{P(A \cap B)}{P(B)} \]
+
+
+Using the multiplication rule, gives Bayes' Theorem in its simplest form:
+
+\[ P(A|B) = \frac{P(B|A)\times P(A)}{P(B)} \]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Using the multiplication rule, gives Bayes' Theorem in its simplest form:
+
+\[ P(A|B) = \frac{P(B|A)\times P(A)}{P(B)} \]
+
+
+The general form of Bayes theorem is
+\[ P(A|B) =
+\frac{P(A \mbox{ and }B)}{P(B)} \]
+
+Equivalently Bayes' Theorem can be expressed as
+\begin{equation*}
+P(B|A)=\frac{P\left(A|B\right) \times P(B) }{P\left( A\right) }.
+\end{equation*}
+
+
+
+
+
+\section{Conditional Probabilities}
+Bayes Theorem
+
+
+\[ P(A|B)  = \frac{P(A \mbox{and} B)}{P(B)} \]
+
+
+
+
+
+
+
+
+
+\end{document}

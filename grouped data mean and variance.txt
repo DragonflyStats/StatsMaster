@@ -1,0 +1,33 @@
+
+\begin{document}
+%---------------------------------------------------%
+\begin{frame}
+\frametitle{Grouped Data : Mean and Variance}
+\Large
+Mean of Grouped Data
+\[ \bar{x} = \frac{\sum fx}{\sum f} \]
+
+\end{frame}
+%---------------------------------------------------%
+\begin{frame}
+\frametitle{Grouped Data : Mean and Variance}
+\Large
+Variace of Grouped Data
+\[ s^2 = \left[\frac{\sum fx}{\sum f}\right] \]
+
+\end{frame}
+%---------------------------------------------------%
+\begin{frame}
+\frametitle{Grouped Data : Mean and Variance}
+\Large
+\begin{itemize}
+\item[1.] $\sum f$ Sum of frequencies,
+\vspace{0.5cm}
+\item[2.] $\sum fx$ Multiply midpoints by frequencies, then sum all products,
+\vspace{0.5cm}
+\item[3.] $\sum fx^2$ Multiply the squares of midpoints by frequencies, then sum all products,
+\end{itemize}
+
+\end{frame}
+%---------------------------------------------------%
+\end{document}
