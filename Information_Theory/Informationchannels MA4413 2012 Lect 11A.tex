@@ -27,156 +27,9 @@
 %------------------------------------------------------------------------%
 
 \begin{document}
-\begin{frame}
-\titlepage
-\end{frame}
 
-\begin{frame}
-\frametitle{Discrete memoryless channel (from last lecture)}
-\begin{itemize}
-\item For a DMC with ``m" inputs and ``n" outputs, the input X consists of input symbols $x_1, x_2, \ldots x_m$.
-\item The probabilities of these source symbols $P(x_i)$ are assumed to be known.
-\item The output Y consists of output symbols $\{y_1,y_2,\ldots, y_n \}$
-\item Each possible input-to-output path is indicated along with a conditional probability $P(y_j|x_i)$, where $P(y_j|x_i)$  is the conditional probability of
-obtaining output $y_j$ given that the input is $x_i$. \item $P(y_j|x_i)$ is called a \textbf{\emph{channel transition probability}}.
-\end{itemize}
-\end{frame}
-%\end{document}
-%--------------------------------------------------------%
-%--------------------------------------------------------%
-\begin{frame}
-\frametitle{Discrete memoryless channel}
-\begin{itemize}
-\item On the next slide, we present a binary DMC, with the channel transition probabilities indicated.
-\item $P(y_1|x_1)$ = 0.9  and $P(y_2|x_1)$ = 0.1
-\item $P(y_1|x_2)$ = 0.2  and $P(y_2|x_2)$ = 0.8
-\end{itemize}
-\end{frame}
-
-\frame{
-\frametitle{Discrete Memoryless Channels}
-
-\begin{center}
-\includegraphics[scale=0.54]{10Bnet2}
-\end{center}
-}
-%- Data Compression ( www.datacompression.com )
-
-\begin{frame}
-\frametitle{Channel Matrix}
-
-A channel is completely specified by the complete set of transition probabilities. Accordingly, a
-channel is specified by the matrix of transition probabilities $[P(Y|X)]$, given by
-
-\[  [P(Y|X)]  = \left[ \begin{array}{cccc}
-P(y_1|x_1) & P(y_2|x_1) & \ldots & P(y_n|x_1) \\
-P(y_1|x_2) & P(y_2|x_2) & \ldots & P(y_n|x_2) \\
-\ldots & \ldots & \ldots & \ldots \\
-P(y_1|x_m) & P(y_2|x_m) & \ldots & P(y_n|x_n) \\
-\end{array} \right] \]
-
-
-The matrix $[P(Y|X)]$ is called the \textbf{\emph{channel matrix}}.
-%ZP(yylx;) : l lor all 1 (10.12)
- \end{frame}
-
-\begin{frame}
-\frametitle{Channel Matrix}
-\begin{itemize}
-\item Since each input to the channel results in some
-output, each row of the channel matrix must sum to unity (i.e. all rows must add up to 1. This condition is not necessary for columns).
-\item For the binary DMC presented previously, the channel matrix is
-\[  [P(Y|X)]  = \left[ \begin{array}{cc}
-0.9 & 0.1  \\
-0.2 & 0.8 \\
-\end{array} \right] \]
-\item (Remark: This is not a binary symmetric channel (relevant to later material))
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Channel Matrix}
-\begin{itemize}
-\item The input probabilities $P(X)$ are represented by the row matrix
-\[  [P(X)]  = \left[ \begin{array}{cccc}
-P(x_1) & P(x_2) & \ldots & P(x_m) \\
-\end{array} \right] \]
-\item The output probabilities $P(Y)$ are represented by the row matrix
-\[  [P(Y)]  = \left[ \begin{array}{cccc}
-P(y_1) & P(y_2) & \ldots & P(y_n) \\
-\end{array} \right] \]
-\item We can compute $[P(Y)] $ by the following formula: $[P(Y)]  = [P(X)]\times [P(Y|X)]$
-\item (Note: Be mindful of the dimensions of each matrix).
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Channel Matrix}
-\begin{itemize}
-\item Suppose for our Binary DMC that the input probabilities were given by $[P(X)] = [ 0.5\mbox{   }0.5]$.
-\item Compute $[P(Y)]$, given the channel matrix given in previous slides.
-\[  [P(Y)]  =  \left[ \begin{array}{cc}
-0.5 & 0.5 \\
-\end{array} \right] \times \left[ \begin{array}{cc}
-0.9 & 0.1  \\
-0.2 & 0.8 \\
-\end{array} \right] \]
-
-\item Solving
-\[  [P(Y)]  =  \left[ \begin{array}{cc}
-(0.5 \times 0.9)+(0.5 \times 0.2) & (0.5 \times 0.1)+(0.5 \times 0.8) \\
-\end{array} \right]  \]
-
-\item Simplifying \[  [P(Y)]  =  \left[ \begin{array}{cc}
-0.55 & 0.45 \\
-\end{array} \right]  \]
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Channel Matrix}
-\begin{itemize}
-\item Let $[P(X)]$ is presented as a diagonal matrix , i.e.
-
-\[  [P(X)]_d  = \left[ \begin{array}{cccc}
-P(x_1) &0 & \ldots & 0 \\
-0 & P(x_2)& \ldots & 0 \\
-\ldots & \ldots & \ldots & \ldots \\
-0& 0 & \ldots & P(x_m) \\
-\end{array} \right] \]
-\item The \emph{\textbf{ joint probability matrix}} $[P(X,Y)]$can be computed as
-$[P(X,Y)]  = [P(X)]_d\times [P(Y|X)]$
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Channel Matrix}
-\begin{itemize}
-\item For the Binary DMC described in the previous example, compute the joint probability matrix.
-\item Diagonalize the input probabilities for $X$.
-\[  [P(X)]_d  = \left[ \begin{array}{cc}
-0.5 & 0.0  \\
-0.0 & 0.5\\
-\end{array} \right] \]
-
-\item Simplifying
-\[  [P(X,Y)]  =  \left[ \begin{array}{cc}
-(0.5 \times 0.9)+(0 \times 0.2) & (0.5 \times 0.1)+(0 \times 0.8) \\
-(0 \times 0.9)+(0.5 \times 0.2) & (0 \times 0.1)+(0.5 \times 0.8) \\
-\end{array} \right]  \]
-
-
-\item Solving
-\[  [P(X,Y)]  =  \left[ \begin{array}{cc}
-0.45 & 0.05 \\
-0.1  & 0.4 \\
-\end{array} \right]  \]
-\end{itemize}
-\end{frame}
 %---------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{Types of Channel}
 \textbf{ 1. Lossless Channel:}\\
 A channel described by a channel matrix with only one non-zero element in each column is called a lossless channel.
@@ -190,10 +43,10 @@ A channel described by a channel matrix with only one non-zero element in each c
 (Drawn in overhead):\\ \bigskip
 
 It can be shown that in the lossless channel, no source information is lost in transmission.
-\end{frame}
+
 
 %---------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{Types of Channel}
 \textbf{2. Deterministic Channel:}\\
 A channel described by a channel matrix with only one non-zero element in each row is called a deterministic channel.
@@ -207,10 +60,10 @@ A channel described by a channel matrix with only one non-zero element in each r
 \end{array} \right]  \]
 (Drawn in overhead):\\ \bigskip
 Note that since each row has only one non-zero element, this element must be 1. When a given source symbol is sent in a deterministic channel, it is clear which output symbol would be received.
-\end{frame}
+
 
 %---------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{Types of Channel}
 \textbf{3. Noiseless Channel:}\\
 A channel is said to be \emph{\textbf{noiseless}} if it is both lossless and deterministic.
@@ -223,10 +76,10 @@ The channel matrix is the identity matrix: only one element in each row and each
 \end{array} \right] \]
 (Drawn in overhead):\\ \bigskip
 Note that the input and output alphabets have the same size , i.e. $m=n$.
-\end{frame}
+
 
 %----------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{Types of Channel}
 \textbf{4. Binary Symmetric Channel:}\\
 The binary symmetric channel is defined by the following channel diagram (next slide) and the channel matrix is given by
@@ -236,7 +89,7 @@ The binary symmetric channel is defined by the following channel diagram (next s
 p & 1-p\\
 \end{array} \right] \]
 The channel has two inputs and two outputs $(x_1=0,x_2=1)$ and two outputs $(x_1=0,x_2=1)$. The channel is symmetric because the probability of receiving a 1 if a 0 is sent is the same as the probability of receiving a 0 if a 1 was sent. This common probability is denoted $p$.
-\end{frame}
+
 
 \frame{
 \frametitle{Binary Symmetric Channels}
@@ -247,7 +100,7 @@ The channel has two inputs and two outputs $(x_1=0,x_2=1)$ and two outputs $(x_1
 }
 
 %---------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{Mutual Information}
 \textbf{Joint Entropies:}\\
 Using the input probabilities $P(x_i)$, output probabilities $P(y_i)$, transition probabilities $P(y_i|x_i)$,
@@ -259,17 +112,17 @@ with m inputs and n outputs:
 \item $H(Y) = - \sum ^{n}_{j=1} P(y_j) \mbox{log}_2 P(y_j)$
 \item $H(X, Y)= - \sum ^{n}_{j=1}\sum ^{m}_{i=1} P(x_i,y_j) \mbox{log}_2 P(x_i,y_j)$
 \end{itemize}
-\end{frame}
+
 
 %---------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{Mutual Information: Joint Entropy}
 These entropies can be interpreted as follows:\begin{itemize}\item $ H(X)$ is the average uncertainty of the channel input,
 and $H(Y)$ is the average uncertainty of the channel output.\item  The joint entropy $H(X,Y)$ is the average uncertainty of the communication channel as a
 whole.\end{itemize}
-\end{frame}
+
 %---------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{Mutual Information: Conditional Entropy}
 \begin{itemize}
 \item The conditional entropy $H(X|Y)$ is a
@@ -282,9 +135,9 @@ transmitted.
 \item $H(X| Y)= - \sum ^{n}_{j=1}\sum ^{m}_{i=1} P(x_i,y_j) \mbox{log}_2 P(x_i|y_j)$
 \item $H(Y|X)= - \sum ^{n}_{j=1}\sum ^{m}_{i=1} P(x_i,y_j) \mbox{log}_2 P(y_j|x_i)$
 \end{itemize}
-\end{frame}
+
 %-----------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{Mutual Information : Useful Identities}
 Two useful relationships among the types of entropies are
 \begin{itemize}
@@ -292,8 +145,8 @@ Two useful relationships among the types of entropies are
 \item $H(X,Y)=H(Y|X)+H(X) $
 \end{itemize}
 (Remark : compare to identities in probability theory)
-\end{frame}
-\begin{frame}
+
+
 
 \frametitle{Mutual Information}
 The mutual information $I(X; Y)$ of a channel is defined by
@@ -303,7 +156,7 @@ Alternatively we can define it as either
 \[ I(X; Y) = H(Y) -  H(Y|X) \mbox{     (b/symbol) } \]
  or as
 \[ I(X; Y) = H(Y)+ H(Y)  - H(X,Y) \mbox{    (b/symbol) } \]
-\end{frame}
+
 
 %----------------------------------------------------------------------------------%
 \frame{
@@ -314,7 +167,7 @@ conditional on the knowledge of another random variable. \item The reduction in 
 \end{itemize}
 }
 %----------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{Entropies: Example}
 \begin{itemize}
 \item The input source to a noisy communication channel is a random variable X over the
@@ -322,9 +175,9 @@ four symbols $\{a, b, c, d\}$. \item  The output from this channel is a random v
 four symbols.
 \end{itemize}
 
-\end{frame}
+
 %----------------------------------------------------------------Part 2 %
-\begin{frame}
+
 \frametitle{Entropies: Example}
 The joint distribution of these two random variables is as follows:\\ \bigskip
 \begin{center}
@@ -337,9 +190,9 @@ y=c & 1/32&1/32 & 1/16 & 0\\ \hline
 y=d & 1/32& 1/32& 1/16 & 0\\ \hline
 \end{tabular}
 \end{center}
-\end{frame}
+
 %----------------------------------------------------------------Part 2 %
-\begin{frame}
+
 \frametitle{Entropies: Example}
 \begin{itemize}
 \item Write down the marginal distribution for $X$ and compute the marginal entropy $H(X)$.
@@ -349,10 +202,10 @@ y=d & 1/32& 1/32& 1/16 & 0\\ \hline
 \item (next class) What is the conditional entropy $H(X|Y)$?
 \item (next class) What is the mutual information $I(X;Y)$ between the two random variables?
 \end{itemize}
-\end{frame}
+
 %----------------------------------------------------------------------------------%
 %----------------------------------------------------------------Part 2 %
-\begin{frame}
+
 \frametitle{Entropies: Example}
 The marginal distribution of these two random variables is as follows:\\ \bigskip
 \begin{center}
@@ -366,10 +219,10 @@ y=d & 1/32& 1/32& 1/16 & 0& \alert{0.125}\\ \hline \hline
 \alert{P(X)} & \alert{0.25}& \alert{0.25}& \alert{0.25} & \alert{0.25}&\\ \hline
 \end{tabular}
 \end{center}
-\end{frame}
 
 
-\begin{frame}
+
+
 \frametitle{Entropies: Example}
 \begin{itemize}
 
@@ -381,13 +234,13 @@ y=d & 1/32& 1/32& 1/16 & 0& \alert{0.125}\\ \hline \hline
 
 
 \end{itemize}
-\end{frame}
+
 
 
 \end{document}
 %---------------------------------------------------------------------------------------------------------------------------------------%
 
-\begin{frame}
+
 \frametitle{Channel Capacity}
 
 \textbf{A. Channel Capacity per Symbol C:}\\
@@ -401,24 +254,24 @@ channel capacity CA is a function of only the channel transition probabilities t
 If r symbols are being transmitted per second, then the maximum rate of transmission of
 information per second is rC>.. This is the channel capacity per second and is denoted by C (bls):
 C : rC, b/s
-\end{frame}
+
 
 %------------------------------------------------------------------------%
 
 
 
 %---------------------------------------------------------------------------------Page 251 C-%
-\begin{frame}
+
 \frametitle{Capacities of special channels}
 \textbf{\emph{Lossless Channel}}:  $H(X|Y) = 0$ Therefore $I(X;Y) = H(X)$.
 The mutual information (information transfer) is equal to the input (source) entropy), and no source information is lost in transmission, Consequently, the channel capacity per symbol is
 \[ C_s = \mbox{ max }_{P(x_i)} H(X) = \mbox{log}_2m \]
 where $m$ is the number of symbols in $X$.
 
-\end{frame}
+
 \end{document}
 %---------------------------------------------------------------------------------Page 251 D-%
-\begin{frame}
+
 \frametitle{Capacities of special channels}
 \begin{itemize}
 \item \textbf{\emph{Deterministic Channel}}:  $H(Y|X) = 0$ Therefore $I(X;Y) = H(Y)$.
@@ -426,16 +279,16 @@ The mutual information (information transfer) is equal to the output entropy). T
 \[ C_s = \mbox{ max }_{P(x_i)} H(Y) = \mbox{log}_2n \]
 where $n$ is the number of symbols in $Y$.
 \end{itemize}
-\end{frame}
+
 %---------------------------------------------------------------------------------Page 252 A -%
-\begin{frame}
+
 \frametitle{Capacities of special channels}
 \begin{itemize}
 \item \textbf{\emph{Noiseless Channel}}:  Since a noiseless channel is both lossless and deterministic , we can say that $I(X;Y) = H(X) = H(Y)$.
 The mutual information (information transfer) is equal to the output entropy). The channel capacity per symbol is
 \[ C_s = \mbox{log}_2m = \mbox{log}_2n \]
 \end{itemize}
-\end{frame}
+
 
 
 % - Lossless data compression.
@@ -552,17 +405,17 @@ performing compression. Coding includes the design of the code and product of th
 
 
 
-\begin{frame}
+
 \frametitle{Code efficiency and Code redundancy}
 % Pg 253/254
 The parameter $L$ represents the average number of bits per source symbol used in the source coding process.
 The code efficiency is defined as \[\nu = {L_{min} \over L} \]where $L_{min}$ is the minimum possiblve value of $L$. When $\nu$ approaches unity, the codes is said to be efficient.
 The code redundancy $\gamma$ is defined as $\gamma = 1- \nu$.
-\end{frame}
+
 
 
 %---------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 %page 254
 \frametitle{Source Coding Theorem}
 The source coding theorem states that for zi DMS X with entropy $H(X)$, the average code word length $L$ per symbol is bounded as
@@ -573,10 +426,10 @@ Thus, with$ L_{min} \geq H(X)$.
 
 The code efficiency can be rewritten as
 \[\nu = {H(X) \over L} \]
-\end{frame}
+
 
 %---------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{ Classification of Codes}
 Classification of codes is best illustrated by an example. Consider Table 10-1 where a source of
 size 4 has been encoded in binary codes with symbol 0 and 1.\\ \bigskip
@@ -588,10 +441,10 @@ b& 01& 01 &1 &10 &01 &01\\
 c &00 &10& 00& 110& 011 &001\\
 d &11& 11& 11& 111 &0111 &0001\\
 \end{tabular}
-\end{frame}
+
 
 %---------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{Categorisation of Codes}
 \begin{enumerate}
 \item Fixed Length Codes
@@ -602,9 +455,9 @@ d &11& 11& 11& 111 &0111 &0001\\
 \item Instantaneous Codes
 \item Optimal Codes
 \end{enumerate}
-\end{frame}
+
 %---------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \begin{itemize}
 \item[1.] Fixed-Length Codes: A fixed-length code is one whose code word length is fixed. Code l and code Z of Table 10»l are
 fixed-length codes with length 2.
@@ -618,10 +471,10 @@ A code in which no code word can be formed by adding code symbols to another cod
 called a prefix-free code. Thus, in a prefix-free code no code word is a prefix of another. Codes 2, 4,
 and 6 of Table 10-l are prefix-free codes.
 \end{itemize}
-\end{frame}
+
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \textbf{5. Uniquely Decodable Codes}
 A distinct code is uniquely devudable if the original source sequence can be reconstructed perfectly
 from the encoded binary sequence. Note that code 3 of Table 10-1 is not a uniquely decodable code.
@@ -632,9 +485,9 @@ another. Thus, the prefix-free codes 2, 4, and 6 are uniquely decodable codes. N
 condition is not a necessary condition for unique decodability. \i\bigskip For example, code 5 of Table l0-l does
 not satisfy the prefix-free condition, and yet it is uniquely decodable since the bit 0 indicates the
 beginning of each code word of the code.
-\end{frame}
+
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \textbf{6. Instantaneous Codes}
 A uniquely decodable code is cmlled an inrtanruneous code if the end of any code word is
 recognizable without examining subsequent code symbols. The instantaneous codes have the property
@@ -643,9 +496,9 @@ codes are sometimes called instantaneous codes.
 \textbf{7. Optimal Codes}
 A code is said to be optimal if it is instantaneous and has mini.mu.rn average length L for a given
 source with a given probability assignment for the source symbols.
-\end{frame}
+
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{ Kraft inequality}
 \begin{itemize}
 \item Let X be a DMS with alphabet ($x _i = \{1, 2, . . . ,m\}$). Assume that the length of the assigned binary
@@ -658,10 +511,10 @@ which is known as the \textbf{Kraft inequality}.
 with code word lengths that satisfy the inequality. But it does not show us how to obtain these code
 words, nor does it say that any code that satisfies the inequality is automatically uniquely decodable
 \end{itemize}
-\end{frame}
+
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 \frametitle{ ENTROPY CODING}
 The design of a variable-length code such that its average code word length approaches the
 entropy of the DMS is often referred to as enlmpy coding. In this section we present two examples of
@@ -670,9 +523,9 @@ entropy coding.
 \item Shannon- Fano Coiding
 \item Huffman Coding
 \end{itemize}
-\end{frame}
+
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------%
-\begin{frame}
+
 % Page 255
 \frame{A. Shannon-Fun Coding:}
 An efficient code can be obtained by the following simple procedure, known as
@@ -682,11 +535,11 @@ Shannon- Fano algorithm:
 \item[2.] Partition the set into two sets that are as close to equiprobable as possible, and assign 0 to the
 upper set and 1 to the lower set.
 \end{itemize}
-\end{frame}
+
 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------%
 % Page 256 Bottom
-\begin{frame}\frametitle{B. Huffman Encoding:}
+\frametitle{B. Huffman Encoding:}
 In general, Huffman encoding results in an optimum code. Thus, it is the code that has the highest
 efliciency.\\ The Huffman encoding procedure is as follows:
 \begin{itemize}\item[1.] List the source symbols in order of decreasing probability.
@@ -700,7 +553,7 @@ assign 1 to the second probability.
 in the previous reduction step, retaining all assignments made in Step 3.
 \item[5.] Keep regressing this way until the first column is reached.
 \end{itemize}
-\end{frame}
+
 
 %An example of Huffman encoding is shown in Table 10-3.
 %H(X) = 2.36b/symbol
@@ -794,7 +647,7 @@ Ambiguity occurs if there is any path to some symbol whose label is a prefix of 
 
 
 %-----------------------------------------------------------------------------------------------%
-\begin{frame} % ULCIS
+ % ULCIS
 \frametitle{Self Information}Self-information
 This is defined by the following mathematical formula:$I(A) = −logb P(A)$
 
@@ -804,7 +657,7 @@ log_b  {1 \over P(A)} \]
 Note that log(1) = 0, and that $| − log(P(A))|$ increases as P(A) decreases
 from 1 to 0. This supports our intuition from daily experience. For example,
 a low-probability event tends to cause more ``surprise".
-\end{frame}
+
 
 
 %-------------------------------------------------------------------------------------------%
