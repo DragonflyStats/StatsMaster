@@ -2,76 +2,9 @@
 \begin{document}
 	
 \chapter{Chi Square Goodness of Fit tests}
-\section{Contingency Tables}
-\begin{itemize}
-\item In the case of goodness of fit tests, there is only one
-categorical variable, such as the screen size of TV sets that have
-been sold, and what is tested is a hypothesis concerning the
-pattern of frequencies, or the distribution, of the variable.
-
-\item The observed frequencies can be listed as a single row, or as a
-single column, of categories.
-\item 
-Tests for independence involve (at least) two categorical
-variables, and what is tested is the assumption that the variables
-are statistically independent.
-\item 
-Independence implies that knowledge of the category in which an
-observation is classified with respect to one variable has no
-affect on the probability of the other variable being in one of
-the several categories.
-
-\item When two variables are involved, the observed frequencies are
-entered in a two-way classification table, or contingency table.
-
-\item The dimensions of such tables are defined by $r \times c$, in
-which $r$ indicates the number of rows and $c$ indicates the
-number of columns.
-\item 
-If the null hypothesis of independence is rejected for classified
-data such as in Table 12.3, this indicates that the two variables
-are dependent and that there is a relationship between them. For
-Table 12.3, for instance, this would indicate that there is a
-relationship between age and the sex of stereo shop customers.
-
-\item Given the hypothesis of independence of the two variables, the
-expected frequency associated with each cell of a contingency
-table should be proportionate to the total observed frequencies
-included in the column and in the row in which the cell is located
-as related to the total sample size.
-
-\item Where $fr$ is the total frequency in a given row and $fc$ is the
-total frequency in a given column, a convenient formula for
-determining the expected frequency for the cell of the contingency
-table that is located in that row and column is
-
-\item The general formula for the degrees of freedom associated with a
-test for independence is $df = (r - 1)(c - 1)$.
-
-\end{itemize}
 
 
-\section{Chi Square}
 
-
-$p_{i}$ = Expected proportion for digit $i$.
-
-For this test we used the chi-squared test statistic which is given by:
-\begin{equation}
-X^2 = \sum_{i=1}^{n} {(O_i - E_i)^2 \over E_i}
-\end{equation}
-
-
-The Chi Square test tests a null hypothesis stating that the frequency distribution of certain events observed in a sample is consistent with a particular theoretical distribution. The events considered must be mutually exclusive and have total probability 1. A common case for this is where the events each cover an outcome of a categorical variable.
-
-\begin{itemize}
-	\item $X^2$ = the test statistic that asymptotically approaches a $\chi^2$ distribution.
-	\item $O_i$ = an observed frequency;
-	\item $E_i$ = an expected (theoretical) frequency, asserted by the null hypothesis;
-	\item $n $  = the number of possible outcomes of each event.
-\end{itemize}
-
-The chi-square statistic can then be used to calculate ap-value by comparing the value of the statistic to a chi-square distribution. The number of degrees of freedom is equal to the number of cells ``n'', minus the reduction in degrees of freedom, ``p''.
 
 \subsection{Chi Square example}
 In reading a burette to 0.01ml the final figure has to be estimated.
@@ -112,80 +45,6 @@ Perform a $\chi^2$ goodness of fit test of the model that states that the readin
 independent observations of a random variable that is uniformly distributed on (0, 3).
 
 
-\subsection{Chi Square contingency tables}
-
-
-In a survey the samples from five factories were examined for the
-number of skilled or unskilled workers.
-
-
-\begin{tabular}{|c|c|c|}
-	\hline
-	% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-	Factory & skilled workers & unskilled workers \\ \hline
-	A & 80 & 184 \\
-	B & 58 & 147 \\
-	C & 114 & 276 \\
-	D & 55 & 196 \\
-	E & 83 & 229 \\
-	\hline
-\end{tabular}
-
-Does the population proportion of skilled and unskilled workers vary with the factory?
-
-%--------------------------------------------------------------------------------------%
-\section{Chi Square}
-The table below shows the relationship between gender and party identification in a US state.
-
-\begin{tabular}{|c|c|c|c|c|}
-& Democrat	&Independent&	Republican	&Total \\ \hline
-Male&	279	&73&	225	& 577 \\ \hline
-Female&	165	&47	&191&	403 \\ \hline
-Total&	444	&120&	416 &	980 \\ \hline
-\end{tabular} 
-
-
-
-Test for association between gender and party affiliation at two appropriate levels
-and comment on your results.
-
-Set out the null hypothesis that there is no association between method of computation
-and gender against the alternative, that there is. Be careful to get these the correct way
-round!
-
-\begin{description}
-\item[H0:] There is no association.
-\item[H1:] There is an association.
-\end{description}
-
-Work out the expected values. For example, you should work out the expected value for
-the number of males who use no aids from the following: (95/195) Ã— 22 = 10.7.
-
-
-\section{Chi Square Example}
-
-In a large country each district is permitted to have its own policy on
-the death penalty. Some districts choose to have it, others choose not
-to. The table below shows the relationship between having the death
-penalty (No, Yes) and the crime rate (Low, High) for a sample of 200
-districts.
-
-\begin{center}
-\begin{tabular}{|c|c c|c|}
-	\hline
-	Death
-	penalty & Low crime & High crime & Total \\ \hline
-	No & 30 & 70 & 100\\ \hline
-	Yes & 60 & 40 & 100 \\ \hline
-	Total & 90 & 110 & 200 \\
-	\hline
-\end{tabular}
-\end{center}
-
-Calculate the value of chi-squared for the table and say what you
-would conclude.
-
-%------------------------------------------------------------------------------------------------%
 
 
 
