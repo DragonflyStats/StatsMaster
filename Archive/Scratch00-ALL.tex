@@ -399,57 +399,6 @@ Probability Distributions (Question 2 for End Of Year Exam)
 \end{itemize}
 }
 
-
-
-
-
-
-\section{Continuous Distributions}
-\begin{itemize}
-\item  (The Continuous Uniform Distribution, Not examinable)
-\item  The Exponential Distribution (Examinable for midterm)
-\item  The Normal Distribution
-\item  The Standard Normal (Z) Distribution.
-\item  Applications of Normal Distribution
-\end{itemize}
-
-
-\textbf{Confidence Interval for a Mean (Small Sample)}
-\begin{itemize}
-\item  The mean operating life for a random sample of $n = 10$ light bulbs is $\bar{x} = 4,000$ hours, with the sample
-standard deviation $s = 200$ hours. \item  The operating life of bulbs in general is assumed to be approximately normally distributed.\item 
-We estimate the mean operating life for the population of bulbs from which this sample was taken, using a 95 percent
-confidence interval as follows:
-
-\[4,000\pm(2.262)(63.3)  = (3857,4143)\]
-\end{itemize}
-
-
-
-
-\textbf{Confidence Interval for a Mean (Small Sample)}
-\begin{itemize}
-\item  The point estimate is 4,000 hours. The sample standard deviation is 200 hours, and the sample size is 10. Hence \[S.E(\bar{x} ) = { 200 \over \sqrt{10}} = 63.3\]
-
-\item  From last slide, the t quantile with $df=9$ is 2.262.
-\end{itemize}
-
-
-
-
-
-\begin{itemize}
-\item The normal distribution
-\item The Central Limit Theorem
-\item Sampling Distributions
-\item Standard error
-\item $p-$ values
-\item Testing for Normality
-\end{itemize}
-
-
-%-------------------------------------------------------------
-
 \begin{itemize}
 \item \textbf{Standard Error}
 Hypothesis Testing
@@ -474,30 +423,6 @@ that the second person chosen does watch them?
 \end{itemize}
 
 
-
-
-
-%----------------------------------------------------------------------------------------------------%
-{
-
-{\section{The Variance}
-\begin{itemize}
-\item Suppose a continuous uniform distribution has following parameters
-\begin{itemize}
-\item minimum $a=1$
-\item maximum $b=9$
-\end{itemize}
-\item What is the probability of $X$ being between $5$ and $8$?
-\begin{itemize}\item The lower bound $L$ is 5
-\item The upper bound $U$ is 8
-\end{itemize}
-\item What is $P( 5 \leq X \leq 8 )$?
-\end{itemize}
-\[
-P( 5 \leq X \leq 8 ) = \boldsymbol{{ 8 - 5 \over 9 - 1} = { 3 \over 8} = 0.375}
-\]
-}
-%--------------------------------------------------------------------------------------------------------%
 
 
 
@@ -624,49 +549,6 @@ Number of stations: & 22 & 37 & 20 & 13 & 6 & 2 \\ \hline
 \item[(b)] Calculate the sample median number of thunderstorms.
 \item[(c)] Comment briefly on the comparison of the mean and the median.
 \end{itemize}
-%------------------------------------------------%
-% 12 Normal Approximation of Binomial
-% PMS April 2006 
-In a certain large population 45\% of people have blood group A. 
-A random sample of 300 individuals is chosen from this population.
-Calculate an approximate value for the probability that more than 115 of the sample
-have blood group A.
-
-If X is the number in the sample with group A, then X has a binomial (300, 0.45)
-distribution, so
-\[ E[X] = 300 \times 0.45 = 135 \] and 
-\[ Var[X] = 300 \times 0.45 \times 0.55 = 74.25 \].
-Then, using the continuity correction,
-
-\[ P(X > 115) = P(X > 115.5)\]
-\[ 1- \frac{115.5 - 135}{\sqrt{74.25} } \]
-%-----------%
-
-
-\[  P(X > 115.5) = 1 -\theta(-2.26) = \theta(2.26) = 0.99\]
-
-%=========================================================% 
-% PMS Autumn 2008 Question 1
-The mean of a sample of 30 claims is \$5,200.
-Six have mean of \$ 8000 (i.e. group 1)
-Ten have mean of \$ 3100 (i.e. group 2)
-
-Compute the mean for the remaining claims
-
-\[\mbox{Total Costs} = (Cost for Group 1) + (Cost for Group 2) + (Cost from Group 3)\]
-
-\begin{itemize}
-\item Total Cost for all three groups : $\$5200 \times 30 = \$156000$
-\item Cost for Group 1 : $\$8000 \times 6 = \$48000$
-\item Cost for Group 2 : $\$3100 \times 10 = \$31000$
-\end{itemize}
-
-Necessarily the cost for group 3 is $\$77000$
-
-The mean claim for group 3 is therefore
-
-\[ \frac{\$77000}{14} = \$5500 \]
-
 %=========================================================% 
 
 % PMS SPring 2006 Question 6
@@ -714,15 +596,6 @@ $T \approx exp(0.5)$
 
 
 
-
-
-\subsection{Dice Roll Example}
-
-Suppose someone asks you to play the following game. Roll a die. If the die shows a 1, 2, 3, or 4, 
-you lose \$10. If the die shows a 5, you win \$15. If the die shows a 6, you win \$30. What is your expected 
-value?
-
-%--------------------------------------------------------------------%
 
 The mean and standard deviation of the following
 
@@ -851,26 +724,6 @@ Similarly, $P(X \leq 2) = P(X = 0) + P(X = 1) + P(X = 2)$\\ = 0 + 1/6 + 5/36 = 1
 
 
 
-\subsection*{Question 10. } % 10 Marks
-
-\begin{itemize}
-\item[a.] (1 Mark) The observation of the air pressure at a volume of 5 cubic metres was 19.87 bars.
-Calculate the residual from the regression model corresponding to this observation.
-\item[b.] (3 marks) Using the table above to justify your conclusion, test the null hypothesis that there
-is no monotonic (systematic) relationship between volume and pressure. State the null
-and alternative hypotheses clearly.
-\item[c.] (2 marks) Briefly explain why the use of linear regression to describe pressure as a function
-of volume is inappropriate.
-\end{itemize}
-
-
-
-
-\subsection{Standardisation Formula}
-
-\begin{equation}
-Z = \frac{ X - \mu } {  \sigma }
-\end{equation}
 %--------------------------------------------------------%
 \subsection{Pooled Standard Deviations}
 
@@ -951,132 +804,6 @@ The crtical value is 1.645.
 \item Significance level $\alpha=0.05$
 \end{itemize}
 
-
-
-
-
-
-
-
-\chapter{Probability Distributions}
-
-
-
-\textbf{Review Question 5 : Choose Operator}
-Evaluat the following
-\begin{itemize}
-\item $^{10}C_0$ 
-\item $^{10}C_1$
-\item $^6C_3$
-\end{itemize}
-Solutions
-\begin{itemize}
-\item $^{10}C_0  = 10! / (10! \times 0!) = 1$
-\item $^{10}C_1 =  10! / (9! \times 1!) =  = 1$
-\item $^6C_3$
-\end{itemize}
-
-
-\textbf{Review Question 5 :  Probability}
-If A and B are events such that $P(A|B^c) = 2P(A|B)$ and $P(B^c) = 2P(B)$.
-(The event $B^c$ is the complement of event B.) Compute the probability: $P(B^c|A)$ 
-
-\begin{itemize}
-\item Complement events: $P(B^c) = 1 - P(B)$. Also we are told $P(B^c) = 1-P(B)= 2P(B)$
-\item Necessarily $1 = 3P(B)$. Therefore $P(B) = 1/3$ and  $P(B^c)=2/3$
-\item Total Probability: $P(A) = P(A \mbox{ and } B) + P(A \mbox{ and } B^c)$
-\item
-\end{itemize}
-
-
-
-
-
-
-
-%
-%\section{Diagrammatic Explanation}
-%{ \textbf{Diagrammatic Explanation}}
-%\begin{displaymath}
-%\xymatrixcolsep{1.5cm}
-%\xymatrixrowsep{2cm}
-%\xymatrix{
-%\boxed{\text{\Huge Population}} \ar@{->}[r] \ar@/_2.2pc/[d]\ar@/_1.5pc/[d]\ar@/_0.8pc/[d]\ar@{->}[d]\ar@/^0.8pc/@{->}[d]\ar@/^1.5pc/@{->}[d]\ar@/^2.2pc/[d] &
-%\begin{tikzpicture}[baseline=(char.base)]
-%\node(char)[draw,shape=ellipse]{Parameter};
-%\end{tikzpicture} \\
-%\boxed{\text{Sample}} \ar@{->}[r] &
-%\begin{tikzpicture}[baseline=(char.base)]
-%\node(char)[draw,shape=ellipse]{Statistic};
-%\end{tikzpicture} \ar@{.>}[u]}
-%\end{displaymath}
-%
-%\begin{textblock}{1}(2.1,3.8)
-%\xymatrixrowsep{1cm}
-%\xymatrix{\\\ar@/^1.5pc/@{.}[u]}
-%\end{textblock}
-%\begin{textblock}{5}(2.2,3.3)
-%{\footnotesize\emph{The group of all individuals of interest (large in size)}}
-%\end{textblock}
-%
-%\begin{textblock}{1}(2.7,11.4)
-%\xymatrixrowsep{0.7cm}
-%\xymatrix{&\ar@/_1pc/@{.}[ld]\\&}
-%\end{textblock}
-%\begin{textblock}{5.5}(0.5,13)
-%{\footnotesize\emph{A subset of individuals selected from the population (small relative to the population size)}}
-%\end{textblock}
-%
-%\begin{textblock}{1}(1.7,10)
-%\xymatrixcolsep{1.5cm}
-%\xymatrix{&\ar@/^0.5pc/@{.}[l]}
-%\end{textblock}
-%\begin{textblock}{3.5}(0.3,7.5)
-%{\footnotesize\emph{Selection process must generate a representative sample}}
-%\end{textblock}
-%\begin{textblock}{3.5}(0.1,10.7)
-%{\footnotesize\emph{(random sampling)}}
-%\end{textblock}
-%
-%\begin{textblock}{1}(13.4,3.8)
-%\xymatrixrowsep{1.3cm}
-%\xymatrix{\\\ar@/_1.5pc/@{.}[u]}
-%\end{textblock}
-%\begin{textblock}{4}(11.4,1.6)
-%{\footnotesize\emph{The true value of the feature of interest (unknown - must be estimated)}}
-%\end{textblock}
-%
-%\begin{textblock}{1}(13,11.4)
-%\xymatrixrowsep{1.2cm}
-%\xymatrix{\\\ar@/_1.8pc/@{.}[u]}
-%\end{textblock}
-%\begin{textblock}{4.5}(9.4,13)
-%{\footnotesize\emph{The feature of interest calculated using the sample data}}
-%\end{textblock}
-%
-%\begin{textblock}{1}(11.8,7)
-%\xymatrixcolsep{0.7cm}
-%\xymatrix{\\&\ar@/_0.4pc/@{.}[l]}
-%\end{textblock}
-%\begin{textblock}{3}(13.2,7.5)
-%{\footnotesize\emph{An unbiased statistic estimates the parameter}}
-%\end{textblock}
-%
-%
-%
-
-
-%\subsection{Question 3}
-%{ \textbf{Question 3}}
-%two populations.... picture quality..\\[0.4cm]
-%\begin{enumerate}[a)]
-%\item What is the population?
-%\item What is the sample?
-%\item What is the parameter? What is its value?
-%\item What is the statistic? What is its value?
-%\item Identify any potential bias.
-%\end{enumerate}
-%
 
 
 
@@ -1374,26 +1101,7 @@ Sampling Frame:
 Databases
 
 
-%============================================================ %
 
-
-Section 2 Graphical methods
-
-Pie Charts – hard to make out what is going on.
-Some aesthetic use i.e. breaking up a long page of text.
-
-
-%============================================================ %
-\section{Probability}
-
-
-\begin{itemize}
-\item Law of total probability
-
-\item Independent events
-
-\item Conditional probability
-\end{itemize}
 
 
 %============================================================ %
@@ -1437,21 +1145,6 @@ $e^{-1.4}$
 
 $e^{-3.2}$
 
-
-
-
-{
-
-\t{This Presentation}
-\begin{enumerate}
-\item Contingency Tables
-\item Conditional Probability: Worked Examples
-\item Joint Probability Tables
-\item The Multiplication Rule
-\item Law of Total Probability
-\end{enumerate}
-
-}
 
 %------------------------------------------------------------%
 {
@@ -1686,41 +1379,6 @@ Interpret this: This is a very high strong positive linear relationship.
 
 
 
-
-
-
-
-\section{Syllabus}
-\begin{itemize}
-\item Descriptive Statistics \item Probability Distributions \item
-Statistical Inference \item Information Theory
-\end{itemize}
-
-On successful completion of this module, students should be able
-to:
-
-\begin{enumerate}
-\item Apply probability theory to problem solving. \item Employ
-the concepts of random variables and probability distributions to
-problem solving.
-
-\item Apply information theory to solve problems in data
-compression and transmission.
-
-\item Analyse rates and proportions.
-
-\item Perform hypothesis tests for a variety of statistical
-problems.
-\end{enumerate}
-
-
-
-
-
-
-
-
-
 \section*{Exercise 29}
 
 Add up all the numbers for 1 to 50
@@ -1817,46 +1475,6 @@ What is the 0.975 quantile for the $t-$ distribution when the degrees of freedom
 \end{tabular}
 \end{center}
 \end{table}
-
-
-
-\section{Syllabus}
-
-
-The concept of a random sample, the sampling distribution of the sample mean with applications to confidence intervals, hypothesis testing, and sample size determination, the sampling distribution of the sample proportion with applications to confidence intervals, hypothesis testing, and sample size determination, comparing two means, comparing two proportions, the chi-squared test of independence, Simpson's Paradox, simple linear regression, correlation, residuals.
-
-\smallskip
-On successful completion of this module, students should be able to:
-
-\begin{itemize}
-\item[1.] Calculate probabilities based on the normal distribution.
-
-\item[2.] Construct and use control charts based on individual measurements, subgroup means and subgroup ranges.
-
-\item[3.] Interpret computer output from common statistical software packages for basic statistical inference procedures such as hypothesis testing and confidence intervals for: a mean, a proportion, difference between independent means, and differences between independent proportions.
-
-\item[4.] Calculate the required sample size for tests of hypothesis and confidence intervals based on a single parameter.
-
-\item[5.] Interpret computer output and diagnostic plots from common statistical software packages for simple linear regression and multiple linear regression.
-
-\item[6.] Test the statistical significance of the difference between several conditional frequency distributions and outline the chi-squared formula used for the test.
-
-\end{itemize}
-
-
-%-------------------------------------------------------%
-
-
-\chapter{Further Inference}
-
-
-
-
-%-----------------%  Random Variables %------------------%
-
-
-%--------------------------------------------------------------------------------------%
-
 
 
 
