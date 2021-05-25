@@ -6,106 +6,6 @@
 	
 	\item \textbf{\emph{cumulative frequency distribution}} \\A  can show either the actual frequencies at or below each interval (as shown here) or the percentage of the scores at or below each interval. The plot can be a histogram as shown here or a polygon.
 \end{itemize}
-
-
-
- 
- 
-
-Introduction
-Examples of Statistics and Probability
-Variables
-Descriptive statistics
-Tukey's five number summary
-Sample size.
-
-Measures of Centrality
-The mean
-The Median
-Quartiles
-Range
-Standard Deviation
-Interquartile Range (IQR)
-Variance
-The Normal Distribution
-Use of the Standard Normal Distribution in Finance
-A Fat Tail
-Wild Randomness
-The Central Limit Theorem
-Confidence Intervals
-The Chi-Square Test
-Simple Linear regression
-The residual
-Correlation
-
-
-Introduction
-
-Finance itself is a relatively young field of research in which data have been available in large quantities only over the last 20 years. Thanks to electronic trading, it is now possible to quantify and analyze the fluctuations of financial markets on a large scale, but much interdisciplinary expertise is necessary to make headway in understanding it all.
-Examples of Statistics and Probability
-getstats campaign
-Florence Nightingale
-AdHoc Fallacy
-Post Hoc Ergo Propter Hoc
-Ecological Fallacy
-2004 Washington State Gubernatorial Election
-
-Shewhart Control Charts
-Deming
-
-Cluster Sampling
-
-Quota Sampling
-Variables
-
-Variables are things that we measure, control, or manipulate in research.
-
-
-Sample size.
-For this course the sample size is always denoted n.
-Measures of Centrality
-The mean 
-
-The mean (sometimes pronounced "x-bar") is the most commonly used measure of centrality.
-
-The Median
-
-
-s2=i=1n(xi-x)2n-1
-The Normal Distribution
-Use of the Standard Normal Distribution in Finance
-
-
-
-The Central Limit Theorem
-
-
-
-
-The Chi-Square Test
- 
-Categorical data
- 
-The Chi –Square test for independence
- 
-Simple Linear regression
-y is the predicted value for y 
-
-
-Estimate for the intercept
-
-Estimate for the slope
-
-The residual
-The residual is the difference of the predicted value and the observed value for each case i.
-
-case
-x
-y
-y
-Residual
-
-Simpson's paradox
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Reliability Theory}
 
@@ -305,183 +205,13 @@ The Bland Altman plot (Bland \& Altman, 1986 and 1999) is a statistical method t
 
 \subsection{Geometric notation}
 
-
-
-
-
-
-
-
-\newpage
-
-
-
-\newpage
-
-
-
 %------------------------------------------------------------------------------------------------%
-%------------------------------------------------------------------------------------------------%
-%------------------------------------------------------------------------------------------------%
-\chapter{ Information Theory and Data Compression}
-
-\section{Data Compression}
-\begin{itemize}
-	\item[1.] Explain what an optimal code is, in the context of data compression.
-	\item[2.] Are Huffman Codes Optimal?
-\end{itemize}
-
-
-The frequency of 0 as an input to a binary channel is 0.6. If O is the
-input, then 0 is the output with probability 0.8. If l is the input, then l
-is the output with probability 0.9.
-\begin{itemize}
-	\item[a.](4 marks) Calculate the information per bit contained in the input.
-	\item[b.](2 marks)Calculate the probability that the output is 0.
-	\item[c.](2 marks) Calculate the probability that the output is l,
-	\item[d.](2 marks) Calculate the probability that the input is 0 given that the
-	output is O.
-	\item[e.](2 marks) Calculate the probability that the input is l given that
-	the output is 1,
-	\item[f.](2 marks) Calculate the probability that the input is l given that
-	the output is O.
-	\item[g.](2 marks) Calculate the probability that the input is 0 given that
-	the output is l.
-	\item[h.](6 marks) Calculate the amount of information transmitted by the channel.
-	\item[i.](3 marks) Derive the globally optimal reconstruction rule.
-\end{itemize}
-
-
-
-
-\subsection*{Information Theory}
-
-\begin{itemize}
-	\item $I(p) = - log_{2}(p) = log_{2}(1/p)$\\
-	
-	\item $I(pq) = I(p) + I(q)$\\
-	
-	\item $H = - \sum_{i=1}^{m}p_{i}\; log_{2}(p_{i})$\\
-	
-	\item $E(L) = \sum_{i=1}^{m} l_{i} p_{i}$\\
-	
-	\item $\mbox{Efficiency} = H / E(L)$\\
-	
-	\item $I(X;Y) = H(X) + H(Y) - H(X,Y)$\\
-	
-	\item $I(X;Y) = H(X) - H(X|Y)$\\
-	
-	\item $P(C[r]) = \sum_{j=1}^{m}P(C[r]|Y=d_{j} )P(Y=d_{j} )$
-	
-\end{itemize}
-
-
-
-
-
-
-
-\bigskip
-An inspector of computer parts selects a random sample of components
-from a large batch to decide whether or not to audit the full batch.
-(i) If 20$\%$ or more of the sample is defective, the entire batch is
-inspected, Calculate the probability of this happening if it is
-thought that the population contains 4$\%$ defective components and
-a sample of 20 is selected.
-(ii) If 10$\%$ or more of the sample is defective, the entire batch is
-inspected. Calculate the probability of this happening if it is
-thought that the population contains 4$\%$ defective components and
-a sample of 50 is selected.
-(10 marks)
-(d) A model of an on—line computer system gives a mean time to retrieve a
-record from a direct access storage system device of 200 milliseconds
-with a standard deviation of 58 milliseconds. If it can be assumed that
-the data are normally distributed:
-(i) What proportion of retrieval times will be greater than 75
-milliseconds?
-(ii) What proportion of retrieval times will be between 150
-milliseconds and 250 milliseconds?
-(iii) What is the retrieval time below which 10\% of retrieval times
-will be?
-(9 marks)
-
-
-\begin{eqnarray*}
-	r&=&\frac{S_{XY}}{\sqrt{S^2_X}\times\sqrt{S^2_Y}}.\\\\
-	S_{XY}&=&\sum xy-\frac{\sum x \times \sum y}{n}.\\\\ S^2_X&=&\sum x^2-\frac{(\sum x)^2 }{n}.\\\\ S^2_Y&=&\sum y^2-\frac{(\sum y)^2 }{n}.\\\\ \end{eqnarray*} {\bf Regression coefficients} \begin{eqnarray*} \hat{\beta}_1&=&\frac{S_{XY}}{S^2_X}.\\\\
-	\hat{\beta}_0&=&\bar{y}-(\hat{\beta}_1\times\bar{x}).
-\end{eqnarray*}
-
-
-\begin{itemize}
-	\item[1.] Given four symbols A, B, C and D, the symbols occur with an equal
-	probability. What is the entropy of the distribution?
-	\item[2.] Suppose they occur with probabilities 0.5, 0.25, 0.125 and 0.125
-	respectively. What is the entropy associated with the event (experiment)?
-	\item[3.] Suppose the probabilities are 1,0,0,0. What is the entropy?
-\end{itemize}
 
 \chapter{Advanced Inference Procedures}
 
 
 
 
-
-
-\section{Kolmogorov-Smirnov test}
-The Kolmogorov-Smirnov test is defined by:
-\\
-H$_0$:     The data follow a specified distribution\\
-H$_1$:     The data do not follow the specified distribution\\
-
-Test Statistic:     The Kolmogorov-Smirnov test statistic is defined as
-
-where F is the theoretical cumulative distribution of the distribution being tested which must be a continuous distribution (i.e., no discrete distributions such as the binomial or Poisson), and it must be fully specified
-
-\subsection{ Characteristics and Limitations of the K-S Test}
-
-
-An attractive feature of this test is that the distribution of the K-S test statistic itself does not depend on the underlying cumulative distribution function being tested. Another advantage is that it is an exact test (the chi-square goodness-of-fit test depends on an adequate sample size for the approximations to be valid). Despite these advantages, the K-S test has several important limitations:
-\begin{enumerate}
-	\item It only applies to continuous distributions.
-	\item It tends to be more sensitive near the center of the distribution than at the tails.
-	\item Perhaps the most serious limitation is that the distribution must be fully specified. That is, if location, scale, and shape parameters are estimated from the data, the critical region of the K-S test is no longer valid. It typically must be determined by simulation.
-\end{enumerate}
-Due to limitations 2 and 3 above, many analysts prefer to use the Anderson-Darling goodness-of-fit test.
-
-However, the Anderson-Darling test is only available for a few specific distributions.
-
-
-\section{The Shapiro-Wilk test of normality}
-Performs the Shapiro-Wilk test of normality.
-\begin{verbatim}
-> x<- rnorm(100, mean = 5, sd = 3)
-> shapiro.test(x)
-
-Shapiro-Wilk normality test
-
-data:  rnorm(100, mean = 5, sd = 3)
-W = 0.9818, p-value = 0.1834
-\end{verbatim}
-In this case, the p-value is greater than 0.05, so we fail to reject the null hypothesis that the
-data set is normally distributed.
-\begin{verbatim}
->y <- runif(100, min = 2, max = 4)
-> shapiro.test(y)
-
-Shapiro-Wilk normality test
-
-data:  runif(100, min = 2, max = 4)
-W = 0.9499, p-value = 0.0008215
-\end{verbatim}
-In this case, the p-value is less than 0.05, so we reject the null hypothesis that the
-data set is normally distributed.
-
-
-
-
-%------------------------------------------------------------------------------------------------%
-%------------------------------------------------------------------------------------------------%
 %------------------------------------------------------------------------------------------------%
 \chapter{Birth and Death Processes}
 
@@ -553,33 +283,7 @@ This coefficient should be minimized over $p$.
 	\item Biometrics
 	\item Variance Inflation Factor
 	\begin{enumerate}
-		\item The heights for a group of forty rowing club members are tabulated as follows;
-		
-		\begin{table}[ht]
-			\begin{center}
-				\begin{tabular}{|rrrrrrrrrr|}
-					
-					\hline
-					141 & 148 & 149 & 149 & 155 & 156 & 167 & 169 & 169 & 170 \\
-					171 & 173 & 175 & 176 & 177 & 179 & 182 & 182 & 183 & 183 \\
-					183 & 184 & 184 & 184 & 185 & 185 & 185 & 186 & 186 & 189 \\
-					191 & 191 & 191 & 191 & 192 & 192 & 192 & 193 & 194 & 199 \\
-					\hline
-				\end{tabular}
-			\end{center}
-		\end{table}
-		\vspace{-0.5cm}
-		\begin{enumerate}
-			\item (6 marks) Summarize the data in the above table using a frequency table. Use 6 class intervals, with 140 as the lower limit of the first interval.
-			\item (6 marks) Draw a histogram for the above data.
-			\item (4 marks) Comment on the shape of the histogram. Based on the shape of the histogram, what is the best measure of centrality and variability?
-			\item (12 marks) Construct a box plot for the above data. Clearly demonstrate how all of the necessary values were computed.
-		\end{enumerate}
-		\vspace{0.25cm}
 		\item 
-		
-	\end{enumerate}
-	\newpage
 	%---------------------------------------%
 	
 	
@@ -591,11 +295,7 @@ This coefficient should be minimized over $p$.
 \section{Autocorrelation}
 
 Autocorrelation can be detected using correlograms.
-%------------------------------------------------%
-\section{Cause and Effect Diagrams}
 
-The Ishikawa diagram (also known as a fishbone diagram)
-is used to associate multiple causes with a single effect.
 
 
 
@@ -720,47 +420,6 @@ Note that seasonal effects are different from cyclical effects, as seasonal cycl
 At about 1960 Claude E. Shannon (MIT) and Robert M. Fano (Bell Laboratories) had developed a coding procedure to generate a binary code tree. The procedure evaluates the symbol's probability and assigns code words with a corresponding code length.
 
 Compared to other methods the Shannon-Fano coding is easy to implement. In practical operation Shannon-Fano coding is not of larger importance. This is especially caused by the lower code efficiency in comparison to Huffman coding as demonstrated later.
-
-
-
-
-%------------------------------%
-\section{Statistical Process Control}
-
-
-\begin{itemize}
-	\item
-	\item Statistical Process Control is, in effect, continuous hypothesis testing.
-\end{itemize}
-%Statistical Process Control and QCC
-%
-%Question
-%
-%1) Control Charts
-%\begin{itemize}
-%\item X bar Charts
-%\item R charts
-%\item S charts
-%\end{itemize}
-%\subsection{Correction Factors}
-%A correction factor is present in the calculation.
-%Explain why it is necessary.
-%	Compute the factors
-
-
-%3) CUSUM
-%4) Process Capability Analysis
-%\begin{itemize}
-%\item Process Capability Indices
-%\item $C_{pk}$ and $C_{pm}$
-%\end{itemize}
-%5) Cause and Effect Diagrams
-%	Discuss the function of the Cause and effect diagram
-%
-%
-%Operating Characteristic Curve
-%CUSUM chart
-
 
 
 
@@ -907,86 +566,6 @@ Multicollineaity
 		\end{equation*}
 	\end{enumerate}
 \end{enumerate}
-
-
-
-
-\noindent\textbf{Question 3:}\\
-\begin{itemize} \item There are 100 passengers booked for a
-	flight. \item It was found that the weight of a
-	passenger and its luggage is random with average value of 75[kg] and standard deviation of 15[kg].
-	\item The plane is overloaded if the total weight of its fuel, passengers and their luggage exceeds 9500[kg].
-	\item The plane has 1750[kg] of fuel.
-	\item \textbf{\emph{Remark:}} Assume that the plane starts with a tank of 1750 kg of fuel. If the plane is overloaded, fuel is pumped out of the tanks accordingly.
-\end{itemize}\bigskip
-
-\noindent\textbf{Part 1:} Introduce appropriate random variables and express the event that the plane is overloaded by means of these random variables.
-
-\noindent\textbf{Solution:}
-\begin{itemize}
-	\item Let $X_i$ be the weight of the $i$-th passenger and his/her luggage.
-	\item Then the variable Y defined as \[ Y = \sum^{100}_{i=1} X_i \] is the
-	total weight of passengers and their luggage.
-	\item The plane is overloaded if $Y + 1750 > 9500$, i.e. $Y > 7750$.
-	
-\end{itemize}
-
-
-\noindent\textbf{Part 2:} Use the Central Limit Theorem to approximate the probability that the plane will be overloaded?
-In the solution you can use the following
-\begin{verbatim}
-normcdf(7750,7500,sqrt(22500))
-ans = 0.95221
-\end{verbatim}
-
-\noindent\textbf{Solution:}
-\begin{itemize}
-	\item By the Central Limit Theorem, $Y = 100X $
-	\[ Y\sim N(100 \times 75, 100 \times 15^2)  \]
-	\[ Y\sim  N(7500, 22500) \]
-	\item \textbf{\emph{Remark}}\emph{ we do not need to know the distribution of X. The CLT states that sample statistics (such as sample sums or sample means) are normally distributed, even if the underlying variable is not normally distributed.}
-	\item From the conditions of the problem we need to find
-	\[P(Y > 7500) = 1 - P(Y \leq 7750) = 1 - F(7750)\]
-	
-	where F is the cdf of $N(7500, 22500)$.
-	
-	\item This can be found using the provided Matlab code.
-	\[  F(7750) = P(Y \leq 7750) = 0.95221 \]
-	\item It follows that there is about $1 - 0.95221 = 0.04779$ of chance for the plane to be overloaded.
-\end{itemize}
-
-\noindent\textbf{Part 3:}How much fuel the plane can take in order for the chances of overload to be $1\%$?
-
-In the solution one can use the following output from Matlab:
-\begin{verbatim}
-norminv(0.99,7500,sqrt(22500))
-ans = 7849.0
-\end{verbatim}
-
-
-
-
-\begin{itemize}
-	\item If Y exceeds 7750 [kg], fuel is pumped out of the tanks accordingly, reducing the fuel level to $F$
-	\item We can say \[ Y + F = 9500 \]
-	As Y increases, F must decrease accordingly.
-	\item \emph{If Y does not exceed 7750, we don't need to pump any out. We are not interested in this.}
-	\item The question can be phrased a different way: Find the fuel level $x$ that there is a $1\%$ probability that the fuel level must not exceed in order for the plane not to be overloaded.
-	
-\end{itemize}
-
-
-
-
-\begin{itemize}
-	\item  Using the MatLab code, we know that the probability of Y being less than or equal to 7849.0 ($99\%$)
-	\[ P(Y \leq 7849) = 0.99\]
-	\item Necessarily  \[ P(Y \geq 7849) = 0.01\]
-	\item There is a $1\%$ chance that the total weight of passengers will be greater than 7849 kg.
-	\item If the aggregate value for Y exceeds 7849, the fuel level must be reduced to 1651 [kg] or less.
-	\item So there is a $1\%$ chance that the fuel level will have to be reduced to 1651 [kg] at least [Answer].
-	
-\end{itemize}
 
 
 
@@ -1151,84 +730,6 @@ We need to compute
 	
 \end{enumerate}
 
-\normalsize{
-	\noindent\textbf{Question 3:}\\
-	\begin{itemize} \item There are 100 passengers booked for a
-		flight. \item It was found that the weight of a
-		passenger and its luggage is random with average value of 75[kg] and standard deviation of 15[kg].
-		\item The plane is overloaded if the total weight of its fuel, passengers and their luggage exceeds 9500[kg].
-		\item The plane has 1750[kg] of fuel.
-		\item \textbf{\emph{Remark:}} Assume that the plane starts with a tank of 1750 kg of fuel. If the plane is overloaded, fuel is pumped out of the tanks accordingly.
-	\end{itemize}\bigskip
-	
-	\noindent\textbf{Part 1:} Introduce appropriate random variables and express the event that the plane is overloaded by means of these random variables.
-	
-	\noindent\textbf{Solution:}
-	\begin{itemize}
-		\item Let $X_i$ be the weight of the $i$-th passenger and his/her luggage.
-		\item Then the variable Y defined as \[ Y = \sum^{100}_{i=1} X_i \] is the
-		total weight of passengers and their luggage.
-		\item The plane is overloaded if $Y + 1750 > 9500$, i.e. $Y > 7750$.
-		
-	\end{itemize}
-	
-	
-	\noindent\textbf{Part 2:} Use the Central Limit Theorem to approximate the probability that the plane will be overloaded?
-	In the solution you can use the following
-	\begin{verbatim}
-	normcdf(7750,7500,sqrt(22500))
-	ans = 0.95221
-	\end{verbatim}
-	
-	\noindent\textbf{Solution:}
-	\begin{itemize}
-		\item By the Central Limit Theorem, $Y = 100X $
-		\[ Y\sim N(100 \times 75, 100 \times 15^2)  \]
-		\[ Y\sim  N(7500, 22500) \]
-		\item \textbf{\emph{Remark}}\emph{ we do not need to know the distribution of X. The CLT states that sample statistics (such as sample sums or sample means) are normally distributed, even if the underlying variable is not normally distributed.}
-		\item From the conditions of the problem we need to find
-		\[P(Y > 7500) = 1 - P(Y \leq 7750) = 1 - F(7750)\]
-		
-		where F is the cdf of $N(7500, 22500)$.
-		
-		\item This can be found using the provided Matlab code.
-		\[  F(7750) = P(Y \leq 7750) = 0.95221 \]
-		\item It follows that there is about $1 - 0.95221 = 0.04779$ of chance for the plane to be overloaded.
-	\end{itemize}
-	
-	\noindent\textbf{Part 3:}How much fuel the plane can take in order for the chances of overload to be $1\%$?
-	
-	In the solution one can use the following output from Matlab:
-	\begin{verbatim}
-	norminv(0.99,7500,sqrt(22500))
-	ans = 7849.0
-	\end{verbatim}
-}
-
-\normalsize{
-	
-	\begin{itemize}
-		\item If Y exceeds 7750 [kg], fuel is pumped out of the tanks accordingly, reducing the fuel level to $F$
-		\item We can say \[ Y + F = 9500 \]
-		As Y increases, F must decrease accordingly.
-		\item \emph{If Y does not exceed 7750, we don't need to pump any out. We are not interested in this.}
-		\item The question can be phrased a different way: Find the fuel level $x$ that there is a $1\%$ probability that the fuel level must not exceed in order for the plane not to be overloaded.
-		
-	\end{itemize}
-}
-
-
-
-\begin{itemize}
-	\item  Using the MatLab code, we know that the probability of Y being less than or equal to 7849.0 ($99\%$)
-	\[ P(Y \leq 7849) = 0.99\]
-	\item Necessarily  \[ P(Y \geq 7849) = 0.01\]
-	\item There is a $1\%$ chance that the total weight of passengers will be greater than 7849 kg.
-	\item If the aggregate value for Y exceeds 7849, the fuel level must be reduced to 1651 [kg] or less.
-	\item So there is a $1\%$ chance that the fuel level will have to be reduced to 1651 [kg] at least [Answer].
-	
-\end{itemize}
-
 
 
 \noindent\textbf{Part 1:}Examine data graphically and check if some linear relation can be involved.
@@ -1290,36 +791,6 @@ We need to compute
 		\vspace{0.25cm}
 		
 		
-		\item It is estimated by a particular bank that 25\% of credit card customers pay only the minimum amount due on their monthly credit card bill and do not pay the total amount due. 50 credit card customers are randomly selected.
-		\begin{enumerate}
-			\item (3 marks)	What is the probability that 9 or more of the selected customers pay only the minimum amount due?
-			\item (3 marks) What is the probability that less than 6 of the selected customers pay only the minimum amount due?
-			\item (3 marks)	What is the probability that more than 5 but less than 10 of the selected customers pay only the minimum amount due?
-		\end{enumerate}
-		
-		
-		
-		\vspace{0.25cm}
-		\item The average lifespan of a PC monitor is 6 years. You may assume that the lifespan of monitors follows an exponential probability distribution.
-		\begin{enumerate}
-			\item (3 marks) What is the probability that the lifespan of the monitor will be at least 5 years?
-			\item (3 marks) What is the probability that the lifespan of the monitor will not exceed 4 years?
-			\item (3 marks) What is the probability of the lifespan being between 5 years and 7 years?
-		\end{enumerate}
-		\vspace{0.25cm}
-		\item A machine is used to package bags of potato chips.  Records of the packaging machine indicate that its fill weights are normally distributed with a mean of 455 grams per bag and a standard deviation of 10 grams.
-		
-		\begin{enumerate}
-			\item (5 marks) What proportion of bags filled by this machine will contain more than 470 grams in the long run?
-			\item (5 marks)	What proportion of bags filled by this machine will contain less than 445 grams in the long run?
-			\item (3 marks)	What proportion of bags filled by this machine will be between 465 grams and 475 grams in the long run?
-		\end{enumerate}
-	\end{enumerate}
-	
-	
-	
-\end{enumerate}
-\newpage
 
 \chapter{Advanced Distribution Theory}
 
