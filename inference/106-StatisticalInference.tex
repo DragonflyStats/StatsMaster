@@ -62,17 +62,6 @@ Geoffrey Vining, Statistical Methods for Engineers, Duxbury, 1st edition,
 
 
 
-\subsection{Hypothesis testing}
-The standard deviation of the life for a particular brand of
-ultraviolet tube is known to be $S = 500 hr$, and the operating
-life of the tubes is normally distributed. The manufacturer claims
-that average tube life is at least 9,000hr. Test this claim at the
-5 percent level of significance against the alternative hypothesis
-that the mean life is less than 9,000 hr, and given that for a
-sample of $n = 18$ tubes the mean operating life was $\bar{X}=
-8,800 hr.$
-
-
 \subsection{two populations}
 
 Two samples drawn from two populations are independent samples if
@@ -141,57 +130,7 @@ The critical value and p-value are looked up in the normal tables.
 
 
 
-\section{Modelling}
 
-The purpose of modelling can be twofold. The first is prediction. Given a set of analytical data, we want to be able to predict properties of the samples that cannot be measured easily. An example is the assessment of whether a specific treatment will be useful for a patient with particular characteristics.
-
-Such an application is known as classification - one is interested in modelling class membership (will or will not respond).
-
-The other major field is regression, where the aim is to model continuous real variables (blood
-pressure, protein content, ...). Such predictive models can mean a big improvement in quality of life, and save large amounts of money.
-
-The prediction error is usually taken as a quality measure: a model that is able to predict with high
-accuracy must have captured some real information about the system under study. Unfortunately, in most cases no analytical expressions can be derived for prediction accuracy, and other ways of estimating prediction accuracy are
-required in a process called validation. A popular example is \textbf{\emph{cross-validation}}.
-
-
-
-
-
-
-\subsection{Independent one-sample $t$-test}
-In testing the null hypothesis that the population mean is equal to a specified value $\mu_{0}$, one uses the statistic
-
-\begin{equation}t = \frac{\overline{x} - \mu_0}{s / \sqrt{n}}\end{equation}
-
-where $s$ is the sample standard deviation and $n$ is the sample size. The degrees of freedom used in this test is $n - 1$.
-
-\subsection{difference of two proportions - example}
-Two time-sharing systems are compared according to their response time to an editing command. The mean response time of 100 requests submitted to system 1 was measured to be 600 milliseconds with a
-known standard deviation of 20 milliseconds. The mean response time
-of 100 requests on system 2 was 592 milliseconds with a known standard deviation of 23 milliseconds. Using a significance level of $5\%$,test the hypothesis that system 2 provides a faster response time than
-system 1. Clearly state your null and alternative hypotheses and your conclusion.
-
-
-
-
-
-
-
-\subsection{Difference between two population proportions}
-When we wish to test the hypothesis that the proportions in two
-populations are not different, the two sample proportions are
-pooled as a basis for determining the standard error of the
-difference between proportions. Note that this differs from the
-procedure used in Section 9.5 on statistical estimation, in which
-the assumption of no difference was not made.
-
-Further, the present procedure is conceptually similar to that
-presented in Section 11.1, in which the two sample variances are
-pooled as the basis for computing the standard error of the
-difference between means. The pooled estimate of the population
-proportion, based on the proportions obtained in two independent
-samples
 
 
 \subsection{F-test of equality of variances}
@@ -213,36 +152,3 @@ has an F-distribution with $n-1$ and $m-1$ degrees of freedom if the null hypoth
 
 
 
-\section{Inference}
-
-\subsection{Confidence interval of a mean (small sample)}
-
-If the data have a normal probability distribution and the sample
-standard deviation $s$ is used to estimate the population
-standard deviation $\sigma$, the interval estimate is given by:
-\begin{equation}
-\bar{X} \pm t_{1-\alpha/2,n-1}\frac{s}{\sqrt{n}}
-\end{equation}
-where $t_{1-\alpha/2,n-1}$ is the value providing an area of $\alpha/2$ in the upper tail of a Student’s t distribution with n - 1 degrees of freedom.
-
-\subsubsection{Example using R}
-Finding confidence intervals for the mean for the nitrate ion
-concentrations in Example 2.7.1.
-\begin{verbatim}
-#Typing data in
-x=c(102,97,99,98,101,106)
-mean(x)
-sd(x)
-n=length(x)
-#setting the confidence level
-CL=0.95
-#computing confidence interval
-pm=sd(x)*c(qt(0.025,n-1),qt(0.975,n-1))/sqrt(n)
-CI=mean(x)+pm
-\end{verbatim}
-
-%------------------------------------------------%
-%\newpage
-%\addcontentsline{toc}{section}{Bibliography}
-%\bibliography{MA4125bib}
-\end{document} 
