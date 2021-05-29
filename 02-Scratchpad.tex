@@ -3,25 +3,6 @@
 \item The standard deviation is often preferred to the variance as a descriptive measure because it is in the same units as the raw data e.g. if your data is measured in years, the standard deviation will also be in years whereas the variance will be in years squared.
 \end{itemize}
 
-\begin{itemize}
-\item Thirty-eight students took the test. The X-axis shows various intervals of scores (the interval labeled 35 includes any score from 32.5 to 37.5). 
-\item The Y-axis shows the number of students scoring in the interval or below the interval.
-
-\item \textbf{\emph{cumulative frequency distribution}}A  can show either the actual frequencies at or below each interval (as shown here) or the percentage of the scores at or below each interval.
-\item  The plot can be a histogram as shown here or a polygon.
-\end{itemize}
-
-\subsection{Exercises on Murdoch Barnes table 6}
-
-Find the following
-
-$e^{-0.6}$
-
-$e^{-1.4}$
-
-$e^{-3.2}$
-
-%===========================================%
 
 \section{Bermouilli}
 %====================================================================================================================== %
@@ -84,44 +65,3 @@ Now, for two out of five people to believe in extraterrestrial life, two conditi
 However, in doing this, we are only considering the case whereby the first two selected people are believers. How do we consider cases such as that in which the third and fifth people are believers, which would also mean a total of two believers out of five?
 
 The answer lies in combinatorics. Bearing in mind that the probability that the first two out of five people believe in extraterrestrial life is 0.03087, we note that there are C(5,2), or 10, ways of selecting a set of two people from out of a set of five, i.e. there are ten ways of considering two people out of the five to be the "first two". This is why we multiply by C(n,k). The probability of having any two of the five people be believers is ten times 0.03087, or 0.3087.
-%================================================================================================== %
-Mean[edit]
-The mean can be derived as follow.
-
-\[
-\operatorname{E}[X] = \sum_i f(x_i)  \cdot x_i = \sum_{x=0}^n  {n \choose x} p^x \left(1-p\right)^{n-x}  \cdot  x
-\operatorname{E}[X] = \sum_{x=0}^n  {n! \over x!(n-x)!} p^x \left(1-p\right)^{n-x} x
-\operatorname{E}[X] = {n! \over 0!(n-0)!} p^0 \left(1-p\right)^{n-0}  \cdot 0 + \sum_{x=1}^n  {n! \over x!(n-x)!} p^x \left(1-p\right)^{n-x} x
-\operatorname{E}[X] = 0 + \sum_{x=1}^n  {n(n-1)! \over x(x-1)!(n-x)!} p  \cdot p^{x-1} \left(1-p\right)^{n-x} x
-\operatorname{E}[X] = np\sum_{x=1}^n  {(n-1)! \over (x-1)!(n-x)!} p^{x-1} \left(1-p\right)^{n-x}
-\]
-Now let w=x-1 and m=n-1. We see that m-w=n-x. We can now rewrite the summation as
-
-\[\operatorname{E}[X] = np \left[\sum_{w=0}^m  {m! \over w!(m-w)!} p^{w} \left(1-p\right)^{m-w}\right]\]
-We now see that the summation is the sum over the complete pmf of a binomial random variable distributed Bin(m, p). This is equal to 1 (and can be easily verified using the Binomial theorem). Therefore, we have
-
-\[\operatorname{E}[X] = np \left[1\right]=np\]
-Variance[edit]
-We derive the variance using the following formula:
-
-\[\operatorname{Var}[X] = \operatorname{E}[X^2] - (\operatorname{E}[X])^2.\]
-We have already calculated E[X] above, so now we will calculate E[X2] and then return to this variance formula:
-
-$$\operatorname{E}[X^2] = \sum_i f(x_i) \cdot x^2$$
-
-$$= \sum_{x=0}^n x^2 \cdot {n\choose x}p^x(1-p)^{n-x}.$$
-We can use our experience gained above in deriving the mean. We use the same definitions of m and w.
-
-\operatorname{E}[X^2] = \sum_{x=0}^n  {n! \over x!(n-x)!} p^x \left(1-p\right)^{n-x} x^2
-\operatorname{E}[X^2] = 0 + \sum_{x=1}^n  {n! \over x!(n-x)!} p^x \left(1-p\right)^{n-x} x^2
-\operatorname{E}[X^2] = np\sum_{x=1}^n  {(n-1)! \over (x-1)!(n-x)!} p^{x-1} \left(1-p\right)^{n-x}x
-\operatorname{E}[X^2] = np \sum_{w=0}^m  {m\choose w} p^{w} \left(1-p\right)^{m-w}(w+1)
-\operatorname{E}[X^2] = np \left[\sum_{w=0}^m  {m\choose w} p^{w} \left(1-p\right)^{m-w}w+\sum_{w=0}^m {m\choose w} p^{w} \left(1-p\right)^{m-w} \right] 
-The first sum is identical in form to the one we calculated in the Mean (above). It sums to mp. The second sum is 1.
-
-\operatorname{E}[X^2] = np \cdot ( mp + 1) = np((n-1)p + 1) = np(np - p + 1).
-Using this result in the expression for the variance, along with the Mean (E(X) = np), we get
-
-\operatorname{Var}(X) = \operatorname{E}[X^2] - (\operatorname{E}[X])^2 = np(np - p + 1) - (np)^2 = np(1-p).
-
-
