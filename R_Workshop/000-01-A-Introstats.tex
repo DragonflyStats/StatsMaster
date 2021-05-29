@@ -1,0 +1,184 @@
+
+\documentclass[]{report}
+
+\voffset=-1.5cm
+\oddsidemargin=0.0cm
+\textwidth = 480pt
+
+\usepackage{framed}
+\usepackage{subfiles}
+\usepackage{graphics}
+\usepackage{newlfont}
+\usepackage{eurosym}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+\begin{document}
+\tableofcontents{3}
+
+%--------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------%
+
+\textbf{Population}
+
+As is so often the case in statistics, some words have technical
+meanings that overlap with their common use but are not the same.
+Population is one such word. It is often difficult to decide
+which population should be sampled. For instance, if we wished to
+sample 500 listeners to an FM radio station specializing in music
+should the population be of listeners to that radio station in
+general, or of listeners to that stations classical music
+programme, or perhaps just the regular listeners, or any one of
+many other possible populations that you can construct for
+yourself? In practice the population is often chosen by finding
+one that is easy to sample from, and that may not be the
+population of first choice.
+
+
+%--------------------------------------------------------------------------------------%
+%--------------------------------------------------------------------------------------%
+\section{Syllabus}
+
+
+The concept of a random sample, the sampling distribution of the sample mean with applications to confidence intervals, hypothesis testing, and sample size determination, the sampling distribution of the sample proportion with applications to confidence intervals, hypothesis testing, and sample size determination, comparing two means, comparing two proportions, the chi-squared test of independence, Simpson's Paradox, simple linear regression, correlation, residuals.
+
+\smallskip
+On successful completion of this module, students should be able to:
+
+\begin{itemize}
+	\item[1.] Calculate probabilities based on the normal distribution.
+	
+	\item[2.] Construct and use control charts based on individual measurements, subgroup means and subgroup ranges.
+	
+	\item[3.] Interpret computer output from common statistical software packages for basic statistical inference procedures such as hypothesis testing and confidence intervals for: a mean, a proportion, difference between independent means, and differences between independent proportions.
+	
+	\item[4.] Calculate the required sample size for tests of hypothesis and confidence intervals based on a single parameter.
+	
+	\item[5.] Interpret computer output and diagnostic plots from common statistical software packages for simple linear regression and multiple linear regression.
+	
+	\item[6.] Test the statistical significance of the difference between several conditional frequency distributions and outline the chi-squared formula used for the test.
+	
+\end{itemize}
+
+
+
+
+
+
+
+\noindent \textbf{Bivariate Data}
+\begin{itemize}
+	\item Univariate statistics describes statistics related to one variables.
+	\item Bivariate statistics describes statistics related to two variables $X$ and $Y$.
+	\item Multivariate statistics describes statistics related to multiple variables (not part of course).
+\end{itemize}
+
+
+%-------------------------------------------------%
+% R Code
+%
+% X = c(10, 15, 20, 25, 30, 35, 40)
+% Y = c(11, 19, 34, 52, 58, 81, 109)
+% plot(X,Y,pch=18,col="red",font.lab=2,main="Scatter Plot of X and Y")
+% cor(X,Y) =0.9830478
+
+%-------------------------------------------------%
+\noindent \textbf{Covariance}
+Covariance is a strength of the measure of the linear relationship between two variables.
+\[ cov(x,Y) = \]
+
+%-------------------------------------------------%
+% Regression Analysis
+
+
+\section{Observational studies and experiments}
+
+\begin{itemize}
+	\item In industrial and agricultural applications of statistics it is possible to control the
+	levels of the important factors that affect the results. Bias from the factors that cannot
+	be controlled is dealt with by randomization. These investigations are \textbf{designed
+		experiments}. 
+	
+	\item In medical, economic and other social science applications of statistics
+	one usually just observes a sample of the population available, without control of any
+	of the factors that may influence the measures observed. These studies are
+	\textbf{observational studies}.
+\end{itemize}
+\begin{itemize}
+	\item In industrial and agricultural applications of statistics it is possible to control the
+	levels of the important factors that affect the results. \item  Bias from the factors that cannot
+	be controlled is dealt with by randomization. \item These investigations are designed
+	experiments. 
+\end{itemize}
+
+In medical, economic and other social science applications of statistics
+one usually just observes a sample of the population available, without control of any
+of the factors that may influence the measures observed. These studies are
+observational studies.
+
+\section{Descriptive Statistics and Inferential Statistics}
+
+
+Statistical procedures can be divided into two major categories: descriptive statistics and inferential statistics.
+%Before discussing the differences between descriptive and inferential statistics, we must first be familiar with two important concepts in social science statistics: population and sample. A population is the total set of individuals, groups, objects, or events that the researcher is studying. For example, if we were studying employment patterns of recent U.S. college graduates, our population would likely be defined as every college student who graduated within the past one year from any college across the United States.
+
+\noindent \textbf{Descriptive Statistics}
+\begin{itemize}
+	\item Descriptive statistics includes statistical procedures that we use to describe the population we are studying. The data could be collected from either a sample or a population, but the results help us organize and describe data. Descriptive statistics can only be used to describe the group that is being studying. That is, the results cannot be generalized to any larger group.
+	
+	\item 	Descriptive statistics are useful and serviceable if you do not need to extend your results to any larger group. However, much of social sciences tend to include studies that give us “universal” truths about segments of the population, such as all parents, all women, all victims, etc.
+	
+	\item Frequency distributions, measures of central tendency (mean, median, and mode), and graphs like pie charts and bar charts that describe the data are all examples of descriptive statistics.
+	
+\end{itemize}
+
+\section{Inferential Statistics}
+\begin{itemize}
+	\item Inferential statistics is concerned with making predictions or inferences about a population from observations and analyses of a sample. That is, we can take the results of an analysis using a sample and can generalize it to the larger population that the sample represents. In order to do this, however, it is imperative that the sample is representative of the group to which it is being generalized.
+	
+	\item To address this issue of generalization, we have tests of significance. A Chi-square or T-test, for example, can tell us the probability that the results of our analysis on the sample are representative of the population that the sample represents. 
+	
+	\item In other words, these tests of significance tell us the probability that the results of the analysis could have occurred by chance when there is no relationship at all between the variables we studied in the population we studied.
+	
+	\item Examples of inferential statistics include linear regression analyses, logistic regression analyses, ANOVA, correlation analyses, structural equation modeling, and survival analysis, to name a few.
+	
+\end{itemize}
+
+%%http://www.ft.com/cms/s/2/5372968a-ba82-11da-980d-0000779e2340,dwp_uuid=77a9a0e8-b442-11da-bd61-0000779e2340.html
+
+
+
+
+
+
+
+
+
+\section{Various Theory Components}
+\begin{itemize}
+	\item Distinguish between a bimodal distribution and a unimodal distribution
+	\item Compare and contrast interval and ordinal data.
+\end{itemize}		
+
+
+
+%---------------------------------------------------------------------------- %
+
+\noindent \textbf{Example}
+Given that $p_1= 1/4, p_2= 1/8, p_3= 1/8,p_4= 1/3, p_5 = 1/6$ find:
+
+\begin{itemize}
+	\item $\displaystyle\sum_{i=1}^{i=n} p_{i} \times x_{i}$
+	\item $\displaystyle\sum_{i=1}^{i=n} p_{1} \times x_{i}^2$
+\end{itemize}
+
+
+
+
+
+
+\end{document}
